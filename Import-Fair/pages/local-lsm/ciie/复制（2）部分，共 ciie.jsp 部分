@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<meta charset="UTF-8" http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%@ include file="/common/lib.jsp"%>
+<c:set var="hotspot" value="common" />
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/common/My97DatePicker/WdatePicker.js"></script>
+<link rel="stylesheet" href="${ctx}/static/jslib/My97DatePicker/skin/My97DatePicker/WdatePicker.css" />
+<%@ include file="/common/bootstrap.jsp"%> 
+<%@ include file="/common/echarts.jsp"%>
+<link rel="stylesheet" href="${jslib}/jquery-1.7.2/external/jqgrid/css/ui.jqgrid.css" />
+<link rel="stylesheet" href="${jslib}/jquery-1.7.2/external/jqgrid/themes/redmond/jquery-ui-1.9.2.custom.min.css" />
+
+
+<link rel="stylesheet" href="${ctx}/static/styles/local-lsm/ciie/ciie.css" />
+<link rel="stylesheet" href="${ctx}/static/styles/local-lsm/ciie/ciie_jqgrid.css" />
+<link rel="stylesheet" href="${ctx}/static/styles/local-lsm/map.css" />
+<title>上海国际进出口博览会</title>
+<style type="text/css">
+	.leaflet-left {
+	    left:30px;
+	}
+	.leaflet-top {
+	    top:30px;
+	}
+	
+	
+</style>
+</head>
+<body> 
+<div class="bodybackground">
+	<div class="blockLeft">
+		<div style="width:100%">
+			<div class="kpiwithtrend" kpi="日累计核心区域用户数">
+				<div class="kwt-header">
+					<div class="icon-user"></div>
+					<div class="kpiTitleLarge">核心区域用户数</div>
+					<div class="kpiUnitLarge">(人)</div>
+				</div>
+				<div class="kwt-body">
+					<div id="topvalue0_0" class="kpiValueLarge">--</div>
+					<div class="icon-splitline"></div>
+					<div id="chart0_0" class="topChart"></div>
+					<div class="topChartTime" id="time0_0">--:--</div>
+				</div>
+			</div>
+			<div class="kpiwithtrend" style="margin-left:30px;"  kpi="日累计语音话务量">
+				<div class="kwt-header">
+					<div class="icon-voicetraff"></div>
+					<div class="kpiTitleLarge">语音话务量</div>
+					<div class="kpiUnitLarge">(Erl)</div>
+				</div>
+				<div class="kwt-body" >
+					<div id="topvalue0_1" class="kpiValueLarge">--</div>
+					<div class="icon-splitline"></div>
+					<div id="chart0_1" class="topChart"></div>
+					<div class="topChartTime" id="time0_1">--:--</div>
+				</div>
+			</div>
+			<div class="kpiwithtrend" style="margin-left:30px;" kpi="日累计数据流量">
+				<div class="kwt-header">
+					<div class="icon-dataflow"></div>
+					<div class="kpiTitleLarge">数据流量</div>
+					<div class="kpiUnitLarge">(GB)</div>
+				</div>
+				<div class="kwt-body">
+					<div id="topvalue0_2" class="kpiValueLarge">--</div>
+					<div class="icon-splitline"></div>
+					<div id="chart0_2" class="topChart"></div>
+					<div class="topChartTime" id="time0_2">--:--</div>
+				</div>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div style="width:100%;margin-top:40px;">
+			<div style="width:1100px;float:left;">
+				<div id="neiPanel" class="ciiepanel">
+					<div class="ciietitle">
+						<div class="icon-neq"></div>
+						<div>网络质量</div>
+						<div class="toolbox">
+							<div id="kpiconfig" class="kpiconfig"></div>
+						</div>
+					</div>
+					<div id="netQualityContent" class="ciiecontent" style="padding:15px 15px 0px 15px;">
+						
+					</div>
+				</div>
+			</div>
+			<div id="activeChart" style="width:790px;margin-left:30px;float:left;">
+				<div class="ciiepanel">
+					<div id="centerChartTitleBar" class="ciietitle" style="cursor:pointer;">
+						<div class="icon-userchart"></div>
+						<div id="centerChartTitle">用户数</div>
+						<div id="centerChartTime">(人)【--:--】</div>
+					</div>
+					<div id="centerChartParent" class="ciiecontent" style="height:500px;position: relative;padding-left:0;padding-right:0;">
+						<div id="userChart" style="width:100%;height:100%;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div style="width:100%;margin-top:40px;">
+			<div style="width:560px;float:left;">
+				<div class="ciiepanel">
+					<div class="ciietitle">
+						<div class="icon-alarm"></div>
+						<div>告警窗</div>
+						<div class="toolbox" style="display:none;"><div class="icon-selector"></div><div class="icon-selector"></div><div class="icon-selector-selected"></div></div>
+					</div>
+					<div class="ciiecontent" style="padding-left:15px;">
+						<div class="horizontalRow" style="margin-top:10px;">
+							<div class="icon-nealarm" style="margin-top:8px;"></div>
+							<div class="kpiTitleMed" style="padding-top:12px;margin-left:10px;letter-spacing:5px;">网元告警</div>
+							<div id="neAlarmCount" class="alarmNumPlate" style="margin-left:10px;cursor:pointer;" >0</div>
+							<div style="padding-top:36px;">条</div>
+						</div>
+						<div class="horizontalRow" style="margin-top:20px;">
+							<div class="icon-peralarm" style="margin-top:8px;"></div>
+							<div class="kpiTitleMed" style="padding-top:12px;margin-left:10px;letter-spacing:5px;">性能告警</div>
+							<div id="performanceAlarmCount" class="alarmNumPlate" style="margin-left:10px;cursor:pointer;" >0</div>
+							<div style="padding-top:36px;">条</div>
+						</div>
+						<div class="horizontalRow" style="margin-top:20px;">
+							<div class="icon-complain" style="margin-top:8px;"></div>
+							<div class="kpiTitleMed" style="padding-top:12px;margin-left:10px;letter-spacing:5px;">用户投诉</div>
+							<div id="complainCount" class="alarmNumPlate" style="margin-left:10px;cursor:pointer;" >0</div>
+							<div style="padding-top:36px;">条</div>
+						</div>
+<!-- 						<div class="radar"></div> -->
+						<embed id="radar_image" style="position:absolute;right:0;top:70px;" type="application/x-shockwave-flash" src="${ctx}/static/styles/local-lsm/ciie/radar.swf" width="249" height="249" wmode="transparent">
+					</div>
+				</div>
+			</div>
+			<div style="width:560px;margin-left:30px;float:left;">
+				<div class="ciiepanel">
+					<div class="ciietitle">
+						<div class="icon-terminalrank"></div>
+						<div id="terminalRankTitle">终端排名</div>
+						<div class="toolbox"><div id="terminalReturn" style="display:none;" class="icon-return"></div></div>
+					</div>
+					<div class="ciiecontent" style="padding:0;padding-top:10px;">
+<!-- 						<div id="terminalrankChart" style="width:550px;height:280px;"></div> -->
+						<svg id="组_98_拷贝" data-name="组 98 拷贝" xmlns="http://www.w3.org/2000/svg" width="550" height="280" viewBox="0 0 454 318">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+ 
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #ae6321;
+      }
+
+      .cls-1, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-20, .cls-21 {
+        fill: #2193ae;
+      }
+
+      .cls-3 {
+        fill: #37aa45;
+      }
+
+      .cls-24, .cls-25, .cls-4 {
+        fill: #d4a33a;
+      }
+
+      .cls-5 {
+        fill: #e3517e;
+      }
+
+      .cls-28, .cls-29, .cls-6 {
+        fill: #019afd;
+      }
+
+      .cls-7 {
+        fill: #52219c;
+      }
+
+      .cls-15, .cls-17, .cls-8 {
+        fill: #d4874e;
+      }
+
+      .cls-9 {
+        fill: #4ebad4;
+      }
+
+      .cls-10, .cls-22, .cls-23 {
+        fill: #5fd46c;
+      }
+
+      .cls-11 {
+        fill: #ebc266;
+      }
+
+      .cls-12, .cls-26, .cls-27 {
+        fill: #f083a3;
+      }
+
+      .cls-13 {
+        fill: #54b6f7;
+      }
+
+      .cls-14, .cls-30, .cls-31 {
+        fill: #764abb;
+      }
+
+      .cls-16 {
+        font-size: 24px;
+        font-family: "Microsoft YaHei";
+      }
+
+      .cls-16, .cls-18 {
+        fill: #fff;
+      }
+
+      .cls-16, .cls-17, .cls-21, .cls-23, .cls-25, .cls-27, .cls-29, .cls-31 {
+        text-anchor: end;
+      }
+
+      .cls-17, .cls-21, .cls-23, .cls-25, .cls-27, .cls-29, .cls-31 {
+        font-size: 12px;
+        font-family: Arial;
+      }
+
+      .cls-18 {
+        font-size: 28px;
+        font-family: CTZhongYuanSJ;
+      }
+
+      .cls-19 {
+        font-size: 18px;
+      }
+    </style>
+  </defs>
+  <path id="矩形_1582_拷贝_6" data-name="矩形 1582 拷贝 6" class="cls-1 pyramid pyramid0" d="M1005.31,1126.4l131.64-50.55,18.05,27L1005.31,1160v-33.6Z" transform="translate(-759 -842)"/>
+  <path id="矩形_1582" data-name="矩形 1582" class="cls-2 pyramid pyramid1" d="M1005.31,1080.32l109.51-42.06,17.89,27.66-127.4,48.96v-34.56Z" transform="translate(-759 -842)"/>
+  <path id="矩形_1582_拷贝" data-name="矩形 1582 拷贝" class="cls-3 pyramid pyramid2" d="M1005.31,1034.24l87.69-34.01,18.07,27.31-105.76,41.26v-34.56Z" transform="translate(-759 -842)"/>
+  <path id="矩形_1582_拷贝_2" data-name="矩形 1582 拷贝 2" class="cls-4 pyramid pyramid3" d="M1005.31,987.2l66.44-24.9,18.07,27.3-84.51,33.119V987.2Z" transform="translate(-759 -842)"/>
+  <path id="矩形_1582_拷贝_3" data-name="矩形 1582 拷贝 3" class="cls-5 pyramid pyramid4" d="M1005.31,941.12l44.13-16.759,18.06,27.305-62.19,24.014V941.12Z" transform="translate(-759 -842)"/>
+  <path id="矩形_1582_拷贝_4" data-name="矩形 1582 拷贝 4" class="cls-6 pyramid pyramid5" d="M1005.31,894.08l22.87-7.653,18.07,27.3L1005.31,929.6V894.08Z" transform="translate(-759 -842)"/>
+  <path id="矩形_1582_拷贝_5" data-name="矩形 1582 拷贝 5" class="cls-7 pyramid pyramid6" d="M1005.31,848l18.62,27.895-18.62,6.665V848Z" transform="translate(-759 -842)"/>
+  <path id="矩形_1582_拷贝_6-2" data-name="矩形 1582 拷贝 6" class="cls-8 pyramid pyramid0" d="M994.692,1126.4l-131.609-50.68L845,1102.76,994.692,1160v-33.6Z" transform="translate(-759 -842)"/>
+  <path id="矩形_1582-2" data-name="矩形 1582" class="cls-9 pyramid pyramid1" d="M994.692,1080.32l-110.259-42.06-18.09,26.99,128.349,49.63v-34.56Z" transform="translate(-759 -842)"/>
+  <path id="矩形_1582_拷贝-2" data-name="矩形 1582 拷贝" class="cls-10 pyramid pyramid2" d="M994.692,1034.24l-88.4-34.01-18.1,27.31,106.505,41.26v-34.56Z" transform="translate(-759 -842)"/>
+  <path id="矩形_1582_拷贝_2-2" data-name="矩形 1582 拷贝 2" class="cls-11 pyramid pyramid3" d="M994.692,987.2l-67.1-24.9-18.1,27.3,85.206,33.119V987.2Z" transform="translate(-759 -842)"/>
+  <path id="矩形_1582_拷贝_3-2" data-name="矩形 1582 拷贝 3" class="cls-12 pyramid pyramid4" d="M994.692,941.12l-44.739-16.759-18.1,27.305,62.843,24.014V941.12Z" transform="translate(-759 -842)"/>
+  <path id="矩形_1582_拷贝_4-2" data-name="矩形 1582 拷贝 4" class="cls-13 pyramid pyramid5" d="M994.692,894.08l-23.441-7.653-18.1,27.3L994.692,929.6V894.08Z" transform="translate(-759 -842)"/>
+  <path id="矩形_1582_拷贝_5-2" data-name="矩形 1582 拷贝 5" class="cls-14 pyramid pyramid6" d="M994.692,848L975.51,875.9l19.182,6.665V848Z" transform="translate(-759 -842)"/>
+  <rect id="矩形_1495" data-name="矩形 1495" class="cls-15" y="241" width="8" height="8" rx="2" ry="2"/>
+  <text id="rank0" class="cls-16" x="58.997" y="271">--</text>
+  <text id="_.............................." data-name=".............................." class="cls-17" x="97" y="246">..............................</text>
+  <text id="rank0_value" data-name="30.4%" class="cls-18" x="10.997" y="240">--<tspan class="cls-19">%</tspan></text>
+  <rect id="矩形_1495-2" data-name="矩形 1495" class="cls-20" x="446" y="205" width="8" height="8" rx="2" ry="2"/>
+  <text id="rank1" class="cls-16" x="441.998" y="235">--</text>
+  <text id="_..............................-2" data-name=".............................." class="cls-21" x="455.003" y="210">..............................</text>
+  <text id="rank1_value" data-name="22.3%" class="cls-18" x="373" y="204">--<tspan class="cls-19">%</tspan></text>
+  <rect id="矩形_1495-3" data-name="矩形 1495" class="cls-22" x="39" y="170" width="8" height="8" rx="2" ry="2"/>
+  <text id="rank2" class="cls-16" x="97.998" y="200">--</text>
+  <text id="_..............................-3" data-name=".............................." class="cls-23" x="136.002" y="175">..............................</text>
+  <text id="rank2_value" data-name="18.3%" class="cls-18" x="49.998" y="169">--<tspan class="cls-19">%</tspan></text>
+  <rect id="矩形_1495-4" data-name="矩形 1495" class="cls-24" x="406" y="136" width="8" height="8" rx="2" ry="2"/>
+  <text id="rank3" class="cls-16" x="401.998" y="166">--</text>
+  <text id="_..............................-4" data-name=".............................." class="cls-25" x="415.003" y="141">..............................</text>
+  <text id="rank3_value" data-name="16.2%" class="cls-18" x="333" y="135">--<tspan class="cls-19">%</tspan></text>
+  <rect id="矩形_1495-5" data-name="矩形 1495" class="cls-26" x="84" y="93" width="8" height="8" rx="2" ry="2"/>
+  <text id="rank4" class="cls-16" x="143.003" y="123">--</text>
+  <text id="_..............................-5" data-name=".............................." class="cls-27" x="181" y="98">..............................</text>
+  <text id="rank4_value" data-name="7.1%" class="cls-18" x="95.003" y="92">--<tspan class="cls-19">%</tspan></text>
+  <rect id="矩形_1495-6" data-name="矩形 1495" class="cls-28" x="374" y="55" width="8" height="8" rx="2" ry="2"/>
+  <text id="rank5" class="cls-16" x="369.998" y="85">--</text>
+  <text id="_................................" data-name="................................" class="cls-29" x="373.998" y="60">................................</text>
+  <text id="rank5_value" data-name="3.9%" class="cls-18" x="314.997" y="54">--<tspan class="cls-19">%</tspan></text>
+  <rect id="矩形_1495-7" data-name="矩形 1495" class="cls-30" x="126" y="21" width="8" height="8" rx="2" ry="2"/>
+  <text id="rank6" class="cls-16" x="185" y="51">--</text>
+  <text id="_..............................-6" data-name=".............................." class="cls-31" x="223.003" y="26">..............................</text>
+  <text id="rank6_value" data-name="1.8%" class="cls-18" x="137" y="20">--<tspan class="cls-19">%</tspan></text>
+</svg>
+						
+					</div>
+				</div>
+			</div>
+			<div style="width:740px;margin-left:30px;float:left;">
+				<div class="ciiepanel">
+					<div class="ciietitle">
+						<div class="icon-userstructure"></div>
+						<div>漫入用户</div>
+						<div class="toolbox" >
+							<div class="btn-group">
+							    <button type="button" target="roamChinaChart" class="btn btn-default roamTypeBtn">省际</button>
+							    <button type="button" target="roamWorldChart" class="btn btn-primary roamTypeBtn">国际</button>
+							</div>
+						</div>
+					</div>
+					<div style="width:100%;">
+						<div style="width:740px;height:300px;float:left;border:solid 0px #ff0000;position:relative;">
+							<div id="roamRankChart" class="roamChart roamRankChart" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
+							<div id="roamChinaChart" class="roamChart roamChinaChart" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
+							<div id="roamWorldChart" class="roamChart roamWorldChart" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
+						</div>
+						<div style="width:565px;position:absolute;top:70px;left:30px;pointer-events:none;">
+							<div class="kpiTitleMed roamChart roamChinaChart roamChinaTotal" style="float:left;">总用户数</div>
+							<div class="roamChart roamChinaChart roamChinaTotal" style="float:left;">
+								<div class="userstructurePlate proroamuser" style="margin-left:0px;float:left;" >0</div>
+								<div class="userstructurePlate proroamuser" style="margin-left:0px;float:left;" >0</div>
+								<div class="userstructurePlate proroamuser" style="margin-left:0px;float:left;" >0</div>
+								<div class="userstructurePlate proroamuser" style="margin-left:0px;float:left;" >0</div>
+								<div class="userstructurePlate proroamuser" style="margin-left:0px;float:left;" >0</div>
+								<div class="userstructurePlate proroamuser" style="margin-left:0px;float:left;" >0</div>
+								<div style="float:left;height:46px;line-height:52px;">人</div>
+							</div>
+							<div style="clear:both;"></div>
+							<div class="kpiTitleMed roamChart roamWorldChart roamWorldTotal" style="float:left;display:none;">总用户数</div>
+							<div class="roamChart roamWorldChart roamWorldTotal" style="float:left;display:none;">
+								<div class="userstructurePlate intlroamuser" style="margin-left:0px;float:left;" >0</div>
+								<div class="userstructurePlate intlroamuser" style="margin-left:0px;float:left;" >0</div>
+								<div class="userstructurePlate intlroamuser" style="margin-left:0px;float:left;" >0</div>
+								<div class="userstructurePlate intlroamuser" style="margin-left:0px;float:left;" >0</div>
+								<div class="userstructurePlate intlroamuser" style="margin-left:0px;float:left;" >0</div>
+								<div class="userstructurePlate intlroamuser" style="margin-left:0px;float:left;" >0</div>
+								<div style="float:left;height:46px;line-height:52px;">人</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+	<div class="blockCenter" >
+		<div class="screencol col5" >
+			<div class="mapFrame">
+				<div style="width:100%;height:100%;position:relative;">
+					<div class="mapFrameLT"></div>
+					<div class="mapFrameBR"></div>
+					<div class="map" id="map">
+						<iframe id="mapIFrame" src="map.jsp" style="width:100%;height:100%;border-radius:100px;" frameborder="0"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="blockRight" style="padding-left:0px;" >
+		<div class="screencol" style="width:620px;" >
+			<div class="centerKpiFrame">
+				<div id="centerKpi0" class="centerHotspotKpiFrameParent" style="height:220px;overflow:hidden;">
+					
+				</div>
+				<div class="centerHotspotKpiFrameParent" style="overflow:hidden;position:relative;table-layout: fixed; word-wrap: break-word; ">
+					<div id="centerKpi" style="width:100%;overflow:hidden;position:absolute;top:0;left:0;">
+					
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="screencol" style="margin-left:30px;width:1270px;" >
+			<div class="ciiepanel">
+				<div class="ciietitle">
+					<div class="icon-hotlist"></div>
+					<div id="rightTableTitle" class="rightTableTitleFunc" style="cursor:pointer;" name="场馆列表">场馆列表</div>
+					<div id="rightTableIcon" class="rightTableTitleFunc icon-hot" style="cursor:pointer;"  name="场馆列表"></div>
+					<div class="toolbox"><div id="hotListReturn" style="display:none;" class="icon-return"></div></div>
+				</div>
+				<div style="width:100%;height:530px;">
+					<table id="table" style="width:100%;height:100%;"></table>
+				</div>
+			</div>
+			<div style="width:100%;margin-top:40px;" >
+				<div class="ciiepanel" style="width:620px;float:left;">
+					<div class="ciietitle">
+						<div class="icon-dataDistribute"></div>
+						<div>数据业务分布</div>
+					</div>
+					<div class="ciiecontent" style="padding:0;">
+						<div id="majorRankChart" style="width:620px;height:440px;"></div>
+						<div style="font-size:28px;text-align:center;line-height:530px;position:absolute;top:0;left:0;pointer-events:none;width:620px;height:440px;">业务分布</div>
+					</div>
+				</div>
+				<div id="pphigh" class="ciiepanel pptable" style="width:620px;float:left;margin-left:30px;">
+					<div class="ciietitle">
+						<div class="icon-pphigh"></div>
+						<div>流量占比<span style="color:#f65850;">高于</span>全网</div>
+						<div class="toolbox" >
+							<div class="btn-group">
+							    <button type="button" target="pphigh" class="btn btn-primary ppTypeBtn">高于</button>
+							    <button type="button" target="pplow" class="btn btn-default ppTypeBtn">低于</button>
+							</div>
+						</div>
+					</div>
+					<div class="ciiecontent" style="padding:0;">
+						<table id="appHigher" style="width:100%;height:100%;"></table>
+					</div>
+				</div>
+				<div id="pplow" class="ciiepanel pptable" style="width:620px;float:left;margin-left:30px;display:none;">
+					<div class="ciietitle">
+						<div class="icon-pplow"></div>
+						<div>流量占比<span style="color:#00ff00;">低于</span>全网</div>
+						<div class="toolbox" >
+							<div class="btn-group">
+							    <button type="button" target="pphigh" class="btn btn-default ppTypeBtn">高于</button>
+							    <button type="button" target="pplow" class="btn btn-primary ppTypeBtn">低于</button>
+							</div>
+						</div>
+					</div>
+					<div class="ciiecontent" style="padding:0;">
+						<table id="appLower" style="width:100%;height:100%;"></table>
+					</div>
+				</div>
+				
+			</div>
+			
+			
+		</div>
+	</div>
+	<div class="screentitle">
+		<div class="titleAndLogo">
+			<div class="logo"></div>
+			<div class="titleTxt">上海移动重要区域实时保障</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div id="screenTitleTime" class="titleTime">
+		</div>
+		<div class="subtitle">GSMA通信保障</div>
+	</div>
+</div>
+<div id="demo" class="icon-play" style="display:none;cursor:pointer;position:absolute;top:5px;left:35px;"></div>
+<div class="modal fade"  id="modalWin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" style="width:850px;">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="modalWinTitle">
+				</h4>
+			</div>
+			<div class="modal-body" id="modalWinBody" style="width:100%;overflow:auto;">
+			</div>
+			<div class="modal-footer">
+                <button type="button" class="btn btn-success" id="modalConfirm">确定</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+            </div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+
+<div class="modal fade"  id="modalWinLarge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" style="width:850px;">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="modalWinTitleLarge">
+				</h4>
+			</div>
+			<div class="modal-body" id="modalWinBodyLarge" style="width:100%;overflow:auto;">
+			</div>
+			<div class="modal-footer">
+                <button type="button" class="btn btn-success" id="modalConfirmLarge">确定</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+            </div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+</body>
+
+<script type="text/javascript" src="${jslib}/jquery-1.7.2/external/jqgrid/js/i18n/grid.locale-cn.js"></script>
+<script type="text/javascript" src="${jslib}/jquery-1.7.2/external/jqgrid/js/jquery.jqGrid.min.js"></script>
+<!-- jquery loadmask -->
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/common/spinner/jquery.ux.loadMaskcss.js"></script>
+<!-- 需要内网使用百度api -->
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/common/baiduapi/baiduApiScript.js"></script>
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/common/baiduapi/codemirror.js"></script>
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/common/baiduapi/javascript.js"></script>
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/common/baiduapi/BMap.js"></script>
+
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/common/consts.js"></script>
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/common/utils.js"></script>
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/common/screenDataManager.js"></script>
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/ciie/ciie_config.js"></script>
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/common/dragger.js"></script>
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/ciie/ciie.js"></script>
+
+<script>
+var BASEPATH="${ctx}";
+$(function(){
+	new CIIE.Screen(CIIE.SCREEN_HOT);
+});
+</script>
+</html>

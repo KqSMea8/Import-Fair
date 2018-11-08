@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<item id="restIp" source="http://10.222.42.22:8080/subject_rest_service/rest/" describe="专题rest接口" /> 
+	<item id="restIp_38_38080" source="http://10.222.42.22:8080/subject_rest_service/rest/" describe="专题rest接口" /> 
+	<item id="restIp_38_8080" source="http://10.222.42.22:8080/" describe="专题rest接口" /> 
+	<item id="restIpJBH" source="http://10.222.42.22:8080/lsmWs/sml/" describe="进博会rest接口" /> 
+</config>

@@ -1,0 +1,6 @@
+<Topo from="CACHE" id="assets/datas/smsyj.xml" name="短信网应急流程图">
+	<Nodes>
+		<Node resourceType="jpg" resourceId="smsyj" isSegment=""
+			workingState="" id="smsyj" name="" image="assets/images/smsyj.png" x="10" y="30" />
+	</Nodes>
+</Topo>

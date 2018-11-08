@@ -1,0 +1,356 @@
+.bgL{
+	width:2000px;
+	height:1200px;
+	background:url(images/bg_01.jpg) center 0px no-repeat;
+	background-size:100% 100%;
+	padding:40px;
+}
+.bgC{
+	width:2400px;
+	height:1200px;
+	background:url(images/roambg.jpg) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.bgR{
+	width:1550px;
+	height:1200px;
+	background:url(images/bg_03.jpg) center 0px no-repeat;
+	background-size:100% 100%;
+	padding:40px;
+}
+
+.icon-oneroad{
+	width:100px;
+	height:100px;
+	background:url(images/carryoneroad.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+
+.icon-czg{
+	width:100px;
+	height:100px;
+	background:url(images/czg.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+
+.icon-intlroamin{
+	width:100px;
+	height:100px;
+	background:url(images/intlroamin.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-provroamin{
+	width:100px;
+	height:100px;
+	background:url(images/provroamin.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-trend{
+	width:48px;
+	height:48px;
+	background:url(images/trend.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-title-intlroamin{
+	width:48px;
+	height:48px;
+	background:url(images/icon-intlroamin.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-title-provroamin{
+	width:48px;
+	height:48px;
+	background:url(images/icon-provroamin.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-internet{
+	width:48px;
+	height:48px;
+	background:url(images/icon-internet.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-4gflow{
+	width:48px;
+	height:48px;
+	background:url(images/icon-4gflow.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-terminal{
+	width:48px;
+	height:48px;
+	background:url(images/icon-terminal.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-apprank{
+	width:48px;
+	height:48px;
+	background:url(images/icon-apprank.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-app{
+	width:48px;
+	height:48px;
+	background:url(images/APP.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.roamBtnbg{
+	width:210px;
+	height:400px;
+	background:url(images/btnbg.png) center 0px no-repeat;
+	background-size:100% 100%;
+	padding:40px 0px 40px 20px;
+	
+}
+.roamBtnbg>div{
+	font-size:34px;
+	text-align:center;
+	padding:5px 20px 0px 10px;
+}
+.roamBtnbg>div:nth-child(n+2){
+	margin-top:50px;
+}
+.roamBtn{
+	width:184px;
+	height:66px;
+	background:url(images/btn.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.roamBtn-selected{
+	width:184px;
+	height:66px;
+	background:url(images/btn-selected.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.roamBtn2{
+	width:184px;
+	height:92px;
+	background:url(images/btn2.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.roamBtn2-selected{
+	width:184px;
+	height:92px;
+	background:url(images/btn2-selected.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.roamRow>div:nth-child(n+2){
+	margin-left:40px;
+}
+.roamchartbg{
+	background:rgba(0,102,255,0.15);
+	border-radius:5px;
+}
+
+.roambarbg{
+	width:100%;
+	height:15px;
+	background:rgba(16,20,78,0.8);
+	border-radius:8px;
+	padding:2px;
+}
+.roambarcolor1{
+	width:100%;
+	height:100%;
+	border-radius:8px;
+	
+	background: -webkit-linear-gradient(left, #087aed , #66e6ff); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #087aed , #66e6ff); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #087aed , #66e6ff); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #087aed , #66e6ff); /* 标准的语法 */
+}
+.roamTableHeader{
+	width:100%;
+	background:rgba(0,102,255,0.15);
+	border-radius:5px;
+	font-size:28px;
+	height:50px;
+}
+.roamTableHeader>div{
+	float:left;
+}
+.roamTableBody{
+	width:100%;
+}
+.roamTableBody>div:nth-child(1){
+	margin-top:20px;
+}
+.roamTableBody>div:nth-child(n+2){
+	margin-top:25px;
+}
+.roamTableRow{
+	width:100%;
+	font-size:28px;
+	margin-top:35px;
+	height:45px;
+}
+.roamTableRow>div{
+	float:left;
+	line-height:30px;
+}
+.roamRightBlock{
+	width:875px;
+	height:535px;
+}
+.roamGauge{
+	width:175px;
+	height:175px;
+	background:url(images/gauge.png) center 0px no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	left:50%;
+	margin-left:-87.5px;
+	padding-top:40px;
+}
+.roamGaugeTitle{
+	position:absolute;
+	bottom:0;
+	width:100%;
+}
+.roamGaugePanel>div{
+	width:33%;
+	text-align:center;
+	font-size:28px;
+	position:relative;
+	height:230px;
+}
+.roamGaugePanel>div:nth-child(n+4){
+	margin-top:35px;
+}
+
+#appGridHeader>div:nth-child(1){
+	width:31%;
+	color:#dfdfdf;
+}
+#appGridHeader>div:nth-child(n+2){
+	width:22%;
+	margin-left:1%;
+	color:#dfdfdf;
+}
+
+#appGridBody>div{
+	height:72px;
+	text-align:center;
+	line-height:72px;
+}
+.appGridDarkTd{
+	background:rgba(0,102,255,0.35);
+}
+.appGridLightTd{
+	background:rgba(0,102,255,0.15);
+}
+#appGridBody>div:nth-child(n+5){
+	margin-top:1%;
+}
+
+#appGridBody>div:nth-child(4n+1){
+	width:31%;
+}
+#appGridBody>div:nth-child(4n+2){
+	width:22%;
+	margin-left:1%;
+}
+#appGridBody>div:nth-child(4n+3){
+	width:22%;
+	margin-left:1%;
+}
+#appGridBody>div:nth-child(4n+4){
+	width:22%;
+	margin-left:1%;
+}
+.appGridBody>div:nth-child(n+5){
+	margin-top:1%;
+}
+
+.appGridBody>div:nth-child(4n+1){
+	width:31%;
+}
+.appGridBody>div:nth-child(4n+2){
+	width:22%;
+	margin-left:1%;
+}
+.appGridBody>div:nth-child(4n+3){
+	width:22%;
+	margin-left:1%;
+}
+.appGridBody>div:nth-child(4n+4){
+	width:22%;
+	margin-left:1%;
+}
+.roammaptip{
+	width:253px;
+	height:68px;
+	background:url(images/maptip.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+
+.roamcenterswitch_intl{
+	width:412px;
+	height:132px;
+	background:url(images/roamcenterswitch_intl.png) center 0px no-repeat;
+	background-size:100% 100%;
+	cursor:pointer;
+}
+.roamcenterswitch_pro{
+	width:412px;
+	height:132px;
+	background:url(images/roamcenterswitch_pro.png) center 0px no-repeat;
+	background-size:100% 100%;
+	cursor:pointer;
+}
+.airportroam{
+	width:388px;
+	height:486px;
+	background:url(images/bg.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.roamusericon{
+	width:32px;
+	height:32px;
+	background:url(images/user.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.airportroamclose{
+	width:24px;
+	height:24px;
+	background:url(images/close.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.airportroamnum{
+	width:50px;
+	height:70px;
+	background:url(images/numbg.png) center 0px no-repeat;
+	background-size:100% 100%;
+	color:#65e7ff;
+	font-size:48px;
+	text-align:center;
+	margin-left:8px;
+}
+.roamTipNew{
+	width:282px;
+	height:112px;
+	background:url(images/tipbg.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.roamTipAnimation{
+	transform:rotateY(360deg);
+   -ms-transform:rotatY(360deg); 	/* IE 9 */
+   -moz-transform:rotateY(360deg); 	/* Firefox */
+   -webkit-transform:rotateY(360deg); /* Safari 和 Chrome */
+    -o-transform:rotateY(360deg);
+    transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out; /* Firefox 4 */
+    -webkit-transition: all 1s ease-in-out; /* Safari 和 Chrome */
+    -o-transition: all 1s ease-in-out; /* Opera */
+}
+.legendColorBar{
+	width:30px;
+	height:250px;
+	background:url(images/colorBar.png) center 0px no-repeat;
+	background-size:100% 100%;		
+}
+.roamfakeprogress{
+	width:110px;
+	height:18px;
+	background:url(images/progressbar.png) center 0px no-repeat;
+	background-size:100% 100%;		
+}

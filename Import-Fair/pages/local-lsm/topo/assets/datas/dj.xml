@@ -1,0 +1,234 @@
+<Topo from="CACHE" id="assets/datas/dj.xml" name="软交换端局拓扑图">
+  <Groups>
+    <Group resourceType="MSCSERVER" id="mmgsgroup9" name="GS(4)" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="1103.0189189594596" y="363.5"/>
+    <Group resourceType="MSCSERVER" id="mmgsgroup11" name="GS(3)" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="1320.7027028513514" y="355.70000000000005"/>
+    <Group resourceType="MSCSERVER" id="mmgsgroup7" name="GS(2)" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="877.791891895946" y="361.8"/>
+    <Group resourceType="MSCSERVER" id="mmgsgroup5" name="GS(3)" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="659.8635135067568" y="370.54999999999984"/>
+    <Group resourceType="MSCSERVER" id="mmgsgroup3" name="GS(2)" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="436.0216216108108" y="357.5"/>
+    <Group resourceType="MSCSERVER" id="mmgsgroup1" name="GS(4)" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="208.48513511756755" y="365.55"/>
+    <Group resourceType="MSCSERVER" id="mmgsgroup12" name="GS(2)" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="1322.6081080540541" y="583.1"/>
+    <Group resourceType="MSCSERVER" id="mmgsgroup10" name="GS(3)" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="1107.8094592297298" y="591.8"/>
+    <Group resourceType="MSCSERVER" id="mmgsgroup8" name="GS(4)" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="888.0270270135136" y="600.05"/>
+    <Group resourceType="MSCSERVER" id="mmgsgroup6" name="GS(4)" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="666.0283783891891" y="605.55"/>
+    <Group resourceType="MSCSERVER" id="mmgsgroup4" name="GS(3)" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="444.3986486243243" y="586.9"/>
+    <Group resourceType="MSCSERVER" id="mmgsgroup2" name="GS(4)" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="224.0256756878378" y="616.0333333333333"/>
+    <Group resourceType="IP专网" id="ar" name="IP专网" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="565.2258825231479" y="91.7"/>
+  </Groups>
+  <Nodes>
+    <Node resourceType="RETURN" resourceId="" id="mmreturnipnet" name="返回IP承载网" isSegment="true-assets/datas/ipnet.xml" image="assets/images/icons/resource/0/online/return.png" x="500" y="10"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb233520038" id="8a5d92813488f4f301348cb233520038" name="CE19" image="assets/images/icons/resource/0/online/ce.png" x="353.66814744801513" y="196"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c4af970008" id="8a5dffbc2f7608f8012f94c4af970008" name="浦东AR3" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="430.225882523148" y="91.7"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb233540039" id="8a5d92813488f4f301348cb233540039" name="CE20" image="assets/images/icons/resource/0/online/ce.png" x="407.4226843100189" y="196"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c5e4890009" id="8a5dffbc2f7608f8012f94c5e4890009" name="金桥AR4" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="235.7258825231479" y="91.7"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb233450032" id="8a5d92813488f4f301348cb233450032" name="CE11" image="assets/images/icons/resource/0/online/ce.png" x="783.7044423440453" y="196"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb233470033" id="8a5d92813488f4f301348cb233470033" name="CE12" image="assets/images/icons/resource/0/online/ce.png" x="837.4589792060491" y="196"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb2334a0034" id="8a5d92813488f4f301348cb2334a0034" name="CE13" image="assets/images/icons/resource/0/online/ce.png" x="891.2135160680529" y="196"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb2334c0035" id="8a5d92813488f4f301348cb2334c0035" name="CE14" image="assets/images/icons/resource/0/online/ce.png" x="944.9680529300567" y="196"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb2334e0036" id="8a5d92813488f4f301348cb2334e0036" name="CE15" image="assets/images/icons/resource/0/online/ce.png" x="676.1953686200378" y="196"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb233500037" id="8a5d92813488f4f301348cb233500037" name="CE16" image="assets/images/icons/resource/0/online/ce.png" x="729.9499054820416" y="196"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb23356003a" id="8a5d92813488f4f301348cb23356003a" name="CE21" image="assets/images/icons/resource/0/online/ce.png" x="998.7225897920605" y="196"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c6e94a000a" id="8a5dffbc2f7608f8012f94c6e94a000a" name="万荣AR5" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="894.7258825231479" y="91.7"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb23358003b" id="8a5d92813488f4f301348cb23358003b" name="CE22" image="assets/images/icons/resource/0/online/ce.png" x="1052.4771266540643" y="196"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c85302000b" id="8a5dffbc2f7608f8012f94c85302000b" name="钦州AR6" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="672.7258825231479" y="91.7"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb2335a003c" id="8a5d92813488f4f301348cb2335a003c" name="CE25" image="assets/images/icons/resource/0/online/ce.png" x="568.6862948960302" y="196"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb2335c003d" id="8a5d92813488f4f301348cb2335c003d" name="CE26" image="assets/images/icons/resource/0/online/ce.png" x="622.440831758034" y="196"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c929c4000c" id="8a5dffbc2f7608f8012f94c929c4000c" name="浦东AR7" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="301.22588252314796" y="91.7"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb233640040" id="8a5d92813488f4f301348cb233640040" name="CE29" image="assets/images/icons/resource/0/online/ce.png" x="461.17722117202266" y="196"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94ca4d42000d" id="8a5dffbc2f7608f8012f94ca4d42000d" name="金桥AR8" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="482.225882523148" y="91.7"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb233690041" id="8a5d92813488f4f301348cb233690041" name="CE30" image="assets/images/icons/resource/0/online/ce.png" x="514.9317580340264" y="196"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb2335e003e" id="8a5d92813488f4f301348cb2335e003e" name="CE27" image="assets/images/icons/resource/0/online/ce.png" x="1106.231663516068" y="196"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb23361003f" id="8a5d92813488f4f301348cb23361003f" name="CE28" image="assets/images/icons/resource/0/online/ce.png" x="1159.9862003780718" y="196"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb2336b0042" id="8a5d92813488f4f301348cb2336b0042" name="CE31" image="assets/images/icons/resource/0/online/ce.png" x="1213.7407372400755" y="196"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb2336d0043" id="8a5d92813488f4f301348cb2336d0043" name="CE32" image="assets/images/icons/resource/0/online/ce.png" x="1267.4952741020793" y="196"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94cb470c000e" id="8a5dffbc2f7608f8012f94cb470c000e" name="万荣AR9" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="617.2258825231479" y="91.7"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb233710044" id="8a5d92813488f4f301348cb233710044" name="CE35" image="assets/images/icons/resource/0/online/ce.png" x="1321.249810964083" y="196"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94cbf085000f" id="8a5dffbc2f7608f8012f94cbf085000f" name="钦州AR10" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="831.7258825231479" y="91.7"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG67" name="G67" group="mmgsgroup2" image="assets/images/icons/resource/0/online/mscserver.png" x="151.0256756756756" y="632.0277777777778"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG66" name="G66" group="mmgsgroup2" image="assets/images/icons/resource/0/online/mscserver.png" x="151.0256756756756" y="582.0388888888888"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG69" name="G69" group="mmgsgroup2" image="assets/images/icons/resource/0/online/mscserver.png" x="151.0256756756756" y="682.0166666666667"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG65" name="G65" group="mmgsgroup2" image="assets/images/icons/resource/0/online/mscserver.png" x="151.0256756756756" y="532.05"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG6701" name="MGG6701" group="mmgsgroup2" image="assets/images/icons/resource/0/online/mgw.png" x="221.02567570000002" y="632.0277777777778"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG6601" name="MGG6601" group="mmgsgroup2" image="assets/images/icons/resource/0/online/mgw.png" x="221.02567570000002" y="582.0388888888888"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG6901" name="MGG6901" group="mmgsgroup2" image="assets/images/icons/resource/0/online/mgw.png" x="221.02567570000002" y="682.0166666666667"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG6501" name="MGG6501" group="mmgsgroup2" image="assets/images/icons/resource/0/online/mgw.png" x="221.02567570000002" y="532.05"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG6702" name="MGG6702" group="mmgsgroup2" image="assets/images/icons/resource/0/online/mgw.png" x="291.0256757" y="632.0277777777778"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG6602" name="MGG6602" group="mmgsgroup2" image="assets/images/icons/resource/0/online/mgw.png" x="291.0256757" y="582.0388888888888"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG6902" name="MGG6902" group="mmgsgroup2" image="assets/images/icons/resource/0/online/mgw.png" x="291.0256757" y="682.0166666666667"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG6502" name="MGG6502" group="mmgsgroup2" image="assets/images/icons/resource/0/online/mgw.png" x="291.0256757" y="532.05"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG50" name="G50" group="mmgsgroup4" image="assets/images/icons/resource/0/online/mscserver.png" x="371.39864864864865" y="524.4"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG51" name="G51" group="mmgsgroup4" image="assets/images/icons/resource/0/online/mscserver.png" x="371.39864864864865" y="577.9"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG56" name="G56" group="mmgsgroup4" image="assets/images/icons/resource/0/online/mscserver.png" x="371.39864864864865" y="631.4"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG5001" name="MGG5001" group="mmgsgroup4" image="assets/images/icons/resource/0/online/mgw.png" x="441.3986486" y="524.4"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG5101" name="MGG5101" group="mmgsgroup4" image="assets/images/icons/resource/0/online/mgw.png" x="441.3986486" y="577.9"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG5601" name="MGG5601" group="mmgsgroup4" image="assets/images/icons/resource/0/online/mgw.png" x="441.3986486" y="631.4"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG5002" name="MGG5002" group="mmgsgroup4" image="assets/images/icons/resource/0/online/mgw.png" x="511.3986486" y="524.4"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG5102" name="MGG5102" group="mmgsgroup4" image="assets/images/icons/resource/0/online/mgw.png" x="511.3986486" y="577.9"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG5602" name="MGG5602" group="mmgsgroup4" image="assets/images/icons/resource/0/online/mgw.png" x="511.3986486" y="631.4"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG76" name="G76" group="mmgsgroup6" image="assets/images/icons/resource/0/online/mscserver.png" x="593.0283783783783" y="666.05"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG72" name="G72" group="mmgsgroup6" image="assets/images/icons/resource/0/online/mscserver.png" x="593.0283783783783" y="619.7166666666667"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG70" name="G70" group="mmgsgroup6" image="assets/images/icons/resource/0/online/mscserver.png" x="593.0283783783783" y="527.05"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG71" name="G71" group="mmgsgroup6" image="assets/images/icons/resource/0/online/mscserver.png" x="593.0283783783783" y="573.3833333333332"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7601" name="MGG7601" group="mmgsgroup6" image="assets/images/icons/resource/0/online/mgw.png" x="663.0283784" y="666.05"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7201" name="MGG7201" group="mmgsgroup6" image="assets/images/icons/resource/0/online/mgw.png" x="663.0283784" y="619.7166666666667"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7001" name="MGG7001" group="mmgsgroup6" image="assets/images/icons/resource/0/online/mgw.png" x="663.0283784" y="527.05"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7101" name="MGG7101" group="mmgsgroup6" image="assets/images/icons/resource/0/online/mgw.png" x="663.0283784" y="573.3833333333332"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7602" name="MGG7602" group="mmgsgroup6" image="assets/images/icons/resource/0/online/mgw.png" x="733.0283784" y="666.05"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7202" name="MGG7202" group="mmgsgroup6" image="assets/images/icons/resource/0/online/mgw.png" x="733.0283784" y="619.7166666666667"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7002" name="MGG7002" group="mmgsgroup6" image="assets/images/icons/resource/0/online/mgw.png" x="733.0283784" y="527.05"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7102" name="MGG7102" group="mmgsgroup6" image="assets/images/icons/resource/0/online/mgw.png" x="733.0283784" y="573.3833333333332"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG74" name="G74" group="mmgsgroup8" image="assets/images/icons/resource/0/online/mscserver.png" x="815.0270270270272" y="615.3833333333332"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG64" name="G64" group="mmgsgroup8" image="assets/images/icons/resource/0/online/mscserver.png" x="815.0270270270272" y="518.05"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG73" name="G73" group="mmgsgroup8" image="assets/images/icons/resource/0/online/mscserver.png" x="815.0270270270272" y="566.7166666666667"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG75" name="G75" group="mmgsgroup8" image="assets/images/icons/resource/0/online/mscserver.png" x="815.0270270270272" y="664.05"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7401" name="MGG7401" group="mmgsgroup8" image="assets/images/icons/resource/0/online/mgw.png" x="885.027027" y="615.3833333333332"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG6401" name="MGG6401" group="mmgsgroup8" image="assets/images/icons/resource/0/online/mgw.png" x="885.027027" y="518.05"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7301" name="MGG7301" group="mmgsgroup8" image="assets/images/icons/resource/0/online/mgw.png" x="885.027027" y="566.7166666666667"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7501" name="MGG7501" group="mmgsgroup8" image="assets/images/icons/resource/0/online/mgw.png" x="885.027027" y="664.05"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7402" name="MGG7402" group="mmgsgroup8" image="assets/images/icons/resource/0/online/mgw.png" x="955.027027" y="615.3833333333332"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG6402" name="MGG6402" group="mmgsgroup8" image="assets/images/icons/resource/0/online/mgw.png" x="955.027027" y="518.05"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7302" name="MGG7302" group="mmgsgroup8" image="assets/images/icons/resource/0/online/mgw.png" x="955.027027" y="566.7166666666667"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7502" name="MGG7502" group="mmgsgroup8" image="assets/images/icons/resource/0/online/mgw.png" x="955.027027" y="664.05"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG85" name="G85" group="mmgsgroup10" image="assets/images/icons/resource/0/online/mscserver.png" x="1034.8094594594595" y="533.8"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG87" name="G87" group="mmgsgroup10" image="assets/images/icons/resource/0/online/mscserver.png" x="1034.8094594594595" y="582.8"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG89" name="G89" group="mmgsgroup10" image="assets/images/icons/resource/0/online/mscserver.png" x="1034.8094594594595" y="631.8"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8501" name="MGG8501" group="mmgsgroup10" image="assets/images/icons/resource/0/online/mgw.png" x="1104.809459" y="533.8"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8701" name="MGG8701" group="mmgsgroup10" image="assets/images/icons/resource/0/online/mgw.png" x="1104.809459" y="582.8"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8901" name="MGG8901" group="mmgsgroup10" image="assets/images/icons/resource/0/online/mgw.png" x="1104.809459" y="631.8"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8502" name="MGG8502" group="mmgsgroup10" image="assets/images/icons/resource/0/online/mgw.png" x="1174.809459" y="533.8"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8702" name="MGG8702" group="mmgsgroup10" image="assets/images/icons/resource/0/online/mgw.png" x="1174.809459" y="582.8"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8902" name="MGG8902" group="mmgsgroup10" image="assets/images/icons/resource/0/online/mgw.png" x="1174.809459" y="631.8"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG88" name="G88" group="mmgsgroup12" image="assets/images/icons/resource/0/online/mscserver.png" x="1249.6081081081084" y="542.6"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG90" name="G90" group="mmgsgroup12" image="assets/images/icons/resource/0/online/mscserver.png" x="1249.6081081081084" y="605.6"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8801" name="MGG8801" group="mmgsgroup12" image="assets/images/icons/resource/0/online/mgw.png" x="1319.608108" y="542.6"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG9001" name="MGG9001" group="mmgsgroup12" image="assets/images/icons/resource/0/online/mgw.png" x="1319.608108" y="605.6"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8802" name="MGG8802" group="mmgsgroup12" image="assets/images/icons/resource/0/online/mgw.png" x="1389.608108" y="542.6"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG9002" name="MGG9002" group="mmgsgroup12" image="assets/images/icons/resource/0/online/mgw.png" x="1389.608108" y="605.6"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG60" name="G60" group="mmgsgroup1" image="assets/images/icons/resource/0/online/mscserver.png" x="144.48513513513515" y="390.05"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG58" name="G58" group="mmgsgroup1" image="assets/images/icons/resource/0/online/mscserver.png" x="144.48513513513515" y="292.05"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG59" name="G59" group="mmgsgroup1" image="assets/images/icons/resource/0/online/mscserver.png" x="144.48513513513515" y="341.05"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG68" name="G68" group="mmgsgroup1" image="assets/images/icons/resource/0/online/mscserver.png" x="144.48513513513515" y="439.05"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG6001" name="MGG6001" group="mmgsgroup1" image="assets/images/icons/resource/0/online/mgw.png" x="214.4851351" y="390.05"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG5801" name="MGG5801" group="mmgsgroup1" image="assets/images/icons/resource/0/online/mgw.png" x="214.4851351" y="292.05"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG5901" name="MGG5901" group="mmgsgroup1" image="assets/images/icons/resource/0/online/mgw.png" x="214.4851351" y="341.05"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG6801" name="MGG6801" group="mmgsgroup1" image="assets/images/icons/resource/0/online/mgw.png" x="214.4851351" y="439.05"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG6002" name="MGG6002" group="mmgsgroup1" image="assets/images/icons/resource/0/online/mgw.png" x="284.4851351" y="390.05"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG5802" name="MGG5802" group="mmgsgroup1" image="assets/images/icons/resource/0/online/mgw.png" x="284.4851351" y="292.05"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG5902" name="MGG5902" group="mmgsgroup1" image="assets/images/icons/resource/0/online/mgw.png" x="284.4851351" y="341.05"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG6802" name="MGG6802" group="mmgsgroup1" image="assets/images/icons/resource/0/online/mgw.png" x="284.4851351" y="439.05"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG77" name="G77" group="mmgsgroup3" image="assets/images/icons/resource/0/online/mscserver.png" x="363.02162162162165" y="320"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG78" name="G78" group="mmgsgroup3" image="assets/images/icons/resource/0/online/mscserver.png" x="363.02162162162165" y="377"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7701" name="MGG7701" group="mmgsgroup3" image="assets/images/icons/resource/0/online/mgw.png" x="433.0216216" y="320"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7801" name="MGG7801" group="mmgsgroup3" image="assets/images/icons/resource/0/online/mgw.png" x="433.0216216" y="377"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7702" name="MGG7702" group="mmgsgroup3" image="assets/images/icons/resource/0/online/mgw.png" x="503.0216216" y="320"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7802" name="MGG7802" group="mmgsgroup3" image="assets/images/icons/resource/0/online/mgw.png" x="503.0216216" y="377"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG82" name="G82" group="mmgsgroup5" image="assets/images/icons/resource/0/online/mscserver.png" x="586.8635135135136" y="312.2499999999999"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG83" name="G83" group="mmgsgroup5" image="assets/images/icons/resource/0/online/mscserver.png" x="586.8635135135136" y="361.54999999999984"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG84" name="G84" group="mmgsgroup5" image="assets/images/icons/resource/0/online/mscserver.png" x="586.8635135135136" y="410.8499999999998"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8201" name="MGG8201" group="mmgsgroup5" image="assets/images/icons/resource/0/online/mgw.png" x="656.8635135000001" y="312.2499999999999"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8301" name="MGG8301" group="mmgsgroup5" image="assets/images/icons/resource/0/online/mgw.png" x="656.8635135000001" y="361.54999999999984"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8401" name="MGG8401" group="mmgsgroup5" image="assets/images/icons/resource/0/online/mgw.png" x="656.8635135000001" y="410.8499999999998"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8202" name="MGG8202" group="mmgsgroup5" image="assets/images/icons/resource/0/online/mgw.png" x="726.8635135000001" y="312.2499999999999"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8302" name="MGG8302" group="mmgsgroup5" image="assets/images/icons/resource/0/online/mgw.png" x="726.8635135000001" y="361.54999999999984"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8402" name="MGG8402" group="mmgsgroup5" image="assets/images/icons/resource/0/online/mgw.png" x="726.8635135000001" y="410.8499999999998"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG57" name="G57" group="mmgsgroup7" image="assets/images/icons/resource/0/online/mscserver.png" x="804.791891891892" y="327.8"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG63" name="G63" group="mmgsgroup7" image="assets/images/icons/resource/0/online/mscserver.png" x="804.791891891892" y="377.8"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG5701" name="MGG5701" group="mmgsgroup7" image="assets/images/icons/resource/0/online/mgw.png" x="874.7918919" y="327.8"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG6301" name="MGG6301" group="mmgsgroup7" image="assets/images/icons/resource/0/online/mgw.png" x="874.7918919" y="377.8"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG5702" name="MGG5702" group="mmgsgroup7" image="assets/images/icons/resource/0/online/mgw.png" x="944.7918919" y="327.8"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG6302" name="MGG6302" group="mmgsgroup7" image="assets/images/icons/resource/0/online/mgw.png" x="944.7918919" y="377.8"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG61" name="G61" group="mmgsgroup11" image="assets/images/icons/resource/0/online/mscserver.png" x="1247.702702702703" y="394.70000000000005"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG55" name="G55" group="mmgsgroup11" image="assets/images/icons/resource/0/online/mscserver.png" x="1247.702702702703" y="346.70000000000005"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG54" name="G54" group="mmgsgroup11" image="assets/images/icons/resource/0/online/mscserver.png" x="1247.702702702703" y="298.70000000000005"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG6101" name="MGG6101" group="mmgsgroup11" image="assets/images/icons/resource/0/online/mgw.png" x="1317.7027030000002" y="394.70000000000005"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG5501" name="MGG5501" group="mmgsgroup11" image="assets/images/icons/resource/0/online/mgw.png" x="1317.7027030000002" y="346.70000000000005"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG5401" name="MGG5401" group="mmgsgroup11" image="assets/images/icons/resource/0/online/mgw.png" x="1317.7027030000002" y="298.70000000000005"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG6102" name="MGG6102" group="mmgsgroup11" image="assets/images/icons/resource/0/online/mgw.png" x="1387.7027030000002" y="394.70000000000005"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG5502" name="MGG5502" group="mmgsgroup11" image="assets/images/icons/resource/0/online/mgw.png" x="1387.7027030000002" y="346.70000000000005"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG5402" name="MGG5402" group="mmgsgroup11" image="assets/images/icons/resource/0/online/mgw.png" x="1387.7027030000002" y="298.70000000000005"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG86" name="G86" group="mmgsgroup9" image="assets/images/icons/resource/0/online/mscserver.png" x="1030.018918918919" y="421"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG80" name="G80" group="mmgsgroup9" image="assets/images/icons/resource/0/online/mscserver.png" x="1030.018918918919" y="332.3333333333333"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG79" name="G79" group="mmgsgroup9" image="assets/images/icons/resource/0/online/mscserver.png" x="1030.018918918919" y="288"/>
+    <Node resourceType="MSCSERVER" resourceId="" id="mmG81" name="G81" group="mmgsgroup9" image="assets/images/icons/resource/0/online/mscserver.png" x="1030.018918918919" y="376.6666666666667"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8601" name="MGG8601" group="mmgsgroup9" image="assets/images/icons/resource/0/online/mgw.png" x="1100.0189189" y="421"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8001" name="MGG8001" group="mmgsgroup9" image="assets/images/icons/resource/0/online/mgw.png" x="1100.0189189" y="332.3333333333333"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7901" name="MGG7901" group="mmgsgroup9" image="assets/images/icons/resource/0/online/mgw.png" x="1100.0189189" y="288"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8101" name="MGG8101" group="mmgsgroup9" image="assets/images/icons/resource/0/online/mgw.png" x="1100.0189189" y="376.6666666666667"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8602" name="MGG8602" group="mmgsgroup9" image="assets/images/icons/resource/0/online/mgw.png" x="1170.018919" y="421"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8002" name="MGG8002" group="mmgsgroup9" image="assets/images/icons/resource/0/online/mgw.png" x="1170.018919" y="332.3333333333333"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG7902" name="MGG7902" group="mmgsgroup9" image="assets/images/icons/resource/0/online/mgw.png" x="1170.018919" y="288"/>
+    <Node resourceType="MGW" resourceId="" id="mmMGG8102" name="MGG8102" group="mmgsgroup9" image="assets/images/icons/resource/0/online/mgw.png" x="1170.018919" y="376.6666666666667"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb233730045" id="8a5d92813488f4f301348cb233730045" name="CE36" image="assets/images/icons/resource/0/online/ce.png" x="1375.0043478260868" y="196"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb23338002e" id="8a5d92813488f4f301348cb23338002e" name="CE07" image="assets/images/icons/resource/0/online/ce.png" x="138.65000000000003" y="196"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb2333f002f" id="8a5d92813488f4f301348cb2333f002f" name="CE08" image="assets/images/icons/resource/0/online/ce.png" x="192.4045368620038" y="196"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb233410030" id="8a5d92813488f4f301348cb233410030" name="CE09" image="assets/images/icons/resource/0/online/ce.png" x="246.15907372400758" y="196"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb233430031" id="8a5d92813488f4f301348cb233430031" name="CE10" image="assets/images/icons/resource/0/online/ce.png" x="299.9136105860114" y="196"/>
+  </Nodes>
+  <Links>
+    <Link resourceType="CE-CE" fromId="8a5d92813488f4f301348cb233520038" toId="8a5d92813488f4f301348cb233540039" color="65280" name=""/>
+    <Link resourceType="CE-CE" fromId="8a5d92813488f4f301348cb233640040" toId="8a5d92813488f4f301348cb233690041" color="65280" name=""/>
+    <Link resourceType="CE-CE" fromId="8a5d92813488f4f301348cb2335a003c" toId="8a5d92813488f4f301348cb2335c003d" color="65280" name=""/>
+    <Link resourceType="CE-CE" fromId="8a5d92813488f4f301348cb2334e0036" toId="8a5d92813488f4f301348cb233500037" color="65280" name=""/>
+    <Link resourceType="CE-CE" fromId="8a5d92813488f4f301348cb233450032" toId="8a5d92813488f4f301348cb233470033" color="65280" name=""/>
+    <Link resourceType="CE-CE" fromId="8a5d92813488f4f301348cb2334a0034" toId="8a5d92813488f4f301348cb2334c0035" color="65280" name=""/>
+    <Link resourceType="CE-CE" fromId="8a5d92813488f4f301348cb23356003a" toId="8a5d92813488f4f301348cb23358003b" color="65280" name=""/>
+    <Link resourceType="CE-CE" fromId="8a5d92813488f4f301348cb2335e003e" toId="8a5d92813488f4f301348cb23361003f" color="65280" name=""/>
+    <Link resourceType="CE-CE" fromId="8a5d92813488f4f301348cb2336b0042" toId="8a5d92813488f4f301348cb2336d0043" color="65280" name=""/>
+    <Link resourceType="CE-CE" fromId="8a5d92813488f4f301348cb233710044" toId="8a5d92813488f4f301348cb233730045" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb233710044" toId="mmgsgroup12" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb233730045" toId="mmgsgroup12" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb2336d0043" toId="mmgsgroup11" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb23361003f" toId="mmgsgroup10" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb2335e003e" toId="mmgsgroup10" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb23358003b" toId="mmgsgroup9" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb23356003a" toId="mmgsgroup9" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb2336b0042" toId="mmgsgroup11" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb2334a0034" toId="mmgsgroup8" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb2334c0035" toId="mmgsgroup8" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb233470033" toId="mmgsgroup7" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb233450032" toId="mmgsgroup7" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb233500037" toId="mmgsgroup6" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb2334e0036" toId="mmgsgroup6" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb2335c003d" toId="mmgsgroup5" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb2335a003c" toId="mmgsgroup5" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb233690041" toId="mmgsgroup4" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb233640040" toId="mmgsgroup4" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb233540039" toId="mmgsgroup3" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb233520038" toId="mmgsgroup3" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb233430031" toId="mmgsgroup2" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb233410030" toId="mmgsgroup2" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb2333f002f" toId="mmgsgroup1" color="65280" name=""/>
+    <Link resourceType="CE-AR" fromId="8a5d92813488f4f301348cb23338002e" toId="8a5dffbc2f7608f8012f94c4af970008" color="65280" name=""/>
+    <Link resourceType="CE-AR" fromId="8a5d92813488f4f301348cb2333f002f" toId="8a5dffbc2f7608f8012f94c5e4890009" color="65280" name=""/>
+    <Link resourceType="CE-AR" fromId="8a5d92813488f4f301348cb233410030" toId="8a5dffbc2f7608f8012f94c4af970008" color="65280" name=""/>
+    <Link resourceType="CE-AR" fromId="8a5d92813488f4f301348cb233430031" toId="8a5dffbc2f7608f8012f94c5e4890009" color="65280" name=""/>
+    <Link resourceType="CE-AR" fromId="8a5d92813488f4f301348cb233520038" toId="8a5dffbc2f7608f8012f94c4af970008" color="65280" name=""/>
+    <Link resourceType="CE-AR" fromId="8a5d92813488f4f301348cb233540039" toId="8a5dffbc2f7608f8012f94c5e4890009" color="65280" name=""/>
+    <Link resourceType="CE-AR" fromId="8a5d92813488f4f301348cb233450032" toId="8a5dffbc2f7608f8012f94c6e94a000a" color="65280" name=""/>
+    <Link resourceType="CE-AR" fromId="8a5d92813488f4f301348cb233470033" toId="8a5dffbc2f7608f8012f94c85302000b" color="65280" name=""/>
+    <Link resourceType="CE-AR" fromId="8a5d92813488f4f301348cb2334a0034" toId="8a5dffbc2f7608f8012f94c6e94a000a" color="65280" name=""/>
+    <Link resourceType="CE-AR" fromId="8a5d92813488f4f301348cb2334c0035" toId="8a5dffbc2f7608f8012f94c85302000b" color="65280" name=""/>
+    <Link resourceType="CE-AR" fromId="8a5d92813488f4f301348cb2334e0036" toId="8a5dffbc2f7608f8012f94c6e94a000a" color="65280" name=""/>
+    <Link resourceType="CE-AR" fromId="8a5d92813488f4f301348cb233500037" toId="8a5dffbc2f7608f8012f94c85302000b" color="65280" name=""/>
+    <Link resourceType="CE-AR" fromId="8a5d92813488f4f301348cb23356003a" toId="8a5dffbc2f7608f8012f94c6e94a000a" color="65280" name=""/>
+    <Link resourceType="CE-AR" fromId="8a5d92813488f4f301348cb23358003b" toId="8a5dffbc2f7608f8012f94c85302000b" color="65280" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94c929c4000c" toId="8a5d92813488f4f301348cb2335a003c" color="65280" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94ca4d42000d" toId="8a5d92813488f4f301348cb2335c003d" color="65280" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94c929c4000c" toId="8a5d92813488f4f301348cb233640040" color="65280" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94ca4d42000d" toId="8a5d92813488f4f301348cb233690041" color="65280" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94cb470c000e" toId="8a5d92813488f4f301348cb2335e003e" color="65280" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94cbf085000f" toId="8a5d92813488f4f301348cb23361003f" color="65280" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94cb470c000e" toId="8a5d92813488f4f301348cb2336b0042" color="65280" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94cbf085000f" toId="8a5d92813488f4f301348cb2336d0043" color="65280" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94cb470c000e" toId="8a5d92813488f4f301348cb233710044" color="65280" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94cbf085000f" toId="8a5d92813488f4f301348cb233730045" color="65280" name=""/>
+    <Link resourceType="CE-MSCSERVER" fromId="8a5d92813488f4f301348cb23338002e" toId="mmgsgroup1" color="65280" name=""/>
+    <Link resourceType="CE-CE" fromId="8a5d92813488f4f301348cb23338002e" toId="8a5d92813488f4f301348cb2333f002f" color="65280" name=""/>
+    <Link resourceType="CE-CE" fromId="8a5d92813488f4f301348cb233410030" toId="8a5d92813488f4f301348cb233430031" color="65280" name=""/>
+  </Links>
+  <Labels>
+    <Label name="制表人：严敏" x="1201.35" y="44.95"/>
+    <Label name="软交换端局拓扑图" x="1201.35" y="4.8999999999999915"/>
+    <Label name="制表日期：2013-1-25" x="1201.35" y="85.00000000000001"/>
+    <Label name="——设备CPU利用率TOP" x="225.5" y="5"/>
+  </Labels>
+</Topo>

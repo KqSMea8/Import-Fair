@@ -1,0 +1,16 @@
+<config>
+	<group name="重点客户">
+		<user name="上海强生控股有限公司"		apn="gps-qst.sh" />
+		<user name="交通银行"    			apn="atm-95559.sh"  />
+		<user name="上海银联有限公司"    		apn="mpos-cupsh.sh"  />
+		<user name="招商银行"    			apn="mpos-cmbchina.sh"  />
+		<user name="直钱"    				apn="mpos-99bill2.sh"  />
+	</group>
+	<group name="千万级客户">
+		<user name="上海市电力公司（江场西路）"    apn="rmcs-smepc3.sh"  />	
+		<user name="兴业银行"    			apn="mpos-cibccc.sh" />	
+		<user name="上海消防局"    			apn="xf-dw.sh" />	
+		<user name="北京拉卡拉网络有限公司"  	apn="mpos-lklsd.sh" />
+		<user name="上海汇付数据服务有限公司"	apn="chinapnr.sh" />
+	</group>
+</config>																																																																																																																																																																																																																																																								

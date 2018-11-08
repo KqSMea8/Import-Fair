@@ -1,0 +1,247 @@
+html{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+body{
+	width:100%;
+	height:100%;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	position:relative;
+	overflow:hidden;
+}
+
+#container{
+	margin:0px;
+	padding:0px;
+	width:100%;
+	height:100%;
+	background-image:url(images/bg.jpg);
+	background-size:100% 100%;
+	overflow:auto;
+	text-align:center;
+	position:relative;
+}
+#list{
+	width:260px;
+	height:90%;
+	display:inline-block;
+	position:absolute;
+	border-radius:8px;
+	background-image:url(images/side_bar.png);
+	background-size:100% 100%;
+	top:5%;
+	padding:15px 50px 15px 0px;
+	left:-215px;
+	overflow-y:auto;
+}
+#imgSet{
+	width:79%;
+	height:100%;
+	display:inline-block;
+	border:solid 1px #ffffff;
+	margin-left:5px;
+	float:left;
+	padding:10px;
+	border-radius:8px;
+}
+.listul{
+	width:100%;
+	padding:0px;
+}
+.listItem{
+	font-family:微软雅黑;
+    list-style-type:none; 
+    line-height: 60px;
+    margin:5px;
+    padding-left:5px;
+    padding-top:10px;
+    
+    white-space:nowrap;
+    overflow:hidden;
+    text-align:center;
+    border-top:solid 1px #0353ec;
+    position:relative;
+}
+.pcIcon{
+	position:absolute;
+	right:5px;
+	top:5px;
+	cursor:pointer;
+}
+.itemImg{
+	width:100px;
+	height:100px;
+	cursor:pointer;
+}
+
+.itemName{
+	display:block;
+	height:50px;
+	font-size:32px; 
+	margin-left:15px;
+	color:#ffffff;
+	line-height:50px;
+	white-space:nowrap;
+}
+.listItem:hover{
+}
+.listSelected{
+	border-top:none;
+	border-radius:8px;
+	background:#78beff;
+	color:white;
+}
+.imgItem{
+	display:inline-block;
+	width:49%;
+	height:49%;
+	cursor:pointer;
+}
+.ui-pager-control{
+	text-align:center;
+}
+.ui-jqgrid .ui-pg-input, .ui-jqgrid .ui-jqgrid-toppager .ui-pg-input {
+    height: 20px;
+    line-height:20px;
+    width: auto;
+    font-size: 12px;
+    margin: 0;
+    line-height: inherit;
+    border: none;
+    padding: 3px 2px;
+}
+
+/*模态框*/
+.wxapp-modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    display: none;
+}
+
+.wxapp-modal .content {
+    width: 100%;
+    top:50%;
+    margin-top: -325px;
+    text-align: center;
+    position: absolute;
+}
+
+.wxapp-modal .content .header {
+    margin: auto;
+    width: 93%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color:#ffffff;
+    font-size:36px;
+    height:50px;
+    padding-top:10px;
+    background-color: #092745;
+    position: relative;
+    z-index: 9999;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 1px #eee solid;
+}
+
+.wxapp-modal .content .header a {
+    position: absolute;
+    right: 20px;
+}
+
+.wxapp-modal .content .body {
+    margin: auto;
+    width: 93%;
+    background-color: #092745;
+    position: relative;
+    z-index: 9999;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+}
+
+.wxapp-modal .content .footer {
+    margin: auto;
+    width: 93%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #FFFFFF;
+    position: relative;
+    z-index: 9999;
+    border-radius: 8px;
+    top: 10px;
+    text-align: center;
+}
+
+.wxapp-modal .content .footer button {
+    display: inline-block;
+    width: 49%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #FFFFFF;
+    margin-left: 0px;
+}
+
+.wxapp-modal .content .footer button:active {
+    background-color: #eee;
+}
+
+.wxapp-modal .content .footer button::after {
+    content: none;
+}
+
+.wxapp-modal .content .footer .cancel {
+    color: #fa5b43;
+    border-right: 1px #eee solid;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.wxapp-modal .content .footer .confirm {
+    color: #1ed3fa;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.wxapp-modal .mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.cancel-con {
+	cursor:pointer;
+    font-size: x-large;
+    position: absolute;
+    right: 20px;
+}
+.icon_exportPic{
+	background-size:100% 100%;  
+	width:25px;
+	height:25px;
+	cursor:pointer; 
+} 
+.titleLabel{
+	display:inline-block;
+	font-size:20px; 
+	margin-left:15px;
+}
+.selectedTimeLabel{
+	width:180px;
+	height:30px;
+	font-size:16px;
+}
+.ui-jqgrid tr.jqgrow td{
+	color:white;
+}

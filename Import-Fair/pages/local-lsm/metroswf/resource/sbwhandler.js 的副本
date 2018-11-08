@@ -1,0 +1,421 @@
+var stationTypeMap={};
+var stationUponGroundMap={};
+var currentKpi="高客流";
+var currentKpiKey="总用户数";
+var currentOrder="desc";
+var currentKpiData=[];
+
+var intervalKey=0;
+var selectedTime=null;
+var timeRecorMap={};
+var videoIntervalKey=0;
+var currentTimeIndex=0;
+var playTimeArr=[];
+var firstTime=true;
+
+var lineIndexToLegendIndex={
+	1:0,
+	2:1,
+	3:2,
+	4:3,
+	5:4,
+	6:5,
+	7:6,
+	8:7,
+	9:8,
+	10:10,
+	11:12,
+	12:13,
+	13:11,
+	16:14
+};
+function handler_initPage(){
+	var dm=LSMScreen.DataManager.getInstance();
+	dm.getMetroLineStationCellType({},cellTypeDataHandler);
+	
+	
+	$(".kpiSpan").on('click',circleKpiChange);
+	$("#zoomBtn").on('click',changeMetroSize);
+	$("#ctrlBtn").on('click',ctrlPlay);
+}
+
+
+function ctrlPlay(evt){
+	if($("#ctrlBtn").hasClass("play")){
+		$("#ctrlBtn").removeClass("play");
+		$("#ctrlBtn").removeClass("pause");
+		$("#ctrlBtn").addClass("pause");
+		stopInterval();
+		play();
+	}else if($("#ctrlBtn").hasClass("pause")){
+		$("#ctrlBtn").removeClass("play");
+		$("#ctrlBtn").removeClass("pause");
+		$("#ctrlBtn").addClass("play");
+		clearInterval(videoIntervalKey);
+		restartInterval();
+	}
+}
+function pause(){
+	$("#ctrlBtn").removeClass("play");
+	$("#ctrlBtn").removeClass("pause");
+	$("#ctrlBtn").addClass("play");
+}
+function play(){
+	if($("#ctrlBtn").hasClass("pause")){
+		cacheTimeData();
+		clearInterval(videoIntervalKey);
+		videoIntervalKey=setInterval(showNextCircleData, 1000);
+	}
+}
+function cacheTimeData(){
+	playTimeArr=[];
+	var lag=1;
+	var videoTime=null;
+	currentTimeIndex=0;
+	var count=0;
+	while(lag>0){
+		count++;
+		var format="yyyy-MM-dd hh:mm:00";
+		var format0="yyyy-MM-dd 06:00:00";
+		var startTime=SUtils.getNowDateTime(format0);
+		if(videoTime==null){
+			videoTime=startTime;
+		}else{
+			var lastDate = new Date(videoTime.replace(/-/g,"/") );
+			lastDate.setMinutes(lastDate.getMinutes()+5);
+			videoTime=lastDate.Format(format);
+			var finalTime=SUtils.getDiffDateTimeFromNow(LSMScreen.DataManager.minBack,SUtils.TIME_TYPE.MIN, format);
+			var finalDate = new Date(finalTime.replace(/-/g,"/") );
+			lag=finalDate.getTime()-lastDate.getTime();
+		}
+		playTimeArr.push(videoTime);
+	}
+	updateUserCircleLoop(playTimeArr);
+}
+function showNextCircleData(){
+	if(currentTimeIndex<playTimeArr.length){
+		var time=playTimeArr[currentTimeIndex];
+		if(timeRecorMap[time]!=null){
+			redrawCircle(timeRecorMap[time]);
+			currentTimeIndex++;
+		}
+	}else{
+		clearInterval(videoIntervalKey);
+	}
+}
+function changeMetroSize(evt){
+	if($("#zoomBtn").hasClass("toFullScreen")){
+		$("#zoomBtn").removeClass("toFullScreen");
+		$("#zoomBtn").removeClass("toNormal");
+		$("#zoomBtn").addClass("toNormal");
+		parent.changeMetroSize(true);
+		$("#rankChartWin").css("display","block");
+	}else if($("#zoomBtn").hasClass("toNormal")){
+		$("#zoomBtn").removeClass("toFullScreen");
+		$("#zoomBtn").removeClass("toNormal");
+		$("#zoomBtn").addClass("toFullScreen");
+		parent.changeMetroSize(false);
+		$("#rankChartWin").css("display","none");
+	}
+}
+function circleKpiChange(evt){
+	var kpiLabel=$(evt.currentTarget).text();
+	$(".kpiSpan").removeClass("kpiSpanSelected");
+	$(evt.currentTarget).addClass("kpiSpanSelected");
+	updateUserCircleCache(kpiLabel);
+}
+function updateUserCircleLoop(timeArr){
+	for(var i=0;i<timeArr.length;i++){
+		var time=timeArr[i];
+		if(timeRecorMap[time]==null){
+			var dm=LSMScreen.DataManager.getInstance();
+			dm.getMetroStationKpiRank({sortKey:currentKpiKey,num:10000,order:currentOrder,time:time},cacheCircleData);
+		}
+	}
+}
+function cacheCircleData(result){
+	if(result!=null&&result.length>0){
+		timeRecorMap[result[0].time]=result;
+	}
+	
+}
+function updateUserCircle(){
+	var dm=LSMScreen.DataManager.getInstance();
+	dm.getMetroStationKpiRank({sortKey:currentKpiKey,num:10000,order:currentOrder,time:selectedTime},redrawCircle);
+}
+
+function updateUserCircleCache(keyLabel){
+	switch(keyLabel){
+		case "高客流":
+			currentKpi=keyLabel;
+			currentKpiKey="总用户数";
+			currentOrder="desc";
+			break;
+		case "低流量":
+			currentKpi=keyLabel;
+			currentKpiKey="总流量";
+			currentOrder="asc";
+			break;
+		case "低速率":
+			currentKpi=keyLabel;
+			currentKpiKey="下行速率500k";
+			currentOrder="asc";
+			break;
+		case "低感知":
+			currentKpi=keyLabel;
+			currentKpiKey="TCP掉线率";
+			currentOrder="desc";
+			break;
+		case "低活跃":
+			currentKpi=keyLabel;
+			currentKpiKey="4G用户数比例";
+			currentOrder="asc";
+			break;
+	}
+	updateUserCircle();
+}
+function redrawCircle(result){
+	if(result!=null&&result.length>0){
+		var time=result[0].time;
+		$("#timeSpan").text(time.substring(11,16));
+	}
+	currentKpiData=result;
+	refreshMetroSwfCircle(result);
+	if(firstTime){
+		firstTime=false;
+		cacheTimeData();
+	}
+}
+function refreshMetroSwfCircle(result){
+	var reverseFlag=false;
+	var maxRadius=45;
+	switch(currentKpi){
+		case "高客流":
+			reverseFlag=false;
+			maxRadius=45;
+			break;
+		case "低流量":
+			reverseFlag=true;
+			maxRadius=45;
+			break;
+		case "低速率":
+			reverseFlag=true;
+			maxRadius=45;
+			break;
+		case "低感知":
+			reverseFlag=false;
+			maxRadius=45;
+			break;
+		case "低活跃":
+			reverseFlag=true;
+			maxRadius=45;
+			break;
+	} 
+	var excludeArr=[];
+	for(var i=0;i<result.length;i++){
+		if(result[i][currentKpiKey]==0){
+			continue;
+		}
+		if(currentKpi=="低活跃"){
+			if(stationTypeMap[result[i].station]=="4g"){
+				excludeArr.push(result[i]);
+			}
+		}else{
+			excludeArr.push(result[i]);
+		}
+		
+	}
+	result=excludeArr;
+	
+	if(reverseFlag){//升序
+		result=result.sort(function(a,b){return a[currentKpiKey]-b[currentKpiKey];});
+	}else{
+		result=result.sort(function(a,b){return b[currentKpiKey]-a[currentKpiKey];});//降序
+	}
+	
+//	var max=0;
+//	var arr=result;
+//	var count=0;
+//	for(var i=0;i<arr.length;i++){
+//		var record=arr[i];
+//		
+//		if(!isNaN(record[currentKpiKey])){
+//			if(count<10){
+//				console.log(record[currentKpiKey]);
+//			}
+//			max=Math.max(max,record[currentKpiKey]);
+//			count++;
+//		}
+//	}
+//	alert(max);
+	
+	_getFlaObj() && _getFlaObj().NS_SW_setUserMap && _getFlaObj().NS_SW_setUserMap(result,currentKpiKey,reverseFlag,maxRadius,10);
+	try{
+		parent.updateRankChart(currentKpi,currentKpiKey,result);
+	}catch(e){
+		console.log("父页面没有updateRankChart");
+	}
+	updateRankChart(currentKpi,currentKpiKey,result);
+}
+function handler_swfloaded(){
+	_getFlaObj() && _getFlaObj().NS_SW_setCity && _getFlaObj().NS_SW_setStationTypeMap(stationTypeMap);
+	_getFlaObj() && _getFlaObj().NS_SW_setCity && _getFlaObj().NS_SW_setStationUponGroundMap(stationUponGroundMap);
+	_getFlaObj() && _getFlaObj().NS_SW_setCity && _getFlaObj().NS_SW_setCity(getSubXml());
+	restartInterval();
+	
+}
+function restartInterval(){
+	updateUserCircle();
+	intervalKey=setInterval(updateUserCircle, 5*60*1000);
+}
+function stopInterval(){
+	clearInterval(intervalKey);
+}
+function handler_stationClick(t){
+//	t:上海市|地铁X号线|XX站
+	var lineIndex=t.split("|")[1].replace("地铁","").replace("号线","");
+	var station=t.split("|")[2];
+	var detail=new KpiComponent.DetailQuery();
+	detail.STATION=station;
+	detail.LINE_INDEX=lineIndex;
+	detail.showStationKpi();
+}
+
+function cellTypeDataHandler(result){
+	for(var line in result){
+		var lineMap=result[line];
+		for(var station in lineMap){
+			var record=lineMap[station];
+			if(!isNaN(record["4G"])&&record["4G"]>0){
+				stationTypeMap[station]="4g";
+			}else{
+				stationTypeMap[station]="3g";
+			}
+		}
+	}
+	
+	var dm=LSMScreen.DataManager.getInstance();
+	dm.getMetroLineStationUpDown({},stationUpDownHandler);
+	
+}
+function stationUpDownHandler(result){
+	
+	for(var line in result){
+		var lineMap=result[line];
+		for(var station in lineMap){
+			var type=lineMap[station];
+			if(type=="地面"||type=="高架"){
+				stationUponGroundMap[station]=true;
+			}
+		}
+	}
+	initPage();
+}
+function NS_SW_setHighlightLine(lineIndex){
+	_getFlaObj() && _getFlaObj().NS_SW_setHighlightLine && _getFlaObj().NS_SW_setHighlightLine(lineIndexToLegendIndex[lineIndex]);
+}
+function NS_SW_chooseLineBySwf(legendIndex){
+	for(var key in lineIndexToLegendIndex){
+		if(lineIndexToLegendIndex[key]==legendIndex){
+			var lineIndex=key;
+			try{
+				parent.NS_SW_chooseLineBySwf(lineIndex);
+			}catch(e){
+				console.log("parent.NS_SW_chooseLineBySwf failed");
+			}
+			break;
+		}
+	}
+}
+function NS_SW_resetHighlightLine(){
+	_getFlaObj() && _getFlaObj().NS_SW_resetHighlightLine && _getFlaObj().NS_SW_resetHighlightLine();
+}
+
+function getSimpleChartOption(series,xArr,legends,tipFormatter){
+	if(tipFormatter==null){
+		tipFormatter='{b0}<br/>{c0}';
+	}
+	var option = {
+			color:['#fced00'],
+		    legend: {
+		        data:legends,
+		        textStyle :
+        		{
+		        	color:LSMScreen.CHARTCONFIG.xAxisLabelColor,
+            		fontSize:LSMScreen.CHARTCONFIG.axisLabelSize*0.8*0.7
+        		},
+		    },
+			grid:{
+		    	borderWidth:0,
+		    	x:100,
+		    	y:50,
+		    	x2:50,
+		    	y2:10
+		    },
+		    tooltip : {
+		        trigger: 'axis',
+		        formatter:tipFormatter
+		    },
+		    calculable : false,
+		    xAxis : [
+		        {
+		            type : 'value',
+		            axisLabel : {
+		            	show:false,
+		            	textStyle :
+		            		{
+			            		color:LSMScreen.CHARTCONFIG.xAxisLabelColor,
+			            		fontSize:LSMScreen.CHARTCONFIG.axisLabelSize*0.8
+		            		}
+		            },
+		            axisLine:{
+		            	lineStyle:{
+		            		color: LSMScreen.CHARTCONFIG.xAxisColor,
+			                width: 2,
+			                type: 'solid'
+		            	}
+		            },
+		            splitLine:{
+		            	lineStyle:{
+		            		color: LSMScreen.CHARTCONFIG.xAxisColor,
+		            		width: 1,
+			                type: 'solid'
+		            	}
+		            },
+		            formatter: '{value}'
+		        }
+		    ],
+		    yAxis : [
+		        {
+		            type : 'category',
+		            axisLabel : {
+		            	textStyle :
+		            		{
+		            		color:LSMScreen.CHARTCONFIG.xAxisLabelColor,
+		            		fontSize:LSMScreen.CHARTCONFIG.axisLabelSize*0.8
+		            		}
+		            },
+		            axisLine:{
+		            	lineStyle:{
+		            		color: LSMScreen.CHARTCONFIG.yAxisColor,
+			                width: 2,
+			                type: 'solid'
+		            	}
+		            },
+		            splitLine:{
+		            	lineStyle:{
+		            		color:LSMScreen.CHARTCONFIG.yAxisColor,
+		            		width: 1,
+			                type: 'solid'
+		            	}
+		            },
+		            formatter: '{value}',
+		            min:0,
+		            data : xArr
+		        }
+		    ],
+		    series : series,
+		};
+	return option;
+};
+

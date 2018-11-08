@@ -1,0 +1,31 @@
+<Topo from="CACHE" id="assets/datas/yaxin.xml" name="亚信峰会保障拓扑">
+  <Groups/>
+  <Nodes>
+    <Node resourceType="FW" resourceId="fw2" id="fw2" name="ASA-2" image="assets/images/icons/resource/0/online/fw.png" x="470" y="136"/>
+    <Node resourceType="SERVER" resourceId="SERVER" id="SERVER" name="用户侧服务器" image="assets/images/icons/resource/0/online/server.png" x="770" y="85"/>
+    <Node resourceType="COMPUTER" resourceId="computer1" id="computer1" name="" image="assets/images/icons/resource/0/online/computer.png" x="102" y="89"/>
+    <Node resourceType="PGW" resourceId="SAE-GW" id="SAE-GW" name="SAE-GW" image="assets/images/icons/resource/0/online/pgw.png" x="222" y="97"/>
+    <Node resourceType="FW" resourceId="fw1" id="fw1" name="ASA-1" image="assets/images/icons/resource/0/online/fw.png" x="470" y="57"/>
+    <Node resourceType="SWITCH" resourceId="Cisco3400-1" id="Cisco3400-1" name="Cisco3400-1" image="assets/images/icons/resource/0/online/route.png" x="353.5" y="57"/>
+    <Node resourceType="SWITCH" resourceId="Cisco3400-2" id="Cisco3400-2" name="Cisco3400-2" image="assets/images/icons/resource/0/online/route.png" x="353.5" y="136"/>
+    <Node resourceType="SWITCH" resourceId="8a5d928139d333280139d7ca68c20002" id="8a5d928139d333280139d7ca68c20002" name="Cisco7613-1" image="assets/images/icons/resource/0/online/route.png" x="592.5" y="57"/>
+    <Node resourceType="SWITCH" resourceId="8a5d928139d333280139d7cb69fb0003" id="8a5d928139d333280139d7cb69fb0003" name="Cisco7613-2" image="assets/images/icons/resource/0/online/route.png" x="592.5" y="136"/>
+  </Nodes>
+  <Links>
+    <Link resourceType="FW-FW" fromId="fw1" toId="fw2" color="65280" name="" linkType="arc"/>
+    <Link resourceType="FW-SWITCH" fromId="fw2" toId="Cisco3400-2" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-FW" fromId="8a5d928139d333280139d7cb69fb0003" toId="fw2" color="65280" name="" linkType="arc"/>
+    <Link resourceType="PGW-SWITCH" fromId="SAE-GW" toId="Cisco3400-1" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SERVER" fromId="8a5d928139d333280139d7ca68c20002" toId="SERVER" color="65280" name="端口G1/30" linkType="arc"/>
+    <Link resourceType="SWITCH-FW" fromId="Cisco3400-1" toId="fw1" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SERVER" fromId="8a5d928139d333280139d7cb69fb0003" toId="SERVER" color="65280" name="端口G1/31" linkType="arc"/>
+    <Link resourceType="PGW-SWITCH" fromId="SAE-GW" toId="Cisco3400-2" color="65280" name="" linkType="arc"/>
+    <Link resourceType="COMPUTER-PGW" fromId="computer1" toId="SAE-GW" color="65280" name="" linkType="arc"/>
+    <Link resourceType="FW-SWITCH" fromId="fw1" toId="8a5d928139d333280139d7ca68c20002" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="Cisco3400-1" toId="Cisco3400-2" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5d928139d333280139d7ca68c20002" toId="8a5d928139d333280139d7cb69fb0003" color="65280" name="" linkType="arc"/>
+  </Links>
+  <Labels>
+    <Label name="亚信峰会保障拓扑" x="113" y="7"/>
+  </Labels>
+</Topo>

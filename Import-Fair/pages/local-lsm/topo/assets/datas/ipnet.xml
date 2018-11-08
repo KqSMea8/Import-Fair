@@ -1,0 +1,64 @@
+<Topo from="CACHE" id="assets/datas/ipnet.xml" name="IP承载网">
+  <Groups>
+    <Group resourceType="" id="group1" name="" resourceId="group1" expand="true" image="assets/images/icons/group/c0.png" x="645.5000000000001" y="583.5999999999999"/>
+  </Groups>
+  <Nodes>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c5e4890009" id="8a5dffbc2f7608f8012f94c5e4890009" name="AR4" image="assets/images/icons/resource/0/online/ar.png" x="471.6428571428572" y="489"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c929c4000c" id="8a5dffbc2f7608f8012f94c929c4000c" name="AR7" image="assets/images/icons/resource/0/online/ar.png" x="548.2857142857143" y="489"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94ca4d42000d" id="8a5dffbc2f7608f8012f94ca4d42000d" name="AR8" image="assets/images/icons/resource/0/online/ar.png" x="624.9285714285714" y="489"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c6e94a000a" id="8a5dffbc2f7608f8012f94c6e94a000a" name="AR5" image="assets/images/icons/resource/0/online/ar.png" x="701.5714285714286" y="489"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c85302000b" id="8a5dffbc2f7608f8012f94c85302000b" name="AR6" image="assets/images/icons/resource/0/online/ar.png" x="778.2142857142858" y="489"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94cb470c000e" id="8a5dffbc2f7608f8012f94cb470c000e" name="AR9" image="assets/images/icons/resource/0/online/ar.png" x="854.8571428571429" y="489"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94cbf085000f" id="8a5dffbc2f7608f8012f94cbf085000f" name="AR10" image="assets/images/icons/resource/0/online/ar.png" x="931.5" y="489"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c4af970008" id="8a5dffbc2f7608f8012f94c4af970008" name="AR3" image="assets/images/icons/resource/0/online/ar.png" x="395" y="489"/>
+    <Node resourceType="RR" resourceId="8a5dffbc2f7608f8012f94cd2ae60010" id="8a5dffbc2f7608f8012f94cd2ae60010" name="RR1" image="assets/images/icons/resource/0/online/rr.png" x="477" y="366"/>
+    <Node resourceType="RR" resourceId="8a5dffbc2f7608f8012f94cf136c0012" id="8a5dffbc2f7608f8012f94cf136c0012" name="RR2" image="assets/images/icons/resource/0/online/rr.png" x="812" y="362"/>
+    <Node resourceType="CR" resourceId="8a5dffbc2f7608f8012f94d0899a0013" id="8a5dffbc2f7608f8012f94d0899a0013" name="CR1" image="assets/images/icons/resource/0/online/cr.png" x="575" y="312"/>
+    <Node resourceType="DG" resourceId="" id="princecr1" name="" image="princecr1" x="311.04166666666686" y="73"/>
+    <Node resourceType="CR" resourceId="8a5dffbc2f7608f8012f94d16f510014" id="8a5dffbc2f7608f8012f94d16f510014" name="CR2" image="assets/images/icons/resource/0/online/cr.png" x="715" y="312"/>
+    <Node resourceType="DG" resourceId="" id="princecr2" name="" image="princecr2" x="723.041666666667" y="10"/>
+    <Node resourceType="SUBTOPO" resourceId="" id="ims" name="IMS" isSegment="true-assets/datas/ims.xml"  group="group1" image="assets/images/icons/resource/0/online/server.png" x="957.0500000000001" y="572.0999999999999"/>
+    <Node resourceType="SUBTOPO" resourceId="" id="cl" name="彩铃" isSegment="true-assets/datas/cl.xml"  group="group1" image="assets/images/icons/resource/0/online/server.png" x="855.2" y="572.0999999999999"/>
+    <Node resourceType="SUBTOPO" resourceId="" id="rjhdjjq" name="软交换端局-金桥" isSegment="true-assets/datas/dj.xml" group="group1" image="assets/images/icons/resource/0/online/server.png" x="345.95000000000016" y="572.0999999999999"/>
+    <Node resourceType="SUBTOPO" resourceId="" id="rjhdjpd" name="软交换端局-浦东" isSegment="true-assets/datas/dj.xml" group="group1" image="assets/images/icons/resource/0/online/server.png" x="447.8000000000001" y="572.0999999999999"/>
+    <Node resourceType="SUBTOPO" resourceId="" id="rjhdjwr" name="软交换端局-万荣" isSegment="true-assets/datas/dj.xml" group="group1" image="assets/images/icons/resource/0/online/server.png" x="549.6500000000001" y="572.0999999999999"/>
+    <Node resourceType="SUBTOPO" resourceId="" id="rjhdjqz" name="软交换端局-钦州" isSegment="true-assets/datas/dj.xml" group="group1" image="assets/images/icons/resource/0/online/server.png" x="651.5000000000001" y="572.0999999999999"/>
+    <Node resourceType="SUBTOPO" resourceId="" id="rjhgkj" name="软交换关口局" isSegment="true-assets/datas/ssb.xml" group="group1" image="assets/images/icons/resource/0/online/server.png" x="753.3500000000001" y="572.0999999999999"/>
+    <Node resourceType="SUBTOPO" resourceId="" id="ctrjh" name="长途软交换" isSegment="true-assets/datas/ct.xml" group="group1" image="assets/images/icons/resource/0/online/server.png" x="1058.9" y="572.0999999999999"/>
+    <Node resourceType="SUBTOPO" resourceId="" id="psy" name="PS域" isSegment="true-assets/datas/ps.xml" group="group1" image="assets/images/icons/resource/0/online/server.png" x="244.10000000000014" y="572.0999999999999"/>
+  </Nodes>
+  <Links>
+    <Link resourceType="CR-AR" fromId="8a5dffbc2f7608f8012f94d16f510014" toId="8a5dffbc2f7608f8012f94c5e4890009" color="65280" name=""/>
+    <Link resourceType="AR-AR" fromId="8a5dffbc2f7608f8012f94c5e4890009" toId="8a5dffbc2f7608f8012f94c4af970008" color="65280" name=""/>
+    <Link resourceType="AR-AR" fromId="8a5dffbc2f7608f8012f94c929c4000c" toId="8a5dffbc2f7608f8012f94ca4d42000d" color="65280" name=""/>
+    <Link resourceType="CR-AR" fromId="8a5dffbc2f7608f8012f94d0899a0013" toId="8a5dffbc2f7608f8012f94c929c4000c" color="65280" name=""/>
+    <Link resourceType="CR-AR" fromId="8a5dffbc2f7608f8012f94d16f510014" toId="8a5dffbc2f7608f8012f94ca4d42000d" color="65280" name=""/>
+    <Link resourceType="CR-AR" fromId="8a5dffbc2f7608f8012f94d0899a0013" toId="8a5dffbc2f7608f8012f94c6e94a000a" color="65280" name=""/>
+    <Link resourceType="CR-AR" fromId="8a5dffbc2f7608f8012f94d16f510014" toId="8a5dffbc2f7608f8012f94c85302000b" color="65280" name=""/>
+    <Link resourceType="AR-AR" fromId="8a5dffbc2f7608f8012f94c6e94a000a" toId="8a5dffbc2f7608f8012f94c85302000b" color="65280" name=""/>
+    <Link resourceType="CR-AR" fromId="8a5dffbc2f7608f8012f94d0899a0013" toId="8a5dffbc2f7608f8012f94cb470c000e" color="65280" name=""/>
+    <Link resourceType="CR-AR" fromId="8a5dffbc2f7608f8012f94d16f510014" toId="8a5dffbc2f7608f8012f94cbf085000f" color="65280" name=""/>
+    <Link resourceType="AR-AR" fromId="8a5dffbc2f7608f8012f94cbf085000f" toId="8a5dffbc2f7608f8012f94cb470c000e" color="65280" name=""/>
+    <Link resourceType="-AR" fromId="group1" toId="8a5dffbc2f7608f8012f94c4af970008" color="65280" name=""/>
+    <Link resourceType="-AR" fromId="group1" toId="8a5dffbc2f7608f8012f94c5e4890009" color="65280" name=""/>
+    <Link resourceType="-AR" fromId="group1" toId="8a5dffbc2f7608f8012f94c929c4000c" color="65280" name=""/>
+    <Link resourceType="-AR" fromId="group1" toId="8a5dffbc2f7608f8012f94ca4d42000d" color="65280" name=""/>
+    <Link resourceType="-AR" fromId="group1" toId="8a5dffbc2f7608f8012f94c6e94a000a" color="65280" name=""/>
+    <Link resourceType="-AR" fromId="group1" toId="8a5dffbc2f7608f8012f94c85302000b" color="65280" name=""/>
+    <Link resourceType="-AR" fromId="group1" toId="8a5dffbc2f7608f8012f94cb470c000e" color="65280" name=""/>
+    <Link resourceType="-AR" fromId="group1" toId="8a5dffbc2f7608f8012f94cbf085000f" color="65280" name=""/>
+    <Link resourceType="CR-AR" fromId="8a5dffbc2f7608f8012f94d0899a0013" toId="8a5dffbc2f7608f8012f94c4af970008" color="65280" name=""/>
+    <Link resourceType="RR-CR" fromId="8a5dffbc2f7608f8012f94cd2ae60010" toId="8a5dffbc2f7608f8012f94d0899a0013" color="39423" name="GE"/>
+    <Link resourceType="RR-RR" fromId="8a5dffbc2f7608f8012f94cd2ae60010" toId="8a5dffbc2f7608f8012f94cf136c0012" color="39423" name="GE"/>
+    <Link resourceType="RR-CR" fromId="8a5dffbc2f7608f8012f94cf136c0012" toId="8a5dffbc2f7608f8012f94d16f510014" color="39423" name="GE"/>
+    <Link resourceType="CR-CR" fromId="8a5dffbc2f7608f8012f94d0899a0013" toId="8a5dffbc2f7608f8012f94d16f510014" color="65280" name=""/>
+    <Link resourceType="CR-DG" fromId="8a5dffbc2f7608f8012f94d0899a0013" toId="princecr1" color="65280" name=""/>
+    <Link resourceType="CR-DG" fromId="8a5dffbc2f7608f8012f94d16f510014" toId="princecr2" color="65280" name=""/>
+  </Links>
+  <Labels>
+    <Label name="制表人：周周" x="1167" y="35"/>
+    <Label name="制表日期：2013-1-10" x="1164" y="69"/>
+    <Label name="IPNET拓扑图" x="1161" y="0"/>
+    <Label name="——设备CPU利用率" x="192.5" y="0"/>
+  </Labels>
+</Topo>

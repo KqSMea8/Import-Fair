@@ -1,0 +1,1 @@
+define("common:widget/backtop/backtop.js",function(o,n,i){"use strict";var t;$(window).on("scroll",function(){window.scrollY<window.innerHeight/2?t.hide():t.show()}),i.exports={init:function(){t=$('<div class="common-widget-back-top -bg-transparent"><i class="icon -gotop -ft-fifth"></i></div>'),$(document.body).append(t),t.on("click",function(){window.scrollTo(0,1)})}}});

@@ -1,0 +1,67 @@
+<root>
+	<CmnetDx>
+		<node name="电信" daikuan="10g*5" circuitIds="571babbae63ae0259bbfc06b3953ec37,f1fd8efd57aa9407c6728779eca6d00e,5e4b4d93b74f8fd84967714e0ee43fa6,1bebeb31c28b1b79b76a697281cf59cb,f06140a7a93a1ff0340fe0deed379428"/>
+		<node name="电信NAP" daikuan="10g" circuitIds="18da0b6568d28050611630cb6fbdf8c7"/>
+		<node name="联通" daikuan="10g*4" circuitIds="68ea2f7098a0456edcf52bba05379eb2,07ab2ea0ed99c2d86a98314866df5553,5395daf9b662ca0b89ae00bfc280190e,79cc447e11f6aba37c21bbcb4c880d36"/>
+		<node name="铁通" daikuan="10g*10" circuitIds="6b51d39436c98290d0d68fedb0755d2d,f23b38c81a9561e55b6472086c14b581,cbccc7fa1791cdec88ea53359c84ecf5,2074b2b043071532dc25c086a170b524,9d89cbd3c315cd576541c0a5cc854c52,603b9885a36ebed6d4df9689434e6b37,30126a018bb079e48973e10200d04a2c,a7443525ebd0f91966ffc0148d6d3f12,2d055adc16932f94a103a55409c4e757,758157bc6fc525d781682a1befacace5"/>
+		<node name="教育网" daikuan="10g" circuitIds="0691e7b4a6afeb64f66057f84242d91f"/>
+	</CmnetDx>
+	<CmnetInternational>
+		<node name="北美POP" circuitIds="c8ed49fd9a3d77f86fd74821329185a7,ea380450397274d3cfcb62b33e64ea6d" daikuan="10G*2"/>
+		<node name="香港POP" circuitIds="2e228c70f9a143af499aae72a1536618" daikuan="10G*1"/>
+		<node name="伦敦POP" circuitIds="a02d1b648712bafceecebf6dc05443ac" daikuan="10G*1"/>
+	</CmnetInternational>
+	<CmnetPrincePd>
+		<node name="广东广州1" daikuan="10G*16"    circuitIds="0d99035356335ffd1747104d6a7f9b77,4b4875cd6222bd23d297ca7bf8e6c378,ec538958950cf8d9f749f2d0810ed4f4,3b5bf317a7aef1fcaad33a4586691d10,d56c5f22b4f14b74e019aac3594c5ae8,35b0b80f8d5d5ecfccfb5ebc9c81f764,63a7b6d34a0add29cd03cd8f2efa9785,b694dde4af7b98eda8d53995a9ff0a19,d6487d7a9cab8cb2e2ad25e037de0cef,efe50b2b79e4be08fae2d62b59f22956,85ebb6ae0f8507ca15aaebc04469a29d,d7cd1dc04120a0b416d4629bb664518d,dc17341b4bec7e187319d70909dcd022,ee8cacddc1178f2a3ffaff181fceeb68,28d087abf1f6783a1b03f7d60320a39c,568734a96c85d1e7204b1d2dc04615df"/>
+		<node name="北京1" daikuan="10G*16" circuitIds="0174db7b180aaa01e9d3aaded75d8ef1,8326207aab0f65141616d7717a65440f,761bcb763b2fb5171ddcaa3cde14961d,e422881f325eba3aba5fb3bfd9dd2bc8,568ebae8e9819e86fb7d0b5687de42e0,ba40fb66a7a0a637d3fb1d9fae961e71,ff9cab7f6c5494243562a9df7f5d82f3,0441fcf4fbb5581c8f8b0d8584359ecc,2baeda16e3e753ecd9d43e1b26ddea9b,09f01366b3f744de095a0cb55a0986f1,e4d4cff87b8b19c2b68ec301e49b60ed,6377a9b3fd550a66192c1bd3e59a47eb,47ab0b40a384c0ec266127e7491a9880,46307ea78585c7e0bc264e16bfd218cf,8c7f9b8f19ff175d7e70d842eede2220,d46a2e2136c2e2e501194f6038dc4a8a"/>
+		<node name="湖北武汉1" daikuan="10G*6"  circuitIds="f6554adaf63435774ec5e9a5604340b3"/>
+		<node name="江苏南京1,2" daikuan="10G*8+40G*2" circuitIds="ccc872e5c7e504fda88d5011b6c17f74,f8dc7d3e395ae7f0167e16b2ac2d6078,c814fa2295593c0722c953e28a29541a,139f9e571d4ce880cbc154e46698524a"/>
+		<node name="江苏苏州1" daikuan="10G*5" circuitIds="3c6cd6cdb3ce6a59f793a3adf0c9a3ba"/>
+		<node name="江苏无锡1" daikuan="10G*6" circuitIds="56c81e99d96c97c4de8d1c063d52454e"/>
+		<node name="浙江杭州1" daikuan="50G+60G+20G" circuitIds="a683c762744d820749216b00cd2ac41e,2b018055da5b25bd876a0e7bfbc6d804,cd8122c32469f50cad8dea72fb106b14"/>
+		<node name="四川成都1" daikuan="10G*1" circuitIds="21d2b28c25f506965a550547bf1ecec0"/>
+		<node name="陕西西安1" daikuan="10G*2" circuitIds="1a05e3444bf4311b38ec53cdc0d4cfbc,b7a553af0fa7da378baa78762c913d90"/>
+		<node name="辽宁沈阳1" daikuan="10G*1" circuitIds="b953aca118b35da16a0d27668900286f"/>
+		<node name="安徽合肥1" daikuan="10G*4" circuitIds="7b56a3f8c5d0c3a8864cd2d25c39a304,690d2e705203272d023199ccc273d369,ad4d8de494245cc4d98d18a1b9345703,b429c7dc1565991c01188c425c553187"/>
+		<node name="广东深圳1" daikuan="10G*4" circuitIds="5219e1b8dc894f166ce08e86026bb9d7,cf4fc602e3118ec1c5c555d0ee88cfb1,a50ecb8e4461a5955c712c9ccbdd0543,14039b6f5ac5b4614dd202351c5a1703"/>
+		<node name="江西南昌1" daikuan="10G*6" circuitIds="854b9d0c2d276d5608ab3150560be122,813af1269c25c2c312b9244797266b9b,1decacbcaeaac64d9edd0ddf53b05db8,7b07fd4365d9c55c06da8d92bdfde325,745f0ee6813a838aa7ee7fc5296d55d7,8757ff11f22c69ab7b025d876efa3d37"/>
+		<node name="山东青岛1" daikuan="10G*4" circuitIds="f53dcb22128b7053b5775ebf2479de02,0635d748d3fa57e0b6aed4dc7aa8847d,ffbb12f36afcf57c0bcae36ea53f8b1b,b4ddb171195179843495d7e131e77a37"/>
+		<node name="福建福州1" daikuan="10G*2" circuitIds="ba6301d14e730d33feff234e15f7f26b,6f385ad4e1bba3fd7ce6daaea4e4026c"/>
+		<node name="重庆开发区1" daikuan="155M*2" circuitIds="4f3eade40506cd875fca4aeee6c5a46e,f146ff3e9605ae40316081bb615aa49a"/>
+	</CmnetPrincePd>
+	<CmnetPrinceWs>
+		<node name="北京2" daikuan="10G*16" 			circuitIds="289d823c8280fde778d0eb665992866e,8c505c5a3391c6b66774639b80fae5a7,48a713634b83b41a534dc3553c13557f,02d5417832259f1adf95eb85cfc7f243,952b9120002560ef5a8a8793614f81fb,661cf6837c54143840ef211dd7ce53bb,4a9b40ec0344c185a60c772a17a6ff6e,fef27d5c47bf21d319b8797a974efc4c,aada44cc738ef4cf87ee99f583edf49d,9e0d0d0993b4ab28724b50fd5e9e71ce,bfc3f735b32a7cf04ad87c5d982f5a32,c6360d3040577f082453fc60702b8475,418ce2be71bce0a95d9bf1b8582b9946,afefa3f44d9117acf2bf87071f3eae6e,d7e8302633f67c3b2a7a8b652bd841ee,9cf183f864c25b79fdcf38d1ca1c8a81"/>
+		<node name="广东广州2" daikuan="10G*16" 		circuitIds="c9bc99b054bc32c1bac69fe135d64043,ba7c6c1a673130274ca8126e23e79082,b41f8257ed84569c0d2d455b3a6580d2,a514ef2c48a73f4ff5e1d2b7a8235a30,ec986d3a21582909a0cb5c366db403a5,3fe45402d6898b9d700200da56d8f08f,0291ff910e26ed820afa0ef761ccda79,acfea3c8e4ac717326f7b98fb9593f46,1fa7ebb0b6f563f67b97919e94e6ef41,1df27a55440028bdd234582e3b29d438,f9b2f13892435078787394f3a2ff58f9,6d0fae1d9bee6be007f8fb29788a574b,60c1f6b230be88e063a27f0785ced75c,526cc10008430b92adcfd04ca8579c3f,e1106d665b03ade4bc0f19a90f738ce1,04892df6fa8c240a35b0e6521755195d"/>
+		<node name="江苏南京3,4" daikuan="10G*4+10G*4" circuitIds="5fe1201226eac1931a703fa6e69bd4b4,f4a3a61f7af72fa5afd4b5d3fd24bab0"/>
+		<node name="江苏苏州" daikuan="10G*5" 			circuitIds="72b2c3a1168e50f0f1598c5285d97da1"/>
+		<node name="江苏无锡" daikuan="10G*6" 			circuitIds="72b2c3a1168e50f0f1598c5285d97da1"/>
+		<node name="湖北武汉2" daikuan="10G*6" 		circuitIds="9be5a9013b72505f44090851bb8a7d19"/>
+		<node name="四川成都2" daikuan="10G*2" 		circuitIds="1f33641523548523f6f5826a3e9ce0a8,53402d5884e89fa6082954785e445d4f"/>
+		<node name="陕西西安2" daikuan="10G*2" 		circuitIds="954996cbe40551bc81ad9e2d06eb8915"/>
+		<node name="浙江杭州2" daikuan="10G*4+10G*4" 	circuitIds="746ab2abb1e948889e56b31d4bd45595,35f99dc319a4c98d6a7fc89301074597"/>
+		<node name="广东深圳2" daikuan="10G*4" 		circuitIds="e002bce9345fb4270656d276f5548cce,aedc3e45b6075dac54a1fe570e5150d4,20d6049dcf5c457ca0d88814954a54dd,8577e489b0c3b63032b41b983fd772b2"/>
+		<node name="江西南昌2" daikuan="10G*4" 		circuitIds="1dde584e283c584507e99470176a1ca3,026583548480d1b7b35cd74f33a0cace,533312d474fc0b12dd15763eb9704931,21a997c5e9a934f3db75c549ddd60b4a"/>
+		<node name="辽宁沈阳2" daikuan="10G*1" 		circuitIds="faa25b589a9026d635e8ddd038aee657"/>
+		<node name="福建福州2" daikuan="10G*2" 		circuitIds="d6b51dfd890bb83d8dc8ec0afdb175ea,e53539ca83343b994fd7aeb49e9a3417"/>
+		<node name="安徽合肥2" daikuan="10G*4" 		circuitIds="18862660da420e081cebae7053f0671c,d3292cbe6476436a12986004c5f0e3a6,f4d409a4a0a158e846cafddc8dadeea6,bc793554cad349336fde4ac142c9e3f1"/>
+		<node name="江苏苏州" daikuan="10G*5" 		circuitIds="72b2c3a1168e50f0f1598c5285d97da1"/>
+		<node name="山东青岛2" daikuan="10G*4" 		circuitIds="ee762c22198ed64d372aff287b0d4e26,08353eee3ac0c2ea47d907ee6b94e38e,f4919ae301f6286b3aa3763d5290c973,17252bc3b57213fea9057b460d1adede"/>
+	</CmnetPrinceWs>
+	<PrinceCr1>
+		<node name="北京CR1" circuitIds="68d4ac287b2a8848f8127373d005622b,a3f0dd2e112393b081f7404f26d49ed2" daikuan="POS10G*2"/>
+		<node name="南京CR1" circuitIds="a242685ed31917def680ba6385968a8a,cf158945005b672171051375f03e71f6" daikuan="POS10G*2"/>
+		<node name="武汉CR1" circuitIds="ca424202d5deca6562747cf30f6bfde6,c78ef1e3dea187f8e3e156b25e98ff25" daikuan="POS10G*2"/>
+		<node name="广州CR1" circuitIds="d80d2556ce0f98b3d7eb2a15552f9e2d" daikuan="POS10G*1"/>
+		<node name="杭州CR1" circuitIds="b289a5242949ec7c01ab8d196db70e75,3cbfb4569952cc0ba7a7658a0a92b9fd" daikuan="POS10G*2"/>
+	</PrinceCr1>
+	<PrinceCr2>
+		<node name="北京CR2" circuitIds="73dec5554c1b5d4c9e8311da65e6b155,988930b03ae5a29200b87265fd319000" daikuan="POS10G*2"/>
+		<node name="武汉CR2" circuitIds="29caa72736419bc85fed2e69ad6b1a62" daikuan="POS10G*1"/>
+		<node name="广州CR2" circuitIds="63ddcf0b5a132ec696f77cae4565192f,839a9a90d3bbd584d412ed680b1974a4" daikuan="POS10G*2"/>
+		<node name="杭州CR2" circuitIds="1c5d6522bbf120055eb60a7d10fe42d3" daikuan="POS10G*1"/>
+		<node name="南京CR2" circuitIds="89d837a786ef398c162c890da2d4c2bc,ace9a32b69f3e0181265a4b202aad82c" daikuan="POS10G*2"/>
+		<node name="青岛BR2" circuitIds="4483ef209a93ba003640f5cd72b4ac19" daikuan="POS10G*1"/>
+		<node name="无锡BR2" circuitIds="b0af8f70a0742c6c10c8250732c9e185,53ae534dfad7d3f12cec935dd53ae794" daikuan="POS10G*2"/>
+		<node name="大连BR2" circuitIds="668b82ffde830afc86b3eef73ae19694" daikuan="POS10G*1"/>
+	</PrinceCr2>
+</root>

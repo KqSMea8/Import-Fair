@@ -1,0 +1,111 @@
+<Topo from="CACHE" id="assets/datas/gprs.xml" name="GPRS拓扑">
+  <Groups>
+    <Group resourceType="SGSNPOOL" id="nxpool" name="诺西POOL2" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="962.1140624999996" y="329.7"/>
+    <Group resourceType="SGSNPOOL" id="alxpool" name="爱立信POOL" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="444.0890624999999" y="329.7"/>
+    <Group resourceType="诺西防火墙" id="nx" name="诺西防火墙" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="1153.55" y="189.775"/>
+    <Group resourceType="爱立信防火墙" id="alx" name="爱立信防火墙" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="176.5" y="189.775"/>
+    <Group resourceType="SGSNPOOL" id="nxcg" name="诺西CG" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="919.2" y="526.725"/>
+    <Group resourceType="SGSNPOOL" id="alxcg" name="爱立信CG" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="401.70000000000005" y="525.725"/>
+  </Groups>
+  <Nodes>
+    <Node resourceType="FW" resourceId="8a5dffbc298ac02c01298ac02c990022" id="8a5dffbc298ac02c01298ac02c990022" name="防火墙1" group="nx" image="assets/images/icons/resource/0/online/fw.png" x="1122.05" y="157.55"/>
+    <Node resourceType="FW" resourceId="8a5dffbc298ac02c01298ac02c9b0023" id="8a5dffbc298ac02c01298ac02c9b0023" name="防火墙2" group="nx" image="assets/images/icons/resource/0/online/fwg.png" x="1122.05" y="204"/>
+    <Node resourceType="FW" resourceId="8a5dffbc298ac02c01298ac02c9d0024" id="8a5dffbc298ac02c01298ac02c9d0024" name="防火墙3" group="nx" image="assets/images/icons/resource/0/online/fwg.png" x="1179.05" y="157.55"/>
+    <Node resourceType="FW" resourceId="8a5dffbc298ac02c01298ac02c9e0025" id="8a5dffbc298ac02c01298ac02c9e0025" name="防火墙4" group="nx" image="assets/images/icons/resource/0/online/fw.png" x="1179.05" y="204"/>
+    <Node resourceType="FW" resourceId="8a5dffbc298ac02c01298ac02c7d0017" id="8a5dffbc298ac02c01298ac02c7d0017" name="防火墙1" group="alx" image="assets/images/icons/resource/0/online/fw.png" x="141.5" y="157.55"/>
+    <Node resourceType="FW" resourceId="8a5dffbc298ac02c01298ac02c7e0018" id="8a5dffbc298ac02c01298ac02c7e0018" name="防火墙2" group="alx" image="assets/images/icons/resource/0/online/fwg.png" x="141.5" y="204"/>
+    <Node resourceType="FW" resourceId="8a5dffbc298ac02c01298ac02c800019" id="8a5dffbc298ac02c01298ac02c800019" name="防火墙3" group="alx" image="assets/images/icons/resource/0/online/fwg.png" x="205.5" y="157.55"/>
+    <Node resourceType="FW" resourceId="8a5dffbc298ac02c01298ac02c81001a" id="8a5dffbc298ac02c01298ac02c81001a" name="防火墙4" group="alx" image="assets/images/icons/resource/0/online/fw.png" x="203.6" y="204"/>
+    <Node resourceType="CG" resourceId="" id="nxCG09" name="CG09" group="nxcg" image="assets/images/icons/resource/0/online/cg.png" x="726.2" y="517.725"/>
+    <Node resourceType="CG" resourceId="" id="nxCG10" name="CG10" group="nxcg" image="assets/images/icons/resource/0/online/cg.png" x="821.2" y="517.725"/>
+    <Node resourceType="CG" resourceId="" id="nxCG14" name="CG14" group="nxcg" image="assets/images/icons/resource/0/online/cg.png" x="916.2" y="517.725"/>
+    <Node resourceType="CG" resourceId="" id="nxCG15" name="CG15" group="nxcg" image="assets/images/icons/resource/0/online/cg.png" x="1011.2" y="517.725"/>
+    <Node resourceType="CG" resourceId="" id="nxCG16" name="CG16" group="nxcg" image="assets/images/icons/resource/0/online/cg.png" x="1106.2" y="517.725"/>
+    <Node resourceType="CG" resourceId="" id="alxCG07" name="CG07" group="alxcg" image="assets/images/icons/resource/0/online/cg.png" x="256.2" y="516.725"/>
+    <Node resourceType="CG" resourceId="" id="alxCG08" name="CG08" group="alxcg" image="assets/images/icons/resource/0/online/cg.png" x="351.2" y="516.725"/>
+    <Node resourceType="CG" resourceId="" id="alxCG09" name="CG09" group="alxcg" image="assets/images/icons/resource/0/online/cg.png" x="446.2" y="516.725"/>
+    <Node resourceType="CG" resourceId="" id="alxCG10" name="CG10" group="alxcg" image="assets/images/icons/resource/0/online/cg.png" x="541.2" y="516.725"/>
+    <Node resourceType="WAP" resourceId="8a5d928137df6c1e01384ba927e50010" id="8a5d928137df6c1e01384ba927e50010" name="WAP3" image="assets/images/icons/resource/0/online/ar.png" x="840.4999999999999" y="102"/>
+    <Node resourceType="GGSN" resourceId="8a5d928125680ec201271d68780717d3" id="8a5d928125680ec201271d68780717d3" name="GGSN12" image="assets/images/icons/resource/0/online/ggsn.png" x="832.25" y="204"/>
+    <Node resourceType="SGSN" resourceId="8a5d928137df6c1e01383718cbe40007" id="8a5d928137df6c1e01383718cbe40007" name="SGSN30" group="alxpool" image="assets/images/icons/resource/0/online/sgsn.png" x="732.4781249999997" y="320.7"/>
+    <Node resourceType="SGSN" resourceId="8a5d92813e9d1cff013ea7768a02000a" id="8a5d92813e9d1cff013ea7768a02000a" name="SGSN38" group="nxpool" image="assets/images/icons/resource/0/online/sgsn.png" x="1056.2437499999996" y="320.7"/>
+    <Node resourceType="SGSN" resourceId="8a5d9281366254b501372a3a3abb0018" id="8a5d9281366254b501372a3a3abb0018" name="SGSN26" group="alxpool" image="assets/images/icons/resource/0/online/sgsn.png" x="538.2187499999998" y="320.7"/>
+    <Node resourceType="GGSN" resourceId="8a5d928125680ec201271d69c40517d6" id="8a5d928125680ec201271d69c40517d6" name="GGSN09" image="assets/images/icons/resource/0/online/ggsn.png" x="279.5" y="204"/>
+    <Node resourceType="SGSN" resourceId="8a5d928137df6c1e013837197a770008" id="8a5d928137df6c1e013837197a770008" name="SGSN31" group="alxpool" image="assets/images/icons/resource/0/online/sgsn.png" x="214.45312499999991" y="320.7"/>
+    <Node resourceType="SGSN" resourceId="8a5d9281366254b501372a3b83a60019" id="8a5d9281366254b501372a3b83a60019" name="SGSN27" group="alxpool" image="assets/images/icons/resource/0/online/sgsn.png" x="667.7249999999998" y="320.7"/>
+    <Node resourceType="SGSN" resourceId="8a5d928137df6c1e0138371b1727000a" id="8a5d928137df6c1e0138371b1727000a" name="SGSN33" group="alxpool" image="assets/images/icons/resource/0/online/sgsn.png" x="602.9718749999998" y="320.7"/>
+    <Node resourceType="SGSN" resourceId="8a5d928137df6c1e0138371a2eec0009" id="8a5d928137df6c1e0138371a2eec0009" name="SGSN32" group="alxpool" image="assets/images/icons/resource/0/online/sgsn.png" x="279.20624999999995" y="320.7"/>
+    <Node resourceType="SGSN" resourceId="8a5d9281366254b501372a3c25ab001a" id="8a5d9281366254b501372a3c25ab001a" name="SGSN28" group="alxpool" image="assets/images/icons/resource/0/online/sgsn.png" x="343.9593749999999" y="320.7"/>
+    <Node resourceType="SGSN" resourceId="8a5d9281366254b501372a3d1559001b" id="8a5d9281366254b501372a3d1559001b" name="SGSN29" group="alxpool" image="assets/images/icons/resource/0/online/sgsn.png" x="408.71249999999986" y="320.7"/>
+    <Node resourceType="SGSN" resourceId="8a5dffbc298ac02c01298ac02c69000a" id="8a5dffbc298ac02c01298ac02c69000a" name="SGSN24" group="alxpool" image="assets/images/icons/resource/0/online/sgsn.png" x="473.4656249999998" y="320.7"/>
+    <Node resourceType="SGSN" resourceId="8a5d928135d2c6f90135d2c6f9ac0000" id="8a5d928135d2c6f90135d2c6f9ac0000" name="SGSN25" group="alxpool" image="assets/images/icons/resource/0/online/sgsn.png" x="149.7" y="320.7"/>
+    <Node resourceType="SGSN" resourceId="8a5d928138521c3301385244b3540003" id="8a5d928138521c3301385244b3540003" name="SGSN35" group="nxpool" image="assets/images/icons/resource/0/online/sgsn.png" x="861.9843749999997" y="320.7"/>
+    <Node resourceType="SGSN" resourceId="8a5d92813e9d1cff013ea775035a0008" id="8a5d92813e9d1cff013ea775035a0008" name="SGSN36" group="nxpool" image="assets/images/icons/resource/0/online/sgsn.png" x="926.7374999999996" y="320.7"/>
+    <Node resourceType="BSCGROUP" resourceId="" id="BSC1" name="爱立信BSC数量(74)" image="assets/images/icons/resource/0/online/bscgroup.png" x="325.15" y="445"/>
+    <Node resourceType="BSCGROUP" resourceId="" id="BSC2" name="阿尔卡特BSC数量(131)" image="assets/images/icons/resource/0/online/bscgroup.png" x="1039.04375" y="445"/>
+    <Node resourceType="BSCGROUP" resourceId="" id="BSC3" name="诺西BSC数量(33)" image="assets/images/icons/resource/0/online/bscgroup.png" x="705.54375" y="445"/>
+    <Node resourceType="RNCGROUP" resourceId="" id="RNC6" name="诺西RNC数量(7)" image="assets/images/icons/resource/0/online/rncgroup.png" x="923.54375" y="445"/>
+    <Node resourceType="RNCGROUP" resourceId="" id="RNC4" name="华为RNC数量(19)" image="assets/images/icons/resource/0/online/rncgroup.png" x="1157.54375" y="445"/>
+    <Node resourceType="RNCGROUP" resourceId="" id="RNC5" name="新邮通RNC数量(2)" image="assets/images/icons/resource/0/online/rncgroup.png" x="818.54375" y="445"/>
+    <Node resourceType="RNCGROUP" resourceId="" id="RNC1" name="华为RNC数量(29)" image="assets/images/icons/resource/0/online/rncgroup.png" x="514.5375" y="445"/>
+    <Node resourceType="WAP" resourceId="8a5d928137df6c1e01384ba780b8000e" id="8a5d928137df6c1e01384ba780b8000e" name="WAP1" image="assets/images/icons/resource/0/online/ar.png" x="279.5" y="102"/>
+    <Node resourceType="GGSN" resourceId="8a5d928125680ec201271d68f1c017d4" id="8a5d928125680ec201271d68f1c017d4" name="GGSN11" image="assets/images/icons/resource/0/online/ggsn.png" x="371.625" y="204"/>
+    <Node resourceType="WAP" resourceId="8a5d928137df6c1e01384ba884ec000f" id="8a5d928137df6c1e01384ba884ec000f" name="WAP2" image="assets/images/icons/resource/0/online/ar.png" x="560" y="102"/>
+    <Node resourceType="GGSN" resourceId="8a5d92813463749f0134637c2bfe0002" id="8a5d92813463749f0134637c2bfe0002" name="GGSN13" image="assets/images/icons/resource/0/online/ggsn.png" x="463.75" y="204"/>
+    <Node resourceType="SGSN" resourceId="8a5d92813e9d1cff013ea775dccd0009" id="8a5d92813e9d1cff013ea775dccd0009" name="SGSN37" group="nxpool" image="assets/images/icons/resource/0/online/sgsn.png" x="991.4906249999996" y="320.7"/>
+    <Node resourceType="SGSN" resourceId="8a5d928138521c33013852441b8e0002" id="8a5d928138521c33013852441b8e0002" name="SGSN34" group="nxpool" image="assets/images/icons/resource/0/online/sgsn.png" x="797.2312499999997" y="320.7"/>
+    <Node resourceType="GGSN" resourceId="8a5d928137df6c1e0138371c6fba000b" id="8a5d928137df6c1e0138371c6fba000b" name="GGSN18" image="assets/images/icons/resource/0/online/ggsn.png" x="1016.5" y="204"/>
+    <Node resourceType="GGSN" resourceId="8a5d928135d2c6f90135d2ca802c0002" id="8a5d928135d2c6f90135d2ca802c0002" name="GGSN17" image="assets/images/icons/resource/0/online/ggsn.png" x="924.375" y="204"/>
+    <Node resourceType="SGSN" resourceId="8a5dffa640610ed70140610ed8fe002c" id="8a5dffa640610ed70140610ed8fe002c" name="SGSN97" group="nxpool" image="assets/images/icons/resource/0/online/sgsn.png" x="1120.9968749999996" y="320.7"/>
+    <Node resourceType="GGSN" resourceId="8a5d92813463749f0134637d63100003" id="8a5d92813463749f0134637d63100003" name="GGSN14" image="assets/images/icons/resource/0/online/ggsn.png" x="555.875" y="204"/>
+    <Node resourceType="GGSN" resourceId="8a5d928125680ec201271d696ca817d5" id="8a5d928125680ec201271d696ca817d5" name="GGSN10" image="assets/images/icons/resource/0/online/ggsn.png" x="651.025" y="204"/>
+    <Node resourceType="GGSN" resourceId="8a5d928135d2c6f90135d2c8126d0001" id="8a5d928135d2c6f90135d2c8126d0001" name="GGSN16" image="assets/images/icons/resource/0/online/ggsn.png" x="740" y="204"/>
+  </Nodes>
+  <Links>
+    <Link resourceType="WAP-GGSN" fromId="8a5d928137df6c1e01384ba927e50010" toId="8a5d928125680ec201271d68780717d3" color="65280" name="" linkType="arc"/>
+    <Link resourceType="WAP-GGSN" fromId="8a5d928137df6c1e01384ba927e50010" toId="8a5d928135d2c6f90135d2ca802c0002" color="65280" name="" linkType="arc"/>
+    <Link resourceType="WAP-GGSN" fromId="8a5d928137df6c1e01384ba927e50010" toId="8a5d928137df6c1e0138371c6fba000b" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928125680ec201271d68780717d3" toId="8a5d928137df6c1e01383718cbe40007" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928135d2c6f90135d2ca802c0002" toId="8a5d928138521c33013852441b8e0002" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928135d2c6f90135d2ca802c0002" toId="8a5d928138521c3301385244b3540003" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928135d2c6f90135d2ca802c0002" toId="8a5d92813e9d1cff013ea775035a0008" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928135d2c6f90135d2ca802c0002" toId="8a5d92813e9d1cff013ea775dccd0009" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928137df6c1e0138371c6fba000b" toId="8a5d928138521c3301385244b3540003" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928137df6c1e0138371c6fba000b" toId="8a5d92813e9d1cff013ea775035a0008" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928137df6c1e0138371c6fba000b" toId="8a5d92813e9d1cff013ea7768a02000a" color="65280" name="" linkType="arc"/>
+    <Link resourceType="WAP-GGSN" fromId="8a5d928137df6c1e01384ba780b8000e" toId="8a5d928125680ec201271d69c40517d6" color="65280" name="" linkType="arc"/>
+    <Link resourceType="WAP-GGSN" fromId="8a5d928137df6c1e01384ba884ec000f" toId="8a5d92813463749f0134637d63100003" color="65280" name="" linkType="arc"/>
+    <Link resourceType="WAP-GGSN" fromId="8a5d928137df6c1e01384ba884ec000f" toId="8a5d928135d2c6f90135d2c8126d0001" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928125680ec201271d69c40517d6" toId="8a5d9281366254b501372a3a3abb0018" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928125680ec201271d69c40517d6" toId="8a5d928137df6c1e013837197a770008" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928125680ec201271d696ca817d5" toId="8a5d9281366254b501372a3b83a60019" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928125680ec201271d696ca817d5" toId="8a5d928137df6c1e0138371b1727000a" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928125680ec201271d68f1c017d4" toId="8a5d928137df6c1e0138371a2eec0009" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d92813463749f0134637c2bfe0002" toId="8a5d9281366254b501372a3c25ab001a" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d92813463749f0134637c2bfe0002" toId="8a5d9281366254b501372a3d1559001b" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d92813463749f0134637d63100003" toId="8a5dffbc298ac02c01298ac02c69000a" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d92813463749f0134637d63100003" toId="8a5d928135d2c6f90135d2c6f9ac0000" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928135d2c6f90135d2c8126d0001" toId="8a5d928138521c33013852441b8e0002" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928135d2c6f90135d2c8126d0001" toId="8a5d928138521c3301385244b3540003" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928135d2c6f90135d2c8126d0001" toId="8a5d92813e9d1cff013ea775035a0008" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928135d2c6f90135d2c8126d0001" toId="8a5d92813e9d1cff013ea775dccd0009" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SGSNPOOL-BSCGROUP" fromId="alxpool" toId="BSC1" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="SGSNPOOL-BSCGROUP" fromId="nxpool" toId="BSC2" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="SGSNPOOL-BSCGROUP" fromId="nxpool" toId="BSC3" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="SGSNPOOL-RNCGROUP" fromId="nxpool" toId="RNC6" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="SGSNPOOL-RNCGROUP" fromId="nxpool" toId="RNC4" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="SGSNPOOL-RNCGROUP" fromId="nxpool" toId="RNC5" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="SGSNPOOL-RNCGROUP" fromId="alxpool" toId="RNC1" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="WAP-GGSN" fromId="8a5d928137df6c1e01384ba780b8000e" toId="8a5d928125680ec201271d696ca817d5" color="65280" name="" linkType="arc"/>
+    <Link resourceType="WAP-GGSN" fromId="8a5d928137df6c1e01384ba884ec000f" toId="8a5d928125680ec201271d68f1c017d4" color="65280" name="" linkType="arc"/>
+    <Link resourceType="WAP-GGSN" fromId="8a5d928137df6c1e01384ba884ec000f" toId="8a5d92813463749f0134637c2bfe0002" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928137df6c1e0138371c6fba000b" toId="8a5d92813e9d1cff013ea775dccd0009" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928137df6c1e0138371c6fba000b" toId="8a5d928138521c33013852441b8e0002" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928135d2c6f90135d2c8126d0001" toId="8a5dffa640610ed70140610ed8fe002c" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928137df6c1e0138371c6fba000b" toId="8a5dffa640610ed70140610ed8fe002c" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928135d2c6f90135d2ca802c0002" toId="8a5dffa640610ed70140610ed8fe002c" color="65280" name="" linkType="arc"/>
+  </Links>
+  <Labels>
+    <Label name="GPRS拓扑" x="671.5" y="0"/>
+  </Labels>
+</Topo>

@@ -1,0 +1,230 @@
+.titleKpi{
+  font-family:"Let's go Digital Regular";
+  font-size:0.8em;
+  text-align: center;
+  line-height:10px;
+  text-decoration: none;
+}
+
+/**jqgrid边框背景*/
+.ui-widget-content {
+    border: 1px none #393F4F;
+    background: #393F4F;
+    color: #ffffff;
+}
+
+/**jqgrid 表头背景*/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid #000000;
+    background: #000000;
+    font-weight: normal;
+    color: #ffffff;
+}
+/**jqgrid 奇数行颜色*/
+.oddGrayTableRow {
+	background: #1E242B;
+}
+
+/**================MultiTypeDeviceKpiTable专用样式======================*/
+.ui-jqgrid .ui-jqgrid-view {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    padding: 0;
+    font-size: 20px;
+    text-indent: :5px;
+}
+.ui-jqgrid tr.jqgrow td {
+    height: 40px;
+    line-height: 40px;
+}
+
+
+
+.deviceNav{
+	background:#1D2025;
+}
+.deviceNav li{
+	text-align:center;
+	cursor:pointer;
+}
+.deviceNav li a{
+	font-size:20px;
+}
+
+.deviceNav li .deviceNavBottom{
+	position:absolute;
+	bottom:0px;
+	height:5px;
+	width:100%;
+}
+.deviceNav li .deviceNavBottomSelected{
+	background:#3B8BC8;
+}
+
+
+
+/**jqgrid边框背景*/
+.MultiTypeDeviceKpiTable .ui-widget-content {
+    border: 2px solid #3B8BC8;
+    background: #393F4F;
+    color: #ffffff;
+}
+
+.MultiTypeDeviceKpiTable .ui-jqgrid tr.jqgrow td {
+    font-weight: normal;
+    overflow: hidden;
+    white-space: pre;
+    height: 40px;
+    padding: 0 0px 0 0px;
+    border-bottom-width: 1px;
+    border-bottom-color: inherit;
+    border-bottom-style: solid;
+    font-size:20px;
+}
+
+
+.fillCellBg{
+	background: #0D6793;
+	display:inline-block;
+	float:left;
+	left:0px;
+	top:0px;
+	text-align: left;
+	font-size:20px;
+	line-height: 40px;
+	text-indent: :5px;
+	font-family: "Let's go Digital Regular";
+	color:#FDF25E;
+	font-size:28px;
+}
+.vendorCell{
+	background: #0F2D55;
+}
+
+/**================MultiTypeDeviceKpiTable专用样式 end======================*/
+.batteryFull{
+	background:#6CA587;
+	border:1px solid #6CA587;
+	-moz-border-radius: 5px;      /* Gecko browsers */
+    -webkit-border-radius: 5px;   /* Webkit browsers */
+    border-radius:5px;            /* W3C syntax */
+}
+.batteryEmpty{
+	background:#7C7C7C;
+	border:1px solid #7C7C7C;
+	-moz-border-radius: 5px;      /* Gecko browsers */
+    -webkit-border-radius: 5px;   /* Webkit browsers */
+    border-radius:5px;            /* W3C syntax */
+}
+
+
+.batteryValue div{
+	font-size:16px;
+}
+.batteryValue{
+	text-indent: 5px;
+	font-size:24px;
+	font-family: "Let's go Digital Regular";
+	color:#FDF25E;
+	line-height: 24px;
+}
+.customScatter{
+	border-left:1px solid #ffffff;
+	border-bottom:1px solid #ffffff;
+	position:absolute;
+	bottom:30px;
+	left:30px;
+}
+
+.backBtn{
+	cursor:pointer;
+	float:right;
+	font-size:14px;
+	line-height:14px;
+	margin-top:18px;
+	display:none;
+}
+
+.tp2_box_SAEGW .alarmTopoNode i{
+	background: url(images/SAEGW_red.png) center 0px no-repeat
+}
+.tp2_box_MME .alarmTopoNode i{
+	background: url(images/MME_red.png) center 0px no-repeat
+}
+.alarmTopoNode span{
+	color:red;
+}
+
+.KPI_green div{
+	color:black;
+}
+.KPI_red div{
+	color:white;
+}
+
+.KPI_red .KPI1_span2{
+	font-size:2.4em;
+}
+
+.alarmBox{
+	border-color: #ff0000;
+	position:relative;
+}
+
+.alarmBox span{
+	color:#ff0000;
+	display:inline-block;
+	table-layout: fixed; 
+	word-wrap: break-word; 
+	overflow: hidden;
+	height:45px;
+}
+.icon-Chart{
+	right: 5px;
+    top: 5px;
+    bottom:5px;
+    position: absolute;
+	float:right;
+	cursor:pointer;
+}
+
+.arrow{
+	pointer-events: none;
+}
+.arrow div{
+	pointer-events: none;
+}
+
+.tempWin{
+	background:#7C7C7C;
+	border:1px solid #333333;
+}
+
+.tempWinTitle{
+	font-size:24px;
+	font-weight:bold;
+	background:#111111;
+	color:#ffffff;
+	text-indent: 10px;
+}
+.tempWinTitle div{
+	color:#ffffff;
+}
+.tempWinContent{
+	
+}
+.tempWinClose{
+	cursor:pointer;
+	position:absolute;
+	right:10px;
+	top:5px;
+	width:24px;
+	height:24px;
+	background: url(images/Panel_closeButtonUpSkin.png) center 0px no-repeat
+}
+
+input{
+	color:#000000;
+}
+

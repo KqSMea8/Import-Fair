@@ -1,0 +1,39 @@
+<Topo from="CACHE" id="assets/datas/gprs1.xml" name="GPRS拓扑">
+  <Groups>
+    <Group resourceType="SGSNPOOL" id="alxpool" name="" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="460" y="275"/>
+  </Groups>
+  <Nodes>
+    <Node resourceType="LINE" resourceId="" id="line1" name="" image="assets/images/icons/resource/0/online/line.png" x="100" y="175"/>
+    <Node resourceType="LINE" resourceId="" id="line2" name="" image="assets/images/icons/resource/0/online/line.png" x="100" y="430"/>
+    <Node resourceType="FW" resourceId="8a5dffbc298ac02c01298ac02c990022" id="8a5dffbc298ac02c01298ac02c990022" name="出口链路"  image="assets/images/icons/resource/0/online/rncgroup.png" x="240" y="60"/>
+    <Node resourceType="FW" resourceId="8a5dffbc298ac02c01298ac02c9b0023" id="8a5dffbc298ac02c01298ac02c9b0023" name="第三方链路"  image="assets/images/icons/resource/0/online/rncgroup.png" x="540" y="60"/>
+    <Node resourceType="FW" resourceId="8a5dffbc298ac02c01298ac02c7d0017" id="8a5dffbc298ac02c01298ac02c7d0017" name="铁通"  image="assets/images/icons/resource/0/online/rncgroup.png" x="840" y="60"/>
+    
+    <Node resourceType="FW" resourceId="8a5dffbc298ac02c01298ac02c7e0018" id="8a5dffbc298ac02c01298ac02c7e0018" name="IDC"  image="assets/images/icons/resource/0/online/rncgroup.png" x="240" y="254"/>
+    <Node resourceType="FW" resourceId="8a5dffbc298ac02c01298ac02c9d0024" id="8a5dffbc298ac02c01298ac02c9d0024" name="Cache链路"  image="assets/images/icons/resource/0/online/rncgroup.png" x="240" y="330"/>
+    <Node resourceType="FW" resourceId="8a5dffbc298ac02c01298ac02c9e0025" id="8a5dffbc298ac02c01298ac02c9e0025" name="重要企业直连"  image="assets/images/icons/resource/0/online/rncgroup.png" x="840" y="214"/>
+    
+    <Node resourceType="FW" resourceId="8a5dffbc298ac02c01298ac02c800019" id="8a5dffbc298ac02c01298ac02c800019" name="MX480"  image="assets/images/icons/resource/0/online/rncgroup.png" x="240" y="458"/>
+    <Node resourceType="FW" resourceId="8a5dffbc298ac02c01298ac02c81001a" id="8a5dffbc298ac02c01298ac02c81001a" name="接入层"  image="assets/images/icons/resource/0/online/rncgroup.png" x="540" y="458"/>
+    <Node resourceType="WAP" resourceId="8a5d928137df6c1e01384ba927e50010" id="8a5d928137df6c1e01384ba927e50010" name="重要peer用户" image="assets/images/icons/resource/0/online/rncgroup.png" x="840" y="458"/>
+    
+    <Node resourceType="FW" resourceId="8a5dffbc298ac02c01298ac02c810011" id="8a5dffbc298ac02c01298ac02c810011" name="浦东TXP" group="alxpool" image="assets/images/icons/resource/0/online/ce.png" x="490" y="280"/>
+    <Node resourceType="WAP" resourceId="8a5d928137df6c1e01384ba927e50012" id="8a5d928137df6c1e01384ba927e50012" name="武胜TXP" group="alxpool" image="assets/images/icons/resource/0/online/ce.png" x="610" y="280"/>
+  </Nodes>
+  <Links>
+    <Link resourceType="WAP-GGSN" fromId="8a5dffbc298ac02c01298ac02c990022" id="ckll" toId="alxpool" color="65280" name="null" linkType="arc"/>
+    <Link resourceType="WAP-GGSN" fromId="8a5dffbc298ac02c01298ac02c9b0023" id="dsfll" toId="alxpool" color="65280" name="null" linkType="arc"/>
+    <Link resourceType="WAP-GGSN" fromId="8a5dffbc298ac02c01298ac02c7d0017" id="tt" toId="alxpool" color="65280" name="null" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5dffbc298ac02c01298ac02c7e0018" id="idc" toId="alxpool" color="65280" name="null" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5dffbc298ac02c01298ac02c9d0024" id="cache" toId="alxpool" color="65280" name="null" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5dffbc298ac02c01298ac02c9e0025" id="ts" toId="alxpool" color="65280" name="null" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5dffbc298ac02c01298ac02c800019" id="mx480" toId="alxpool" color="65280" name="null" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5dffbc298ac02c01298ac02c81001a" id="bbb" toId="alxpool" color="65280" name="null" linkType="arc"/>
+    <Link resourceType="GGSN-SGSN" fromId="8a5d928137df6c1e01384ba927e50010" id="ccc" toId="alxpool" color="65280" name="null" linkType="arc"/>
+  </Links>
+  <Labels>
+    <Label name="资源角度" x="120" y="184"/>
+    <Label name="用户角度" x="120" y="420"/>
+    <Label name="出口角度" x="120" y="30" />
+  </Labels>
+</Topo>

@@ -1,0 +1,38 @@
+<Topo from="CACHE" id="assets/datas/international.xml" name="软交换国际局">
+  <Groups>
+    <Group resourceType="IP专网" id="ar" name="IP专网" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="472.725882523148" y="141.7"/>
+  </Groups>
+  <Nodes>
+    <Node resourceType="IMG" resourceId="" id="mm国际局-信令(MGW)" name="国际局-信令(MGW)" image="assets/images/icons/resource/0/online/img.png" x="265.7" y="356.7"/>
+    <Node resourceType="ISS" resourceId="" id="mm国际局-信令(Server)" name="国际局-信令(Server)" image="assets/images/icons/resource/0/online/iss.png" x="472.2" y="356.7"/>
+    <Node resourceType="IMG" resourceId="" id="mm国际局-媒体" name="国际局-媒体" image="assets/images/icons/resource/0/online/img.png" x="678.7" y="356.7"/>
+    <Node resourceType="CE" resourceId="8a5d9281366254b50137358c2a9c0023" id="8a5d9281366254b50137358c2a9c0023" name="CE17" image="assets/images/icons/resource/0/online/ce.png" x="520.7" y="269.7"/>
+    <Node resourceType="CE" resourceId="8a5d9281366254b5013735a150ba0024" id="8a5d9281366254b5013735a150ba0024" name="CE18" image="assets/images/icons/resource/0/online/ce.png" x="355.7" y="269.7"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94cb470c000e" id="8a5dffbc2f7608f8012f94cb470c000e" name="万荣AR9" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="524.7258825231479" y="141.7"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94cbf085000f" id="8a5dffbc2f7608f8012f94cbf085000f" name="钦州AR10" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="739.2258825231479" y="141.7"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c6e94a000a" id="8a5dffbc2f7608f8012f94c6e94a000a" name="万荣AR5" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="802.2258825231479" y="141.7"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c85302000b" id="8a5dffbc2f7608f8012f94c85302000b" name="钦州AR6" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="580.2258825231479" y="141.7"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c929c4000c" id="8a5dffbc2f7608f8012f94c929c4000c" name="浦东AR7" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="208.72588252314802" y="141.7"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94ca4d42000d" id="8a5dffbc2f7608f8012f94ca4d42000d" name="金桥AR8" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="389.725882523148" y="141.7"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c4af970008" id="8a5dffbc2f7608f8012f94c4af970008" name="浦东AR3" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="337.725882523148" y="141.7"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c5e4890009" id="8a5dffbc2f7608f8012f94c5e4890009" name="金桥AR4" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="143.22588252314796" y="141.7"/>
+  	<Node resourceType="RETURN" resourceId="" id="mmreturnipnet" isSegment="true-assets/datas/ipnet.xml" name="返回IP承载网" image="assets/images/icons/resource/0/online/return.png" x="500" y="10"/>
+  </Nodes>
+  <Links>
+    <Link resourceType="CE-IMG" fromId="8a5d9281366254b5013735a150ba0024" toId="mm国际局-信令(MGW)" color="65280" name=""/>
+    <Link resourceType="CE-ISS" fromId="8a5d9281366254b5013735a150ba0024" toId="mm国际局-信令(Server)" color="65280" name=""/>
+    <Link resourceType="CE-IMG" fromId="8a5d9281366254b5013735a150ba0024" toId="mm国际局-媒体" color="65280" name=""/>
+    <Link resourceType="CE-IMG" fromId="8a5d9281366254b50137358c2a9c0023" toId="mm国际局-信令(MGW)" color="65280" name=""/>
+    <Link resourceType="CE-ISS" fromId="8a5d9281366254b50137358c2a9c0023" toId="mm国际局-信令(Server)" color="65280" name=""/>
+    <Link resourceType="CE-IMG" fromId="8a5d9281366254b50137358c2a9c0023" toId="mm国际局-媒体" color="65280" name=""/>
+    <Link resourceType="CE-AR" fromId="8a5d9281366254b50137358c2a9c0023" toId="8a5dffbc2f7608f8012f94c4af970008" color="65280" name=""/>
+    <Link resourceType="CE-AR" fromId="8a5d9281366254b5013735a150ba0024" toId="8a5dffbc2f7608f8012f94c5e4890009" color="65280" name=""/>
+    <Link resourceType="CE-CE" fromId="8a5d9281366254b50137358c2a9c0023" toId="8a5d9281366254b5013735a150ba0024" color="65280" name=""/>
+  </Links>
+  <Labels>
+    <Label name="——设备CPU利用率TOP" x="225.5" y="5"/>
+    <Label name="制表人：严敏" x="1201.35" y="44.95"/>
+    <Label name="软交换国际局拓扑图" x="1201.35" y="4.8999999999999915"/>
+    <Label name="制表日期：2013-1-25" x="1201.35" y="85.00000000000001"/>
+  </Labels>
+</Topo>

@@ -1,0 +1,29 @@
+<config>
+	<group name="重点客户">
+		<user name="上海银行股份有限公司" 			interfaceIds="4734f72c5be0a855584e6b1448fbe0d4"/>
+		<user name="交通银行股份有限公司 " 			interfaceIds="4ba02341a773b87534478fb0b740453e"/>
+		<user name="交通银行股份有限公司上海分行" 	interfaceIds="198b293be2ec85f48b171c069fb1498c,c58d23770d711777098975f506a0dc84"/>
+		<user name="上海携程商务有限公司" 			interfaceIds="32dee2aadff5ed31726cf5f1be0ae494"/>
+		<user name="中信建投证券有限责任公司" 		interfaceIds="703e38cf1ac49b334dc4e1871df92f6d"/>
+		<user name="中国人民银行上海清算总中心" 		interfaceIds="931fb5bec471bc717d4d3928c1cb236e,c42ae184330b534862475695a85c1c51"/>
+	</group>
+	<group name="重点客户">
+		<user name="兴业银行股份有限公司信用卡中心" 	interfaceIds="4ab8bc231a5a69c6a4e85e455d30e2e5"/>
+		<user name="申银万国证券有限公司" 			interfaceIds="71c1387d78f5b03205a7c8cc6f26c856"/>
+		<user name="上海世纪联华超市发展有限公司" 	interfaceIds="59b391d22ba4dc2bbdc5ce20b595588e"/>
+		<user name="中华人民共和国上海海关" 			interfaceIds="8ad11de5fa163721ef2768e826f9b248"/>
+		<user name="上海市电力公司" 	 				interfaceIds="cac7aecbbce53355f3054f5d319fb48c"/>
+		<user name="上海市城市建设投资开发总公司" 	interfaceIds="bb2cb5adbfe1c004c1410022dc45bd2f"/>
+		<user name="上海振华重工(集团)股份有限公司" 	interfaceIds="dbd5bc6ebc464be83b3d1164edbad1dd"/>
+		<user name="上海汽车工业（集团）总公司 " 		interfaceIds="8ae7b1eeed4ac280a54b17e82d10b352"/>
+		<user name="上海纺织控股（集团）公司" 		interfaceIds="5001009241270abaa909e06518e3aa81"/>
+		<user name="中国商用飞机有限责任公司" 		interfaceIds="982e72781a4cc09497cd062a593db3c7"/>
+		<user name="上海振华重工(集团)股份有限公司" 	interfaceIds="605f7af709b685bc61f6c2e403ba509e"/>
+		<user name="上海东方有线网络有限公司" 		interfaceIds="d5d8f33d8092dc19334a2546e926e721,e6599f1a9f4cdbb8acb28be8ed3432d9"/>
+		<user name="东方有线网络有限公司" 			interfaceIds="fed5498c925d1435b71bbf8f216861ae"/>
+		<user name="上海松江东方有线网络有限公司" 	interfaceIds="992a234936389ae209cc9dcd44f6a929"/>
+		<user name="上海地面通信息网络有限公司" 		interfaceIds="802ca5d66d60d75e5485e820cc2ba376"/>
+		<user name="上海翰威信息科技有限公司-BGP" 	interfaceIds="5b3ce2efc144b7d61394799785653725"/>
+		<user name="上海大学" 						interfaceIds="c8266bfeb775534bddd6511cbad1ef37"/>
+	</group>
+</config>

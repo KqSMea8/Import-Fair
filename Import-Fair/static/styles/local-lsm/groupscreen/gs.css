@@ -1,0 +1,346 @@
+.bgL{
+	width:1000px;
+	height:1050px;
+	background:url(images/bgL.jpg) center 0px no-repeat;
+	background-size:100% 100%;
+	padding:20px;
+}
+.bgC{
+	width:1500px;
+	height:1050px;
+	background:url(images/bgC.jpg) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.bgR{
+	width:1000px;
+	height:1050px;
+	background:url(images/bgR.jpg) center 0px no-repeat;
+	background-size:100% 100%;
+	padding:20px;
+}
+.roamBgL{
+	width:1000px;
+	height:1050px;
+	background:url(images/roam/bg_01.jpg) center 0px no-repeat;
+	background-size:100% 100%;
+	padding:20px;
+}
+.roamBgC{
+	width:1500px;
+	height:1050px;
+	background:url(images/roam/bg_02.jpg) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.roamBgR{
+	width:1000px;
+	height:1050px;
+	background:url(images/roam/bg_03.jpg) center 0px no-repeat;
+	background-size:100% 100%;
+	padding:20px;
+}
+
+.screentitle{
+	width:3500px;
+	height:198px;
+	background:url(images/title_g.png) center 0px no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	top:0;
+	left:0;
+	pointer-events:none;
+	text-align:center;
+}
+.logociie{
+	width:1226px;
+	height:72px;
+	background:url(images/logo_g.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-gc{
+	width:32px;
+	height:32px;
+	background:url(images/icon_group.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-fc{
+	width:32px;
+	height:32px;
+	background:url(images/icon_family.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-fca{
+	width:32px;
+	height:32px;
+	background:url(images/icon_familyquality.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon_user{
+	width:32px;
+	height:32px;
+	background:url(images/icon_user.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon_qst{
+	width:32px;
+	height:32px;
+	background:url(images/qst.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon_gsm_hwl{
+	width:32px;
+	height:32px;
+	background:url(images/gsm_hwl.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon_hlwzl{
+	width:32px;
+	height:32px;
+	background:url(images/hlwzl.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon_wireless{
+	width:32px;
+	height:32px;
+	background:url(images/icon_wireless.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon_wxsw{
+	width:32px;
+	height:32px;
+	background:url(images/wxsw.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon_yhs{
+	width:312px;
+	height:239px;
+	background:url(images/yhs.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon_Lte{
+	width:32px;
+	height:32px;
+	background:url(images/Lte.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+
+.icon_gjmrzdyh{
+	width:32px;
+	height:32px;
+	background:url(images/gjmrzdyh.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+
+.icon_wirelessquality{
+	width:32px;
+	height:32px;
+	background:url(images/icon_wirelessquality.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+
+.icon_gauge{
+	width:168px;
+	height:168px;
+	background:url(images/gauge.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+
+.icon_bg{
+	width:960px;
+	height:162px;
+	background:url(images/bg.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon_Internet{
+	width:32px;
+	height:32px;
+	background:url(images/Internet.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+
+.icon_hyyhs{
+	width:32px;
+	height:32px;
+	background:url(images/hyyhs.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon_return{
+	width:32px;
+	height:32px;
+	background:url(images/return.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon_Internet_bg{
+	width:960px;
+	height:566px;
+	background:url(images/Internetbg.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+
+.icon_Internet_bg_1{
+	width:960px;
+	height:566px;
+	background:url(images/Internetbg_1.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon_http{
+	width:310px;
+	height:100px;
+	background:url(images/HTTP.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.wireless{
+	width:300px;
+	height:300px;
+	background:url(images/wireless.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.bg-spframe{
+	width:470px;
+	height:80px;
+	background:url(images/spkpi.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.spframe-title{
+	font-size:24px;
+	text-align:center;
+	line-height:75px;
+	width:185px;
+}
+.spframe-value{
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+	width:275px;
+	line-height:75px;
+}
+.spframe-value>div{
+	float:left;
+}
+
+
+.bg-fckpiblock{
+	width:230px;
+	height:150px;
+	background:url(images/kpiblock.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.bg-frame{
+	background:rgba(0,102,255,0.15);
+	width:710px;
+	height:150px;
+}
+.bg-frame-round{
+	border-radius:8px;
+	background:rgba(0,102,255,0.15);
+	width:227px;
+	height:280px;
+}
+.bg-circle{
+	width:150px;
+	height:150px;
+	background:url(images/circle.png) center 0px no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-75px;
+	margin-left:-75px;
+}
+#kpiquality{
+	overflow:hidden;
+}
+#kpiquality>div{
+	float:left;
+}
+#kpiquality>div:nth-child(n+2){
+	margin-left:15px;
+}
+
+.GS-roamList{
+	width:272px;
+	height:440px;
+	background:url(images/roam/roamlist_bg.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.GS-roamList-title{
+	width:258px;
+	height:62px;
+	background:url(images/roam/roamlist_title.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.GS-roamList-icon{
+	width:28px;
+	height:28px;
+	background:url(images/roam/roamlist_icon.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.GS-arrow-up{
+	width:48px;
+	height:48px;
+	background:url(images/roam/arrow_up.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.GS-arrow-down{
+	width:48px;
+	height:48px;
+	background:url(images/roam/arrow_down.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+
+.GS-cnavi-short{
+	width:48px;
+	height:64px;
+	background:url(images/cnavi/short.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.GS-cnavi-long{
+	width:48px;
+	height:154px;
+	background:url(images/cnavi/long.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.GS-cnavi-icon{
+	width:6px;
+	height:18px;
+	background:url(images/cnavi/icon.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.GS-cnavi-splitline{
+	width:400px;
+	height:2px;
+	background:url(images/cnavi/splitline.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+
+.GS-roamList-rankcolor1{
+	border-radius:5px;
+	background: -webkit-linear-gradient(90deg,#ef500c,#ffae8e);  
+    background: -o-linear-gradient(90deg,#ef500c,#ffae8e);  
+    background: -moz-linear-gradient(90deg,#ef500c,#ffae8e);  
+    background: -mos-linear-gradient(90deg,#ef500c,#ffae8e);  
+    background: linear-gradient(90deg,#ef500c,#ffae8e);  
+}
+.GS-roamList-rankcolor2{
+	border-radius:5px;
+	background: -webkit-linear-gradient(90deg,#ff8e21,#ffec69);  
+    background: -o-linear-gradient(90deg,#ff8e21,#ffec69);  
+    background: -moz-linear-gradient(90deg,#ff8e21,#ffec69);  
+    background: -mos-linear-gradient(90deg,#ff8e21,#ffec69);  
+    background: linear-gradient(90deg,#ff8e21,#ffec69);  
+}
+.GS-roamList-rankcolor3{
+	border-radius:5px;
+	background: -webkit-linear-gradient(90deg,#6ad72c,#19ffa7);  
+    background: -o-linear-gradient(90deg,#6ad72c,#19ffa7);  
+    background: -moz-linear-gradient(90deg,#6ad72c,#19ffa7);  
+    background: -mos-linear-gradient(90deg,#6ad72c,#19ffa7);  
+    background: linear-gradient(90deg,#6ad72c,#19ffa7);  
+}
+.GS-roamList-rankcolor4{
+	border-radius:5px;
+	background: -webkit-linear-gradient(90deg,#0068ff,#59e3ff);  
+    background: -o-linear-gradient(90deg,#0068ff,#59e3ff);  
+    background: -moz-linear-gradient(90deg,#0068ff,#59e3ff);  
+    background: -mos-linear-gradient(90deg,#0068ff,#59e3ff);  
+    background: linear-gradient(90deg,#0068ff,#59e3ff);  
+}

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<device name="SGSN">
+		<kpi id="attachSuccRate" name="附着成功率" />
+		<kpi id="attachSuccRate2G" name="附着成功率(2G)" />
+		<kpi id="attachSuccRate3G" name="附着成功率(3G)" />
+		<kpi id="PDPActiSuccRate" name="PDP激活成功率" />
+		<kpi id="PDPActiSuccRate2G" name="PDP激活成功率(2G)" />
+		<kpi id="PDPActiSuccRate3G" name="PDP激活成功率(3G)" />
+		<kpi id="routeUpdateSuccRate" name="SGSN总路由更新成功率" />
+		<kpi id="routeUpdateSuccRate2G" name="SGSN总路由更新成功率(2G)" />
+		<kpi id="routeUpdateSuccRate3G" name="SGSN总路由更新成功率(3G)" />
+		<kpi id="SGSNInRouteUpdateSuccRate" name="SGSN间路由更新成功率" />
+		<kpi id="SGSNInRouteUpdateSuccRate2G" name="SGSN间路由更新成功率(2G)" />
+		<kpi id="SGSNInRouteUpdateSuccRate3G" name="SGSN间路由更新成功率(3G)" />
+		<kpi id="SGSNWiRouteUpdateSuccRate" name="SGSN内路由更新成功率" />
+		<kpi id="SGSNWiRouteUpdateSuccRate2G" name="SGSN内路由更新成功率(2G)" />
+		<kpi id="SGSNWiRouteUpdateSuccRate3G" name="SGSN内路由更新成功率(3G)" />
+		<kpi id="avgAttachUserNum" name="平均附着用户数" />
+		<kpi id="avgAttachUserNumRate" name="平均附着用户数利用率" />
+		<kpi id="avgAttachUserNum2G" name="平均附着用户数(2G)" />
+		<kpi id="avgAttachUserNum3G" name="平均附着用户数(3G)" />
+		<kpi id="PDPActiUserNum" name="PDP激活用户数" />
+		<kpi id="PDPActiUserNum2G" name="PDP激活用户数(2G)" />
+		<kpi id="PDPActiUserNum3G" name="PDP激活用户数(3G)" />
+		<kpi id="cpuUtility" name="CPU利用率" description="用于板卡" />
+	</device>
+	<device name="SGSNPOOL">
+		<kpi id="avgAttachUserNum" name="平均附着用户数" />
+		<kpi id="avgAttachUserNum2G" name="平均附着用户数(2G)" />
+		<kpi id="avgAttachUserNum3G" name="平均附着用户数(3G)" />
+		<kpi id="PDPActiUserNum" name="PDP激活用户数" />
+		<kpi id="PDPActiUserNum2G" name="PDP激活用户数(2G)" />
+		<kpi id="PDPActiUserNum3G" name="PDP激活用户数(3G)" />
+		<kpi id="balanceIndex" name="均衡指数" />
+	</device>
+	<device name="APN">
+		<kpi id="PDPActiTryNum" name="PDP激活尝试次数" />
+		<kpi id="PDPActiSuccRate" name="PDP激活成功率" />
+		<kpi id="apnOnlineUserNum" name="APN在线用户数" />
+		<kpi id="upFlow" name="上行流量" />
+		<kpi id="downFlow" name="下行流量" />
+		<kpi id="addressPoolUseRate" name="地址池利用率" />
+	</device>
+	<device name="GGSN">
+		<kpi id="avgPDPActiUserNum" name="平均PDP激活用户数" />
+		<kpi id="avgPDPActiUserNumRate" name="平均PDP激活用户数利用率" />
+		<kpi id="upFlowGI" name="GI上行流量" />
+		<kpi id="downFlowGI" name="GI下行流量" />
+		<kpi id="cpuUtility" name="CPU利用率" />
+	</device>
+	<device name="WAP">
+		<kpi id="wapVisibleUseTpsRate" name="WAP网关可见TPS利用率" />
+	</device>
+	<device name="INTERFACE">
+		<kpi id="upFlow" name="上行流量" />
+		<kpi id="downFlow" name="下行流量" />
+		<kpi id="totalFlow" name="总流量" />
+	</device>
+	<device name="INTERFACEF">
+		<kpi id="upFlow" name="下行流量" />
+		<kpi id="downFlow" name="上行流量" />
+		<kpi id="totalFlow" name="总流量" />
+	</device>
+	<device name="INTERFACEINOUT">
+		<kpi id="upFlow" name="流入流量" />
+		<kpi id="downFlow" name="流出流量" />
+		<kpi id="totalFlow" name="总流量" />
+	</device>
+	<device name="INTERFACEOUTIN">
+		<kpi id="upFlow" name="流出流量" />
+		<kpi id="downFlow" name="流入流量" />
+		<kpi id="totalFlow" name="总流量" />
+	</device>
+	<device name="LINK">
+		<kpi id="upFlow" name="上行流量" />
+		<kpi id="downFlow" name="下行流量" />
+		<kpi id="totalFlow" name="总流量" />
+	</device>
+	<device name="DNS">
+		<kpi id="sysParseSuccRate" name="系统解析成功率" />
+		<kpi id="userReqParseSuccRate" name="用户请求解析成功率" />
+		<kpi id="parseAvgDelay" name="解析平均时延" />
+	</device>
+	<device name="FW">
+		<kpi id="sessionNum" name="session数" />
+		<kpi id="sessionNumRate" name="session利用率" />
+	</device>
+	<device name="FEISIDA_USER_EXPERIENCE" decription="飞思达拨测指标">
+		<kpi id="analyTime" name="解析时间" />
+		<kpi id="connectedTime" name="连接时间" />
+		<kpi id="firstByteTime" name="首字节时间" />
+		<kpi id="firstScreenTime" name="首屏打开时间" />
+		<kpi id="throughupRate" name="吞吐率" />
+		<kpi id="overralQuality" name="综合质量" />
+	</device>
+	<device name="FEISIDA_INTERCONNECT" decription="飞思达拨测指标">
+		<kpi id="lostBag" name="丢包" />
+		<kpi id="delay" name="时延" />
+	</device>
+	<device name="FEISIDA_PATH_DELAY_PING" decription="飞思达拨测指标">
+		<kpi id="lostBag" name="丢包" />
+		<kpi id="delay" name="时延" />
+	</device>
+	<device name="WLAN" decription="wlan">
+		<kpi id="totalFlow" name="总流量" />
+		<kpi id="maxRelateUserNum" name="关联用户数" />
+		<kpi id="maxOnlineUserNum" name="在线用户数" />
+		<kpi id="relateSuccRate" name="关联成功率" />
+		<kpi id="dhcpReqSuccRate" name="DHCP请求成功率" />
+		<kpi id="relateExceOffLineRate" name="关联终端异常掉线率" />
+		<kpi id="dhcpAddrUseRate" name="DHCP地址池利用率" />
+		<kpi id="relateBlockRate" name="AP关联拥塞率" />
+		<kpi id="busyHotspotNum" name="超忙热点数" />
+		<kpi id="idleHotspotNum" name="超闲热点数" />
+	</device>
+	<device name="CPUMEM" decription="cpumem">
+		<kpi id="cpuUtility" name="CPU利用率" />
+	</device>
+	<device name="DNS" decription="dns">
+		<kpi id="serverCpu" name="服务器CPU" />
+		<kpi id="serverMem" name="服务器内存" />
+		<kpi id="serverProcess" name="服务器主要进程" />
+		<kpi id="serverDiskUseRate" name="服务器磁盘利用率" />
+		<kpi id="dnsParseSuccRate" name="DNS业务解析成功率" />
+		<kpi id="qpsNum" name="并发请求数QPS" />
+		<kpi id="parseDelay" name="解析时延" />
+	</device>
+	<device name="MME" decription="mme">
+		<kpi id="MM_ATTEPSATTACH" name="EPS附着请求次数" />
+		<kpi id="MM_SUCCEPSATTACH" name="EPS附着成功次数" />
+		<kpi id="MM_FAILEDEPSATTACH_3" name="非法用户的EPS附着失败次数" />
+		<kpi id="MM_FAILEDEPSATTACH_6" name="非法ME的EPS附着失败次数" />
+		<kpi id="MM_FAILEDEPSATTACH_7" name="EPS服务不允许的EPS附着失败次数" />
+		<kpi id="MM_FAILEDEPSATTACH_8" name="EPS和非EPS服务不允许的EPS附着失败次数" />
+		<kpi id="SM_ACTDEFAULTEPSBEARERREQUEST" name="缺省承载激活请求次数" />
+		<kpi id="SM_ACTDEFAULTEPSBEARERACCEPT" name="缺省承载激活成功次数" />
+		<kpi id="MM_ATTINTERMMEINTERSGWTAU" name="MME间SGW间跟踪区更新请求次数" />
+		<kpi id="MM_SUCCINTERMMEINTERSGWTAU" name="MME间SGW间跟踪区更新成功次数" />
+		<kpi id="MM_ATTINTERMMEINTRASGWTAU" name="MME间SGW内跟踪区更新请求次数" />
+		<kpi id="MM_SUCCINTERMMEINTRASGWTAU" name="MME间SGW内跟踪区更新成功次数" />
+		<kpi id="MM_ATTINTRAMMEINTERSGWTAU" name="MME内SGW间跟踪区更新请求次数" />
+		<kpi id="MM_SUCCINTRAMMEINTERSGWTAU" name="MME内SGW间跟踪区更新成功次数" />
+		<kpi id="MM_ATTINTRAMMEINTRASGWTAU" name="MME内SGW内跟踪区更新请求次数" />
+		<kpi id="MM_SUCCINTRAMMEINTRASGWTAU" name="MME内SGW内跟踪区更新成功次数" />
+		<kpi id="HO_ATTINTRAMMEINTERENBS1" name="MME内S1接口切换尝试次数" />
+		<kpi id="HO_SUCCINTRAMMEINTERENBS1" name="MME内S1接口切换成功次数" />
+		<kpi id="HO_ATTINTRAMMEINTERENBX2" name="MME内X2接口切换尝试次数" />
+		<kpi id="HO_SUCCINTRAMMEINTERENBX2" name="MME内X2接口切换成功次数" />
+		<kpi id="MM_SECONDPAGINGSUCC" name="二次寻呼响应次数" />
+		<kpi id="MM_FIRSTPAGINGSUCC" name="一次寻呼响应次数" />
+		<kpi id="MM_PAGATT" name="寻呼请求次数" />
+		<kpi id="SUB_NBRSUBECMIDLE" name="MME空闲态用户数" />
+		<kpi id="SUB_NBRSUBECMCONNECTED" name="MME连接态用户数" />
+		<kpi id="MM_EPS_SUCC_RATE" name="EPS附着成功率" />
+		<kpi id="SM_ACTDEFAULTEPSBEARER_RATE" name="缺省承载激活成功率" />
+		<kpi id="MM_INTERMMEINTERSGWTAU_RATE" name="MME间SGW间跟踪区更新成功率" />
+		<kpi id="MM_INTERMMEINTRASGWTAU_RATE" name="MME间SGW内跟踪区更新成功率" />
+		<kpi id="MM_INTRAMMEINTERSGWTAU_RATE" name="MME内SGW间跟踪区更新成功率" />
+		<kpi id="MM_INTRAMMEINTRASGWTAU_RATE" name="MME内SGW内跟踪区更新成功率" />
+		<kpi id="HO_INTRAMMEINTERENBS1_RATE" name="MME内S1接口切换成功率" />
+		<kpi id="HO_INTRAMMEINTERENBX2_RATE" name="MME内X2接口切换成功率" />
+		<kpi id="MM_RAWSUCCEPSATTACH_RATE" name="排除用户原因的附着成功率" />
+		<kpi id="MM_PAGINGSUCC_RATE" name="寻呼成功率" />
+		<kpi id="MM_ATTMMESGWTAU_RATE" name="跟踪区更新成功率" />
+		<kpi id="SUB_NBRSUBECM_SUM" name="MME附着用户数" />
+	</device>
+	<device name="PGW" decription="pgw">
+		<kpi id="IP_INCOCTSGI" name="SGi接口接收流量" />
+		<kpi id="IP_OUTOCTSGI" name="SGi接口发送流量" />
+	</device>
+	<device name="LTE" decription="lte">
+		<kpi id="EQPT_MEANMELOAD" name="系统平均负荷" />
+	</device>
+	
+</config>

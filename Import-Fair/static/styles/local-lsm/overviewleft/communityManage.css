@@ -1,0 +1,66 @@
+.progress-purple0{
+	height: 13px;
+	background: rgb(255,82,82);
+	border-radius: 4px;
+}
+.progress-purple1{
+	height: 13px;
+	background: rgb(255,147,60);
+	border-radius: 4px;
+}
+.progress-purple2{
+	height: 13px;
+	background: rgb(255,240,102);
+	border-radius: 4px;
+}
+.progress0{
+	height: 13px;
+	background: linear-gradient(90deg,#0643a9,#01cefd);
+	border-radius: 4px;
+}
+.progress1{
+	height: 13px;
+	background-color:#F8AA8E;
+	border-radius: 4px;
+}
+.progress2{
+	height: 13px;
+	background-color:#F5E760;
+	border-radius: 4px;
+}
+.progress3{
+	height: 13px;
+	background-color:#06F7A3;
+	border-radius: 4px;
+}
+.progress4{
+	height: 13px;
+	background-color:#62DEF7;
+	border-radius: 4px;
+}
+.progress5{
+	height: 13px;
+	background-color:#62DEF7;
+	border-radius: 4px;
+}
+.progress6{
+	height: 13px;
+	background-color:#FF8C00;
+	border-radius: 4px;
+}
+.progress-red{
+	height: 13px;
+	background: rgb(244, 74, 106);
+	border-radius: 4px;
+}
+.index-progress{
+	height: 13px;
+	background: rgb(16,19,77);
+	border-radius: 4px;
+}
+.fl{
+	float: left;
+}
+.bluespan{
+	color: rgb(76, 114, 235);
+}

@@ -1,0 +1,613 @@
+html{
+	width:6400px;
+	height:1200px;
+	background:#000000;
+	
+	scrollbar-arrow-color: #333; /**//*三角箭头的颜色*/   
+    scrollbar-face-color: #333; /**//*立体滚动条的颜色*/   
+    scrollbar-3dlight-color: #666; /**//*立体滚动条亮边的颜色*/   
+    scrollbar-highlight-color: #666; /**//*滚动条空白部分的颜色*/   
+    scrollbar-shadow-color: #999; /**//*立体滚动条阴影的颜色*/   
+    scrollbar-darkshadow-color: #666; /**//*立体滚动条强阴影的颜色*/   
+    scrollbar-track-color: #666; /**//*立体滚动条背景颜色*/   
+    scrollbar-base-color:#f8f8f8; /**//*滚动条的基本颜色*/   
+}
+
+::-webkit-scrollbar{
+   width:10px;
+   background:#999;/* 整个滚条背景 */
+} 
+::-webkit-scrollbar-thumb{
+   -webkit-border-radius:4px;
+   border-radius:4px;
+   background:#666; /* 滚条内嵌颜色 */
+} 
+::-webkit-scrollbar-button {
+    background-color:#666;/* 两边端按钮颜色 */
+}
+body{
+	width:100%;
+	height:100%;
+	position:relative;
+	font-size:16px;
+	color:#ffffff;
+	-webkit-text-size-adjust:auto !important;
+	font-family:微软雅黑;
+}
+.close{
+	color:#ffffff !important;
+	opacity:1 !important;
+}
+.close:hover, .close:focus{
+	color:#ffffff !important;
+}
+.modal-content{
+	background-color: rgba(1,0,69,0.75) !important;
+}
+.loadmaskspin{
+	background:url(images/loading.gif) center 0px no-repeat;
+}
+.bodybackground{
+	width:100%;
+	height:100%;
+	background:url(images/screen/bg.jpg) center 0px no-repeat;
+	background-size:100% 100%;
+	padding:40px;
+}
+.screencol{
+	height:100%;
+	float:left;
+	position:relative;
+}
+.horizontalRow{
+	width:100%;
+	float:left;
+}
+.horizontalRow>div{
+	float:left;
+}
+.col1{
+	width:550px;
+}
+.col2{
+	width:1130px;
+	margin-left:30px;
+}
+.col3{
+	width:180px;
+	margin-left:40px;
+}
+.col4{
+	width:3184px;
+	margin-left:40px;
+}
+.col5{
+	width:1346px;
+	margin-left:40px;
+}
+.col6{
+	width:1346px;
+	margin-left:40px;
+}
+.kwt-header{
+	width:100%;
+	height:60px;
+	line-height:52px;
+}
+.kwt-header>div{
+	float:left;
+	margin-left:10px;
+}
+.kwt-body{
+	width:100%;
+	height:60px;
+}
+.kwt-body>div{
+	float:left;
+}
+.kpiwithtrend{
+	width:550px;
+	height:160px;
+	background:url(images/screen/zb1.png) center 0px no-repeat;
+	background-size:100% 100%;
+	padding:18px;
+}
+.icon-voicetraff{
+	width:48px;
+	height:48px;
+	background:url(images/screen/icon-voicetraff.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-dataflow{
+	width:48px;
+	height:48px;
+	background:url(images/screen/icon-dataflow.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-user{
+	width:48px;
+	height:48px;
+	background:url(images/screen/icon-user.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-alarm{
+	width:48px;
+	height:48px;
+	background:url(images/screen/icon-alarm.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-safe{
+	width:48px;
+	height:48px;
+	background:url(images/screen/icon-safe.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-terminalrank{
+	width:48px;
+	height:48px;
+	background:url(images/screen/terminalrank.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-selector{
+	width:14px;
+	height:14px;
+	background:url(images/screen/selector.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-selector-selected{
+	width:14px;
+	height:14px;
+	background:url(images/screen/selector_selected.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-nealarm{
+	width:48px;
+	height:48px;
+	background:url(images/screen/icon-nealarm.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-peralarm{
+	width:48px;
+	height:48px;
+	background:url(images/screen/icon-peralarm.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-complain{
+	width:48px;
+	height:48px;
+	background:url(images/screen/icon-complain.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-shniec{
+	width:48px;
+	height:48px;
+	background:url(images/screen/icon-shniec.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-hotel{
+	width:48px;
+	height:48px;
+	background:url(images/screen/icon-hotel.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-center{
+	width:48px;
+	height:48px;
+	background:url(images/screen/icon-center.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-userstructure{
+	width:48px;
+	height:48px;
+	background:url(images/screen/icon-userstructure.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-splitline{
+	width:4px;
+	height:82px;
+	background:url(images/screen/zb1-splitline.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-userchart{
+	width:48px;
+	height:48px;
+	background:url(images/screen/icon-userchart.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-neq{
+	width:48px;
+	height:48px;
+	background:url(images/screen/icon-neq.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-up{
+	width:18px;
+	height:24px;
+	background:url(images/screen/up_green.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-down{
+	width:18px;
+	height:24px;
+	background:url(images/screen/down_red.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+
+.icon-conn_ratio{
+	width:48px;
+	height:34px;
+	background:url(images/screen/conn_ratio.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-delay{
+	width:48px;
+	height:34px;
+	background:url(images/screen/delay.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-dl{
+	width:48px;
+	height:34px;
+	background:url(images/screen/dl.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-response{
+	width:48px;
+	height:34px;
+	background:url(images/screen/response.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.icon-return{
+	width:27px;
+	height:31px;
+	background:url(images/screen/return.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+
+.kpiconfig{
+	width:150px;
+	height:40px;
+	background:url(images/screen/zb_btn1.png) center 0px no-repeat;
+	background-size:100% 100%;
+	cursor:pointer;
+}
+.topChart{
+	width:265px;
+	height:80px;
+}
+.alarmNumPlate{
+	width:60px;
+	height:66px;
+	background:url(images/screen/alarmNumPlate.png) center 0px no-repeat;
+	background-size:100% 100%;
+	color:#fbff48;
+	text-align:center;
+	font-size:48px;
+	line-height:64px;
+}
+.userstructurePlate{
+	width:88px;
+	height:92px;
+	background:url(images/screen/alarmNumPlate.png) center 0px no-repeat;
+	background-size:100% 100%;
+	color:#fbff48;
+	text-align:center;
+	font-size:64px;
+	line-height:92px;
+}
+.safeKpi{
+	margin-top:30px;
+	width:504px;
+	height:99px;
+	background:url(images/screen/zb2.png) center 0px no-repeat;
+	background-size:100% 100%;
+	position:relative;
+}
+.safeKpi>div:nth-child(1){
+	position:absolute;
+	width:220px;
+	height:75px;
+	left:10px;
+	top:10px;
+	text-align:center;
+	color:#faff48;
+	font-size:52px;
+	line-height:75px;
+}
+.safeKpi>div:nth-child(2){
+	position:absolute;
+	width:240px;
+	height:55px;
+	right:20px;
+	top:10px;
+	text-align:right;
+	font-size:20px;
+	line-height:50px;
+	letter-spacing:3px;
+}
+.kpiTitleLarge{
+	font-size:28px;
+}
+.kpiTitleMed{
+	font-size:24px;
+}
+.kpiUnitLarge{
+	font-size:18px;
+}
+.kpiValueLarge{
+	width:240px;
+	font-size:48px;
+	color:#69e2da;
+}
+.verticalGap{
+	margin-top:40px;
+}
+.ciiepanel{
+	width:100%;
+	position:relative;
+}
+.ciietitle{
+	width:100%;
+	height:55px;
+	border-bottom:solid 1px #0c7bde;
+	font-size:32px;
+	position:relative;
+}
+.ciiecontent{
+	width:100%;
+	padding-left:45px;
+	padding-right:45px;
+}
+.ciietitle>div{
+	float:left;
+}
+.toolbox{
+	position:absolute;
+	width:100%;
+	bottom:15px;
+}
+.toolbox>div{
+	float:right;
+	margin-left:10px;
+	cursor:pointer;
+}
+.netQualityGroup{
+	width:100%;
+	margin-top:10px;
+}
+.netQualityGroupName{
+	width:169px;
+	height:35px;
+	background:url(images/screen/zb4.png) center 0px no-repeat;
+	background-size:100% 100%;
+	color:#94c2e3;
+	font-size:24px;
+	line-height:35px;
+}
+.netQualityGroupList{
+	width:100%;
+}
+.netQualityGroupKpi{
+	width:350px;
+	height:240px;
+	background:url(images/screen/qakpi.png) center 0px no-repeat;
+	background-size:100% 100%;
+	color:#faff48;
+	float:left;
+	text-align:center;
+	cursor:pointer;
+}
+.netQualityGroupKpi>div:nth-child(2){
+	width:100%;
+	font-size:72px;
+	height:70px;
+	margin-top:10px;
+	line-height:70px;
+}
+.netQualityGroupKpi>div:nth-child(1){
+	width:100%;
+	font-size:24px;
+	height:50px;
+	line-height:20px;
+	color:#ffffff;
+	text-align:left;
+	margin-top:20px;
+	padding-left:25px;
+}
+.netQuality_ratiorow>div{
+	float:left;
+	color:#8ed7ff;
+	font-size:24px;
+}
+.procedureCircle{
+	width:180px;
+	height:180px;
+	background:url(images/screen/zb_btn2.png) center 0px no-repeat;
+	background-size:100% 100%;
+	line-height:180px;
+	text-align:center;
+	font-size:32px;
+	cursor:pointer;
+	z-index:1;
+}
+.procedureCircleSelected{
+	background:url(images/screen/zb_btn2_2.png) center 0px no-repeat;
+	background-size:100% 100%;
+	font-size:38px;
+}
+.procedureLine{
+	height:1000px;
+	width:0;
+	border:solid 2px #16437a;
+	position:absolute;
+	top:60px;
+	left:88px;
+	z-index:0;
+	
+}
+
+.screenTitle{
+	width:1285px;
+	height:180px;
+	background:url(images/screen/titlebg.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.titleImg{
+	width:180px;
+	height:180px;
+	background:url(images/screen/titleimg.png) center 0px no-repeat;
+	background-size:100% 100%;
+	float:left;
+}
+.titleTxt{
+	float:left;
+	color:#9fe4f4;
+	font-size:81px;
+	font-weight:bold;
+	line-height:180px;
+	padding-left:10px;
+	letter-spacing:10px;
+}
+.mapFrame{
+	width:2000px;
+	height:1120px;
+	position:absolute;
+	left:1184px;
+	top:0;
+}
+.mapFrameLT{
+	width:100%;
+	height:100%;
+	border:solid 5px #003ca0;
+	border-radius:100px;
+	position:absolute;
+	left:0;
+	top:0;
+	box-shadow:inset 600px 600px 600px #001b56;
+}
+.mapFrameBR{
+	width:100%;
+	height:100%;
+	border:solid 5px #003ca0;
+	border-radius:100px;
+	position:absolute;
+	left:0;
+	top:0;
+	box-shadow:inset -600px -600px 600px #001b56;
+}
+.mapTools{
+	width:100%;
+	height:100%;
+}
+
+.mapswitch{
+	width:118px;
+	height:355px;
+	background:url(images/screen/maptoolbg.png) center 0px no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	right:50px;
+	top:50px;
+	padding:5px 10px 10px 10px;
+}
+.mapswitch>div{
+	margin-top:10px;
+	cursor:pointer;
+}
+.map2d{
+	width:98px;
+	height:102px;
+	background:url(images/screen/map2d.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.map3d{
+	width:98px;
+	height:102px;
+	background:url(images/screen/map3d.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.mapsat{
+	width:98px;
+	height:102px;
+	background:url(images/screen/mapsat.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.map{
+	width:100%;
+	height:100%;
+	border:solid 5px #003ca0;
+	border-radius:100px;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.centerKpiFrame{
+	width:1140px;
+	height:910px;
+	position:absolute;
+	left:0;
+	top:180px;
+}
+.centerHotspotKpiFrameParent{
+	height:630px;
+	overflow:auto;
+}
+.centerHotspotKpiFrame{
+	margin-top:25px;
+}
+.kpitopbg{
+	width:280px;
+	height:60px;
+	background:url(images/screen/zb_topbg.png) center 0px no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	right:0;
+	bottom:-16px;
+	line-height:60px;
+	padding-left:10px;
+}
+.kpicenter{
+	width:260px;
+	height:200px;
+	background:url(images/screen/zb5.png) center 0px no-repeat;
+	background-size:100% 100%;
+	float:left;
+	margin-top:20px;
+	margin-left:20px;
+	text-align:center;
+}
+.kpicenterTitle{
+	width:100%;
+	height:110px;
+	font-size:26px;
+	padding-top:20px;
+}
+.kpicenterValue{
+	width:100%;
+	height:70px;
+	line-height:70px;
+	color:#93dcef;
+	font-size:42px;
+}
+.gradientBar{
+	border-radius:30px;
+	background: -webkit-linear-gradient(90deg,#0643a9,#01cefd);  
+    background: -o-linear-gradient(90deg,#0643a9,#01cefd);  
+    background: -moz-linear-gradient(90deg,#0643a9,#01cefd);  
+    background: -mos-linear-gradient(90deg,#0643a9,#01cefd);  
+    background: linear-gradient(90deg,#0643a9,#01cefd);  
+}
+.colchooser {
+    width: 100%;
+    height:300px;
+}
+.colchooser li {
+    width: 180px;
+    height: 110px;
+    float: left;
+    font-size: 18px;
+    list-style: none;
+    margin: 5px;
+    padding: 10px;
+    color: white;
+}

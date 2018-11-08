@@ -1,0 +1,54 @@
+<Topo from="CACHE" id="assets/datas/cl.xml" name="彩铃">
+  <Groups>
+    <Group resourceType="IP专网" id="ar" name="IP专网" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="494.42588252314806" y="110.19999999999999"/>
+  </Groups>
+  <Nodes>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94cb470c000e" id="8a5dffbc2f7608f8012f94cb470c000e" name="万荣AR9" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="546.4258825231481" y="110.2"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94cbf085000f" id="8a5dffbc2f7608f8012f94cbf085000f" name="钦州AR10" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="760.9258825231481" y="110.2"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c5e4890009" id="8a5dffbc2f7608f8012f94c5e4890009" name="金桥AR4" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="164.92588252314806" y="110.2"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c4af970008" id="8a5dffbc2f7608f8012f94c4af970008" name="浦东AR3" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="359.4258825231481" y="110.2"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c929c4000c" id="8a5dffbc2f7608f8012f94c929c4000c" name="浦东AR7" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="230.42588252314812" y="110.2"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94ca4d42000d" id="8a5dffbc2f7608f8012f94ca4d42000d" name="金桥AR8" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="411.4258825231481" y="110.2"/>
+    <Node resourceType="CL" resourceId="" id="mm彩铃3" name="彩铃3" image="assets/images/icons/resource/0/online/cl.png" x="792.0265306122449" y="330"/>
+    <Node resourceType="CL" resourceId="" id="mm彩铃1" name="彩铃1" image="assets/images/icons/resource/0/online/cl.png" x="603.465306122449" y="330"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c6e94a000a" id="8a5dffbc2f7608f8012f94c6e94a000a" name="万荣AR5" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="823.9258825231481" y="110.2"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb2332e002a" id="8a5d92813488f4f301348cb2332e002a" name="CE03" image="assets/images/icons/resource/0/online/ce.png" x="430.5629629629631" y="223"/>
+    <Node resourceType="CE" resourceId="8a5d9281366254b5013735afd2580025" id="8a5d9281366254b5013735afd2580025" name="CE33" image="assets/images/icons/resource/0/online/ce.png" x="565.7814814814816" y="223"/>
+    <Node resourceType="CE" resourceId="8a5d9281366254b5013735b0fae30026" id="8a5d9281366254b5013735b0fae30026" name="CE34" image="assets/images/icons/resource/0/online/ce.png" x="701.0000000000001" y="223"/>
+    <Node resourceType="CL" resourceId="" id="mm彩铃4" name="彩铃4" image="assets/images/icons/resource/0/online/cl.png" x="414.904081632653" y="330"/>
+    <Node resourceType="CL" resourceId="" id="mm彩铃2" name="彩铃2" image="assets/images/icons/resource/0/online/cl.png" x="226.3428571428571" y="330"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb23330002b" id="8a5d92813488f4f301348cb23330002b" name="CE04" image="assets/images/icons/resource/0/online/ce.png" x="295.3444444444446" y="223"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c85302000b" id="8a5dffbc2f7608f8012f94c85302000b" name="钦州AR6" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="601.9258825231481" y="110.2"/>
+    <Node resourceType="RETURN" resourceId="" id="mmreturnipnet" isSegment="true-assets/datas/ipnet.xml" name="返回IP承载网" image="assets/images/icons/resource/0/online/return.png" x="500" y="10"/>
+  </Nodes>
+  <Links>
+    <Link resourceType="CE-CE" fromId="8a5d92813488f4f301348cb2332e002a" toId="8a5d92813488f4f301348cb23330002b" color="65280" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94c929c4000c" toId="8a5d9281366254b5013735afd2580025" color="65280" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94ca4d42000d" toId="8a5d9281366254b5013735b0fae30026" color="65280" name=""/>
+    <Link resourceType="CE-CE" fromId="8a5d9281366254b5013735b0fae30026" toId="8a5d9281366254b5013735afd2580025" color="65280" name=""/>
+    <Link resourceType="CE-CL" fromId="8a5d9281366254b5013735afd2580025" toId="mm彩铃3" color="39423" name=""/>
+    <Link resourceType="CE-CL" fromId="8a5d9281366254b5013735b0fae30026" toId="mm彩铃1" color="39423" name=""/>
+    <Link resourceType="CE-CL" fromId="8a5d9281366254b5013735b0fae30026" toId="mm彩铃3" color="39423" name=""/>
+    <Link resourceType="CE-CL" fromId="8a5d9281366254b5013735afd2580025" toId="mm彩铃1" color="39423" name=""/>
+    <Link resourceType="CE-CL" fromId="8a5d92813488f4f301348cb2332e002a" toId="mm彩铃2" color="39423" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94c6e94a000a" toId="8a5d92813488f4f301348cb2332e002a" color="65280" name=""/>
+    <Link resourceType="CE-CL" fromId="8a5d92813488f4f301348cb23330002b" toId="mm彩铃2" color="39423" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94c85302000b" toId="8a5d92813488f4f301348cb23330002b" color="65280" name=""/>
+    <Link resourceType="CE-CL" fromId="8a5d92813488f4f301348cb2332e002a" toId="mm彩铃4" color="39423" name=""/>
+    <Link resourceType="CE-CL" fromId="8a5d92813488f4f301348cb23330002b" toId="mm彩铃4" color="39423" name=""/>
+    <Link resourceType="CE-CL" fromId="8a5d92813488f4f301348cb23330002b" toId="mm彩铃2" color="13042660" name=""/>
+    <Link resourceType="CE-CL" fromId="8a5d92813488f4f301348cb2332e002a" toId="mm彩铃4" color="13042660" name=""/>
+    <Link resourceType="CE-CL" fromId="8a5d92813488f4f301348cb2332e002a" toId="mm彩铃2" color="13042660" name=""/>
+    <Link resourceType="CL-CE" fromId="mm彩铃4" toId="8a5d92813488f4f301348cb23330002b" color="13042660" name=""/>
+    <Link resourceType="CE-CL" fromId="8a5d9281366254b5013735afd2580025" toId="mm彩铃1" color="13042660" name=""/>
+    <Link resourceType="CE-CL" fromId="8a5d9281366254b5013735b0fae30026" toId="mm彩铃1" color="13042660" name=""/>
+    <Link resourceType="CE-CL" fromId="8a5d9281366254b5013735afd2580025" toId="mm彩铃3" color="13042660" name=""/>
+    <Link resourceType="CE-CL" fromId="8a5d9281366254b5013735b0fae30026" toId="mm彩铃3" color="13042660" name=""/>
+  </Links>
+  <Labels>
+    <Label name="——设备CPU利用率TOP" x="225.5" y="5"/>
+    <Label name="制表人：严敏" x="1201.35" y="44.95"/>
+    <Label name="彩铃拓扑图" x="1201.35" y="4.8999999999999915"/>
+    <Label name="制表日期：2013-1-25" x="1201.35" y="85.00000000000001"/>
+  </Labels>
+</Topo>

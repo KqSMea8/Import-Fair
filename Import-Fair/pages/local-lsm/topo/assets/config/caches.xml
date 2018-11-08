@@ -1,0 +1,140 @@
+<root>	<!-- 第三方出口 -->
+	<third>
+		<node id="1e406493fb5304084cf6fe498f370659"/>
+		<node id="2d53831230b16a7f3dbe947f5669c4f3"/>
+		<node id="9fc6b409a620ba3f5e029b0e60ed9d0b"/>
+	</third>
+	<!-- 铁通对等互联 -->
+	<ctt>
+		<node id="d1c5bf5da3cafc5ba33944598428a42d"/>
+	</ctt>	<!-- 东方有线E家通 -->
+	<dongfang>
+		<node id="56842350b34634ae208a661d392c7e44"/>		<node id="a991e6d66cb73316c7eb0ad02ca5375c"/>
+	</dongfang>	<!-- 联建家庭宽带 -->
+	<lianjian>		<node id="b0d26cd533d58c7e266e3c4b1d64ac81"/>		<node id="6543458f6499d7409837f82d2beb431e"/>	</lianjian>	<!-- 政企宽带 -->
+	<zhengqi>
+		<node id="a591da26d795a2db18f8e06bc7283774"/>		<node id="fe7012ccabd65b1638a90d709bca8cb8"/>
+	</zhengqi>
+	<lte>
+		<node id="fda421b388eb18a4adf5530c0e2da84a"/>
+		<node id="401ff14487d8a14b67ab516c2e425322"/>
+		<node id="a63ba0d52dc13226a5f93359070ba4ca"/>
+		<node id="d13364cd652305c8a0e6996bc68897f3"/>
+	</lte>	<!-- CMNET出口 -->
+	<cmnet>	
+		<node id="2c3375f86df9caeb5ed2a3ce6be8b120"/>
+		<node id="3b2e9b44845e8367386753e50f64681e"/>
+		<node id="a731e74c12917c134a9eee664b3d7459"/>
+		<node id="e4eb86e622d8aaeee61a68aa517b37ff"/>		<node id="5bb5d7624715e3b3837f77352191857b"/>		<node id="80a5969c3c6ca2abf6305ccdc0032149"/>
+	</cmnet>	<!-- IP承载网 -->
+	<ipnet>	
+		<node id="3fe60dba6458d9b0e1dab4279ac1120e"/>
+		<node id="caadb8c9bd677dd68826be8e7a14c76d"/>
+		<node id="4bcc26b3e63fa4b69e682315bfa92b8f"/>
+		<node id="6e095d5af21f2c0ec6d76dfd7a6e4563"/>
+		<node id="aaf87058bd8816b2ad8395149e3aa1a0"/>
+		<node id="382dc3201848f3d900df99e4a16727b4"/>
+		<node id="08eb92834ba3c3fef2079408f2ef27dd"/>
+		<node id="f25317956a837f5c949d310c3c349dfc"/>
+		<node id="3ddef73d0ca48f3c0bb31a61756ac3e6"/>
+		<node id="7564f49d2df9774ae0d377e70a0fa9d8"/>
+		<node id="1a08681a5f1fd4b29228f65d30847603"/>
+		<node id="ca2f5f42f0414610abeb05605bd31788"/>
+		<node id="53ae534dfad7d3f12cec935dd53ae794"/>
+		<node id="b0af8f70a0742c6c10c8250732c9e185"/>
+	</ipnet>	
+	<cache>
+		<node id="a81d5a7742fb6ebf668b5b616c4cdad7"  port="GigabitEthernet2/0/10" type=""/>
+		<node id="cd2d914761b95a9c281c15d434bdd3b0"  port="GigabitEthernet2/0/10" type=""/>		
+		<node id="8e87134dd879565f8d7f294f1925359f"  port="GigabitEthernet2/0/11" type=""/>		
+		<node id="c5b40f616bfa5498c4a3ba800cbed741"  port="GigabitEthernet2/0/11" type=""/>		
+		<node id="4bdbb0f338f07388d5d863d239db0093"  port="GigabitEthernet2/0/12" type=""/>		
+		<node id="5eb0021459afcb5ee0e2a646df788003"  port="GigabitEthernet2/0/12" type=""/>		
+		<node id="d43c3e49980d6e84c578d3fbe66a1c8a"  port="GigabitEthernet2/0/13" type=""/>		
+		<node id="e8caadbe8636aef5044b40d716cb88fb"  port="GigabitEthernet2/0/13" type=""/>		
+		<node id="0aee283c1377db41b2fc1fe84bef2004"  port="GigabitEthernet2/0/14" type=""/>		
+		<node id="3742a66e831755d7c3960edbc776d6d1"  port="GigabitEthernet2/0/14" type=""/>		
+		<node id="a9c0b9d43c991224848a13e03e65f58b"  port="GigabitEthernet2/0/15" type=""/>		
+		<node id="b53283ef6b16e288bd186f5cb18294e9"  port="GigabitEthernet2/0/15" type=""/>		
+		<node id="06d64581265ded69ea3e84d010808db4"  port="GigabitEthernet2/0/16" type=""/>		
+		<node id="6ac355b9f6cb8be1c29c71ba3034cd32"  port="GigabitEthernet2/0/16" type=""/>		
+		<node id="81daea2c1d1a821c5d9991590d28a9a6"  port="GigabitEthernet2/0/17" type=""/>		
+		<node id="de9dd8bd6d18df39e6f10a892fa73b2f"  port="GigabitEthernet2/0/17" type=""/>		
+		<node id="8e6f388d3716fe1b5aed48177c603a90"  port="GigabitEthernet2/0/18" type=""/>		
+		<node id="e3a3720a36b1a325f9105c7b473e2c69"  port="GigabitEthernet2/0/18" type=""/>		
+		<node id="2f30086ba034cc8182eb9bc07625d881"  port="GigabitEthernet2/0/19" type=""/>		
+		<node id="95637f38a4b98a5b7022d9b822c5eea1"  port="GigabitEthernet2/0/19" type=""/>		
+		<node id="984ac9b747f9d93d854105ff54510a47"  port="GigabitEthernet2/0/20" type=""/>		
+		<node id="a3cfc95e05b5c3c78c286f0ff77854fd"  port="GigabitEthernet2/0/20" type=""/>		
+		<node id="080dc7f5769f8f238b4d2167d45d0457"  port="GigabitEthernet2/0/21" type=""/>		
+		<node id="bb529ba0f4040a12dd0d916862d633f9"  port="GigabitEthernet2/0/21" type=""/>		
+		<node id="062c3c565e4930c765d5dc68ee8aa0b8"  port="GigabitEthernet2/0/22" type=""/>		
+		<node id="cd97cacfee730653f6699e152046345e"  port="GigabitEthernet2/0/22" type=""/>		
+		<node id="085b8f9a202b981c48df9d61c2271188"  port="GigabitEthernet2/0/23" type=""/>		
+		<node id="398bb29d68850d73ae87e496678b3ae9"  port="GigabitEthernet2/0/23" type=""/>		
+		<node id="4c1f77db11ddd6988f381fc2196425fa"  port="GigabitEthernet2/0/24" type=""/>		
+		<node id="518ea27e9c7992616fc32ae73c191ed3"  port="GigabitEthernet2/0/24" type=""/>		
+		<node id="3cc0e33b8a9f7a78bc143c2ac4137d6f"  port="GigabitEthernet2/0/25" type=""/>		
+		<node id="d936522c5f6f81e55db52686a4177c04"  port="GigabitEthernet2/0/25" type=""/>		
+		<node id="045e10d2841a96b38727c52c67f22b3f"  port="GigabitEthernet2/0/26" type=""/>		
+		<node id="057acda82a6324418b3d66137fe481f4"  port="GigabitEthernet2/0/26" type=""/>		
+		<node id="101afa6c4a40a4eb0df71c0ce92f9763"  port="GigabitEthernet2/0/27" type=""/>		
+		<node id="8a3cf500e5dc9a3adbfb8d94e2982e39"  port="GigabitEthernet2/0/27" type=""/>		
+		<node id="7d757db27c0b6f2221e0aa9c77459e70"  port="GigabitEthernet2/0/28" type=""/>		
+		<node id="85434dc1bcdc3fc7529e612b2262d95e"  port="GigabitEthernet2/0/28" type=""/>		
+		<node id="247a74751468b799e82c279eccaa1050"  port="GigabitEthernet2/0/29" type=""/>		
+		<node id="a6a1d45ce52596ef9eef5c01176097ab"  port="GigabitEthernet2/0/29" type=""/>		
+		<node id="17e9a2175891333922fea8dc8e6ae236"  port="GigabitEthernet2/0/30" type=""/>		
+		<node id="6a516ae69b67b14282ff51181609b8e1"  port="GigabitEthernet2/0/30" type=""/>		
+		<node id="4afcd3209165c1be41a0311b62d2628f"  port="GigabitEthernet2/0/31" type=""/>		
+		<node id="6f049aedd12bb8d8b0e033354b2809c1"  port="GigabitEthernet2/0/31" type=""/>		
+		<node id="7218af4845d99b34fd2160426f94df75"  port="GigabitEthernet2/0/32" type=""/>		
+		<node id="ced5bd320cd4f7b689186c232a6db365"  port="GigabitEthernet2/0/32" type=""/>		
+		<node id="03ab41f3841701a42e14fe8725828592"  port="GigabitEthernet2/0/33" type=""/>		
+		<node id="6ec76c8a6313ff119174ebd36bf660d6"  port="GigabitEthernet2/0/33" type=""/>		
+		<node id="9d8f31b7b6cd445659b82c87c3f7bf6a"  port="GigabitEthernet2/0/34" type=""/>		
+		<node id="bd9eb6aee74cfbefba4fb0ba9ad73fa5"  port="GigabitEthernet2/0/34" type=""/>		
+		<node id="365964e8e11d7b2d65dbf7cb5e332e33"  port="GigabitEthernet2/0/35" type=""/>		
+		<node id="688c1b40b2d663b1febd4582caf64a1b"  port="GigabitEthernet2/0/35" type=""/>		
+		<node id="30d6f8119ea4728c973fc057ed6c93ea"  port="GigabitEthernet2/0/36" type=""/>		
+		<node id="d7fbfdc8af0c7b7aebc703f12350d029"  port="GigabitEthernet2/0/36" type=""/>		
+		<node id="c110e46be3b4c360ba376c3edb64efaa"  port="GigabitEthernet2/0/37" type=""/>		
+		<node id="c27831aff8a1f317c528e5445e8abb66"  port="GigabitEthernet2/0/37" type=""/>		
+		<node id="a0561ea3f581fa16653ab0b356ce6741"  port="GigabitEthernet2/0/8" type=""/>		
+		<node id="f1485f7e82608b53fe2f96d9c3dceb44"  port="GigabitEthernet2/0/8" type=""/>		
+		<node id="2df691ae67907cffd8a043a3bacd2b07"  port="GigabitEthernet2/0/9" type=""/>		
+		<node id="b75a38b13e204c757c04dab791b36b07"  port="GigabitEthernet2/0/9" type=""/>		
+		<node id="8318be32d6ffef9ca5c02fc01395f1f4"  port="GigabitEthernet3/0/10" type=""/>		
+		<node id="c9be50f91f8fff9f6c8fe615d4f2e758"  port="GigabitEthernet3/0/10" type=""/>		
+		<node id="4ddad429820158a29544c65d86575c91"  port="GigabitEthernet3/0/11" type=""/>		
+		<node id="d2f14ed9b6341db34d91bd7833f51ac1"  port="GigabitEthernet3/0/11" type=""/>		
+		<node id="056d4ee4fb53447120f1acdd18a9af9d"  port="GigabitEthernet3/0/12" type=""/>		
+		<node id="bc41a4a9b7792b1af94e74ae04e6267b"  port="GigabitEthernet3/0/12" type=""/>		
+		<node id="13be0e416499f56cdb3b2e6331f14856"  port="GigabitEthernet3/0/13" type=""/>		
+		<node id="9a5d533ee9ef0e9d49436e0a3d3b2e1b"  port="GigabitEthernet3/0/13" type=""/>		
+		<node id="042ac2e22d4bf7ffcc2bdae1da7cbb50"  port="GigabitEthernet3/0/14" type=""/>		
+		<node id="8d6d03e06385f9d758724a10753b1be6"  port="GigabitEthernet3/0/14" type=""/>		
+		<node id="20372fb9853e0273b20c8e68de56b9d4"  port="GigabitEthernet3/0/15" type=""/>		
+		<node id="37722802ad5c142728ea879a53d7b72c"  port="GigabitEthernet3/0/15" type=""/>		
+		<node id="00dfe3b64629d364098fababd6ba109d"  port="GigabitEthernet3/0/16" type=""/>		
+		<node id="ebed45b14d1bdca39ed640d52069ed0d"  port="GigabitEthernet3/0/16" type=""/>		
+		<node id="05f4ff1e25d94da09012383cd6d98193"  port="GigabitEthernet3/0/17" type=""/>		
+		<node id="3224b559333da1bc6a299564a6930a91"  port="GigabitEthernet3/0/17" type=""/>		
+		<node id="9c046cd9a2d271d68c6ec170c3c82ae4"  port="GigabitEthernet3/0/18" type=""/>		
+		<node id="e4e341d9be0de6b4e6acf093403505d6"  port="GigabitEthernet3/0/18" type=""/>		
+		<node id="01a54441c64e9b7afc5b4336fecd31c7"  port="GigabitEthernet3/0/19" type=""/>		
+		<node id="dc0935d4efe7906464d331c4e63f7412"  port="GigabitEthernet3/0/19" type=""/>		
+		<node id="bff0c0db7bea0dff650caf648e771479"  port="GigabitEthernet3/0/20" type=""/>		
+		<node id="e40201e626f2b6c807cd2f50355dc99f"  port="GigabitEthernet3/0/20" type=""/>		
+		<node id="05221093ffcfebf9c217f5f595386376"  port="GigabitEthernet3/0/21" type=""/>		
+		<node id="8f5175645101f7818e0743b2e723e4cd"  port="GigabitEthernet3/0/21" type=""/>		
+		<node id="d65988275adc3d5430649e461f32b509"  port="GigabitEthernet3/0/6" type=""/>		
+		<node id="f34a0db8cf5f57a4fc1fa5cb0e4ac4ed"  port="GigabitEthernet3/0/6" type=""/>		
+		<node id="2156dc10e1f9e1b87f503f31bcf3670b"  port="GigabitEthernet3/0/7" type=""/>		
+		<node id="e616b98c3c2c7e00ab2e0321ce8b342c"  port="GigabitEthernet3/0/7" type=""/>		
+		<node id="4cea56142733d968796d92359f28fbff"  port="GigabitEthernet3/0/8" type=""/>		
+		<node id="e920c1a8f5d023c8b8bbfd11111fbdbf"  port="GigabitEthernet3/0/8" type=""/>		
+		<node id="c8d286f4b6b63f8d30f39f6e0df1d24b"  port="GigabitEthernet3/0/9" type=""/>		
+		<node id="fc6001923580b8a2f7cdfdcfde9011bc"  port="GigabitEthernet3/0/9" type=""/>
+	</cache>
+</root>

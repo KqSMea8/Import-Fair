@@ -1,0 +1,476 @@
+@font-face {
+    font-family: 'Microsoft YaHei';
+    src: url('../font/lets_go_digital_regular-webfont.eot');
+    src: url('../font/lets_go_digital_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/lets_go_digital_regular-webfont.woff2') format('woff2'),
+         url('../font/lets_go_digital_regular-webfont.woff') format('woff'),
+         url('../font/lets_go_digital_regular-webfont.ttf') format('truetype'),
+         url('../font/lets_go_digital_regular-webfont.svg#Microsoft YaHei') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}/*数字字体*/
+
+body{
+	background: url(images/metrobg.jpg) center 0px repeat-x;
+	width:2100px;
+	height:1200px;
+}
+.ui-jqgrid .ui-jqgrid-pager {
+    height: 40px;
+    font-size: 24px;
+}
+.ui-jqgrid .ui-jqgrid-pager input{
+   color:#000000;
+}
+
+
+/**jqgrid边框背景*/
+.ui-widget-content {
+    border: 1px solid #393f4f;
+    background: #021e38;
+    color: #ffffff;
+}
+
+.ui-jqgrid tr.jqgrow td {
+    font-weight: normal;
+    overflow: hidden;
+    white-space: pre;
+    height: 43px;
+    padding: 0 0px 0 0px;
+    font-size:24px;
+    text-align: center;
+    font-family:"afta_sansregular";
+    color:#00fcff;
+    font-weight:bold;
+}
+#worstCellGrid td{
+	height: 38px;
+}
+
+.ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+}
+/**jqgrid 表头背景*/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid #000000;
+    background: #012d72;
+    font-weight: normal;
+    color: #ffffff;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    border: 1px solid #0503d6;
+    background: #0503d6;
+    color: #ffffff;
+}
+/**jqgrid 奇数行颜色*/
+.oddGrayTableRow {
+	background: #164454;
+}
+
+
+.ui-jqgrid .ui-jqgrid-htable th div {
+    overflow: hidden;
+    position: relative;
+    height: 30px;
+    font-size:20px;
+}
+
+
+#hotAppGrid td{
+	height: 48px;
+}
+	
+.subtitle_txt1 {
+    margin: 15px 0 0 20px;
+    width: 2100px;
+}
+.data {
+    width: 672px;
+    height: 90px;
+    float: left;
+    margin-top: 10px;
+}
+
+.chart0 {
+    width: 165px;
+    height: 90px;
+    float: left;
+}
+
+.leftTime{
+	left:1800px;
+}
+.DL2_content {
+    width: 2100px;
+    height: 154px;
+    padding: 10px 37px 10px 37px;
+    float: left;
+}
+
+.Lnorm1 {
+    width: 672px;
+    height: 130px;
+    float: left;
+    cursor: pointer;
+}
+
+.commonText{
+	font-size:24px;
+	color:#ffffff;
+}
+
+.topGrid{
+	width:2090px;
+	height:317px;
+	position:absolute;
+	top:5px;
+	left:5px;
+}
+.topGrid_value{
+	font-family: "Microsoft YaHei";
+	font-size:28px;
+	color:#00fcff;
+}
+
+.bottomLeft{
+	width:620px;
+	position:absolute;
+	top:340px;
+	left:5px;
+}
+
+.metroCenter{
+	width:2100px;
+	height:580px;
+	top:275px;
+	position:absolute;
+}
+.metroFrame{
+	width:1212px;
+	height:580px;
+	top:275px;
+	left:888px;
+	position:absolute;
+	background:transparent;
+}
+.metroFrameFull{
+	width:2100px;
+	height:1200px;
+	top:0px;
+	left:0px;
+	position:absolute;
+	background:#041c28;
+}
+.metroCenter{
+	
+}
+.metroBottom{
+	width:2100px;
+	height:340px;
+	top:860px;
+	position:absolute;
+}
+.inline{
+	display:inline-block;
+}
+.centerChart{
+	width:890px;
+	height:340px;
+}
+.rankChart{
+	width:318px;
+	height:340px;
+}
+.bottomChart{
+	width:411px;
+	height:340px;
+}
+#terminalChart{
+	width:295px;
+	height:340px;
+}
+
+
+.textInfo1{
+	width:620px;
+	height:160px;
+	background: url(images/L1.png) center 0px no-repeat;
+	padding:5px 0px 10px 10px;
+	font-size:24px;
+	color:#ffffff;
+	display:none;
+}
+.textInfo1_value{
+	font-family: "Microsoft YaHei";
+	font-size:28px;
+	color:#00fcff;
+}
+.textInfo2{
+	width:538px;
+	height:454px;
+	background: url(images/L2_2.png) center 0px no-repeat;
+	margin-top:5px;
+	padding:6px 10px 6px 10px;
+	overflow-y:auto;
+}
+.textInfo2_item{
+	width:100%;
+	height:105px;
+	border:solid 1px #98bde2;
+	margin-top:5px;
+}
+.textInfo2_item_title{
+	width:32.8%;
+	height:50%;
+	font-size:28px;
+	color:#ffffff;
+	text-align:center;
+	display:inline-block;
+	line-height: 48px;
+	
+}
+.textInfo2_item_kpi{
+	font-size:28px;
+	color:#ffffff;
+	line-height: 48px;
+}
+
+.textInfo2_item_kpi_value{
+	font-family: "Microsoft YaHei";
+	font-size:48px;
+	color:#00fcff;
+}
+.arpuChart{
+	width:538px;
+	height:218px;
+	background: url(images/L3_2.png) center 0px no-repeat;
+	margin-top:5px;
+}
+
+.alarmBg{
+	background:#a80300;
+}
+
+.station3g{
+	width:30px;
+	height:30px;
+	background: url(images/2-3G.png) center 0px no-repeat;
+	display:inline-block;
+}
+.station4g{
+	width:30px;
+	height:30px;
+	background: url(images/4G.png) center 0px no-repeat;
+	display:inline-block;
+}
+
+
+.indicators{
+	display: block;
+	width:180px;
+	height:112px;
+	position:relative;
+	  }	
+.KPI{
+	background: url(images/indicators_bg.png) center 0px no-repeat;
+	float:left;
+	}
+.KPT_marginB{
+	float:left;
+	margin-bottom:5px;
+	}
+.KPT_marginT{
+	float:left;
+	margin-top:10px;
+	}		
+.KPT_marginR{
+	margin-right:2px;
+	}
+.KPI_top{
+	width:176px;
+	height:60px;
+	text-align:center;
+	line-height:50px;
+	margin:0 auto;
+	}
+.KPI h2{
+	font-family: 'afta_sansregular';
+	font-size:42px;	
+	}
+.KPI_bluetxt{
+	color:#00fcff;	
+	}
+	
+.KPI_redtxt{
+	color:#ff0000;	
+	}	
+		
+.KPI_yellowtxt{
+	color:#fbb100;	
+	}		
+		
+.KPI h2 span{
+	font-family: 'fzlantinghei-m-gbkregular';
+	font-size:20px;
+	color:#fff;	
+	}	
+.KPIUnit{
+	font-family: 'fzlantinghei-m-gbkregular';
+	font-size:16px;
+	color:#fff;
+	position:absolute;
+	bottom:15px;
+	right:10px;	
+}
+.KPI_down{
+	width:176px;
+	height:30px;
+	color:#fff;
+	font-size:22px;
+	text-align:center;
+	margin:0 auto;
+	font-family: 'fzlantinghei-m-gbkregular';
+	table-layout: fixed; 
+	word-wrap: break-word; 
+	overflow: hidden;
+	}
+.KPI_red{
+	background:#940000;
+	}
+.KPI_blue{
+	background:#0503d6;
+	}
+.KPI_yllow{
+	background:#fbb100;
+	}				
+	
+	.DL2{
+	top:37px;
+	width:2100px;
+	height:237px;
+	background: url(images/DL2.png) center 0px no-repeat;
+	position:absolute;
+	}
+	.largeDL2{
+		height:337px;
+		background: url(images/DL2_2.png) center 0px no-repeat;
+	}
+	
+	.indicators {
+		    display: block;
+		    width: 180px;
+		    height: 92px;
+		    position: relative;
+		}
+		
+.selectedTimeLabel{
+	font-family: "afta_sansregular";
+    height: 40px;
+    float: left;
+    text-align: right;
+    font-size: 28px;
+    cursor:pointer;
+    position:absolute;
+    left:1100px;
+    top:0px;
+}
+.borderBox{
+	border:solid 1px #0358f6;
+}
+.detailTable{
+	width:630px;
+}
+
+.kpiType{
+	font-size: 20px;
+	font-weight: bold;
+	color:#ffffff;
+	cursor:pointer;
+}
+.cellType{
+	font-size: 20px;
+	font-weight: bold;
+	color:#ffffff;
+	cursor:pointer;
+}
+.cellTypeTitle{
+	font-size: 20px;
+	font-weight: bold;
+	color:#ffffff;
+	cursor:pointer;
+}
+
+#compareTitle{
+	color:#ffffff;
+	font-size:24px;
+	position:absolute;
+	top:5px;
+	left:5px;
+}
+.compareTimeValueBtn{
+	cursor:pointer;
+}
+
+.icon_business{
+	background: url(images/menu_new/icon_business.png) center 0px no-repeat;
+	width:80px;
+	height:80px;
+}
+.icon_business_selected{
+	background: url(images/menu_new/icon_business_selected.png) center 0px no-repeat;
+	width:80px;
+	height:80px;
+}
+.icon_resource{
+	background: url(images/menu_new/icon_resource.png) center 0px no-repeat;
+	width:80px;
+	height:80px;
+}
+.icon_resource_selected{
+	background: url(images/menu_new/icon_resource_selected.png) center 0px no-repeat;
+	width:80px;
+	height:80px;
+}
+.icon_quality{
+	background: url(images/menu_new/icon_quality.png) center 0px no-repeat;
+	width:80px;
+	height:80px;
+}
+.icon_quality_selected{
+	background: url(images/menu_new/icon_quality_selected.png) center 0px no-repeat;
+	width:80px;
+	height:80px;
+}
+
+.icon_metro_switch{
+	background: url(images/switch.png) center 0px no-repeat;
+	background-size:100% 100%;  
+	width:25px;
+	height:25px;
+	cursor:pointer;
+}
+.icon_metro_chart1{
+	background: url(images/business_selected.png) center 0px no-repeat;
+	background-size:100% 100%;  
+	width:25px;
+	height:25px;
+	cursor:pointer;
+}
+.icon_metro_chart2{
+	background: url(images/chart.png) center 0px no-repeat;
+	background-size:100% 100%;  
+	width:25px;
+	height:25px;
+	cursor:pointer;
+}
+.icon_exportPic{
+	background: url(images/exportPic.png) center 0px no-repeat;
+	background-size:100% 100%;  
+	width:25px;
+	height:25px;
+	cursor:pointer;
+}
+

@@ -1,0 +1,532 @@
+/* CSS file */
+
+global{
+	color: #FFFFFF;
+	text-roll-over-color:#FFFFFF;
+	text-selected-color:#FFFFFF;
+	font-size:12;
+	border-color:#999999;
+	rollOverColor: #6d6d6d;
+	selectionColor: #000000;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor: #FFFFFF;
+	logoIcon: Embed(source="assets/images/black/logo.png"); 
+}
+@font-face{
+	src: url('assets/fonts/DS-DIGIB.TTF');
+	fontFamily: "钟表";
+	font-weight:bold;
+}
+.digitalLabel{
+	fontFamily: "钟表";
+	font-weight:bold;
+}
+TextArea,TextInput{
+	color:#000000;
+}
+.timerBg
+{
+	background-color:#50587C;
+}
+Content
+{
+	padding-top:5;
+	padding-bottom:5;
+	background-alpha:0.9;
+	background-color:#2D2D2D;
+	border-thickness:5;
+	border-color:#733c28;
+	border-alpha:1;
+}
+
+/*.homeView
+{
+	background-image: Embed(source="assets/images/screen/bg.jpg"); 
+	background-size:"100%";
+}
+.innerView
+{
+	background-image: Embed(source="assets/images/screen/bg.jpg"); 
+	background-size:"100%";
+}*/
+
+.rect1
+{
+	background-color:#5C5C5C;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rect2
+{
+	background-color:#5C5C5C;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rect3
+{
+	background-color:#5C5C5C;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rect4
+{
+	background-color:#5C5C5C;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rect5
+{
+	background-color:#5C5C5C;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rect6
+{
+	background-color:#5C5C5C;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rect7
+{
+	background-color:#5C5C5C;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rect8
+{
+	background-color:#5C5C5C;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rect9
+{
+	background-color:#5C5C5C;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rectTitle
+{
+	font-size:14;
+	font-weight:bold;
+	color:#ffffff;
+}
+CList
+{
+	color:#ffffff;
+	font-weight:bold;
+	border-alpha:0;
+	border-thickness:0;
+	selectionColor:#ffffff;
+	rollOverColor:#ffffff;
+	rollOverAlpha:0.23;
+	selectionAlpha:0.13;
+	padding-left:14;
+}
+
+.userlist
+{
+	color:#733c28;
+	border-alpha:0;
+	border-thickness:0;
+	selectionColor:#ede6dd;
+	rollOverColor:#ede6dd;
+	rollOverAlpha:1;
+	selectionAlpha:1;
+}
+
+DataGrid
+{
+	useRollOver: true;
+	headerHeight:30px;
+/*	borderStyle:solid;*/
+	borderColor: #2ad5b5;
+	letterSpacing: 0;
+	backgroundAlpha: 1;
+	borderThickness: 1;
+	textIndent: 0;
+	alternatingItemColors: #393f4f, #5f647c;
+	headerColors: #1f253d, #1f253d;
+	sortArrowSkin: Embed(source="assets/images/black/DataGrid_sortArrowSkin.png");
+	color: #FFFFFF;
+	selectionColor: #2e8b57;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor: #FFFFFF;
+	headerStyleName: "mydataGridHeaderStyle";
+	rollOverColor: #2ad5b5;
+	verticalGridLines: false;
+/*	horizontalGridLines: true;
+	verticalGridLineColor: #999999;
+	horizontalGridLineColor: #999999;*/
+}
+
+.mydataGridHeaderStyle {
+	color: #ffffff;
+}
+/*Button {
+	cornerRadius: 5;
+	highlightAlphas: 0.5, 0;
+	fillAlphas: 0.6, 0.4, 0.75, 0.65;
+	disabledSkin: Embed(source="assets/images/black/Button_disabledSkin.png",scaleGridTop="4",scaleGridLeft="3",scaleGridBottom="18",scaleGridRight="37");
+	downSkin: Embed(source="assets/images/black/Button_downSkin.png",scaleGridTop="4",scaleGridLeft="3",scaleGridBottom="18",scaleGridRight="37");
+	overSkin: Embed(source="assets/images/black/Button_overSkin.png",scaleGridTop="4",scaleGridLeft="3",scaleGridBottom="18",scaleGridRight="37");
+	upSkin: Embed(source="assets/images/black/Button_upSkin.png",scaleGridTop="4",scaleGridLeft="3",scaleGridBottom="18",scaleGridRight="37");
+	selected-disabled-skin:Embed(source="assets/images/black/Button_disabledSkin.png",scaleGridTop="4",scaleGridLeft="3",scaleGridBottom="18",scaleGridRight="37");
+	selected-down-skin:Embed(source="assets/images/black/Button_downSkin.png",scaleGridTop="4",scaleGridLeft="3",scaleGridBottom="18",scaleGridRight="37");
+	selected-over-skin:Embed(source="assets/images/black/Button_overSkin.png",scaleGridTop="4",scaleGridLeft="3",scaleGridBottom="18",scaleGridRight="37");
+	selected-up-skin:Embed(source="assets/images/black/Button_downSkin.png",scaleGridTop="4",scaleGridLeft="3",scaleGridBottom="18",scaleGridRight="37");
+	fontWeight: bold;
+	color:#FFFFFF;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor: #FFFFFF;
+}*/
+
+Panel,TitleWindow {
+	borderThicknessLeft: 10;
+	borderThicknessTop: 0;
+	borderThicknessBottom: 10;
+	borderThicknessRight: 10;
+	roundedBottomCorners: true;
+	backgroundAlpha: 1;
+	fontFamily:"微软雅黑";
+/*	highlightAlphas: 1, 1;*/
+	backgroundColor: #50587C;
+/*	shadowDirection: right;*/
+	borderAlpha:1;
+	padding-bottom:0;
+	padding-left:0;
+	padding-right:0;
+	padding-top:0;
+	borderColor: #50587C;
+	closeButtonDisabledSkin: Embed(source="assets/images/black/Panel_closeButtonDisabledSkin.png");
+	closeButtonDownSkin: Embed(source="assets/images/black/Panel_closeButtonDownSkin.png");
+	closeButtonOverSkin: Embed(source="assets/images/black/Panel_closeButtonOverSkin.png");
+	closeButtonUpSkin: Embed(source="assets/images/black/Panel_closeButtonUpSkin.png");
+	control-bar-style-name:"panelControlBar";
+	buttonStyleName:"alertButton";
+}
+
+EWindow{
+	settingButtonSkin: Embed(source="assets/images/black/system.png");
+	searchButtonSkin: Embed(source="assets/images/black/find.png");
+	resetButtonSkin: Embed(source="assets/images/black/chart.png");
+	excelButtonSkin: Embed(source="assets/images/black/excel.png");
+	refreshButtonSkin: Embed(source="assets/images/black/refresh.png");
+	topButtonUpSkin: Embed(source="assets/images/winTopSelected.png");
+	topButtonOverSkin: Embed(source="assets/images/winTopSelected.png");
+	topButtonDownSkin: Embed(source="assets/images/winTopSelected.png");
+	topButtonDisabledSkin: Embed(source="assets/images/winTopUnSelected.png");
+	normalButtonSkin: Embed(source="assets/images/black/big.png");
+	minButtonSkin: Embed(source="assets/images/icons/suoxiao.png");
+	maxButtonSkin: Embed(source="assets/images/black/small.png");
+	resizeCursor: Embed(source='assets/images/icons/huanyuan.png');
+	resizeIcon: Embed(source='assets/images/icons/huanyuan.png');
+	updateButtonSkin: Embed(source='assets/images/refresh.png');
+/*	borderAlpha: 0.8;
+	borderThicknessLeft: 5;
+	borderThicknessTop: 5;
+	borderThicknessBottom: 5;
+	borderThicknessRight: 5;
+	backgroundAlpha:1;*/
+	iconSize:16;
+	maxBackgroundAlpha:1;
+	dropShadowEnabled: true;	
+}
+LinkButton
+{
+	color:#FFFFFF;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor: #FFFFFF;
+}
+CheckBox{
+	disabledIcon: Embed(source="assets/images/black/CheckBox_disabledIcon.png");
+	downIcon: Embed(source="assets/images/black/CheckBox_downIcon.png");
+	overIcon: Embed(source="assets/images/black/CheckBox_overIcon.png");
+	selectedDisabledIcon: Embed(source="assets/images/black/CheckBox_selectedDisabledIcon.png");
+	selectedDownIcon: Embed(source="assets/images/black/CheckBox_selectedDownIcon.png");
+	selectedOverIcon: Embed(source="assets/images/black/CheckBox_selectedOverIcon.png");
+	selectedUpIcon: Embed(source="assets/images/black/CheckBox_selectedUpIcon.png");
+	upIcon: Embed(source="assets/images/black/CheckBox_upIcon.png");
+	color: #FFFFFF;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor: #FFFFFF;
+}
+RadioButton
+{
+	disabledIcon: Embed(source="assets/images/black/RadioButton_disabledIcon.png");
+	downIcon: Embed(source="assets/images/black/RadioButton_downIcon.png");
+	overIcon: Embed(source="assets/images/black/RadioButton_overIcon.png");
+	selectedDisabledIcon: Embed(source="assets/images/black/RadioButton_selectedDisabledIcon.png");
+	selectedDownIcon: Embed(source="assets/images/black/RadioButton_selectedDownIcon.png");
+	selectedOverIcon: Embed(source="assets/images/black/RadioButton_selectedOverIcon.png");
+	selectedUpIcon: Embed(source="assets/images/black/RadioButton_selectedUpIcon.png");
+	upIcon: Embed(source="assets/images/black/RadioButton_upIcon.png");
+	color: #FFFFFF;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor: #FFFFFF;
+}
+
+TabNavigator{
+	padding-top:2;
+	background-color:#1f253d;
+	horizontalGap: 1;
+	borderColor: #999999;
+}
+
+.myTabs {
+	cornerRadius: 0;
+	highlightAlphas: 0, 0;
+	fillAlphas: 1, 1;
+	fillColors: #d7c7ad, #d7c7ad;
+	backgroundAlpha: 1;
+	backgroundColor: #a86248;
+	borderColor: #a7a7a5;
+	color: #774836;
+	textRollOverColor: #ffffff;
+	themeColor: #ffffff;
+}
+
+.mySelectedTabs {
+	color: #ffffff;
+	textRollOverColor: #f9d4c6;
+}
+
+TileList
+{
+	selectionColor:#ffffff;
+	rollOverColor:#ffffff;
+}
+Canvas
+{
+	padding-right:0;
+	padding-left:0;
+}
+ComboBox {
+	color:#000000;
+	disabledSkin: Embed(source="assets/images/black/ComboBox_disabledSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="63");
+	downSkin: Embed(source="assets/images/black/ComboBox_downSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="63");
+	editableDisabledSkin: Embed(source="assets/images/black/ComboBox_editableDisabledSkin.png",scaleGridTop="4",scaleGridLeft="1",scaleGridBottom="18",scaleGridRight="21");
+	editableDownSkin: Embed(source="assets/images/black/ComboBox_editableDownSkin.png",scaleGridTop="4",scaleGridLeft="1",scaleGridBottom="18",scaleGridRight="21");
+	editableOverSkin: Embed(source="assets/images/black/ComboBox_editableOverSkin.png",scaleGridTop="4",scaleGridLeft="1",scaleGridBottom="18",scaleGridRight="21");
+	editableUpSkin: Embed(source="assets/images/black/ComboBox_editableUpSkin.png",scaleGridTop="4",scaleGridLeft="1",scaleGridBottom="18",scaleGridRight="21");
+	overSkin: Embed(source="assets/images/black/ComboBox_overSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="63");
+	upSkin: Embed(source="assets/images/black/ComboBox_upSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="63");
+	fontWeight: normal;
+	paddingLeft: 0;
+	paddingRight: 0;
+	
+}
+
+.myComboBoxDropDowns {
+	borderColor: #643d2c;
+	color: #643d2c;
+}
+
+.button{
+	padding-right:10;
+	padding-left:10;
+}
+
+.buttonGroup
+{
+	vertical-align:"middle";
+	horizontal-align:"right";
+	padding-right:"20" ;
+	bottom:6;
+}
+
+ButtonBar
+{
+	buttonStyleName:"buttonBarStyleName";
+	firstButtonStyleName: "buttonBarFirstButton";
+	lastButtonStyleName: "buttonBarLastButton";
+}
+.buttonBarStyleName {
+	disabledSkin: Embed(source="assets/images/black/ButtonBar-button_disabledSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="42");
+	downSkin: Embed(source="assets/images/black/ButtonBar-button_downSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="42");
+	overSkin: Embed(source="assets/images/black/ButtonBar-button_overSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="42");
+	selectedDisabledSkin: Embed(source="assets/images/black/ButtonBar-button_selectedDisabledSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="42");
+	selectedUpSkin: Embed(source="assets/images/black/ButtonBar-button_selectedUpSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="42");
+	upSkin: Embed(source="assets/images/black/ButtonBar-button_upSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="42");
+	color: #FFFFFF;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor: #FFFFFF;
+}
+.buttonBarFirstButton
+{
+	disabledSkin: Embed(source="assets/images/black/ButtonBar-firstButton_disabledSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="42");
+	downSkin: Embed(source="assets/images/black/ButtonBar-firstButton_downSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="42");
+	overSkin: Embed(source="assets/images/black/ButtonBar-firstButton_overSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="42");
+	selectedDisabledSkin: Embed(source="assets/images/black/ButtonBar-firstButton_selectedDisabledSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="42");
+	selectedUpSkin: Embed(source="assets/images/black/ButtonBar-firstButton_selectedUpSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="42");
+	upSkin: Embed(source="assets/images/black/ButtonBar-firstButton_upSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="42");
+	color: #FFFFFF;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor: #FFFFFF;
+}
+.buttonBarLastButton
+{
+	disabledSkin: Embed(source="assets/images/black/ButtonBar-lastButton_disabledSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="38");
+	downSkin: Embed(source="assets/images/black/ButtonBar-lastButton_downSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="38");
+	overSkin: Embed(source="assets/images/black/ButtonBar-lastButton_overSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="38");
+	selectedDisabledSkin: Embed(source="assets/images/black/ButtonBar-lastButton_selectedDisabledSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="38");
+	selectedUpSkin: Embed(source="assets/images/black/ButtonBar-lastButton_selectedUpSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="38");
+	upSkin: Embed(source="assets/images/black/ButtonBar-lastButton_upSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="18",scaleGridRight="38");
+	color: #FFFFFF;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor: #FFFFFF;
+}
+.myRedColumnSeries {
+	fills: #FF0033, #FF3333, #FF6633;
+}        
+.myGreenColumnSeries {
+	fills: #33FF00, #33FF33, #33FF66;
+} 
+.myGrayColumnSeries {
+	fills: #cccccc, #cccccc, #cccccc;
+} 
+
+AxisRenderer
+{
+	can-drop-labels:true;
+}
+RichTab
+{
+	closeButtonSkin:Embed(source="assets/images/icons/x.png");
+}
+.infoStyle
+{
+	color:#FFFFFF;
+}
+
+.linkStyle
+{
+	fontSize:16;
+	font-weight:bold;
+}
+Tree
+{
+	line-color:#FFFFFF;
+	open-duration:0;
+	defaultLeafIcon: Embed(source="assets/images/black/Tree_defaultLeafIcon.png");
+	disclosureClosedIcon: Embed(source="assets/images/black/Tree_disclosureClosedIcon.png");
+	disclosureOpenIcon: Embed(source="assets/images/black/Tree_disclosureOpenIcon.png");
+	folderClosedIcon: Embed(source="assets/images/black/Tree_folderClosedIcon.png");
+	folderOpenIcon: Embed(source="assets/images/black/Tree_folderOpenIcon.png");
+	backgroundColor: #181818;
+	borderColor: #999999;
+}
+HScrollBar
+{
+	downArrowDisabledSkin: Embed(source="assets/images/black/HScrollBar_downArrowDisabledSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="13",scaleGridRight="14");
+	downArrowDownSkin: Embed(source="assets/images/black/HScrollBar_downArrowDownSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="13",scaleGridRight="14");
+	downArrowOverSkin: Embed(source="assets/images/black/HScrollBar_downArrowOverSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="13",scaleGridRight="14");
+	downArrowUpSkin: Embed(source="assets/images/black/HScrollBar_downArrowUpSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="13",scaleGridRight="14");
+	thumbDownSkin: Embed(source="assets/images/black/HScrollBar_thumbDownSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="51",scaleGridRight="14");
+	thumbIcon: Embed(source="assets/images/black/HScrollBar_thumbIcon.png");
+	thumbOverSkin: Embed(source="assets/images/black/HScrollBar_thumbOverSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="51",scaleGridRight="14");
+	thumbUpSkin: Embed(source="assets/images/black/HScrollBar_thumbUpSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="51",scaleGridRight="14");
+	trackDisabledSkin: Embed(source="assets/images/black/HScrollBar_trackDisabledSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="149",scaleGridRight="16");
+	trackSkin: Embed(source="assets/images/black/HScrollBar_trackSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="149",scaleGridRight="16");
+	upArrowDisabledSkin: Embed(source="assets/images/black/HScrollBar_upArrowDisabledSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="13",scaleGridRight="14");
+	upArrowDownSkin: Embed(source="assets/images/black/HScrollBar_upArrowDownSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="13",scaleGridRight="14");
+	upArrowOverSkin: Embed(source="assets/images/black/HScrollBar_upArrowOverSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="13",scaleGridRight="14");
+	upArrowUpSkin: Embed(source="assets/images/black/HScrollBar_upArrowUpSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="13",scaleGridRight="14");
+}
+VScrollBar
+{
+	downArrowDisabledSkin: Embed(source="assets/images/black/VScrollBar_downArrowDisabledSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="13",scaleGridRight="14");
+	downArrowDownSkin: Embed(source="assets/images/black/VScrollBar_downArrowDownSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="13",scaleGridRight="14");
+	downArrowOverSkin: Embed(source="assets/images/black/VScrollBar_downArrowOverSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="13",scaleGridRight="14");
+	downArrowUpSkin: Embed(source="assets/images/black/VScrollBar_downArrowUpSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="13",scaleGridRight="14");
+	thumbDownSkin: Embed(source="assets/images/black/VScrollBar_thumbDownSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="51",scaleGridRight="14");
+	thumbIcon: Embed(source="assets/images/black/VScrollBar_thumbIcon.png");
+	thumbOverSkin: Embed(source="assets/images/black/VScrollBar_thumbOverSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="51",scaleGridRight="14");
+	thumbUpSkin: Embed(source="assets/images/black/VScrollBar_thumbUpSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="51",scaleGridRight="14");
+	trackDisabledSkin: Embed(source="assets/images/black/VScrollBar_trackDisabledSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="149",scaleGridRight="16");
+	trackSkin: Embed(source="assets/images/black/VScrollBar_trackSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="149",scaleGridRight="16");
+	upArrowDisabledSkin: Embed(source="assets/images/black/VScrollBar_upArrowDisabledSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="13",scaleGridRight="14");
+	upArrowOverSkin: Embed(source="assets/images/black/VScrollBar_upArrowOverSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="13",scaleGridRight="14");
+	upArrowDownSkin: Embed(source="assets/images/black/VScrollBar_upArrowDownSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="13",scaleGridRight="14");
+	upArrowUpSkin: Embed(source="assets/images/black/VScrollBar_upArrowUpSkin.png",scaleGridTop="1",scaleGridLeft="1",scaleGridBottom="13",scaleGridRight="14");
+}
+ToolTip
+{
+	font-size:12;
+	backgroundAlpha: 0.9;
+	cornerRadius: 2;
+	backgroundColor: #5C5C5C;
+}
+Slider
+{
+	thumbDisabledSkin: Embed(source="assets/images/black/Slider_thumbDisabledSkin.png");
+	thumbDownSkin: Embed(source="assets/images/black/Slider_thumbDownSkin.png");
+	thumbOverSkin: Embed(source="assets/images/black/Slider_thumbOverSkin.png");
+	thumbUpSkin: Embed(source="assets/images/black/Slider_thumbUpSkin.png");
+	trackHighlightSkin: Embed(source="assets/images/black/Slider_trackHighlightSkin.png");
+	trackSkin: Embed(source="assets/images/black/Slider_trackSkin.png");
+}
+ProgressBar
+{
+	barSkin: Embed(source="assets/images/black/ProgressBar_barSkin.png");
+	indeterminateSkin: Embed(source="assets/images/black/ProgressBar_indeterminateSkin.png");
+	trackSkin: Embed(source="assets/images/black/ProgressBar_trackSkin.png");
+}
+PopUpButton{
+	disabledSkin: Embed(source="assets/images/black/PopUpButton_disabledSkin.png",scaleGridTop="3",scaleGridLeft="3",scaleGridBottom="18",scaleGridRight="63");
+	downSkin: Embed(source="assets/images/black/PopUpButton_downSkin.png",scaleGridTop="3",scaleGridLeft="3",scaleGridBottom="18",scaleGridRight="63");
+	overSkin: Embed(source="assets/images/black/PopUpButton_overSkin.png",scaleGridTop="3",scaleGridLeft="3",scaleGridBottom="18",scaleGridRight="63");
+	popUpDownSkin: Embed(source="assets/images/black/PopUpButton_popUpDownSkin.png",scaleGridTop="3",scaleGridLeft="3",scaleGridBottom="18",scaleGridRight="63");
+	popUpOverSkin: Embed(source="assets/images/black/PopUpButton_popUpOverSkin.png",scaleGridTop="3",scaleGridLeft="3",scaleGridBottom="18",scaleGridRight="63");
+	upSkin: Embed(source="assets/images/black/PopUpButton_upSkin.png",scaleGridTop="3",scaleGridLeft="3",scaleGridBottom="18",scaleGridRight="63");
+	color: #000000;
+	textRollOverColor: #000000;
+	textAlign: left;
+	fontWeight: normal;
+	textSelectedColor: #000000;
+	pop-up-style-name:"popUpStyle";
+}
+.popUpStyle{
+	color:#FFFFFF;
+	textRollOverColor:#FFFFFF;
+	textSelectedColor:#FFFFFF;
+}
+TabBar
+{
+	tabStyleName: "tabBarTab";
+	firstTabStyleName: "tabBarTab";
+	lastTabStyleName: "tabBarTab";
+	horizontalGap: 1;
+	selectedTabTextStyleName: tabBarSelectedTabText;
+}
+.tabBarTab
+{
+	upSkin: Embed(source="assets/images/black/TabBar-tab_upSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="20",scaleGridRight="48");
+	overSkin: Embed(source="assets/images/black/TabBar-tab_overSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="20",scaleGridRight="48");
+	downSkin: Embed(source="assets/images/black/TabBar-tab_downSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="20",scaleGridRight="48");
+	disabledSkin: Embed(source="assets/images/black/TabBar-tab_disabledSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="20",scaleGridRight="48");
+	selectedUpSkin: Embed(source="assets/images/black/TabBar-tab_selectedUpSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="20",scaleGridRight="48");
+	selectedOverSkin: Embed(source="assets/images/black/TabBar-tab_overSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="20",scaleGridRight="48");
+	selectedDownSkin: Embed(source="assets/images/black/TabBar-tab_downSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="20",scaleGridRight="48");
+	selectedDisabledSkin: Embed(source="assets/images/black/TabBar-tab_selectedDisabledSkin.png",scaleGridTop="4",scaleGridLeft="4",scaleGridBottom="20",scaleGridRight="48");
+	paddingLeft: 2;
+	paddingRight: 2;
+	fontWeight: normal;
+	color: #000000;
+}
+.tabBarSelectedTabText
+{
+	color: #FFFFFF;
+	fontWeight: bold;
+}
+.tip
+{
+	font-size:12;
+	backgroundAlpha: 0.9;
+	cornerRadius: 2;
+	backgroundColor: #5C5C5C;
+}
+.yans
+{
+	color: #5C5C5C;
+}
+

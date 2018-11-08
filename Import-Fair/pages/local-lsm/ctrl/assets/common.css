@@ -1,0 +1,247 @@
+HTML .x-body {
+	FONT-FAMILY: 'Microsoft YaHei','微软雅黑',sans-serif;
+	padding:0px; MARGIN: 0px;
+}
+BODY {
+	FONT-SIZE: 13px; FONT-FAMILY: 'Microsoft YaHei','微软雅黑',sans-serif; COLOR: #484848; padding:0px; MARGIN: 0px;  BACKGROUND-COLOR: #edf2f8
+}
+UL {
+	LIST-STYLE-TYPE: none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px
+}
+A {
+	TEXT-DECORATION: none; COLOR: #484848
+}
+H1 {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px
+}
+H2 {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px
+}
+H3 {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px
+}
+B {
+	FONT-WEIGHT: lighter
+}
+P {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px
+}
+.fl {
+	FLOAT: left
+}
+.fr {
+	FLOAT: right
+}
+.clear {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; CLEAR: both; PADDING-RIGHT: 0px
+}
+.c_red {
+	COLOR: red
+}
+.c_green {
+	COLOR: #00ce10
+}
+.clumn_box {
+	BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 10px; PADDING-TOP: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP-WIDTH: 0px; BACKGROUND-COLOR: #fff
+}
+.clumn_box_top {
+	HEIGHT: 39px; BORDER-BOTTOM: #ddd 1px solid; LINE-HEIGHT: 39px
+}
+.clumn_box_top_icon {
+	HEIGHT: 16px; WIDTH: 3px; MARGIN: 12px 8px 0px; DISPLAY: block; BACKGROUND-COLOR: #0085d0
+}
+.clumn_box H3 {
+	FONT-SIZE: 16px; FONT-WEIGHT: lighter; COLOR: #565656
+}
+.clumn_topTab {
+	FONT-SIZE: 14px; HEIGHT: 36px; BORDER-BOTTOM: #ddd 1px solid; PADDING-BOTTOM: 3px; PADDING-TOP: 0px; PADDING-LEFT: 0px; LINE-HEIGHT: 36px; PADDING-RIGHT: 0px
+}
+.clumn_topTab A {
+	COLOR: #999; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 15px; DISPLAY: block; PADDING-RIGHT: 15px
+}
+.clumn_topTab A:hover {
+	BORDER-BOTTOM: #1e84cc 3px solid; COLOR: #484848
+}
+.clumn_topTab_over {
+	BORDER-BOTTOM: #1e84cc 3px solid; FONT-WEIGHT: lighter; COLOR: #000; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 15px; PADDING-RIGHT: 15px
+}
+.clumn_box_content {
+	MARGIN: 8px 0px
+}
+.leftlist LI {
+	WIDTH: 230px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px
+}
+.leftlist LI P {
+	COLOR: #757575; MARGIN: 10px 0px 0px 20px; LINE-HEIGHT: 20px
+}
+.leftlist_icon {
+	HEIGHT: 12px; WIDTH: 11px; BACKGROUND: url(../../../../static/images/special/login/common/leftlist_icon.png) no-repeat; MARGIN: 2px 5px; DISPLAY: block
+}
+.leftlist_text {
+	WIDTH: 207px; LINE-HEIGHT: 20px
+}
+.form_table TD {
+	PADDING-BOTTOM: 7px; PADDING-TOP: 7px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px
+}
+.form_table TD B {
+	FONT-SIZE: 14px
+}
+.form_table_title {
+	BACKGROUND-COLOR: #f2f2f2
+}
+.form_td {
+	BORDER-BOTTOM: #d5d5d5 1px dotted
+}
+.checkbox_style {
+	VERTICAL-ALIGN: middle; MARGIN: -2px 7px 0px
+}
+.select_style {
+	BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid; BORDER-BOTTOM: #ddd 1px solid; PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 4px; BORDER-LEFT: #ddd 1px solid; PADDING-RIGHT: 4px
+}
+.btnstyle_default {
+	FONT-SIZE: 14px; COLOR: #fff; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 14px; PADDING-RIGHT: 14px; BACKGROUND-COLOR: #439dfa; border-radius: 2px
+}
+.btnstyle_default_over {
+	FONT-SIZE: 14px; COLOR: #fff; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 14px; PADDING-RIGHT: 14px; BACKGROUND-COLOR: #65b1ff; border-radius: 2px
+}
+.btnstyle_gray {
+	FONT-SIZE: 14px; COLOR: #fff; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 14px; PADDING-RIGHT: 14px; BACKGROUND-COLOR: #c8c8c8; border-radius: 2px
+}
+.btnstyle_gray_over {
+	FONT-SIZE: 14px; COLOR: #fff; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 14px; PADDING-RIGHT: 14px; BACKGROUND-COLOR: #d8d8d8; border-radius: 2px
+}
+.btn_style {
+	BORDER-LEFT-WIDTH: 0px; CURSOR: pointer; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px
+}
+.indicator_back {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px
+}
+.indicator_back H1 {
+	FONT-SIZE: 30px; PADDING-BOTTOM: 5px; PADDING-TOP: 2px; PADDING-LEFT: 0px; DISPLAY: inline-block; PADDING-RIGHT: 0px
+}
+.indicator_back H2 {
+	FONT-SIZE: 22px; PADDING-BOTTOM: 5px; PADDING-TOP: 11px; PADDING-LEFT: 0px; DISPLAY: inline-block; PADDING-RIGHT: 0px
+}
+.indicator_back B {
+	FONT-SIZE: 14px
+}
+.indicator_back B {
+	COLOR: #fff
+}
+.indicator_back H1 {
+	COLOR: #fff
+}
+.indicator_back H2 {
+	COLOR: #fff
+}
+.indicator_back FONT {
+	COLOR: #fff
+}
+.indicator_back SPAN {
+	COLOR: #484848
+}
+.takeup {
+	HEIGHT: 12px; WIDTH: 15px; BACKGROUND: url(../../../../static/images/special/login/common/takeup.png) no-repeat
+}
+.takedown {
+	HEIGHT: 12px; WIDTH: 15px; BACKGROUND: url(../../../../static/images/special/login/common/takedown.png) no-repeat
+}
+.more {
+	COLOR: #888
+}
+.more:hover {
+	COLOR: #0085d0
+}
+.pages {
+	MARGIN: 10px auto
+}
+.pages A {
+	BACKGROUND: #f6f7fb; COLOR: #666; PADDING-BOTTOM: 6px; PADDING-TOP: 6px; PADDING-LEFT: 12px; PADDING-RIGHT: 12px; border-radius: 2px
+}
+.pages .active {
+	BACKGROUND: #5cbdf4; COLOR: #fff; PADDING-BOTTOM: 6px; PADDING-TOP: 6px; PADDING-LEFT: 12px; PADDING-RIGHT: 12px
+}
+.pages A:hover {
+	BACKGROUND: #5cbdf4; COLOR: #fff; PADDING-BOTTOM: 6px; PADDING-TOP: 6px; PADDING-LEFT: 12px; PADDING-RIGHT: 12px
+}
+.quota_arrow_up {
+	HEIGHT: 16px; WIDTH: 11px; BACKGROUND: url(../../../../static/images/special/login/common/quota_arrow_up.png) no-repeat; MARGIN: 1px 0px 0px 5px
+}
+.quota_arrow_down {
+	HEIGHT: 16px; WIDTH: 11px; BACKGROUND: url(../../../../static/images/special/login/common/quota_arrow_down.png) no-repeat; MARGIN: 1px 0px 0px 5px
+}
+.clumn_arrowup {
+	HEIGHT: 24px; WIDTH: 24px; BACKGROUND: url(../../../../static/images/special/login/common/clumn_box_arrowup.png) no-repeat; MARGIN: 8px 5px 0px
+}
+.clumn_arrowup_over {
+	HEIGHT: 24px; WIDTH: 24px; BACKGROUND: url(../../../../static/images/special/login/common/clumn_box_arrowup_over.png) no-repeat; MARGIN: 8px 5px 0px
+}
+.clumn_arrowdown {
+	HEIGHT: 24px; WIDTH: 24px; BACKGROUND: url(../../../../static/images/special/login/common/clumn_box_arrowdown.png) no-repeat; MARGIN: 8px 5px 0px
+}
+.clumn_arrowdown_over {
+	HEIGHT: 24px; WIDTH: 24px; BACKGROUND: url(../../../../static/images/special/login/common/clumn_box_arrowdown_over.png) no-repeat; MARGIN: 8px 5px 0px
+}
+.bottom_take_all {
+	WIDTH: 72px; COLOR: #aaa; MARGIN: 0px auto; DISPLAY: block
+}
+.bottom_take_all:hover {
+	COLOR: #0085d0
+}
+.bottom_take_all I {
+	MARGIN: 4px 0px 0px 5px
+}
+.back_color00 {
+	BACKGROUND-COLOR: #d5d5d5
+}
+.back_color01 {
+	BACKGROUND-COLOR: #5db75d
+}
+.back_color02 {
+	BACKGROUND-COLOR: #fcb247
+}
+.back_color03 {
+	BACKGROUND-COLOR: #85c3fc
+}
+.back_color04 {
+	BACKGROUND-COLOR: #f6803a
+}
+.back_color05 {
+	BACKGROUND-COLOR: #ba8bd1
+}
+.back_color06 {
+	BACKGROUND-COLOR: #98b652
+}
+.back_color07 {
+	BACKGROUND-COLOR: #e6d02f
+}
+.back_color08 {
+	BACKGROUND-COLOR: #56c8c9
+}
+.back_color09 {
+	BACKGROUND-COLOR: #dd69aa
+}
+.back_color10 {
+	BACKGROUND-COLOR: #7688f7
+}
+.back_color11 {
+	BACKGROUND-COLOR: #54ba67
+}
+.back_color12 {
+	BACKGROUND-COLOR: #bdbf3a
+}
+.bc01_bottom_arrow {
+	HEIGHT: 8px; WIDTH: 16px; BACKGROUND: url(../../../../static/images/special/login/common/bc01_bottom_arrow.png) no-repeat
+}
+.bc04_bottom_arrow {
+	HEIGHT: 8px; WIDTH: 16px; BACKGROUND: url(../../../../static/images/special/login/common/bc04_bottom_arrow.png) no-repeat
+}
+.bc05_bottom_arrow {
+	HEIGHT: 8px; WIDTH: 16px; BACKGROUND: url(../../../../static/images/special/login/common/bc05_bottom_arrow.png) no-repeat
+}
+.bc06_bottom_arrow {
+	HEIGHT: 8px; WIDTH: 16px; BACKGROUND: url(../../../../static/images/special/login/common/bc06_bottom_arrow.png) no-repeat
+}
+.bc07_bottom_arrow {
+	HEIGHT: 8px; WIDTH: 16px; BACKGROUND: url(../../../../static/images/special/login/common/bc07_bottom_arrow.png) no-repeat
+}

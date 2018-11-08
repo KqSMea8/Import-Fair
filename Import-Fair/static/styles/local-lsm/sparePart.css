@@ -1,0 +1,239 @@
+body {
+    font-family: 微软雅黑;
+    text-size-adjust: auto !important;
+}
+.fl {
+    float: left;
+}
+.clear{
+    clear:both;
+}
+.pr{
+    position: relative;
+}
+li{
+    list-style: none;
+    padding: 0 15px;
+    cursor: pointer;
+    border-left: 1px solid #273b8400;
+    border-right: 1px solid #273b8400;
+}
+.selectLi{
+    border-left: 1px solid #273b84;
+    border-right: 1px solid #273b84;
+    background-color:#020938; 
+    z-index: 66;
+}
+.fontImportantInfo {
+    font-size: 28px;
+}
+.maptipbg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    border: solid 0px pink;
+    padding: 0px;
+}
+.elementBackground {
+    border: 1px solid #273b84;
+    background-color: #020938;
+    margin: 2px 0px;
+    border-radius: 5px;
+}
+/*.icon-shu{
+    width: 5px;
+    height: 22px;
+    margin-top: 14px;
+    background:#66e6ff; 
+
+}*/
+.icon-shu{
+    width: 8px;
+    height: 22px;
+    margin-top: 14px;
+    background-image: url(map/biaoqianicon.png);
+    background-size: 100% 100%;
+
+}
+.tabContent{
+    background-color: #0d2168;
+    border-bottom: 1px solid #273b84;
+}
+.tipIcon1 {
+    position: absolute;
+    top: 4px;
+    width: 34px;
+    height: 34px;
+    background-image: url(map/userAndFlow.png);
+    background-size: 100% 100%;
+    display: inline-block;
+}
+.tiptitle{
+    margin-left: 40px;
+    height: 34px;
+    line-height: 34px;
+    display: inline-block;
+    font-size: 21px;
+}
+.tipKpis_4 {
+    width: 230px;      /*15*/
+    cursor: pointer;
+}
+.tipKpis_5 {
+    width: 182px;
+    cursor: pointer;
+}
+.tipKpis_5>div:nth-child(2),.tipKpis_4>div:nth-child(2) {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    color: #66e6ff;
+    background: #000963;
+    padding: 5px;
+}
+#commonAddressCellThead th{
+    text-align: center;
+}
+#commonAddressCellTbody,#commonAddressCellThead{
+    width:100%;
+    text-align: center;
+    font-size: 25px;
+}
+#commonAddressCellTbody tr,#commonAddressCellThead tr{
+    height: 60px;
+}
+#commonAddressCellTbody tr:eq(0){
+    background-color: #00000000;
+}
+#commonAddressCellTbody tr:nth-child(odd){
+    background-color: #092d7a;
+}
+#commonAddressCellTbody tr:nth-child(even){
+    background-color: #061952;
+}
+
+
+
+
+
+
+#commonAddressCellThead_tongji th{
+    text-align: center;
+}
+#commonAddressCellTbody_tongji,#commonAddressCellThead_tongji{
+    width:100%;
+    text-align: center;
+    font-size: 25px;
+}
+#commonAddressCellTbody_tongji tr,#commonAddressCellThead_tongji tr{
+    height: 60px;
+}
+#commonAddressCellTbody_tongji tr:eq(0){
+    background-color: #00000000;
+}
+#commonAddressCellTbody_tongji tr:nth-child(odd){
+    background-color: #092d7a;
+}
+#commonAddressCellTbody_tongji tr:nth-child(even){
+    background-color: #061952;
+}
+
+.getSelectgsearwga{
+    color:#66e6ff;
+}
+
+
+.tipIconliuliang {
+    position: absolute;
+    top: 4px;
+    width: 34px;
+    height: 34px;
+    background-image: url(map/liuliang.png);
+    background-size: 100% 100%;
+    display: inline-block;
+}
+
+.tipIconhuawuliang {
+    position: absolute;
+    top: 4px;
+    width: 34px;
+    height: 34px;
+    background-image: url(map/huawuliang.png);
+    background-size: 100% 100%;
+    display: inline-block;
+}
+.tipIconrrczuidalianjieshu {
+    position: absolute;
+    top: 4px;
+    width: 34px;
+    height: 34px;
+    background-image: url(map/rrczuidalianjieshu.png);
+    background-size: 100% 100%;
+    display: inline-block;
+}
+.tipIconvoltediaohualv {
+    position: absolute;
+    top: 4px;
+    width: 34px;
+    height: 34px;
+    background-image: url(map/voltediaohualv.png);
+    background-size: 100% 100%;
+    display: inline-block;
+}
+.tipIconupprbliyonglv {
+    position: absolute;
+    top: 4px;
+    width: 34px;
+    height: 34px;
+    background-image: url(map/upprbliyonglv.png);
+    background-size: 100% 100%;
+    display: inline-block;
+}
+.tipIconwuxiangdiaohualv {
+    position: absolute;
+    top: 4px;
+    width: 34px;
+    height: 34px;
+    background-image: url(map/wuxiangdiaohualv.png);
+    background-size: 100% 100%;
+    display: inline-block;
+}
+.tipIconwuxianjietonglv {
+    position: absolute;
+    top: 4px;
+    width: 34px;
+    height: 34px;
+    background-image: url(map/wuxianjietonglv.png);
+    background-size: 100% 100%;
+    display: inline-block;
+}
+.tipIcondownprbliyonglv {
+    position: absolute;
+    top: 4px;
+    width: 34px;
+    height: 34px;
+    background-image: url(map/downprbliyonglv.png);
+    background-size: 100% 100%;
+    display: inline-block;
+}
+.tipIconqushitu {
+    position: absolute;
+    top: 4px;
+    width: 34px;
+    height: 34px;
+    background-image: url(map/qushitu.png);
+    background-size: 100% 100%;
+    display: inline-block;
+}
+.chuanshutuopo {
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    width: 65px;
+    height: 66px;
+    background-image: url(map/chuanshutuopo.png);
+    background-size: 100% 100%;
+    display: inline-block;
+    cursor: pointer;
+}

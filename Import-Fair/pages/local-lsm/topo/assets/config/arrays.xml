@@ -1,0 +1,29 @@
+<config>
+	<vendors desccription="厂商">
+		<vendor label="爱立信"/>
+		<vendor label="华为"/>
+		<vendor label="大唐"/>
+		<vendor label="诺西"/>
+		<vendor label="阿尔卡特"/>
+		<vendor label="新邮通"/>
+		<vendor label="诺基亚"/>
+	</vendors>		
+	<units>		
+		<item label="Mbps"/>
+		<item label="Gbps"/>
+		<item label="MB"/>
+		<item label="GB"/>
+		<item label="%"/>
+		<item label="条"/>
+		<item label="万"/>
+		<item label="个"/>
+	</units>		
+	<datatype desccription="指标假数据，设备类型">
+		<device name="WAP"   ref="true"/>
+		<device name="FLOW"   >
+			<kpi id="flowSelfNetRate" name="流量本网率"/>
+		</device>
+	</datatype>	
+	<reportTypes>M2M业务质量分析,专线节日保障,行业短信业务质量分析</reportTypes>
+	<presetting description="短信中心mo+ao预测">2970725,1459424,895627,670466,1921998,1173261,2953460,8148773,11911007,17146359,19239484,11566798,8231744,8093909,11853124,12549731,14179174,14137251,10484725,11833336,9930231,7187277,5906822,2938293</presetting>
+</config>	

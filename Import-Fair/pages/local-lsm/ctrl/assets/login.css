@@ -1,0 +1,83 @@
+.login_box {
+	HEIGHT: 336px; WIDTH: 100%; 
+}
+.login_content {
+	HEIGHT: 320px; WIDTH: 100%; BACKGROUND: url(../../../../static/images/special/login/login/login_content.jpg); POSITION: relative; Z-INDEX: 1; TOP: 8px
+}
+.login_content_left {
+	HEIGHT: 320px; WIDTH: 370px; BACKGROUND: url(../../../../static/images/special/login/login/login_content_left.jpg) no-repeat
+}
+.login_content_right {
+	HEIGHT: 320px; WIDTH: 370px; BACKGROUND: url(../../../../static/images/special/login/login/login_content_right.jpg) no-repeat
+}
+.login_main {
+	HEIGHT: 320px; WIDTH: 1002px; POSITION: absolute; LEFT: 50%; MARGIN: 0px 0px 0px -501px; Z-INDEX: 3; TOP: 0px
+}
+.login_title {
+	HEIGHT: 53px; WIDTH: 554px; POSITION: absolute; LEFT: 0px; Z-INDEX: 3; TOP: -68px
+}
+.login_top_right {
+	RIGHT: 0px; POSITION: absolute; COLOR: #aaa; TEXT-ALIGN: right; Z-INDEX: 3; LINE-HEIGHT: 22px; TOP: -60px
+}
+.login_banner {
+	HEIGHT: 266px; WIDTH: 586px;  POSITION: absolute; LEFT: 80px; Z-INDEX: 3; BOTTOM: 0px
+}
+.login_main_right {
+	WIDTH: 750px;height:550px; left: 330px; POSITION: absolute; Z-INDEX: 3; TOP: 80px
+}
+.login_input {
+	HEIGHT: 90px; 
+	WIDTH: 700px;  
+	MARGIN: 10px 0px 0px 10px;
+	LINE-HEIGHT: 90px;
+	font-size:42px; 
+	BACKGROUND: none;
+	BORDER-LEFT-WIDTH: 0px; 
+	BORDER-RIGHT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	PADDING-BOTTOM: 0px; 
+	PADDING-TOP: 0px; 
+	PADDING-LEFT: 5px;  
+	PADDING-RIGHT: 0px; 
+	BORDER-TOP-WIDTH: 0px;  
+	border-radius: 4px
+}
+.password_forget {
+	WIDTH: 257px; MARGIN: 15px 0px 0px 45px
+}
+.password_forget A {
+	TEXT-DECORATION: none; FLOAT: right; COLOR: #fff
+}
+.password_forget A:hover {
+	COLOR: #f5f5f5 
+}
+.login_btn_container {
+	WIDTH: 730px; MARGIN: 50px 0px 0px 0px 
+}
+.login_btn1 {
+	FONT-SIZE: 16px; HEIGHT: 120px; WIDTH: 300px; COLOR: #fff; TEXT-ALIGN: center; LINE-HEIGHT: 34px
+}
+.login_btn1_over {
+	FONT-SIZE: 16px; HEIGHT: 37px; WIDTH: 116px; BACKGROUND: url(../../../../static/images/special/login/login/login_btn1.png) no-repeat left bottom; COLOR: #fff; TEXT-ALIGN: center; LINE-HEIGHT: 34px
+}
+.login_btn2 {
+	FONT-SIZE: 32px; HEIGHT: 120px; WIDTH: 300px;BACKGROUND: url(images/login/b1.png) no-repeat;  COLOR: #606060; TEXT-ALIGN: center; LINE-HEIGHT: 34px
+}
+.login_btn2_over {
+	FONT-SIZE: 16px; HEIGHT: 37px; WIDTH: 116px; BACKGROUND: url(../../../../static/images/special/login/login/login_btn2.png) no-repeat left bottom; COLOR: #606060; TEXT-ALIGN: center; LINE-HEIGHT: 34px
+}
+.icon_user {
+	HEIGHT: 24px; WIDTH: 24px; BACKGROUND: url(../../../../static/images/special/login/login/icon_user.png) no-repeat
+}
+.icon_lock {
+	HEIGHT: 24px; WIDTH: 24px; BACKGROUND: url(../../../../static/images/special/login/login/icon_lock.png) no-repeat
+}
+.login_bottom {
+	FONT-SIZE: 12px; WIDTH: 100%; POSITION: absolute; COLOR: #aaa; LEFT: 0px; BOTTOM: -50px
+}
+.login_bottom SPAN {
+	LINE-HEIGHT: 20px
+}
+.browser_box {
+	FONT-SIZE: 14px; HEIGHT: 28px; WIDTH: 82px; COLOR: #a5a5a5; TEXT-ALIGN: center; LINE-HEIGHT: 28px; BACKGROUND-COLOR: #e5e5e5; MARGIN-RIGHT: 20px; border-radius: 2px
+}

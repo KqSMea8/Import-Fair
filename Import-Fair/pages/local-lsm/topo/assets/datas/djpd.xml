@@ -1,0 +1,24 @@
+<Topo from="CACHE" id="assets/datas/djpd.xml" name="软交换端局浦东">
+  <Groups>
+    <Group resourceType="IP专网" id="ar" name="IP专网" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="470.025882523148" y="74"/>
+  </Groups>
+  <Nodes>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94cb470c000e" id="8a5dffbc2f7608f8012f94cb470c000e" name="万荣AR9" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="522.025882523148" y="74"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94cbf085000f" id="8a5dffbc2f7608f8012f94cbf085000f" name="钦州AR10" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="736.525882523148" y="74"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c929c4000c" id="8a5dffbc2f7608f8012f94c929c4000c" name="浦东AR7" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="206.02588252314803" y="74"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94ca4d42000d" id="8a5dffbc2f7608f8012f94ca4d42000d" name="金桥AR8" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="387.025882523148" y="74"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c4af970008" id="8a5dffbc2f7608f8012f94c4af970008" name="浦东AR3" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="335.025882523148" y="74"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c5e4890009" id="8a5dffbc2f7608f8012f94c5e4890009" name="金桥AR4" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="140.52588252314797" y="74"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c6e94a000a" id="8a5dffbc2f7608f8012f94c6e94a000a" name="万荣AR5" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="799.525882523148" y="74"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c85302000b" id="8a5dffbc2f7608f8012f94c85302000b" name="钦州AR6" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="577.525882523148" y="74"/>
+  </Nodes>
+  <Links>
+  	
+  </Links>
+   <Labels>
+  	<Label name="——设备CPU利用率TOP" x="225.5" y="5"/>
+    <Label name="制表人：严敏" x="1201.35" y="44.95"/>
+    <Label name="软交换端局浦东拓扑图" x="1201.35" y="4.8999999999999915"/>
+    <Label name="制表日期：2013-1-25" x="1201.35" y="85.00000000000001"/>
+  </Labels>
+</Topo>

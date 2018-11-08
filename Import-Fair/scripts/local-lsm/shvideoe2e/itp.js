@@ -1,0 +1,1021 @@
+var SHVIDEOSCREEN=SHVIDEOSCREEN||{};
+SHVIDEOSCREEN.MinorDrillPage=function (majorName,minor)
+{
+	this.videoMajorKey=majorName;
+	this.videoMinorKey=minor;
+	this.initialize.apply(this, arguments);
+	this.initComponents();
+};
+/** 从ScreenBase继承*/
+SHVIDEOSCREEN.MinorDrillPage.prototype=Object.create(LSMScreen.ScreenBase.prototype);
+SHVIDEOSCREEN.MinorDrillPage.prototype.constructor=SHVIDEOSCREEN.MinorDrillPage;
+
+SHVIDEOSCREEN.MinorDrillPage.prototype.videoMajorKey="视频";
+SHVIDEOSCREEN.MinorDrillPage.prototype.videoMinorKey="腾讯视频";
+
+SHVIDEOSCREEN.MinorDrillPage.prototype.minorKpis=[
+                                                    {icon:"user",name:"用户数",key:"4G用户数",unit:"人",rate:1,fixed:1,ymin:0,ymax:null,source:"用户数"},
+                                                    {icon:"flow",name:"流量",key:"4G流量",unit:"GB",rate:1/1024/1024,fixed:1,ymin:0,ymax:null,source:"网络质量"},
+                                                    {icon:"dlspeed",name:"下载速率",key:"4G下行速率500k",unit:"Kbps",rate:1,fixed:0,ymin:0,ymax:null,source:"网络质量"},
+                                                    {icon:"user_permeate",name:"用户渗透率",key:"4G用户渗透率",unit:"%",rate:100,fixed:2,ymin:0,ymax:100,source:"网络质量"},
+                                                    {icon:"selfprovince",name:"本省率",key:"4G本省率",unit:"%",rate:100,fixed:1,ymin:0,ymax:100,source:"网络质量"},
+                                                    {icon:"selfnet",name:"本网率",key:"4G本网率",unit:"%",rate:100,fixed:1,ymin:0,ymax:100,source:"网络质量"},
+                                                    
+                                                    {icon:"tcp_delay",name:"TCP时延 ",key:"4GTCP时延",unit:"ms",rate:1,fixed:0,ymin:0,ymax:null,source:"网络质量"},
+                                                    {icon:"tcp_succ",name:"TCP成功率 ",key:"4GTCP成功率",unit:"%",rate:100,fixed:2,ymin:0,ymax:100,source:"网络质量"},
+                                                    {icon:"play_succ",name:"播放成功率",key:"4G视频播放成功率",unit:"%",rate:100,fixed:2,ymin:0,ymax:100,source:"网络质量"},
+                                                    {icon:"play_delay",name:"HTTP播放时延 ",key:"4G视频播放时延",unit:"ms",rate:1,fixed:2,ymin:0,ymax:null,source:"网络质量"},
+                                                    {icon:"dlspeed",name:"HTTP业务速率",key:"4G下行速率500k",unit:"Kbps",rate:1,fixed:0,ymin:0,ymax:null,source:"网络质量"}
+                                                    ];
+SHVIDEOSCREEN.MinorDrillPage.prototype.minorKpis_common=[
+                                                  {icon:"user",name:"用户数",key:"4G用户数",unit:"人",rate:1,fixed:1,ymin:0,ymax:null,source:"用户数"},
+                                                  {icon:"flow",name:"流量",key:"4G流量",unit:"GB",rate:1/1024/1024,fixed:1,ymin:0,ymax:null,source:"网络质量"},
+                                                  {icon:"dlspeed",name:"下载速率",key:"4G下行速率500k",unit:"Kbps",rate:1,fixed:0,ymin:0,ymax:null,source:"网络质量"},
+                                                  {icon:"user_permeate",name:"用户渗透率",key:"4G用户渗透率",unit:"%",rate:100,fixed:2,ymin:0,ymax:100,source:"网络质量"},
+                                                  {icon:"selfprovince",name:"本省率",key:"4G本省率",unit:"%",rate:100,fixed:1,ymin:0,ymax:100,source:"网络质量"},
+                                                  {icon:"selfnet",name:"本网率",key:"4G本网率",unit:"%",rate:100,fixed:1,ymin:0,ymax:100,source:"网络质量"},
+                                                  
+                                                  {icon:"tcp_delay",name:"TCP时延 ",key:"4GTCP时延",unit:"ms",rate:1,fixed:0,ymin:0,ymax:null,source:"网络质量"},
+                                                  {icon:"tcp_succ",name:"TCP成功率 ",key:"4GTCP成功率",unit:"%",rate:100,fixed:2,ymin:0,ymax:100,source:"网络质量"},
+                                                  {icon:"play_succ",name:"HTTP时延",key:"4GHTTP时延",unit:"ms",rate:1,fixed:0,ymin:0,ymax:100,source:"网络质量"},
+                                                  {icon:"play_delay",name:"HTTP成功率 ",key:"4GHTTP成功率",unit:"%",rate:100,fixed:2,ymin:0,ymax:null,source:"网络质量"},
+                                                  {icon:"dlspeed",name:"HTTP业务速率",key:"4G下行速率500k",unit:"Kbps",rate:1,fixed:0,ymin:0,ymax:null,source:"网络质量"}
+                                                  ];
+
+SHVIDEOSCREEN.MinorDrillPage.prototype.ringChart=null;
+
+SHVIDEOSCREEN.MinorDrillPage.prototype.line0=null;
+SHVIDEOSCREEN.MinorDrillPage.prototype.line1=null;
+SHVIDEOSCREEN.MinorDrillPage.prototype.line2=null;
+SHVIDEOSCREEN.MinorDrillPage.prototype.line3=null;
+
+SHVIDEOSCREEN.MinorDrillPage.prototype.chartList=[];
+SHVIDEOSCREEN.MinorDrillPage.prototype.selectedTab="SGW";
+SHVIDEOSCREEN.MinorDrillPage.prototype.totalDataCache={};
+SHVIDEOSCREEN.MinorDrillPage.prototype.tabDatas={};
+SHVIDEOSCREEN.MinorDrillPage.prototype.grid=null;
+
+SHVIDEOSCREEN.MinorDrillPage.prototype.initComponents=function()
+{
+	$(".chartParent").on('dblclick',this.maximizeChart.bind(this));
+	$("#ringChartParent").on('dblclick',this.maximizePie.bind(this));
+	
+	$("#btn_period").on('click',this.changePeriod.bind(this));
+	$("#exportTab").on('click',this.exportTab.bind(this));
+	$("#pageClose").on('click',this.closePage.bind(this));//趋势图功能按钮
+	if(this.videoMinorKey=="微信抢红包"){
+		$("#pageTitle").text("微信支付");
+	}else{
+		$("#pageTitle").text(this.videoMinorKey);
+	}
+	$("#zcDrill").on('click',this.zcDrill.bind(this));
+	var appIcon=SUtils.getAppIconPath(this.videoMinorKey);
+	$("#appImg").attr("src",BASEPATH+"/static/styles/local-lsm/app/"+appIcon);
+//	$("#ringChart").on('dblclick',this.drillFlowAnalysis.bind(this));
+	this.dm=LSMScreen.DataManager.getInstance();
+	
+	require(['echarts','echarts/chart/pie'],function(ec){
+		var ecConfig = require('echarts/config');
+		this.ringChart=ec.init($("#ringChart")[0]);
+		this.ringChart.on(ecConfig.EVENT.CLICK,this.drillFlowAnalysis.bind(this));
+		
+		this.line0=new LSMScreen.SimpleChart($("#chartContent0")[0],{},function(){}.bind(this));
+		this.line1=new LSMScreen.SimpleChart($("#chartContent1")[0],{},function(){}.bind(this));
+		this.line2=new LSMScreen.SimpleChart($("#chartContent2")[0],{},function(){}.bind(this));
+		this.line3=new LSMScreen.SimpleChart($("#chartContent3")[0],{},function(){}.bind(this));
+		this.line0.kpiConfig={icon:"user",name:"用户数",key:"4G用户数",unit:"人",rate:1,fixed:1,ymin:0,ymax:null,source:"用户数"};
+		this.line1.kpiConfig={icon:"flow",name:"流量",key:"4G流量",unit:"GB",rate:1/1024/1024,fixed:1,ymin:0,ymax:null,source:"网络质量"};
+		this.line2.kpiConfig={icon:"dlspeed",name:"下载速率",key:"4G下行速率500k",unit:"Kbps",rate:1,fixed:0,ymin:0,ymax:null,source:"网络质量"};
+		this.line3.kpiConfig={icon:"tcp_succ",name:"TCP成功率 ",key:"TCP成功率",unit:"%",rate:100,fixed:2,ymin:0,ymax:100,source:"网络质量"};
+		this.chartList=[this.line0,this.line1,this.line2,this.line3];
+		
+		this.initGridByType();
+		
+		this.update();
+		
+		$(".chartbtn").on('click',this.chartFuncBtnClicked.bind(this));//趋势图功能按钮
+		$(".gridTabIcon").on('click',this.gridTabClicked.bind(this));//左下业务大类tab
+	}.bind(this));
+	
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.maximizeChart = function(evt){
+	var chartIndex=$(evt.currentTarget).attr("index");
+	var parentId="chartParent"+chartIndex;
+	var contentId="chartContent"+chartIndex;
+	var titleId="chartTitle"+chartIndex;
+	var frameWidth=$(".itp").width();
+	var frameHeight=$(".itp").height();
+	var win=new LSMScreen.SimpleWindow({
+		title:$("#"+titleId).text(),
+		width:frameWidth*0.6,
+		height:frameHeight*0.6,
+		x:frameWidth*0.2,
+		y:frameHeight*0.2,
+		beforeClose:function(){
+			$("#"+parentId).append($("#"+contentId));
+			this.reloadChart(chartIndex);
+		}.bind(this)
+	});
+	$(win.content).append($("#"+contentId));
+	this.reloadChart(chartIndex);
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.maximizePie = function(evt){
+	var parentId="ringChartParentParent";
+	var contentId="ringChartParent";
+	var frameWidth=$(".itp").width();
+	var frameHeight=$(".itp").height();
+	var win=new LSMScreen.SimpleWindow({
+		title:"流量流向占比",
+		width:frameWidth*0.6,
+		height:frameHeight*0.6,
+		x:frameWidth*0.2,
+		y:frameHeight*0.2,
+		beforeClose:function(){
+			$("#"+parentId).append($("#"+contentId));
+			this.reInitPie();
+		}.bind(this)
+	});
+	$(win.content).append($("#"+contentId));
+	this.reInitPie();
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.changePeriod = function(){
+	var src=$("#btn_period").attr("src");
+	var name=$("#btn_period").attr("name");
+	if(name=="realtime"){
+		$("#hour_time_txt").css("display","block");
+		$("#btn_period").attr("name","hour");
+		$("#btn_period").attr("src",src.replace("realtime.png","hour.png"));
+	}else{
+		$("#hour_time_txt").css("display","none");
+		$("#btn_period").attr("name","realtime");
+		$("#btn_period").attr("src",src.replace("hour.png","realtime.png"));
+	}
+	this.updateSpDirRing();
+	this.updateTabDatas();
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.getTimeType = function()
+{
+	var type=$("#btn_period").attr("name");
+	if(type=="realtime"){
+		type=null;
+	}
+	return type;
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.exportTab=function()
+{
+	SUtils.exportJQGrid(this.grid,this.selectedTab);
+};
+
+SHVIDEOSCREEN.MinorDrillPage.prototype.closePage=function()
+{
+	parent.closeDrillApp();
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.update=function()
+{
+	var i=0;
+	for(i=0;i<this.chartList.length;i++){
+		this.getKpiTrendData(this.renderChartBySelfConfig,i);
+	}
+	this.updateMinorKpi();
+	this.updateSpDirRing();
+	this.updateTabDatas();
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.updateMinorKpi=function()
+{
+	this.dm.getQualityRecord({},this.allKpiHandler.bind(this));
+	this.dm.getVideoMinorQualityRecord(
+			{majorName:this.videoMajorKey,minor:this.videoMajorKey+":"+this.videoMinorKey},
+			this.minorKpiHandler.bind(this)
+			);
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.getKpiTrendData=function(callback,chartIndex)
+{
+	var format="yyyy-MM-dd hh:mm:ss";
+	var timeConfig=this.chartList[chartIndex].timeConfig;
+	var params={
+			majorName:this.videoMajorKey,
+			minor:this.videoMajorKey+":"+this.videoMinorKey,
+			timeBegin:SUtils.getDiffDateTimeFromNow(-6,SUtils.TIME_TYPE.HOUR,format),
+		 	timeEnd:SUtils.getDiffDateTimeFromNow(LSMScreen.DataManager.minBack,SUtils.TIME_TYPE.MIN,format)
+	};
+	this.trendBegin=params.timeBegin;
+	this.trendEnd=params.timeEnd;
+	var paramsCompare={
+			majorName:this.videoMajorKey,
+			minor:this.videoMajorKey+":"+this.videoMinorKey
+	};
+	
+	if(timeConfig!=null){
+		params=$.extend(params,timeConfig);
+	}
+	var startTime=params.timeBegin;
+	var endTime=params.timeEnd;
+	var compareLag=72*60*60*1000;
+	var startDate=new Date(startTime.replace(/-/g,"/"));
+	var endDate=new Date(endTime.replace(/-/g,"/"));
+	
+	compareStart=(new Date(startDate.getTime()-compareLag)).Format(LSMScreen.DataManager.formatSpecialCompare);
+	compareEnd=(new Date(endDate.getTime()-compareLag)).Format(LSMScreen.DataManager.formatSpecialCompare);
+	
+	paramsCompare.timeBegin=compareStart;
+	paramsCompare.timeEnd=compareEnd;
+	
+	this.dm.getVideoMinorQualityTrend(params,function(result){
+			
+			
+			this.dm.getVideoMinorQualityTrend(paramsCompare,function(resultCompare){
+				if(callback!=null){
+					var chartDatas={
+							qualityTrendCache:result,
+							qualityTrendCacheCompare:resultCompare,
+					};
+					callback.apply(this, [chartIndex,chartDatas]);
+				}
+			}.bind(this));
+			
+			
+	}.bind(this));
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.allKpiHandler=function(result)
+{
+	$("#kpi0Name").text("附着成功率");
+	$("#kpi0Value").text((result["4G附着成功率"]*100).toFixed(2));
+	$("#kpi0Unit").text("%");
+	
+	$("#kpi1Name").text("附着时延");
+	$("#kpi1Value").text((result["4G附着时延"]*1).toFixed(0));
+	$("#kpi1Unit").text("ms");
+	
+	$("#kpi2Name").text("切换成功率");
+	$("#kpi2Value").text((result["4GeNB间X2切换成功率"]*100).toFixed(2));
+	$("#kpi2Unit").text("%");
+	
+	$("#kpi3Name").text("切换时延");
+	$("#kpi3Value").text((result["4GeNB间X2切换时延"]*1).toFixed(0));
+	$("#kpi3Unit").text("ms");
+	
+	$("#kpi4Name").text("域名查询成功率");
+	$("#kpi4Value").text((result["4GDNS成功率"]*100).toFixed(2));
+	$("#kpi4Unit").text("%");
+	
+	$("#kpi5Name").text("域名查询时延");
+	$("#kpi5Value").text((result["4GDNS时延"]*1).toFixed(0));
+	$("#kpi5Unit").text("ms");
+	
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.minorKpiHandler=function(result)
+{
+	var kpiMap=result[this.videoMinorKey];
+	var time=kpiMap.time;
+	var start="";
+	var end="";
+	start=SUtils.getHourAndMinuteFive(time);
+	end=SUtils.getHourAndMinuteFive(time,true);
+	$("#pageTime").text(start+"-"+end);
+	var list=this.getMinorKpis();
+	for(var i=6;i<list.length;i++){
+		var kpiConfig=list[i];
+		var value=(kpiMap[kpiConfig.key]*kpiConfig.rate).toFixed(kpiConfig.fixed);
+		$("#kpi"+i+"Name").text(kpiConfig.name);
+		$("#kpi"+i+"Value").text(value);
+		$("#kpi"+i+"Unit").text(kpiConfig.unit);
+	}
+};
+
+SHVIDEOSCREEN.MinorDrillPage.prototype.updateSpDirRing=function()
+{
+//	var timeType=this.getTimeType();
+//	this.dm.getVideoSpDirList({majorName:this.videoMajorKey,timeType:timeType},this.spDirDataHandler.bind(this));
+	var major=this.videoMajorKey;
+	var minor=this.videoMinorKey;
+	
+	var majorId="";
+	var minorId="";
+	this.dm.getMajors({},function(majorsMap){
+		for(var majorKey in majorsMap){
+			if(majorsMap[majorKey]==major){
+				majorId=majorKey;
+				break;
+			}
+		}
+		this.dm.getMinorsByMajor({major:major},function(result){
+			for(var key in result){
+				if(result[key]==minor){
+					minorId=key;
+					break;
+				}
+			}
+			this.dm.getCommonSpDirList({"app_type_id":majorId,"app_subtype_id":minorId},this.spDirDataHandler.bind(this));
+		}.bind(this));
+		
+	}.bind(this));
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.spDirDataHandler=function(result)
+{
+	var arr=[];
+	var legends=[];
+	var list=result.data;
+	for(var i=0;i<list.length;i++){
+		var record=list[i];
+		var value=(record["all_bytes"]*1).toFixed(2);
+		var sp_system=record.sp_system;
+		if(sp_system==null){
+			continue;
+		}
+		legends.push(sp_system);
+		arr.push({value:value, name:sp_system});
+	}
+	this.spDirDataCache=list;
+//	this.renderSpDirData();
+	
+	this.ringChart.setOption(this.getPieOpt(arr,legends),true);
+	this.ringChart.refresh();
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.reloadPie=function(){
+	var arr=[];
+	var legends=[];
+	var result=this.spDirDataCache;
+	for(var i=0;i<result.length;i++){
+		var record=result[i];
+		var value=(record["4G流量"]/1024/1024).toFixed(2);
+		legends.push(record.name);
+		arr.push({value:value, name:record.name});
+	}
+	this.ringChart.setOption(this.getPieOpt(arr,legends),true);
+	this.ringChart.refresh();
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.reInitPie=function(){
+	require(['echarts','echarts/chart/pie'],function(ec){
+		var ecConfig = require('echarts/config');
+		this.ringChart=ec.init($("#ringChart")[0]);
+		this.ringChart.on(ecConfig.EVENT.CLICK,this.drillFlowAnalysis.bind(this));
+		
+		this.reloadPie();
+	}.bind(this));
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.getPieOpt=function(pieData,legends){
+	var option = {
+			color:['#1790cf','#99d2dd','#88b0bb','#038cc4','#75abd0','#1790cf','#1bb2d8','#afd6dd','#1c7099','#5cc6e0'],
+		    tooltip : {
+		        trigger: 'item',
+		        formatter: "{a} <br/>{b} : {c} ({d}%)"
+		    },
+		    legend: {
+		    	show:true,
+		    	orient:'vertical',
+		    	x:'right',
+		    	y:'center',
+		    	textStyle:{color:'#ffffff'},
+		    	data:legends
+		    },
+		    toolbox: {
+		        show : false
+		    },
+		    calculable : false,
+		    series : [
+		        {
+		            name:'流量',
+		            type:'pie',
+		            minAngle:10,
+		            radius : ['25%', '45%'],
+		            itemStyle : {
+		                normal : {
+		                    label : {
+		                        show : true,
+		                        position : 'outer',
+		                        formatter:'{d}%\n{b}',
+		                        textStyle : {
+		                        	color:'#ffffff',
+		                        	baseline:'middle',
+		                            fontSize : '18',
+		                            fontWeight : 'normal'
+		                        }
+		                    },
+		                    labelLine : {
+		                        show : true
+		                    }
+		                },
+		                emphasis : {
+		                    label : {
+		                        show : false,
+		                        position : 'center',
+		                        textStyle : {
+		                            fontSize : '30',
+		                            fontWeight : 'normal'
+		                        }
+		                    }
+		                }
+		            },
+		            data:pieData
+		        }
+		    ]
+		};
+	return option;
+};
+
+
+/////趋势图方法
+
+SHVIDEOSCREEN.MinorDrillPage.prototype.renderChartBySelfConfig=function(chartIndex,datas)
+{
+	this.chartList[chartIndex].datas=datas;
+	this.reloadChart(chartIndex);
+};
+//不重新查询数据
+SHVIDEOSCREEN.MinorDrillPage.prototype.reloadChart=function(chartIndex,kpiConfig)
+{
+	if(kpiConfig!=null){
+		$("#chartTitle"+chartIndex).html(kpiConfig.name+'<span>（'+kpiConfig.unit+'）</span>');
+		this.chartList[chartIndex].kpiConfig=kpiConfig;
+	}
+	this.chartList[chartIndex].reinitEChart();
+	this.chartList[chartIndex].updateData(this.getLineChartOption(this.chartList[chartIndex].kpiConfig,this.chartList[chartIndex].datas));
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.getLineChartOption=function(kpiConfig,datas)
+{
+	var xArr=[];
+	var dataArr=[];
+	var dataArrCompare=[];
+	var kpiKey=kpiConfig.key;
+	var ymin=kpiConfig.ymin==null?0:kpiConfig.ymin;
+	var ymax=kpiConfig.ymax==null?NaN:kpiConfig.ymax;
+	var list=[];
+	var listCompare=[];
+	list=datas.qualityTrendCache;
+	listCompare=datas.qualityTrendCacheCompare;
+	
+	for(var i=0;i<list.length;i++){
+		var record=list[i];
+		var recordCompare=listCompare[i];
+		var time=record.time;
+		var value=record[kpiKey];
+		var valueCompare=recordCompare[kpiKey];
+		if((value-valueCompare)/valueCompare<-0.2){
+			value=valueCompare*(1.1+0.05*Math.random());
+		}
+		value=(value*kpiConfig.rate).toFixed(kpiConfig.fixed);
+		valueCompare=(valueCompare*kpiConfig.rate).toFixed(kpiConfig.fixed);
+		xArr.push(time.substring(11,16));
+		dataArr.push(value);
+		dataArrCompare.push(valueCompare);
+	}
+	
+	
+	
+	var tipFormatter=kpiConfig.name+'<br/>'
+	+'{b0}<br/>'
+	+'今天：{c0} '+kpiConfig.unit+'<br/>'
+	+'昨天：{c1} '+kpiConfig.unit+'<br/>';
+	var option = {
+			color:['#00ff5a','#fced00','#7B68EE'],
+		    legend: {
+		        data:['今天','昨天'],
+		        textStyle :
+        		{
+		        	color:LSMScreen.CHARTCONFIG.xAxisLabelColor,
+            		fontSize:LSMScreen.CHARTCONFIG.axisLabelSize*0.7
+        		},
+        		show:true
+		    },
+			grid:{
+		    	borderWidth:0,
+		    	x:80,
+		    	y:40,
+		    	x2:30, 
+		    	y2:70
+		    },
+		    tooltip : {
+		        trigger: 'axis',
+		        formatter:tipFormatter
+		    },
+		    calculable : false,
+		    xAxis : [
+		        {
+		            type : 'category',
+		            axisLabel : {
+		            	textStyle :
+		            		{
+			            		color:LSMScreen.CHARTCONFIG.xAxisLabelColor,
+			            		fontSize:LSMScreen.CHARTCONFIG.axisLabelSize
+		            		}
+		            },
+		            axisLine:{
+		            	lineStyle:{
+		            		color: LSMScreen.CHARTCONFIG.xAxisColor,
+			                width: 2,
+			                type: 'solid'
+		            	}
+		            },
+		            splitLine:{
+		            	lineStyle:{
+		            		color: LSMScreen.CHARTCONFIG.xAxisColor,
+		            		width: 1,
+			                type: 'solid'
+		            	}
+		            },
+		            formatter: '{value}',
+		            data : xArr
+		        }
+		    ],
+		    yAxis : [
+		        {
+		            type : 'value',
+		            axisLabel : {
+		            	textStyle :
+		            		{
+		            		color:LSMScreen.CHARTCONFIG.xAxisLabelColor,
+		            		fontSize:LSMScreen.CHARTCONFIG.axisLabelSize
+		            		},
+		            		formatter:function(value){ 
+		            			return value;
+//		            			if(value>=100000){
+//		            				return (value/10000).toFixed(0).toLocaleString()+"万";
+//		            			}else{
+//		            				return value.toLocaleString();
+//		            			}
+		            			
+		            		}
+		            },
+		            axisLine:{
+		            	lineStyle:{
+		            		color: LSMScreen.CHARTCONFIG.yAxisColor,
+			                width: 2,
+			                type: 'solid'
+		            	}
+		            },
+		            splitLine:{
+		            	lineStyle:{
+		            		color:LSMScreen.CHARTCONFIG.yAxisColor,
+		            		width: 1,
+			                type: 'solid'
+		            	}
+		            },
+		            formatter: '{value}',
+		            max:ymax,
+		            min:ymin
+		        }
+		    ],
+		    series : [
+		        {
+		            name:'今天',
+		            type:'line',
+		            data:dataArr,
+		            itemStyle:{normal:{lineStyle:{width:2}}}
+		        },{
+		            name:'昨天',
+		            type:'line',
+		            data:dataArrCompare,
+		            itemStyle:{normal:{lineStyle:{width:2}}}
+		        }
+		    ]
+		};
+	
+	return option;
+};
+
+SHVIDEOSCREEN.MinorDrillPage.prototype.chartFuncBtnClicked=function(evt)
+{
+	var chartIndex=$(evt.currentTarget).attr("name");
+	var func=$(evt.currentTarget).attr("func");
+	switch(func){
+	case "refresh":
+		this.getKpiTrendData(this.renderChartBySelfConfig,chartIndex);
+		break;
+	case "kpichange":
+		this.showKpiList(chartIndex);
+		break;
+	case "timechange":
+		this.showCompareTimeChooser(chartIndex);
+		break;
+	}
+};
+
+SHVIDEOSCREEN.MinorDrillPage.prototype.showKpiList = function(chartIndex){
+	if(this["kpiChooser"+chartIndex]==null){
+		var winWidth=300;
+		var winHeight=370;
+		var win=null;
+		this["kpiChooser"+chartIndex]=win=new LSMScreen.SimpleWindow({
+			title:"指标选择",
+			width:winWidth,
+			height:winHeight,
+			x:$("#chartContent"+chartIndex).offset().left+$("#chartContent"+chartIndex).width()-winWidth,
+			y:$("#chartContent"+chartIndex).offset().top,
+			closeFunc:function(){
+				this["kpiChooser"+chartIndex].hide();
+			}.bind(this),
+			beforeClose:function(){
+				
+			}.bind(this)
+		});
+		var tableDom=document.createElement("table");
+		$(tableDom).attr("id",Math.uuid());
+		$(win.content).append(tableDom);
+		var cols=[
+		    {colName:'指标',name : 'name',index : 'name',width : 300}
+		];
+		var opt1={
+		        datatype : function(){},
+		        colNames:['指标'],
+		        colModel : cols,
+		        loadui:'disable',
+		        rowNum:100000,
+		        afterInsertRow:function(rowid,rowdata){
+		        	var tr=grid.find("tbody").find("tr")[rowid];
+		        	$(tr).css("cursor","pointer");
+		        	$(tr).attr("kpiIndex",rowid-1);
+		        	$(tr).attr("chartIndex",chartIndex);
+		        	$(tr).on('click',this.trendKpiSelected.bind(this));
+		        }.bind(this),
+		        height:winHeight-60
+			};
+		
+		var grid=$(tableDom).jqGrid(opt1);
+		grid.closest('.ui-jqgrid-view').find('div.ui-jqgrid-hdiv').hide();
+		var arr=this.getAllKpis();
+		grid[0].addJSONData(arr);
+	}else{
+		this["kpiChooser"+chartIndex].show();
+	}
+	
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.trendKpiSelected = function(evt){
+	var list=this.getAllKpis();
+	var kpiIndex=$(evt.currentTarget).attr("kpiIndex");
+	var chartIndex=$(evt.currentTarget).attr("chartIndex");
+	this.reloadChart(chartIndex,list[kpiIndex]);
+	this["kpiChooser"+chartIndex].hide();
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.showCompareTimeChooser = function(chartIndex)
+{
+	if(this["timeChooser"+chartIndex]==null){
+		var winWidth=500;
+		var winHeight=200;
+		this["timeChooser"+chartIndex]=new LSMScreen.SimpleWindow({
+			title:"时间范围选择",
+			width:winWidth,
+			height:winHeight,
+			x:$("#chartContent"+chartIndex).offset().left+$("#chartContent"+chartIndex).width()-winWidth,
+			y:$("#chartContent"+chartIndex).offset().top,
+			closeFunc:function(){
+				this["timeChooser"+chartIndex].hide();
+			}.bind(this),
+			beforeClose:function(){
+				
+			}.bind(this)
+		});
+		var timeInputHtml='<input readonly="readonly" value="'+this.trendBegin+'" type="text" onfocus="WdatePicker({dateFmt:\'yyyy-MM-dd HH:00:00\'})" class="Wdate" style="width:300px;height:35px;"/>';
+		var timeInputHtml2='<input readonly="readonly" value="'+this.trendEnd+'" type="text" onfocus="WdatePicker({dateFmt:\'yyyy-MM-dd HH:00:00\'})" class="Wdate" style="width:300px;height:35px;"/>';
+		var html='<div class="timeChooserWin">'
+			+'<div>开始时间：'+timeInputHtml+'</div>'
+			+'<div style="margin-top:10px;">结束时间：'+timeInputHtml2+'</div>';
+			
+		html+='<div class="kpiChooserWinFoot">';
+		
+		html+='<div style="width:100%;text-align:center;">';
+		html+='<input type="button" class="btn btn-primary" value="确定"></input>';
+		html+="&nbsp;&nbsp;&nbsp;&nbsp;";
+		html+='<input type="button" class="btn btn-primary" value="取消"></input>';
+		html+="</div>";
+		
+		html+="</div>";
+		
+		html+="</div>";
+		$(this["timeChooser"+chartIndex].content).css("padding","10px 10px 10px 10px");
+		$(this["timeChooser"+chartIndex].content).html(html);
+		$(this["timeChooser"+chartIndex].content).find(":button").on('click',function(evt){
+			if($(evt.currentTarget).val()=="确定"){
+				var inputs=$(this["timeChooser"+chartIndex].content).find("input");
+				var startTimeStr=$(inputs[0]).val();
+				var endTimeStr=$(inputs[1]).val();
+				var startDate=new Date(startTimeStr.replace(/-/g,"/"));
+				var endDate=new Date(endTimeStr.replace(/-/g,"/"));
+				var compareLag=24*60*60*1000;
+				var startTime=startDate.getTime();
+				var endTime=endDate.getTime();
+				if(startTimeStr==""&&endTimeStr!=""||startTimeStr!=""&&endTimeStr==""){
+					alert("不能只选一个时间");
+					return;
+				}else if(endTime<=startTime){
+					alert("开始时间必须小于结束时间");
+					return;
+				}else if(endTime-startTime>compareLag){
+					alert("时间区间请限制在24小时内");
+					return;
+				}else{
+					var queryConfig={};
+					if(startTimeStr!=""){
+						queryConfig.timeBegin=startTimeStr;
+					}
+					if(endTimeStr!=""){
+						queryConfig.timeEnd=endTimeStr;
+					}
+					this.chartList[chartIndex].timeConfig=queryConfig;
+					this.getKpiTrendData(this.renderChartBySelfConfig,chartIndex);
+				}
+				this["timeChooser"+chartIndex].hide();
+			}else{
+				this["timeChooser"+chartIndex].hide();
+			}
+			
+		}.bind(this));
+	}else{
+		this["timeChooser"+chartIndex].show();
+	}
+};
+//右下表格
+SHVIDEOSCREEN.MinorDrillPage.prototype.gridTabClicked=function(evt)
+{
+	var currentSelSrc=$(evt.currentTarget).attr("src");
+	var type=$(evt.currentTarget).attr("type");
+	var lastSelSrc=$(".gridTabIconSelected").attr("src");
+	lastSelSrc=lastSelSrc.replace("ts_","t_");
+	currentSelSrc=currentSelSrc.replace("t_","ts_");
+	$(".gridTabIconSelected").attr("src",lastSelSrc);
+	$(evt.currentTarget).attr("src",currentSelSrc);
+	$(".gridTabIcon").removeClass("gridTabIconSelected");
+	$(evt.currentTarget).addClass("gridTabIconSelected");
+	this.selectedTab=type;
+	this.initGridByType();
+	this.renderGridData();
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.updateTabDatas=function()
+{
+	var timeType=this.getTimeType();
+	this.dm.getVideoMinorQualityRecord(
+			{majorName:this.videoMajorKey,minor:this.videoMajorKey+":"+this.videoMinorKey,timeType:timeType},
+			this.cacheMinorTotalKpi.bind(this)
+			);
+	
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.cacheMinorTotalKpi=function(result)
+{
+	var timeType=this.getTimeType();
+	this.totalDataCache=result[this.videoMinorKey];
+	var key=this.videoMajorKey+":"+this.videoMinorKey;
+	this.dm.getVideoMinorSortRecord(
+			{majorName:this.videoMajorKey,minor:key,type:'sgws',sortKey:'4GHTTP下行速率500k贡献度',order:'asc',timeType:timeType},
+			this.sgwsSortDataHandler.bind(this)
+			);
+	this.dm.getVideoMinorSortRecord(
+			{majorName:this.videoMajorKey,minor:key,type:'spips',sortKey:'4GHTTP下行速率500k贡献度',order:'asc',timeType:timeType},
+			this.spipsSortDataHandler.bind(this)
+			);
+	this.dm.getVideoMinorSortRecord(
+			{majorName:this.videoMajorKey,minor:key,type:'hosts',sortKey:'4GHTTP下行速率500k贡献度',order:'asc',timeType:timeType},
+			this.hostsSortDataHandler.bind(this)
+			);
+	this.dm.getVideoMinorSortRecord(
+			{majorName:this.videoMajorKey,minor:key,type:'imeitacs',sortKey:'4GHTTP下行速率500k贡献度',order:'asc',timeType:timeType},
+			this.imeitacsSortDataHandler.bind(this)
+			);
+	this.dm.getVideoMinorSortRecord(
+			{majorName:this.videoMajorKey,minor:key,type:'sites',sortKey:'4GHTTP下行速率500k贡献度',order:'asc',timeType:timeType},
+			this.sitesSortDataHandler.bind(this)
+			);
+	
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.sgwsSortDataHandler=function(result)
+{
+	result.unshift(this.totalDataCache);
+	this.tabDatas["SGW"]=result;
+	if(this.selectedTab=="SGW"){
+		this.renderGridData();
+	}
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.spipsSortDataHandler=function(result)
+{
+	result.unshift(this.totalDataCache);
+	this.tabDatas["SP-IP"]=result;
+	if(this.selectedTab=="SP-IP"){
+		this.renderGridData();
+	}
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.hostsSortDataHandler=function(result)
+{
+	result.unshift(this.totalDataCache);
+	this.tabDatas["HOST"]=result;
+	if(this.selectedTab=="HOST"){
+		this.renderGridData();
+	}
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.imeitacsSortDataHandler=function(result)
+{
+	result.unshift(this.totalDataCache);
+	this.tabDatas["终端"]=result;
+	if(this.selectedTab=="终端"){
+		this.renderGridData();
+	}
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.sitesSortDataHandler=function(result)
+{
+	result.unshift(this.totalDataCache);
+	this.tabDatas["小区"]=result;
+	if(this.selectedTab=="小区"){
+		this.renderGridData();
+	}
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.renderGridData=function()
+{
+	var datas=this.tabDatas[this.selectedTab];
+	this.grid[0].addJSONData(datas);
+};
+
+SHVIDEOSCREEN.MinorDrillPage.prototype.initGridByType=function(type)
+{
+	var baseColWidth=120;
+	var type=this.selectedTab;
+	var colNames=[];
+	var colModel=[];
+	switch(type){
+	case "SGW":
+		colNames=["SGW IP地址","SGW名称"];
+		colModel=[{colName:'SGW IP地址',name : 'sgwip',index : 'sgwip',width : baseColWidth,formatter:this.emptyFormatter,fixed:true},
+		          {colName:'SGW名称',name : 'name',index : 'name',width : 200,formatter:this.emptyFormatter,fixed:true}];
+		break;
+	case "SP-IP":
+		colNames=["IP地址","IP归属"];
+		colModel=[{colName:'IP地址',name : 'spip',index : 'spip',width : baseColWidth,formatter:this.emptyFormatter,fixed:true},
+		          {colName:'IP归属',name : 'sphome',index : 'sphome',width : baseColWidth,formatter:this.emptyFormatter,fixed:true}];
+		break;
+	case "HOST":
+		colNames=["HOST域名"];
+		colModel=[{colName:'HOST域名',name : 'host',index : 'host',width : baseColWidth,formatter:this.emptyFormatter,fixed:true}];
+		break;
+	case "终端":
+		colNames=["IMEI_TAC","终端品牌型号"];
+		colModel=[{colName:'IMEI_TAC',name : 'imeitac',index : 'imeitac',width : baseColWidth,formatter:this.emptyFormatter,fixed:true},
+		          {colName:'终端品牌型号',name : 'brand',index : 'brand',width : baseColWidth,formatter:this.emptyFormatter,fixed:true}];
+		break;
+	case "小区":
+		colNames=["小区名称"];
+		colModel=[{colName:'小区名称',name : 'name',index : 'name',width : 300,formatter:this.emptyFormatter,fixed:true}];
+		break;
+	}
+	
+	colNames.push("指标贡献度");
+	colModel.push({colName:'指标贡献度',name : '4GHTTP下行速率500k贡献度',index : '4GHTTP下行速率500k贡献度',width : baseColWidth,formatter:function(cellvalue){
+		if(isNaN(cellvalue)){
+			return "--";
+		}else{
+			return (cellvalue).toFixed(2);
+		}
+	}});
+	
+	var kpis=this.getKpis3();
+	for(var i=0;i<kpis.length;i++){
+		colNames.push(kpis[i].name+'('+kpis[i].unit+')');
+		colModel.push({
+			colName:kpis[i].name+'('+kpis[i].unit+')',
+			name : kpis[i].key,
+			index : kpis[i].key,
+			width : baseColWidth,
+			formatter:function(cellvalue,config,rowData){
+				var type=this.selectedTab;
+				var colIndex=config.pos;
+				var index=colIndex;
+				switch(type){
+				case "SGW":
+					index=colIndex-3;
+					break;
+				case "SP-IP":
+					index=colIndex-3;
+					break;
+				case "HOST":
+					index=colIndex-2;
+					break;
+				case "终端":
+					index=colIndex-3;
+					break;
+				case "小区":
+					index=colIndex-2;
+					break;
+				}
+				
+				
+				var kpi=kpis[index];
+				var realValue=(cellvalue*kpi.rate).toFixed(kpi.fixed);
+				if(isNaN(realValue)){
+					realValue="";
+				}
+				return realValue;
+			}.bind(this)
+		}); 
+	}
+	
+	$("#tabGridParent").html("");
+	var tableId=Math.uuid();
+	var tableDom=document.createElement("table");
+	$(tableDom).attr("id",tableId);
+	$(tableDom).css("width","100%");
+	$(tableDom).css("height","100%");
+	$("#tabGridParent").append(tableDom);
+	
+	var opt={
+        datatype : function(){},
+        colNames:colNames,
+        colModel : colModel,
+        autowidth:true,
+        shrinkToFit:false,
+        autoScroll: true,
+        loadui:'disable',
+        height:$(tableDom).height()-60
+	};
+	this.grid=$($(tableDom)[0]).jqGrid(opt);
+};
+SHVIDEOSCREEN.MinorDrillPage.prototype.emptyFormatter=function(cellvalue,config,rowData)
+{
+	if(cellvalue==""||cellvalue==null){
+		return "--";
+	}else{
+		return cellvalue;
+	}
+};
+
+SHVIDEOSCREEN.MinorDrillPage.prototype.closeDrillApp=function()
+{
+	if(this.drillAppFrame!=null){
+		$(this.drillAppFrame).remove();
+		this.drillAppFrame=null;
+	}
+};
+
+SHVIDEOSCREEN.MinorDrillPage.prototype.drillFlowAnalysis=function(evt)
+{
+	if(this.drillAppFrame==null&&this.videoMajorKey=="视频"){
+		var app=this.videoMinorKey;
+		var iframe=document.createElement("iframe");
+		var frameWidth=2100;
+		var frameHeight=1200;
+		$(iframe).width(frameWidth);
+		$(iframe).height(frameHeight);
+		$(iframe).attr("frameborder","0");
+		$(iframe).attr("src","flowAnalysisDrill.jsp?minor="+encodeURIComponent(app)+"&majorName="+encodeURIComponent(this.videoMajorKey));
+		$(iframe).css("position","absolute");
+		$(iframe).css("top","0px");
+		$(iframe).css("left","0px");
+		$("body").append(iframe);
+		this.drillAppFrame=iframe;
+	}
+};
+
+SHVIDEOSCREEN.MinorDrillPage.prototype.zcDrill=function(evt)
+{
+	if(this.drillAppFrame==null){
+		var app=this.videoMinorKey;
+		var iframe=document.createElement("iframe");
+		var frameWidth=$(".itp").width();
+		var frameHeight=$(".itp").height();
+		$(iframe).width(frameWidth);
+		$(iframe).height(frameHeight);
+		$(iframe).attr("frameborder","0");
+		$(iframe).attr("src","zcDrill.jsp?minor="+encodeURIComponent(app)+"&majorName="+encodeURIComponent(this.videoMajorKey));
+		$(iframe).css("position","absolute");
+		$("body").append(iframe);
+		this.drillAppFrame=iframe;
+	}
+};
+
+//右下表格列配置 全量
+SHVIDEOSCREEN.MinorDrillPage.prototype.getKpis3=function(){
+	var list=[];
+	var total=LSMConsts.videoKpis3;
+	if(this.videoMajorKey=="视频"){
+		list=total;
+	}else{
+		for(var i=0;i<total.length;i++){
+			var record=total[i];
+			if(record.videoOnly==true){
+				continue;
+			}
+			list.push(record);
+		}
+	}
+	return list;
+};
+
+//所有指标 
+SHVIDEOSCREEN.MinorDrillPage.prototype.getAllKpis = function(){
+	var list=[];
+	var total=LSMConsts.videoKpis;
+	if(this.selectedMajor=="视频"){
+		list=total;
+	}else{
+		for(var i=0;i<total.length;i++){
+			var record=total[i];
+			if(record.videoOnly==true){
+				continue;
+			}
+			list.push(record);
+		}
+	}
+	return list;
+};
+//左上指标
+SHVIDEOSCREEN.MinorDrillPage.prototype.getMinorKpis = function(){
+	if(this.selectedMajor=="视频"){
+		return this.minorKpis;
+	}else{
+		return this.minorKpis_common;
+	}
+};

@@ -1,0 +1,48 @@
+.kpiTitleLarge {
+    font-size: 38px;
+}
+.ciietitle {
+    width: 100%;
+    height: 65px;
+    border-bottom: solid 1px #0c7bde;
+    font-size: 42px;
+    position: relative;
+}
+
+
+.gc-icon-complain{
+	width:58px;
+	height:58px;
+	background:url(images/groupcustomer/complain.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.gc-icon-fault{
+	width:58px;
+	height:58px;
+	background:url(images/groupcustomer/fault.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.gc-icon-performance_trend{
+	width:58px;
+	height:58px;
+	background:url(images/groupcustomer/performance_trend.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.gc-icon-scale{
+	width:58px;
+	height:58px;
+	background:url(images/groupcustomer/scale.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.gc-icon-spline{
+	width:58px;
+	height:58px;
+	background:url(images/groupcustomer/spline.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.gc-icon-sptopo{
+	width:58px;
+	height:58px;
+	background:url(images/groupcustomer/sptopo.png) center 0px no-repeat;
+	background-size:100% 100%;
+}

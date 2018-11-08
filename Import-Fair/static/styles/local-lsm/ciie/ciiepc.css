@@ -1,0 +1,449 @@
+html{
+	width:100%;
+	height:100%;
+	background:#000000;
+	
+ 	scrollbar-arrow-color: #333; /**//*三角箭头的颜色*/   
+    scrollbar-face-color: #333; /**//*立体滚动条的颜色*/   
+    scrollbar-3dlight-color: #666; /**//*立体滚动条亮边的颜色*/   
+    scrollbar-highlight-color: #666; /**//*滚动条空白部分的颜色*/   
+    scrollbar-shadow-color: #999; /**//*立体滚动条阴影的颜色*/   
+    scrollbar-darkshadow-color: #666; /**//*立体滚动条强阴影的颜色*/   
+    scrollbar-track-color: #666; /**//*立体滚动条背景颜色*/   
+    scrollbar-base-color:#f8f8f8; /**//*滚动条的基本颜色*/   
+}
+::-webkit-scrollbar{
+   width:10px;
+   background:#999;/* 整个滚条背景 */
+} 
+::-webkit-scrollbar-thumb{
+   -webkit-border-radius:4px;
+   border-radius:4px;
+   background:#666; /* 滚条内嵌颜色 */
+} 
+::-webkit-scrollbar-button {
+    background-color:#666;/* 两边端按钮颜色 */
+}
+body{
+	width:100%;
+	height:100%;
+	position:relative;
+	font-size:16px;
+	color:#ffffff;
+	-webkit-text-size-adjust:auto !important;
+}
+.close{
+	color:#ffffff !important;
+	opacity:1 !important;
+}
+.close:hover, .close:focus{
+	color:#ffffff !important;
+}
+.modal-content{
+	background-color: rgba(1,0,69,0.75) !important;
+	font-size:1.5em;
+}
+.loadmaskspin{
+	background-image : url(images/loading.gif) center 0px no-repeat;
+}
+/* @media screen and (max-width: 1280px) { */
+/*     body { */
+/*         font-size:12px; */
+/*     } */
+/* } */
+.bodybackground{
+	width:100%;
+	height:100%;
+	background:url(images/bg.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.pagetitle{
+	width:75%;
+	height:11%;
+	position:absolute;
+	left:25%;
+	top:0;
+}
+.spline{
+	background:url(images/spline/title.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.people{
+	background:url(images/people/title.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.data-border-01{
+	width:22%;
+	height:18%;
+	background:url(images/data-border-01.png) center 0px no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	left:1.5%;
+	top:1.5%;
+}
+.data-border-02{
+	width:22%;
+	height:28%;
+	background:url(images/data-border-02.png) center 0px no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	left:1.5%;
+	top:22%;
+}
+.data-border-03{
+	width:22%;
+	height:45%;
+	background:url(images/data-border-03.png) center 0px no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	left:1.5%;
+	top:52.5%;
+}
+.data-border-main{
+	width:68.7%;
+	height:77%;
+	position:absolute;
+	left:27.6%;
+	top:16.4%;
+}
+.data-border-main-people{
+	width:70.7%;
+	height:80.4%;
+	position:absolute;
+	left:26.6%;
+	top:14.8%;
+	
+}
+.tablebg{
+	background:url(images/spline/table-bg.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.data-border-title{
+	position:absolute;
+	left:2.5%;
+	top:3.5%;
+	line-height:1.5em;
+}
+.data-border-title-txt{
+	color:#78c2dc;
+	font-size:1.5em;
+	float:left;
+	padding-left:0.3em;
+}
+.icon-switch{
+	width:1.2vw;
+	height:1.2vw;
+	background:url(images/switch.png) center 0px no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	right:0;
+	top:0;
+	cursor:pointer;
+}
+
+.icon-city{
+	width:1.8em;
+	height:1.8em;
+	background:url(images/city.png) center 0px no-repeat;
+	background-size:100% 100%;
+	float:left;
+}
+.icon-resource{
+	width:1.8em;
+	height:1.8em;
+	background:url(images/resource.png) center 0px no-repeat;
+	background-size:100% 100%;
+	float:left;
+}
+.icon-bulletin{
+	width:1.8em;
+	height:1.8em;
+	background:url(images/bulletin.png) center 0px no-repeat;
+	background-size:100% 100%;
+	float:left;
+}
+.icon-building{
+	width:1.8em;
+	height:1.8em;
+	background:url(images/icon-1.png) center 0px no-repeat;
+	background-size:100% 100%;
+	float:left;
+}
+.icon-chart{
+	width:1.8em;
+	height:1.8em;
+	background:url(images/icon-2.png) center 0px no-repeat;
+	background-size:100% 100%;
+	float:left;
+}
+.data-border-content-01{
+	width:100%;
+	height:70%;
+	top:30%;
+	position:absolute;
+}
+
+.dbc-horizontal{
+	width:100%;
+	height:2em;
+	padding:1em;
+	margin-top:3%;
+	line-height:1.2em;
+}
+.dbc-horizontal>div{
+	float:left;
+}
+.data-border-content-02{
+	width:100%;
+	height:85%;
+	top:15%;
+	position:absolute;
+}
+.dbc-horizontal-02{
+	width:100%;
+	height:100%;
+}
+.dbc-horizontal-02>div{
+	float:left;
+}
+.data-border-content-03{
+	width:100%;
+	height:88%;
+	top:12%;
+	padding:1em;
+	position:absolute;
+}
+.dbc-title{
+	color:#ffffff;
+	font-size:1.2em;
+}
+.dbc-percentbg{
+	width:48%;
+	border-radius:1.5em;
+	border:solid 1px #2b4d8e;
+	height:1.5em;
+	background:#2d5395;
+}
+.dbc-percentbg2{
+	width:48%;
+	border-radius:1.5em;
+	border:solid 1px #3152a3;
+	height:1.5em;
+	background:#284666;
+}
+.dbc-datadigit{
+	color:#3aff35;
+	font-size:1.8em;
+	margin-left:0.5em;
+}
+
+.dbc-unit{
+	color:#8da8bf;
+	font-size:0.8em;
+	margin-left:0.5em;
+}
+.dbc-block{
+	width:42%;
+	height:40%;
+	margin-left:5%;
+	margin-top:4%;
+	position:relative;
+}
+.dbc-block-03{
+	width:100%;
+	height:3em;
+	margin-top:4%;
+	position:relative;
+}
+.dbc-block-bg{
+	width:100%;
+	height:100%;
+	background:#273479;
+	border-radius:0.8em;
+	opacity:0.7;
+	position:absolute;
+	top:0;
+	left:0;
+
+}
+.dbc-block-content{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	text-align:center;
+}
+.dbc-block-content>div{
+	margin-top:4%;
+}
+.dbc-block-content-03{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.tableDiv{
+	width:100%;
+	height:75%;
+}
+.topoDiv{
+	position:relative;
+	width:100%;
+	height:25%;
+}
+
+/* 人流 */
+.people-data-container-bg{
+	width:100%;
+	height:100%;
+	background:#143676;
+	opacity:0.7;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.people-data-content{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.kpiFrame{
+	width:30%;
+	height:30%;
+	background:url(images/people/zhibiao_border.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.kpiFrame_content{
+	position:absolute;
+	top:40%;
+	left:30%;
+}
+.people_kpiframe_title{
+	font-size:1.2em;
+}
+.people_kpiframe_ratio{
+	font-size:1em;
+	margin-left:0.3em;
+}
+.people_kpiframe_value{
+	font-size:2.2em;
+	color:#69e2da;
+	margin-left:0.3em;
+}
+.people_kpiframe_unit{
+	font-size:1em;
+	margin-left:0.5em;
+}
+.ciie_max_btn{
+	width:1.8em;
+	height:1.8em;
+	cursor:pointer;
+	position:absolute;
+	right:5px;
+	top:5px;
+	background:url(images/max.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.ciie_min_btn{
+	width:1.8em;
+	height:1.8em;
+	cursor:pointer;
+	position:absolute;
+	right:5px;
+	top:5px;
+	background:url(images/min.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.ciie_collapse_btn{
+	width:1em;
+	height:3.6em;
+	cursor:pointer;
+	position:absolute;
+	left:0px;
+	top:50%;
+	margin-top:-0.9em;
+	background:url(images/collapse.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.ciie_expand_btn{
+	width:1em;
+	height:3.6em;
+	cursor:pointer;
+	position:absolute;
+	left:0px;
+	top:50%;
+	margin-top:-0.9em;
+	background:url(images/expand.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+/* 拓扑 */
+.topoNode{
+	text-align:center;
+	position:absolute;
+	width:7%;
+	height:60%;
+	top:10%;
+}
+.topoComp{
+  border:solid 2px #413c98;
+  border-radius:0.8em;
+  background:#29125f;
+  padding:1px;
+  width:100%;
+  height:100%;
+  
+}
+.device{
+	color:#ffffff;
+	border-radius:0.8em;
+	background:#4b4fb3;
+	text-align:center;
+	width:100%;
+	height:100%;
+	padding:5% 5% 10% 10%;
+}
+.SDH{
+	width:90%;
+	height:60%;
+	background:url(images/spline/SDH-icon.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.topoLabel{
+	margin-top:8px;
+}
+
+
+
+/* 颜色 */
+.angled-135 {
+	height:100%;
+	border-radius:1.5em;
+    background-color: #48b2de;
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%,
+                            color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent),
+                            color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)),
+                            color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent),
+                            to(transparent));
+    background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+                        transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+                        transparent 75%, transparent);
+    background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+                        transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+                        transparent 75%, transparent);
+    background-image: linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+                        transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+                        transparent 75%, transparent);
+}
+.purplebar{
+	background-color: #6741ab;
+}
+.yellowfont{
+	color:#ffff25;
+}
+
+
+

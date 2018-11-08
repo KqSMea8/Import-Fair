@@ -1,0 +1,7 @@
+<config>
+	<item id="spCode" value="909007" description="春晚短信"/>
+	<item id="mmsCapacity" value="5040000" description="504万条/小时"/>
+	<item id="thirdFlowCapacity" value="512"  description="对于总流量相当于1Gbps,第三方流量容量(单位:Mbps)"/>
+	<item id="apnFlowCapacity" value="0"  description="对于总流量相当于1Gbps,APN流量容量(单位:Mbps)"/>
+	<item id="pingshiTime" value="2015-01-01"  description="默认平时时间"/>
+</config>	

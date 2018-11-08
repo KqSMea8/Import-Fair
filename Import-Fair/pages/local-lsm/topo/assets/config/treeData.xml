@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root label="业务快报">
+	<sort label="数据网业务快报" id="data"/>
+	<sort label="短信业务快报" id="sms" >
+		<node id="sms_60" label="短信业务快报(小时)"/>
+		<node id="sms_5" label="短信业务快报(5分钟)"/>
+	</sort>
+	<sort label="互联网业务快报">
+		<node id="net_cmnet" label="CMNET业务快报" />
+		<node id="net_idc" label="IDC业务快报" />
+		<node id="net_ip" label="IP承载网业务快报" />
+	</sort>
+</root>	

@@ -1,0 +1,226 @@
+var CIIENEW=CIIENEW||{};
+CIIENEW.Screen=function ()
+{
+	this.initialize.apply(this,arguments);
+};
+CIIENEW.Screen.prototype.constructor=CIIENEW.Screen;
+CIIENEW.Screen.prototype.hotspot='进口博览会';
+CIIENEW.Screen.prototype.dm=null;
+CIIENEW.Screen.prototype.cdm=null;
+CIIENEW.Screen.prototype.hotspotList=[];
+CIIENEW.Screen.prototype.startIndex=0;
+CIIENEW.Screen.prototype.selectedHot=null;
+CIIENEW.Screen.prototype.kpiCache={};
+CIIENEW.Screen.prototype.mainHotMap={};
+
+CIIENEW.Screen.prototype.intervalKey0=0;
+CIIENEW.Screen.prototype.intervalKey1=0;
+CIIENEW.Screen.prototype.imgMap={
+//		国家会展中心
+	"J-1号馆":"J-1H.png",
+	"J-2号馆":"J-2H.png",
+	"J-3号馆":"J-3H.png",
+	"J-4号馆":"J-4H.png",
+	"J-5号馆":"J-5H.png",
+	"J-6号馆":"J-6H.png",
+	"J-7号馆":"J-7H.png",
+	"J-8号馆":"J-8H.png",
+	"J-A0办公楼":"J-A0B.png",
+	"J-B0办公楼":"J-B0B.png",
+	"J-C0办公楼":"J-C0B.png",
+	"J-D0洲际酒店":"J-D0H.png",
+	"J-东厅":"J-EH.png",
+	"J-北厅":"J-NH.png",
+	"J-西厅":"J-WH.png",
+	"J-会展大道北":"J-NR.png",
+	"J-会展大道东":"J-ER.png",
+	"J-会展大道南":"J-SR.png",
+	"J-会展大道西":"J-WR.png",
+	"J-入口广场":"J-ENTER.png",
+	"J-商业区":"J-BUS.png",
+	"J-周边外围":"J-SUR.png",
+	
+//	酒店
+	"J-和平饭店":"J-HOTELHP.png",
+	"J-嘉定喜来登大酒店":"J-HOTELXLD.png",
+	"J-锦江饭店":"J-HOTELJJ.png",
+	"J-上海大酒店":"J-HOTELSH.png",
+	"J-上海大厦":"J-HOTELSHB.png",
+	"J-上海四季酒店":"J-HOTELSJ.png",
+	"J-世博洲际酒店":"J-HOTELZJ.png",
+	"J-西郊宾馆":"J-HOTELXJ.png",
+	
+//	进口博览会
+	"J-道路":"J-ROAD.png",
+	"J-国家会展中心":"J-CIIE.png",
+	"J-交通枢纽":"J-TRAFFIC.png",
+	"J-酒店":"J-HOTEL.png",
+	
+//	道路
+	"J-虹桥火车站-国家会展中心":"J-HQ-CIIE.png",
+	"J-虹桥机场-国家会展中心":"J-AHQ-CIIE.png",
+	"J-沪杭高铁":"J-HH.png",
+	"J-京沪_沪宁高铁":"J-JHHN.png",
+	"J-浦东机场-国家会展中心":"J-APD-CIIE.png",
+	"J-上海火车站-国家会展中心":"J-SH-CIIE.png",
+	"J-上海火南站-国家会展中心":"J-NSH-CIIE.png",
+	
+//	交通枢纽
+	"J-虹桥火车站":"J-THQ.png",
+	"J-虹桥机场":"J-TAHQ.png",
+	"J-浦东机场":"J-TAPD.png",
+	"J-上海南站":"J-TNSH.png",
+	"J-上海站":"J-TSH.png"
+	
+};
+
+CIIENEW.Screen.prototype.initialize=function(_hotspot){
+	if(_hotspot!=null){
+		this.hotspot=_hotspot;
+	}
+	this.dm=LSMScreen.DataManager.getInstance();
+	this.cdm=LSMScreen.CacheDataManager.getInstance();
+	//this.cdm.getSubHotspots({hotspot:this.hotspot,hot_type:'0'},this.subHotspotDataHandler.bind(this));
+	this.cdm.getHotspotTree({},this.subHotTreeHandler.bind(this));
+	$('.ciiebubble').on('click',this.updateMainHot.bind(this));
+	$('.ciiehotinfoparent').on('click',this.hotClickHandler.bind(this));
+};
+
+CIIENEW.Screen.prototype.getSelectedMainHot=function(e){
+	var hot=$('.ciiedot-select').attr('name');
+	return hot;
+};
+CIIENEW.Screen.prototype.updateMainHot=function(e){
+	var hot=$(e.currentTarget).attr('name');
+	$('.ciiebubble').removeClass('ciiebubble-selected');
+	$(e.currentTarget).addClass('ciiebubble-selected');
+	this.setMainHot(hot);
+	parent.updateHotspot(hot);
+};
+CIIENEW.Screen.prototype.subHotTreeHandler=function(result){
+	var baseList=result.children;
+	var i=0;
+	var hotspots=[];
+	for(i=0;i<baseList.length;i++){
+		var record=baseList[i];
+		this.mainHotMap[record.id]=record.children;
+	}
+	this.mainHotMap[result.id]=result.children;
+	this.setMainHot(result.id);
+	
+};
+CIIENEW.Screen.prototype.setMainHot=function(hot){
+	var list=this.mainHotMap[hot];
+	var i=0;
+	var hotspots=[];
+	for(i=0;i<list.length;i++){
+		var record=list[i];
+		//if(record.type==0){
+			hotspots.push(record.id);
+		//}
+	}
+	this.startIndex=0;
+	this.hotspotList=hotspots;
+	this.drawNext();
+	this.update();
+	clearInterval(this.intervalKey0);
+	clearInterval(this.intervalKey1);
+	this.intervalKey0=setInterval(this.drawNext.bind(this),30000);
+	this.intervalKey1=setInterval(this.update.bind(this),60*1000);
+};
+CIIENEW.Screen.prototype.hotClickHandler=function(e){
+	var hot=$(e.currentTarget).attr('hot');
+	parent.updateHotspot(hot);
+	this.selectedHot=hot;
+	this.checkDot();
+};
+CIIENEW.Screen.prototype.update=function(){
+	this.cdm.getHotspotKpi({},this.updateKpis.bind(this));
+};
+
+CIIENEW.Screen.prototype.updateKpis=function(result){
+	this.kpiCache=result;
+	this.refreshKpiValues();
+};
+
+CIIENEW.Screen.prototype.drawNext=function(){
+	var showLen=4;
+	this.startIndex=this.startIndex%this.hotspotList.length;
+	var imgs=['ciie.png','himalayan.png','hongqiaotrain.png','pudongair.png'];
+	for(var i=0;i<showLen;i++){
+		var next=(this.startIndex+i)%this.hotspotList.length;
+		var hot=this.hotspotList[next];
+		//$('.ciiehotinfoparent:eq('+i+')').css('transform',"rotateX(180deg)");
+		//$('.ciiehotinfoparent:eq('+i+')').toggleClass('rotateDivX');
+		if($('.ciiehotinfoparent:eq('+i+')').hasClass('rotateDivX')){
+			$('.ciiehotinfoparent:eq('+i+')').removeClass('rotateDivX');
+			$('.ciiehotinfoparent:eq('+i+')').addClass('rotateDivX2');
+		}else{
+			$('.ciiehotinfoparent:eq('+i+')').removeClass('rotateDivX2');
+			$('.ciiehotinfoparent:eq('+i+')').addClass('rotateDivX');
+		}
+		
+		$('.ciiedot:eq('+i+')').attr('hot',hot);
+		$('.ciiehotinfoparent:eq('+i+')').attr('hot',hot);
+		$('.ciiehotinfo-hot:eq('+i+')').text(hot.replace('J-',''));
+		var imgSrc
+		if(this.imgMap[hot]==null){
+			imgSrc=BASEPATH+"/static/styles/local-lsm/ciienew/images/hotimg/J-SUR.png";
+		}else{
+			imgSrc=BASEPATH+"/static/styles/local-lsm/ciienew/images/hotimg/"+this.imgMap[hot];
+		}
+		$('.ciiehotimgsrc:eq('+i+')').attr('src',imgSrc);
+	}
+	this.checkDot();
+	this.refreshKpiValues();
+	this.startIndex+=showLen;
+};
+CIIENEW.Screen.prototype.refreshKpiValues=function(){
+	var dataMap=this.kpiCache;
+	if(dataMap==null) return;
+	var list=$('.ciiehotinfoparent');
+	for(var i=0;i<list.length;i++){
+		var hot=$(list[i]).attr('hot');
+		var record=dataMap[hot];
+		if(record!=null){
+			$(list[i]).find('.ciiehotkpi:eq(0)').find('.ciiekpivalue').text(record['s_091']);//用户数
+			$(list[i]).find('.ciiehotkpi:eq(1)').find('.ciiekpivalue').text(record['hwl']);//话务量
+			$(list[i]).find('.ciiehotkpi:eq(2)').find('.ciiekpivalue').text((record['s_083']/1024/1024).toFixed(2));//流量
+			
+			this.setRatio('s_091',record,'tb',$(list[i]).find('.ciiehotkpi:eq(0)').find('.fontSubInfo:eq(1)'));
+			this.setRatio('s_091',record,'hb',$(list[i]).find('.ciiehotkpi:eq(0)').find('.fontSubInfo:eq(2)'));
+			
+			this.setRatio('hwl',record,'tb',$(list[i]).find('.ciiehotkpi:eq(1)').find('.fontSubInfo:eq(1)'));
+			this.setRatio('hwl',record,'hb',$(list[i]).find('.ciiehotkpi:eq(1)').find('.fontSubInfo:eq(2)'));
+			
+			this.setRatio('s_083',record,'tb',$(list[i]).find('.ciiehotkpi:eq(2)').find('.fontSubInfo:eq(1)'));
+			this.setRatio('s_083',record,'hb',$(list[i]).find('.ciiehotkpi:eq(2)').find('.fontSubInfo:eq(2)'));
+		}
+	}
+};
+CIIENEW.Screen.prototype.setRatio=function(kpiKey,record,tag,targetJq){
+	var now=record[kpiKey];
+	var compare=record[kpiKey+tag];
+	
+	var ratio=((now-compare)/compare*100);
+	var ratioTxt='--';
+	if(isNaN(ratio)||ratio==0||compare==0||compare==null){
+		ratioTxt='--';
+		targetJq.prev().attr('class','');
+	}else{
+		ratioTxt=Math.abs(ratio).toFixed(2);
+		if(ratio>0){
+			targetJq.prev().attr('class','icon-up');
+		}else{
+			targetJq.prev().attr('class','icon-down');
+		}
+	}
+	targetJq.text(ratioTxt);
+};
+CIIENEW.Screen.prototype.checkDot=function(){
+	$('.ciiedot').removeClass('ciiedot-select');
+	$('.ciiedot[hot='+this.selectedHot+']').addClass('ciiedot-select');
+};
+
+
+

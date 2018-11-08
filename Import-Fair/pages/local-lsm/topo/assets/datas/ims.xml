@@ -1,0 +1,46 @@
+<Topo from="CACHE" id="assets/datas/ims.xml" name="IMS">
+  <Groups>
+    <Group resourceType="IP专网" id="ar" name="IP专网" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="496.72588252314796" y="112.7"/>
+  </Groups>
+  <Nodes>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94cb470c000e" id="8a5dffbc2f7608f8012f94cb470c000e" name="万荣AR9" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="548.7258825231479" y="112.7"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94cbf085000f" id="8a5dffbc2f7608f8012f94cbf085000f" name="钦州AR10" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="763.2258825231479" y="112.7"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c929c4000c" id="8a5dffbc2f7608f8012f94c929c4000c" name="浦东AR7" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="232.72588252314802" y="112.7"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94ca4d42000d" id="8a5dffbc2f7608f8012f94ca4d42000d" name="金桥AR8" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="413.725882523148" y="112.7"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c4af970008" id="8a5dffbc2f7608f8012f94c4af970008" name="浦东AR3" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="361.725882523148" y="112.7"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c5e4890009" id="8a5dffbc2f7608f8012f94c5e4890009" name="金桥AR4" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="167.22588252314796" y="112.7"/>
+    <Node resourceType="IMS" resourceId="" id="mm钦州-IMS-媒体" name="钦州-IMS-媒体" image="assets/images/icons/resource/0/online/ims.png" x="608.7166666666667" y="353.7"/>
+    <Node resourceType="IMS" resourceId="" id="mm钦州-IMS-信令" name="钦州-IMS-信令" image="assets/images/icons/resource/0/online/ims.png" x="796.05" y="353.7"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c6e94a000a" id="8a5dffbc2f7608f8012f94c6e94a000a" name="万荣AR5" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="826.2258825231479" y="112.7"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c85302000b" id="8a5dffbc2f7608f8012f94c85302000b" name="钦州AR6" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="604.2258825231479" y="112.7"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb23333002c" id="8a5d92813488f4f301348cb23333002c" name="CE05" image="assets/images/icons/resource/0/online/ce.png" x="719.1666666666667" y="244.7"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb23336002d" id="8a5d92813488f4f301348cb23336002d" name="CE06" image="assets/images/icons/resource/0/online/ce.png" x="570.8222222222223" y="244.7"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb23330002b" id="8a5d92813488f4f301348cb23330002b" name="CE04" image="assets/images/icons/resource/0/online/ce.png" x="274.1333333333333" y="244.7"/>
+    <Node resourceType="IMS" resourceId="" id="mm万荣-IMS-媒体" name="万荣-IMS-媒体" image="assets/images/icons/resource/0/online/ims.png" x="234.04999999999998" y="353.7"/>
+    <Node resourceType="CE" resourceId="8a5d92813488f4f301348cb2332e002a" id="8a5d92813488f4f301348cb2332e002a" name="CE03" image="assets/images/icons/resource/0/online/ce.png" x="422.47777777777776" y="244.7"/>
+    <Node resourceType="IMS" resourceId="" id="mm万荣-IMS-信令" name="万荣-IMS-信令" image="assets/images/icons/resource/0/online/ims.png" x="421.3833333333334" y="353.7"/>
+ 	<Node resourceType="RETURN" resourceId="" id="mmreturnipnet" isSegment="true-assets/datas/ipnet.xml" name="返回IP承载网" image="assets/images/icons/resource/0/online/return.png" x="500" y="10"/>
+  </Nodes>
+  <Links>
+    <Link resourceType="IMS-CE" fromId="mm钦州-IMS-媒体" toId="8a5d92813488f4f301348cb23333002c" color="39423" name=""/>
+    <Link resourceType="IMS-CE" fromId="mm钦州-IMS-信令" toId="8a5d92813488f4f301348cb23333002c" color="13042660" name=""/>
+    <Link resourceType="IMS-CE" fromId="mm钦州-IMS-媒体" toId="8a5d92813488f4f301348cb23336002d" color="39423" name=""/>
+    <Link resourceType="IMS-CE" fromId="mm钦州-IMS-信令" toId="8a5d92813488f4f301348cb23336002d" color="13042660" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94c6e94a000a" toId="8a5d92813488f4f301348cb2332e002a" color="65280" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94c85302000b" toId="8a5d92813488f4f301348cb23330002b" color="65280" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94c6e94a000a" toId="8a5d92813488f4f301348cb23333002c" color="65280" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94c85302000b" toId="8a5d92813488f4f301348cb23336002d" color="65280" name=""/>
+    <Link resourceType="CE-CE" fromId="8a5d92813488f4f301348cb2332e002a" toId="8a5d92813488f4f301348cb23330002b" color="65280" name=""/>
+    <Link resourceType="CE-CE" fromId="8a5d92813488f4f301348cb23333002c" toId="8a5d92813488f4f301348cb23336002d" color="65280" name=""/>
+    <Link resourceType="CE-IMS" fromId="8a5d92813488f4f301348cb23330002b" toId="mm万荣-IMS-信令" color="13042660" name="null"/>
+    <Link resourceType="CE-IMS" fromId="8a5d92813488f4f301348cb2332e002a" toId="mm万荣-IMS-媒体" color="39423" name="null"/>
+    <Link resourceType="CE-IMS" fromId="8a5d92813488f4f301348cb23330002b" toId="mm万荣-IMS-媒体" color="39423" name="null"/>
+    <Link resourceType="CE-IMS" fromId="8a5d92813488f4f301348cb2332e002a" toId="mm万荣-IMS-信令" color="13042660" name="null"/>
+  </Links>
+  <Labels>
+    <Label name="制表人：严敏" x="1201.35" y="44.95"/>
+    <Label name="IMS拓扑图" x="1201.35" y="4.8999999999999915"/>
+    <Label name="制表日期：2013-1-25" x="1201.35" y="85.00000000000001"/>
+    <Label name="——设备CPU利用率TOP" x="233.5" y="2"/>
+  </Labels>
+</Topo>

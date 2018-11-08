@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<item id="summer" label="清凉夏日" describe="清凉夏日（3-12月）" icon="assets/images/summer/summer_green.png"  image="assets/images/summer/summer.png"/> 
+	<item id="spring" label="节假日" describe="节假日（1,2月）"   icon="assets/images/spring/spring_red.png"  image="assets/images/spring/spring.png"/> 
+	<item id="black" label="低碳" describe="低碳（10,12月）"   icon="assets/images/black/black_red.png"  image="assets/images/black/summer.png"/> 
+</config>

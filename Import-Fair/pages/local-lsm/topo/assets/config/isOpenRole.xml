@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config describe="whitePhoneList:白名单手机列表" >
+	<item whitePhoneList="15021394296,15779709138,15900710785" />
+</config>

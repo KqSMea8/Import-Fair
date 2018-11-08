@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<menuitem label="短信节假日保障"  id="sms" >
+		<menuitem label="短信网保障概要" type="radio"    id="sms_security" />
+		<menuitem label="应急切换"  id="sms_movie"/>
+		<menuitem label="短信中心" id="sms_center" type="radio" />
+		<menuitem label="短信网关"  id="sms_gate" type="radio"/>
+		<menuitem label="增值业务平台" id="sms_add" type="radio"/>
+		<menuitem label="千万级客户"  id="sms_customer"/>
+		<menuitem label="重点保障电商"  id="sms_customer2"/>
+		<menuitem label="双11重保IDC"  id="sms_ali11"/>
+		<menuitem label="短彩信业务分析"  id="sms_mms_Analysis"/>
+		<menuitem label="公益短信10086021"  id="sms_customer3"/>
+		<menuitem label="重点SP业务" id="sms_sp" type="radio"/>
+		<!-- <menuitem label="垃圾短信业务" id="sms_junk" type="radio"/> -->
+		<menuitem label="短信网设备配置" id="sms_device_config" type="radio"/>
+		<menuitem label="短信网告警"  id="sms_alarm"/>
+	</menuitem>
+	<menuitem label="彩信节假日保障" id="mms">
+		<menuitem label="彩信中心" type="radio" id="mms_monitor"/>
+		<menuitem label="彩信配置" type="radio" id="mms_config"/>
+	</menuitem>
+	<menuitem label="手机视频节假日保障" id="video">
+		<menuitem label="视频" type="radio" id="video_monitor"/>
+		<menuitem label="视频配置" type="radio" id="video_config"/>
+	</menuitem>
+	<menuitem label="互联网节假日保障"  id="net">
+		<!--<menuitem label="互联网保障概要" type="radio"    id="net_security" />-->
+		<menuitem label="CMNET城域网总体质量监控图" type="radio" id="net_overview"/>
+		<menuitem label="IPNET承载网总体质量监控图" type="radio" id="net_overview2"/>
+		<menuitem label="重点保障专线"  id="net_important_customer"/>
+		<menuitem label="家宽用户数统计" type="radio"    id="net_bras_users"   />
+		<menuitem label="Cache流量分析" type="radio"     id="net_service_analysis"  />
+		<menuitem label="CMNET骨干网概览" type="radio"   id="net_diaphysis_overview"    />
+		<!--<menuitem label="CMNET省网概览" type="radio"    id="net_city_province"   />-->
+		<menuitem label="CMNET城域网应用分析" type="radio"   id="net_app_analysis"    /> 
+		<menuitem label="CMNET城域网数据质量分析" type="radio"     id="net_data_analysis"  />
+		<!--<menuitem label="CMNET业务出口保障"  id="oldVersion"  urls="http://10.221.18.38:28080/subject_rest_service/holiday/main.html"/>-->
+		<menuitem label="DNS性能监控" type="radio"    id="net_dns"   />
+		<menuitem label="IP承载网概览" type="radio"    id="net_ipbn"   />
+		<menuitem label="应急切换"  id="net_movie"/>
+		<menuitem label="互联网价值" type="radio"    id="net_new"   />	
+		<menuitem label="全网出口流量概览" type="radio"    id="net_all"   />		
+		<!--<menuitem label="互联网大客户应用分析" type="radio"   id="net_app_analysis"    />-->
+		<!--<menuitem label="互联网数据质量应用分析" type="radio"     id="net_data_analysis"  />-->
+	</menuitem>
+	<menuitem label="GPRS/LTE节假日保障" id="gprs">
+		<menuitem label="保障概要" type="radio"    id="gprs_security" />
+		<menuitem label="总体概览" type="radio" id="gprs_brief" />
+	<!--<menuitem label="应急切换"  id="gprs_movie"/> -->
+		<menuitem label="GPRS核心" type="radio" id="gprs_overview"/>
+ 		<menuitem label="LTE核心"  type="radio" id="gprs_lte_core_view"/>	
+ 		<menuitem label="GPRS无线接入"  type="radio" id="gprs_wireless"/>
+		<menuitem label="重要客户概览"  type="radio" id="gprs_app"/>
+		<menuitem label="全网性能概览" type="radio"    id="gprs_all"   />
+		<menuitem label="拨测质量概览" type="radio"    id="gprs_call_testing"   />
+		<menuitem label="容量配置"  type="radio" id="gprs_setting"/>	
+		<menuitem label="亚信峰会专线保障"  type="radio" id="gprs_yaxin"/>
+	</menuitem>
+	<menuitem label="参数配置"  id="param">
+		<menuitem label="告警配置" type="radio"  id="param_alarm" />
+		<!--<menuitem label="带宽利用率配置" type="radio"  id="param_utility" /> -->
+		<menuitem label="指标门限配置" type="radio"  id="param_Threshold"/>
+		<menuitem label="指标数据配置"  type="radio"  id="param_kpidata"/>
+		<menuitem label="IP地址段配置"  type="radio"  id="param_ip"/>
+		<menuitem label="用户群配置"  type="radio"  id="param_user"/>
+		<menuitem label="域名分组配置"  type="radio"  id="param_domain"/>
+		<!--<menuitem label="告警过滤配置"  type="radio"  id="param_filterAlarm"/> -->
+		<!--<menuitem label="性能指标阈值配置"  type="radio"  id="param_boceConfig"/> -->
+		<!--<menuitem label="拓扑告警优先级配置"  type="radio"  id="param_firstAlarmConfig"/> -->
+		<!--<menuitem label="拓扑权限配置"  type="radio"  id="param_RoleConfig"/> -->
+	</menuitem>
+	<menuitem label="保障概要"  single="true"   id="baozhang"/>
+	<menuitem label="WLAN专题"  single="true"   id="waln"/>
+	<menuitem label="业务快报专题"  single="true"   id="yewu"/>
+	<menuitem label="运行日报"  single="true"   id="dailyReport"/>
+</menu>

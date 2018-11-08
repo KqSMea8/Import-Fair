@@ -1,0 +1,128 @@
+<root>
+	<sort name="重要客户">
+		<user name="上海强生控股有限公司" apn="gps-qst.sh"   generate="true"/>
+		<user name="交通银行(千万级客户)"    apn="atm-95559.sh"   generate="true"/>
+		<user name="上海银联有限公司"    apn="mpos-cupsh.sh"   generate="true"/>
+		<user name="招商银行"    apn="mpos-cmbchina.sh" generate="true"/>
+		<user name="直钱"    apn="mpos-99bill2.sh" generate="true"/>
+		<user name="上海市电力公司（江场西路）" apn="rmcs-smepc3.sh"  generate="true"/>
+		<user name="兴业银行"    apn="mpos-cibccc.sh"   generate="true"/>
+		<user name="上海消防局"    apn="xf-dw.sh"  generate="true"/>
+		<user name="北京拉卡拉网络有限公司"    apn="mpos-lklsd.sh" generate="true"/>
+		<user name="上海市公安局"    apn="ga-jwt.sh"  generate="true"/>
+	</sort>
+	<sort name="银行">
+		<user name="招商银行"    apn="mpos-cmbchina.sh"  generate="true"/>
+		<user name="中国银行"    apn="mpos-boc.sh"  generate="true"/>
+		<user name="兴业银行-c500.sh"    apn="c500.sh"  generate="true"/>
+		<user name="兴业银行"    apn="mpos-cibccc.sh"  generate="true"/>
+		<user name="工商银行"    apn="mpos-icbc-prod.sh"  generate="true"/>
+		<user name="交通银行"    apn="atm-95559.sh"  generate="true"/>
+		<user name="汇丰银行"    apn="mpos-gpcn.sh"  generate="true"/>
+		<user name="农业银行"    apn="abc001.sh" generate="false" />
+		<user name="浦发银行"    apn="95528.sh" generate="false"/>
+		<user name="上海银行"    apn="sh-bank.sh" generate="false"/>
+	</sort>
+	<sort name="公用事业">
+		<user name="上海市电力公司（江场西路）"    apn="rmcs-smepc3.sh"  generate="true"/>
+		<user name="松江燃气"    apn="sjrqyd.sh"  generate="true"/>
+		<user name="公共交通卡"    apn="SPTCC.SH"  generate="true"/>
+		<user name="上海市自来水市北有限公司"    apn="sbzls.sh" generate="true"/>
+	</sort>
+	<sort name="交通出租">
+		<user name="上海强生控股有限公司"    apn="gps-qst.sh"  generate="true"/>
+		<user name="大众交通集团股份有限公司"    apn="dispatch-dzjt.sh" generate="false"/>
+		<user name="队信通无线DDN"    apn="madc-dxt.sh" generate="false"/>
+	</sort>
+	<sort name="政府机构">
+		<user name="上海消防局"    apn="xf-dw.sh"  generate="true"/>
+		<user name="宝山环保局"    apn="view-baoshanhuanbao.sh"  generate="true"/>
+		<user name="上海市公安局"    apn="ga-jwt.sh"  generate="true"/>
+		<user name="上海市定海路街道办事处"    apn="DHJD.sh" generate="false"/>
+		<user name="上海出入境检验检疫局"    apn="shciq.sh"  generate="false"/>
+		<user name="上海海关"    apn="sh-customs.sh" generate="false"/>
+		<user name="武警上海总队"    apn="mpos-wjshzd.sh" generate="false"/>
+		<user name="上海市闵行区卫生局"    apn="mope-licheng.sh" generate="false"/>
+		<user name="上海市人民政府办公厅"    apn="szfbgt.sh" generate="false"/>
+		<user name="上海市杨浦区殷行社区卫生服务中心"    apn="yhsw.sh" generate="false"/>
+	</sort>
+	<sort name="信息科技">
+		<user name="上海华势信息科技公司"    apn="mpos-shhs.sh"  generate="true"/>
+		<user name="众宇华德"    apn="mpos-idata.sh" generate="false"/>
+		<user name="上海易佩"    apn="ePay.sh" generate="false"/>
+		<user name="通服公司"    apn="gps-mobileservice.sh" generate="false"/>
+		<user name="上海点控其能电子科技"    apn="shdk.sh" generate="false"/>
+	</sort>
+	<sort name="支付">
+		<user name="银联商务"    apn="mpos-chinaums.sh"  generate="true"/>
+		<user name="拉卡拉"    apn="mpos-lklsd.sh"  generate="true"/>
+		<user name="盛付通"    apn="sdp.sh"  generate="true"/>
+		<user name="直钱"    apn="mpos-99bill2.sh"  generate="true"/>
+		<user name="上海银联有限公司"    apn="mpos-cupsh.sh"  generate="true"/>
+		<user name="信付通电子支付服务"    apn="mpos-cardinfo.sh"  generate="true"/>
+		<user name="上海汇付数据服务有限公司"    apn="chinapnr.sh"  generate="true"/>
+		<user name="银联数据"    apn="cupdata.sh"  generate="true"/>
+		<user name="杉德银卡通信息服务有限公司"    apn="mpos-SAND.sh"  generate="false"/>
+		<user name="旺旺专用APN"    apn="wantwant.sh" generate="false"/>
+		<user name="通联支付"    apn="mposallinpay.sh" generate="false"/>
+	</sort>
+	<sort name="快递">
+		<user name="圆通"    apn="ytocn.sh"  generate="true"/>
+		<user name="钱宝科技"    apn="GB.sh"  generate="true"/>
+		<user name="大田-联邦快递有限公司上海分公司-扫描"    apn="mscan-fedex.sh"  generate="true"/>
+		<user name="大田-联邦快递有限公司上海分公司-生产"    apn="gps-fedex-pro.sh"  generate="true"/>
+		<user name="浙江汇强快递有限公司"    apn="huiqiang.sh"  generate="false"/>
+		<user name="中通吉速递"    apn="zto.sh" generate="false"/>
+		<user name="韵达"    apn="yundasudi.sh" generate="false"/>
+	</sort>
+	<sort name="移动自有">
+		<user name="上海中移"    apn="zy-ypsports.sh" generate="true"/>
+		<user name="网上办公"    apn="moa-shmc.sh" generate="true"/>
+		<user name="上海移动党群工作部（预备役）"    apn="yby.sh" generate="true"/>
+		<user name="上海中移车辆监控"    apn="ZY-CLJK.SH" generate="false"/>
+		<user name="vpn拨号（可漫游）"    apn="vpn.sh" generate="false"/>
+		<user name="城市网格化管理项目"    apn="mpda-cgt.sh" generate="false"/>
+		<user name="环境监控"    apn="huanjian-wangluo.sh"  generate="true"/>
+		<user name="电商中心专用APN"    apn="CMPAY" generate="false"/>
+		<user name="管线资源管理系统（公司自用）"    apn="gisrm.sh" generate="false"/>
+		<user name="视频监控"    apn="shmvm.sh" generate="false"/>
+	</sort>
+	<sort name="企业单位">
+		<user name="平安"    apn="pabcas.sh" generate="true"/>
+		<user name="宝钢"    apn="mgps-baosteel.sh"  generate="true"/>
+		<user name="龙工挖掘"    apn="lonking.sh"  generate="true"/>
+		<user name="三菱电梯"    apn="smeccmcc.sh" generate="true"/>
+		<user name="思源电气（闵行）"    apn="syec.sh"  generate="true"/>
+		<user name="付费通"    apn="shfft.sh"  generate="true"/>
+		<user name="瑞昕科技"    apn="shrx.sh"  generate="true"/>
+		<user name="申美饮料"    apn="smyl.sh"  generate="true"/>
+		<user name="宝钢发展"    apn="mgps-bskf.sh" generate="true"/>
+		<user name="飞利浦"    apn="flpcs.sh"  generate="true"/>
+		<user name="励诚贸易"    apn="mOPE-licheng.sh" generate="true"/>
+		<user name="享乐广告"    apn="fmbld.sh"  generate="true"/>
+		<user name="洋马"    apn="yanmarsar.sh" generate="false"/>
+		<user name="百事公司"    apn="pepsi-co.sh" generate="false"/>
+		<user name="卫易通信"    apn="mpos-wayso.sh" generate="false"/>
+		<user name="宏源照明"    apn="LVDNET.sh" generate="false"/>
+		<user name="汉庭星空"    apn="htinns.sh" generate="false"/>
+		<user name="安达泰"    apn="adt.sh" generate="false"/>
+		<user name="启腾电气"    apn="qitengdianqi.sh"  generate="false"/>
+		<user name="楼兰科技"    apn="roiland.sh"  generate="false"/>
+		<user name="渠道空中选号系统"    apn="KZXK-GPRS.sh"  generate="false"/>
+		<user name="野外作业"    apn="net-iris.sh"  generate="false"/>
+		<user name="西门子车辆监控"    apn="mgps-mcaiji-siem.sh"  generate="false"/>
+		<user name="文聪信息"    apn="shwc.sh"  generate="false"/>
+		<user name="通力电梯"    apn="kfmlite_smart.sh"  generate="false"/>
+		<user name="中远资讯"    apn="conscon.sh"  generate="false"/>
+		<user name="经达实业"    apn="JDGPS.sh"  generate="false"/>
+		<user name="易百信息"    apn="ebuy.sh"  generate="false"/>
+		<user name="行远信息"    apn="xy.sh"  generate="false"/>
+		<user name="捷银信息"    apn="papay.sh"  generate="false"/>
+		<user name="聚核信息"    apn="juhaha.sh"  generate="false"/>
+		<user name="米源饮料"    apn="mydrink.sh"  generate="false"/>
+		<user name="外高桥造船"    apn="sws.sh"  generate="false"/>
+		<user name="液化气"    apn="alhtd.sh"  generate="false"/>
+		<user name="壹鸿企业管理"    apn="yihong.sh"  generate="false"/>
+		<user name="复旦大学附属中山医院"    apn="zs1990.sh"  generate="false"/>
+	</sort>
+</root>

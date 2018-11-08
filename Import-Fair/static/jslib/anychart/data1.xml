@@ -1,0 +1,63 @@
+﻿<anychart>
+	<settings>
+		<animation enabled="True" />
+	</settings>
+	<charts>
+		<chart plot_type="CategorizedVertical">
+			<data_plot_settings default_series_type="Bar"
+				enable_3d_mode="True">
+				<bar_series group_padding="0.5">
+					<tooltip_settings enabled="True">
+						<format>
+							{%Name} - {%YValue}{numDecimals:0}
+						</format>
+					</tooltip_settings>
+				</bar_series>
+			</data_plot_settings>
+			<chart_settings>
+				<title enabled="true">
+					<text>来省情况统计</text>
+				</title>
+
+				<axes>
+					<y_axis>
+						<title>
+							<text>人数</text>
+						</title>
+						<labels align="Inside">
+							<format>{%Value}{numDecimals:0}</format>
+						</labels>
+					</y_axis>
+					<x_axis>
+						<labels align="Outside" rotation="90" />
+						<title enabled="false">
+							<text>Products</text>
+						</title>
+					</x_axis>
+				</axes>
+			</chart_settings>
+			<data>
+				<series name="Series 1" palette="Default">
+
+					<point name="小学及以下 " y="7737" />
+					<point name="初中及高中 " y="13512" />
+					<point name="大专及以上" y="9706" />
+					<point name="16周岁以下" y="839" />
+					<point name="17-20周岁" y="9787" />
+					<point name="21-50周岁" y="13426" />
+					<point name="50周岁以上" y="6703" />
+					<point name="第一产业" y="6088" />
+					<point name="第二产业" y="8908" />
+					<point name="第三产业" y="1033" />
+					<point name="投资经商" y="1451" />
+					<point name="其他" y="5297" />
+					<point name="投靠亲属" y="6103" />
+					<point name="不就业人员" y="5325" />
+					<point name="省内" y="9948" />
+					<point name="省外" y="15907" />
+					<point name="党员数" y="5596" />
+				</series>
+			</data>
+		</chart>
+	</charts>
+</anychart>

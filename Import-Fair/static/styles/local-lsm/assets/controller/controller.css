@@ -1,0 +1,562 @@
+html{
+	width:100%;
+	height:100%;
+}
+body{
+	width:100%;
+	height:100%;
+	background: url(bg.jpg);
+	background-repeat:repeat;
+	overflow:hidden;
+}
+.main_menu{
+	width:100%;
+	height:100%;
+	padding-top:5%;
+}
+.main_menu img{
+	cursor:pointer;
+}
+.ctrl_screen1{
+	width:100%;
+	height:100%;
+	display:none;	
+}
+.ctrl_screen2{
+	width:100%;
+	height:100%;
+	display:none;	
+}
+.ctrl_screen3{
+	width:100%;
+	height:100%;
+	display:none;	
+}
+#screen1_tabsub{
+	width:100%;
+	height:100%;
+}
+#screen1_tab{
+	width:100%;
+	height:10%;
+}
+#screen1_tab li{
+	width:100px;
+	float:left;
+	text-align:center;
+}
+#screen1_sub{
+	width:100%;
+	height:90%;
+}
+.dropdown-menu li a{
+	color:#428bca;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+	background: url(switchBtn_selected.png) center 0px no-repeat;
+	background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+	background-repeat:no-repeat;
+	color:#ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+.returnBtn{
+	font-size:14px;
+	color:#ffffff;
+	font-weight:bold;
+	width:110px;
+	height:45px;
+	text-align:center;
+	padding-top:15px;
+	position:absolute;
+	right:0px;
+	top:0px;
+	cursor:pointer;
+	display:none;
+	background: url(returnTop.png) center 0px no-repeat;
+	background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+	background-repeat:no-repeat;
+}
+	
+.regionBtn{
+	width:33%;
+	height:50%;
+	margin:10px 10px 10px 10px；
+}
+.subBtn{
+	width:100%;
+	float:right;
+}
+
+.chartSlider{
+	width:100%;
+	border:solid 1px #ff0000;
+	bottom:0px;
+}
+.container_image{
+	width:100%;
+	position:absolute;
+	height:auto;
+}
+.container_image .i_btn {
+   top: 10px;
+   margin-top:20%;
+}
+
+.slide_img {
+    position: relative;
+    z-index: 1;
+    width:auto;
+    height:auto;
+}
+.slide_img li{
+	background:none;
+}
+.slide_img li a img {
+    position: absolute;
+    height: 100%;
+    width:100%;
+}
+.screen1nav{
+	float:left;
+}
+.s1navtop{
+	font-size:14px;
+	color:#ffffff;
+	font-weight:bold;
+	background: url(switchBtn.png) center 0px no-repeat;
+	background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+	background-repeat:no-repeat;
+}
+<!--screen1 -->
+
+.screen1Ctrl{
+	float:left;
+	left:0px;
+	top:0px;
+	height:100%;
+}
+.screen1Return{
+	cursor:pointer;
+	margin-top:-12px;
+	position:absolute;
+	top:50%;
+	left:0px;
+	width:24px;
+	height:24px;
+	background: url(arrowLeft.png) center 0px no-repeat;
+	background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+	background-repeat:no-repeat;
+}
+.screen1Left{
+	padding-top:50px;
+	width:100%;
+	height:400px;
+	overflow-y:auto;
+	padding-left:24px;
+	float:left;
+}
+.screen1Left ul{
+	width:100%;
+	height:100%;
+}
+.screen1Left li{
+	float:none;
+}
+.screen1Left li a{
+	text-align: center;
+	font-size:12px;
+}
+
+.screen1Right{
+	height:100%;
+	width:100%;
+}
+
+.sceneImgs{
+	float:left;
+	width:100%;
+	height:100%;
+	overflow:auto;
+}
+.scenebg{
+	width:100%;
+	height:100%;
+	position:absolute;
+	background:#0A0CBA;
+	top:0px;
+	left:0px;
+	filter:alpha(opacity=30);  
+      -moz-opacity:0.5;  
+      -khtml-opacity: 0.5;  
+      opacity: 0.5;  
+}
+.scene0{
+	position:relative;
+	float:left;
+	height:33%;
+	width:33%;
+	cursor:pointer;
+	border:solid 2px #0A0CBA;
+	border-radius:5px;
+	margin-left:2px;
+	margin-top:2px;
+}
+.scene1{
+	width:50%;
+	background: url(caribe.png) center 0px no-repeat;
+	background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+}
+.scene2{
+	width:50%;
+	background: url(ancient.png) center 0px no-repeat;
+	background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+}
+.scene3{
+	width:33.3%;
+	background: url(rollinghorse.png) center 0px no-repeat;
+	background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+}
+.scene4{
+	width:33.3%;
+	background: url(parking.png) center 0px no-repeat;
+	background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+}
+.scene5{
+	width:33.3%;
+	background: url(gate.png) center 0px no-repeat;
+	background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+}
+.subhot{
+	color:#ffffff;
+	font-weight:bold;
+	text-align:center;
+	padding-top:35px;
+	position:absolute;
+	top:50%;
+	margin-top:-40px;
+	left:50%;
+	margin-left:-85px;
+	width:80px;
+	height:80px;
+	background: url(cellSubhot.png) center 0px no-repeat;
+	background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+	display:none;
+}
+.subcell{
+	color:#ffffff;
+	font-weight:bold;
+	text-align:center;
+	padding-top:35px;
+	position:absolute;
+	top:50%;
+	margin-top:-40px;
+	right:50%;
+	margin-right:-85px;
+	width:80px;
+	height:80px;
+	background: url(cellSubhot.png) center 0px no-repeat;
+	background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+	display:none;
+}
+.subSelected{
+	width:80px;
+	height:80px;
+	background: url(cellSubhot_selected.png);
+	background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+}
+.sceneText{
+	font-size:16px;
+	display:block;
+	color:#ffffff;
+	font-weight:bold;
+	text-align: center;
+	position:absolute;
+	bottom:25px;
+	width:100%;
+	height:20px;
+}
+.scenemask{
+	display:block;
+	width:100%;
+	height:100%;
+	position:absolute;
+	background:#0A0CBA;
+	top:0px;
+	left:0px;
+	filter:alpha(opacity=30);  
+      -moz-opacity:0.5;  
+      -khtml-opacity: 0.5;  
+      opacity: 0.5;  
+}
+.chartDiv{
+	display:none;
+	height:100%;
+}
+
+.screen2Left{
+	width:100%;
+	height:100%;
+	padding-top:50px;
+	overflow-y:auto;
+}
+.screen2Left ul{
+	width:90%;
+	height:100%;
+}
+.screen2Left li{
+	float:none;
+}
+.screen2Left li a{
+	text-align: center;
+}
+
+.screen2Right{
+	width:100%;
+}
+.screen2Btn_2{
+	width:100%;
+	height:50px;
+	position:relative;
+}
+.screen2Btn_2 li{
+	width:100px;
+	float:left;
+}
+.screen2MapFrame{
+	width:100%;
+}
+
+.screen3Btn{
+	left:100px;
+	position:absolute;
+}
+
+.screen3Btn li{
+	width:80px;
+	float:left;
+	text-align:center;
+}
+#screen3Menu{
+	width:100%;
+	height:100%;
+}
+.screen3MenuIcon{
+	position:absolute;
+	bottom:10px;
+	width:90%;
+	text-align: center;
+}
+.roundIcon{
+	cursor:pointer;
+	display:inline-block;
+	width:48px;
+	height:48px;
+	background: url(switchRB.png);
+	background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+}
+.roundIconSelected{
+	width:96px;
+	height:48px;
+	background: url(switchRB_selected.png);
+}
+
+.slide_img li.left a{
+	padding:30px;
+}
+.slide_img li.left img{
+    background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+	background-repeat:no-repeat;
+}
+
+.slide_img li.right a{
+	padding:30px;
+}
+.slide_img li.right img{
+    background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+	background-repeat:no-repeat;
+}
+
+.slide_img li.mid a{
+    padding:30px;
+}
+.slide_img li.mid img{
+    background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+	background-repeat:no-repeat;
+	height:auto;
+}
+.slide_img li a img {
+	height:auto;	
+}
+
+.container_image .prev_L{display:none;}
+.container_image .next_R{display:none;}
+
+
+.statusBtn{
+	width:16px;
+	height:16px;
+	position:absolute;
+	left:5px;
+	top:5px;
+}
+.reconnectText{
+	position:absolute;
+	left:25px;
+	top:10px;
+	text-decoration: underline;
+	display:none;
+	color:white;
+}
+
+.ctrlStatusOn{
+	background: url(on.png);
+	background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+	background-repeat:no-repeat;
+}
+.ctrlStatusOff{
+	background: url(off.png);
+	background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+	background-repeat:no-repeat;
+}
+.MenuPicMain li{
+	
+}
+.MenuPicMain li{
+	width:30%
+	float:left;
+}
+
+.aNavSelected {
+    background: url(switchBtn_selected.png) center 0px no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.MainMenu{
+	width:100%;
+	height:100%;
+}
+.screen_1{
+	position:absolute;
+	left:8%;
+	top:8%;
+	width:40%;
+	height:40%;
+	background: url(L_03.png) center 0px no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.screen_2{
+	position:absolute;
+	left:28%;
+	bottom:8%;
+	width:40%;
+	height:40%;
+	background: url(C_03.png) center 0px no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.screen_3{
+	position:absolute;
+	right:8%;
+	top:8%;
+	width:40%;
+	height:40%;
+	background: url(R_03.png) center 0px no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+
+
+.chart1{
+	position:absolute;
+	top:15%;
+	left:8%;
+	width:40%;
+	height:30%;
+	background: url(t1.png) center 0px no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    float:left;
+}
+.chart2{
+	position:absolute;
+	top:15%;
+	right:8%;
+	width:40%;
+	height:30%;
+	background: url(t2.png) center 0px no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    float:left;
+}
+.chart3{
+	position:absolute;
+	bottom:15%;
+	left:8%;
+	width:40%;
+	height:30%;
+	background: url(chartChina.png) center 0px no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    float:left;
+}
+.chart4{
+	position:absolute;
+	bottom:15%;
+	right:8%;
+	width:40%;
+	height:30%;
+	background: url(chartWorld.png) center 0px no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    float:left;
+}
+.largerChart{
+	width:43%;
+	height:38%;
+}

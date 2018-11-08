@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<actionlists>
+	<actionlist scope="node" type="ALL">
+		<actions>
+			<action event="RightClick" type="OPNE_VIEW" name="查看资源信息"/>
+			<action event="RightClick" type="OPNE_VIEW" name="查看性能信息"/>
+			<action event="RightClick" type="OPNE_VIEW" name="查看告警信息"/>
+		</actions>
+	</actionlist>
+</actionlists>

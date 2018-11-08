@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<meta charset="UTF-8" http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%@ include file="/common/lib.jsp"%>
+<c:set var="hotspot" value="common" />
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/common/My97DatePicker/WdatePicker.js"></script>
+<link rel="stylesheet" href="${ctx}/static/jslib/My97DatePicker/skin/My97DatePicker/WdatePicker.css" />
+<%@ include file="/common/bootstrap.jsp"%> 
+<%@ include file="/common/echarts_requirejs.jsp"%>
+<link rel="stylesheet" href="${jslib}/jquery-1.7.2/external/jqgrid/css/ui.jqgrid.css" />
+<link rel="stylesheet" href="${jslib}/jquery-1.7.2/external/jqgrid/themes/redmond/jquery-ui-1.9.2.custom.min.css" />
+
+<link rel="stylesheet" href="${jslib}/leaflet/css/leaflet.css" />
+<link rel="stylesheet" href="${jslib}/leaflet/css/leaflet.draw.css" />
+<link rel="stylesheet" href="${jslib}/leaflet/css/leaflet.contextmenu.css" />
+<link rel="stylesheet" href="${jslib}/leaflet/css/leaflet.markercluster.css" />
+<link rel="stylesheet" href="${jslib}/leaflet/css/leaflet-search.css" />
+<link rel="stylesheet" href="${jslib}/leaflet/css/Icon.Label.css" />
+<link rel="stylesheet" href="${jslib}/leaflet/css/leaflet.groupedlayercontrol.css" />
+
+<link rel="stylesheet" href="${ctx}/static/styles/local-lsm/ciie/ciie.css" />
+<link rel="stylesheet" href="${ctx}/static/styles/local-lsm/ciie/ciie_jqgrid.css" />
+<link rel="stylesheet" href="${ctx}/static/styles/local-lsm/map.css" />
+<title>上海国际进出口博览会</title>
+<style type="text/css">
+	.leaflet-left {
+	    left:30px;
+	}
+	.leaflet-top {
+	    top:30px;
+	}
+	
+	
+</style>
+</head>
+<body> 
+<div class="bodybackground">
+	<div class="screencol col1">
+		<div class="kpiwithtrend" kpi="日累计核心区域用户数">
+			<div class="kwt-header">
+				<div class="icon-user"></div>
+				<div class="kpiTitleLarge">核心区域用户数</div>
+				<div class="kpiUnitLarge">(人)</div>
+			</div>
+			<div class="kwt-body">
+				<div id="topvalue0_0" class="kpiValueLarge">--</div>
+				<div class="icon-splitline"></div>
+				<div id="chart0_0" class="topChart"></div>
+				<div class="topChartTime" id="time0_0">--:--</div>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="ciiepanel verticalGap">
+			<div class="ciietitle">
+				<div class="icon-alarm"></div>
+				<div>告警窗</div>
+				<div class="toolbox" style="display:none;"><div class="icon-selector"></div><div class="icon-selector"></div><div class="icon-selector-selected"></div></div>
+			</div>
+			<div class="ciiecontent" >
+				<div class="horizontalRow" style="margin-top:10px;">
+					<div class="icon-nealarm" style="margin-top:8px;"></div>
+					<div class="kpiTitleMed" style="padding-top:12px;margin-left:10px;letter-spacing:5px;">网元告警</div>
+					<div id="neAlarmCount" class="alarmNumPlate" style="margin-left:10px;cursor:pointer;" >0</div>
+					<div style="padding-top:36px;">条</div>
+				</div>
+				<div class="horizontalRow" style="margin-top:10px;">
+					<div class="icon-peralarm" style="margin-top:8px;"></div>
+					<div class="kpiTitleMed" style="padding-top:12px;margin-left:10px;letter-spacing:5px;">性能告警</div>
+					<div id="performanceAlarmCount" class="alarmNumPlate" style="margin-left:10px;cursor:pointer;" >0</div>
+					<div style="padding-top:36px;">条</div>
+				</div>
+				<div class="horizontalRow" style="margin-top:10px;">
+					<div class="icon-complain" style="margin-top:8px;"></div>
+					<div class="kpiTitleMed" style="padding-top:12px;margin-left:10px;letter-spacing:5px;">用户投诉</div>
+					<div id="complainCount" class="alarmNumPlate" style="margin-left:10px;cursor:pointer;" >0</div>
+					<div style="padding-top:36px;">条</div>
+				</div>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="ciiepanel verticalGap">
+			<div class="ciietitle">
+				<div class="icon-terminalrank"></div>
+				<div>终端排行</div>
+				<div class="toolbox" style="display:none;"><div class="icon-selector"></div><div class="icon-selector"></div><div class="icon-selector-selected"></div></div>
+			</div>
+			<div class="ciiecontent" style="padding-left:0;padding-top:15px;">
+				<div id="terminalrankChart" style="width:550px;height:530px;"></div>
+			</div>
+			<div class="ciiecontent" style="display:none">
+				<div class="safeKpi">
+					<div>0</div>
+					<div>有漏洞资产(个)</div>
+				</div>
+				<div class="safeKpi">
+					<div>16</div>
+					<div>恶意软件(个)</div>
+				</div>
+				<div class="safeKpi">
+					<div>2818</div>
+					<div>恶意软件控制量(个)</div>
+				</div>
+				<div class="safeKpi">
+					<div>0</div>
+					<div>不良网站(个)</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	<div class="screencol col2">
+		<div class="horizontalRow" >
+			<div class="kpiwithtrend" style="position:relative;" kpi="日累计语音话务量">
+				<div class="kwt-header">
+					<div class="icon-voicetraff"></div>
+					<div class="kpiTitleLarge">语音话务量</div>
+					<div class="kpiUnitLarge">(Erl)</div>
+				</div>
+				<div class="kwt-body" >
+					<div id="topvalue0_1" class="kpiValueLarge">--</div>
+					<div class="icon-splitline"></div>
+					<div id="chart0_1" class="topChart"></div>
+					<div class="topChartTime" id="time0_1">--:--</div>
+				</div>
+			</div>
+			<div class="kpiwithtrend" style="margin-left:30px;" kpi="日累计数据流量">
+				<div class="kwt-header">
+					<div class="icon-dataflow"></div>
+					<div class="kpiTitleLarge">数据流量</div>
+					<div class="kpiUnitLarge">(GB)</div>
+				</div>
+				<div class="kwt-body">
+					<div id="topvalue0_2" class="kpiValueLarge">--</div>
+					<div class="icon-splitline"></div>
+					<div id="chart0_2" class="topChart"></div>
+					<div class="topChartTime" id="time0_2">--:--</div>
+				</div>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="ciiepanel verticalGap">
+			<div class="ciietitle">
+				<div class="icon-userchart"></div>
+				<div id="centerChartTitle">用户数</div>
+				<div id="centerChartTime">(人)【--:--】</div>
+			</div>
+			<div id="centerChartParent" class="ciiecontent" style="height:230px;position: relative;">
+				<div id="userChart" style="width:100%;height:100%;"></div>
+			</div>
+		</div>
+		<div class="ciiepanel verticalGap">
+			<div class="ciietitle">
+				<div class="icon-neq"></div>
+				<div>网络质量</div>
+				<div class="toolbox">
+					<div id="kpiconfig" class="kpiconfig"></div>
+				</div>
+			</div>
+			<div id="netQualityContent" class="ciiecontent" style="padding:15px;">
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="screencol col3" style="display:none;" >
+		<div class="procedureLine"></div>
+		<div style="width:100%;height:100%;position:absolute;">
+			<div class="procedureCircle" style="margin-top:0;">文艺汇演</div>
+			<div class="procedureCircle" style="margin-top:55px;">接机</div>
+			<div class="procedureCircle procedureCircleSelected" style="margin-top:55px;">会议</div>
+			<div class="procedureCircle" style="margin-top:55px;"">通用场景</div>
+			<div class="procedureCircle" style="margin-top:55px;"">活动</div>
+		</div>
+	</div>
+	<div class="screencol col4" >
+		<div class="screenTitle">
+			<div class="titleImg"></div>
+			<div class="titleTxt">上海GSMA通信保障</div>
+		</div>
+		<div class="centerKpiFrame">
+			<div id="centerKpi0" class="centerHotspotKpiFrameParent" style="height:320px;overflow:hidden;">
+				
+			</div>
+			<div class="centerHotspotKpiFrameParent" style="overflow:hidden;position:relative;table-layout: fixed; word-wrap: break-word; ">
+				<div id="centerKpi" style="width:100%;overflow:hidden;position:absolute;top:0;left:0;">
+				
+				</div>
+			</div>
+			
+		</div>
+		<div class="mapFrame">
+			<div style="width:100%;height:100%;position:relative;">
+				<div class="mapFrameLT"></div>
+				<div class="mapFrameBR"></div>
+				<div class="map" id="map">
+<!-- 					<iframe src="map.jsp" style="width:100%;height:100%;border-radius:100px;" frameborder="0"></iframe> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="screencol col5" >
+		<div class="ciiepanel">
+			<div class="ciietitle">
+				<div class="icon-shniec"></div>
+				<div id="rightTableTitle" style="cursor:pointer;">场馆列表</div>
+				<div class="toolbox"><div id="hotListReturn" style="display:none;" class="icon-return"></div></div>
+			</div>
+			<div style="width:100%;height:672px;">
+				<table id="table" style="width:100%;height:100%;"></table>
+			</div>
+		</div>
+		<div class="ciiepanel">
+			<div class="ciietitle">
+				<div class="icon-userstructure"></div>
+				<div>用户构成</div>
+			</div>
+			<div style="width:100%;">
+				<div style="width:565px;height:335px;float:left;border:solid 0px #ff0000;">
+					<div class="kpiTitleMed" style="margin-top:20px;">省际漫游用户数</div>
+					<div>
+						<div class="userstructurePlate proroamuser" style="margin-left:0px;float:left;" >0</div>
+						<div class="userstructurePlate proroamuser" style="margin-left:0px;float:left;" >0</div>
+						<div class="userstructurePlate proroamuser" style="margin-left:0px;float:left;" >0</div>
+						<div class="userstructurePlate proroamuser" style="margin-left:0px;float:left;" >0</div>
+						<div class="userstructurePlate proroamuser" style="margin-left:0px;float:left;" >0</div>
+						<div class="userstructurePlate proroamuser" style="margin-left:0px;float:left;" >0</div>
+						<div style="float:left;height:92px;line-height:116px;">人</div>
+					</div>
+					<div style="clear:both;"></div>
+					<div class="kpiTitleMed" style="margin-top:20px;">国际漫游用户数</div>
+					<div>
+						<div class="userstructurePlate intlroamuser" style="margin-left:0px;float:left;" >0</div>
+						<div class="userstructurePlate intlroamuser" style="margin-left:0px;float:left;" >0</div>
+						<div class="userstructurePlate intlroamuser" style="margin-left:0px;float:left;" >0</div>
+						<div class="userstructurePlate intlroamuser" style="margin-left:0px;float:left;" >0</div>
+						<div class="userstructurePlate intlroamuser" style="margin-left:0px;float:left;" >0</div>
+						<div class="userstructurePlate intlroamuser" style="margin-left:0px;float:left;" >0</div>
+						<div style="float:left;height:92px;line-height:116px;">人</div>
+					</div>
+				</div>
+				<div style="width:425px;height:335px;float:left;border:solid 0px #ff0000;position:relative;">
+					<canvas id="roamBg" width="425" height="335" style="position:absolute;top:0;left:0;"></canvas>
+					<div id="roamPieChart" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
+				</div>
+				<div style="width:355px;height:335px;float:left;border:solid 0px #ff0000;position:relative;">
+					<div id="roamRankChart" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade"  id="modalWin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" style="width:850px;">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="modalWinTitle">
+				</h4>
+			</div>
+			<div class="modal-body" id="modalWinBody" style="width:100%;">
+			</div>
+			<div class="modal-footer">
+                <button type="button" class="btn btn-success" id="modalConfirm">确定</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+            </div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+</body>
+
+<script type="text/javascript" src="${jslib}/jquery-1.7.2/external/jqgrid/js/i18n/grid.locale-cn.js"></script>
+<script type="text/javascript" src="${jslib}/jquery-1.7.2/external/jqgrid/js/jquery.jqGrid.min.js"></script>
+<!-- jquery loadmask -->
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/common/spinner/jquery.ux.loadMaskcss.js"></script>
+<script src="${jslib}/leaflet/leaflet.js"></script>
+<script src="${jslib}/leaflet/heatmap.js"></script>
+<script src="${jslib}/leaflet/leaflet-heatmap.js"></script>
+<script src="${jslib}/leaflet/leaflet.draw.js"></script>
+<script src="${jslib}/leaflet/leaflet.contextmenu.js"></script>
+<script src="${jslib}/leaflet/leaflet.markercluster-src.js"></script>
+<script src="${jslib}/leaflet/leaflet-search.js"></script>
+<script src="${jslib}/leaflet/Icon.Label.js"></script>
+<script src="${jslib}/leaflet/leaflet.groupedlayercontrol.js"></script>
+<script src="${jslib}/leaflet/leaflet.baidu.min.js"></script>
+
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/ciie/map.js"></script>
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/ciie/mapInfoWin.js"></script>
+
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/common/consts.js"></script>
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/common/utils.js"></script>
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/common/screenDataManager.js"></script>
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/ciie/ciie_config.js"></script>
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/common/dragger.js"></script>
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/ciie/ciie.js"></script>
+
+<script>
+var BASEPATH="${ctx}";
+$(function(){
+	new CIIE.Screen(CIIE.SCREEN_HOT);
+});
+</script>
+</html>

@@ -1,0 +1,69 @@
+html,body {
+	background:transparent;
+}
+.indicators {
+    display: block;
+    width: 180px;
+    height: 92px;
+    position: relative;
+}
+.timeSpan{
+	font-size:28px;
+	font-weight:bold;
+	color:#ffffff;
+	cursor:pointer;
+	margin-left:8px;
+}
+.kpiSpan{
+	font-size:16px;
+	font-weight:bold;
+	color:#ffffff;
+	cursor:pointer;
+	margin-left:8px;
+}
+.kpiSpanSelected{
+	text-decoration: underline;
+}
+
+.ctrlBtn{
+	width:48px;
+	height:48px;
+	cursor:pointer;
+	display:inline-block;
+}
+
+.zoomBtn{
+	width:48px;
+	height:48px;
+	cursor:pointer;
+	display:inline-block;
+}
+.toFullScreen{
+	background: url(fullscreen.png) center 0px no-repeat;
+}
+.toNormal{
+	background: url(normal.png) center 0px no-repeat;
+}
+
+.play{
+	background: url(play.png) center 0px no-repeat;
+}
+.pause{
+	background: url(pause.png) center 0px no-repeat;
+}
+.metroStTypeLegend{
+	color:#ffffff;
+	font-size:16px;
+	position:absolute;width:250px;bottom:0px;left:0px;background:#041c28;border:solid 1px #00489f;padding:8px 8px 8px 8px;
+}
+.metroStTypeLegend span{
+	line-height: 20px;	
+}
+.stationLegendIcon{
+	height: 16px;
+    width: 16px;
+    background-size:100% 100%;
+	-moz-background-size:100% 100%;
+    display:inline-block;
+    
+}

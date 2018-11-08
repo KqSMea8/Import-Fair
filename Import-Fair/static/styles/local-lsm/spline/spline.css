@@ -1,0 +1,139 @@
+input[type=checkbox] {
+    /* your style goes here */
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+}
+
+.kpiTitleLarge {
+    font-size: 38px;
+}
+.ciietitle {
+    width: 100%;
+    height: 65px;
+    border-bottom: solid 1px #0c7bde;
+    font-size: 42px;
+    position: relative;
+}
+
+.gc-icon-scale{
+	width:48px;
+	height:48px;
+	background:url(images/icon_scale.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.gc-icon-spfault{
+	width:48px;
+	height:48px;
+	background:url(images/spfault.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.gc-icon-spcomplain{
+	width:48px;
+	height:48px;
+	background:url(images/spcomplain.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.gc-icon-spinternetp{
+	width:48px;
+	height:48px;
+	background:url(images/spinternetp.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.gc-icon-spcustomerlocal{
+	width:48px;
+	height:48px;
+	background:url(images/spcustomerlocal.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.gc-icon-spcustomergroup{
+	width:48px;
+	height:48px;
+	background:url(images/spcustomergroup.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.gc-icon-splist{
+	width:48px;
+	height:48px;
+	background:url(images/splist.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.gc-icon-sptopo{
+	width:48px;
+	height:48px;
+	background:url(images/sptopo.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+
+
+.gc-gauge-bg{
+	width:300px;
+	height:162px;
+	background:url(images/gauge.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.gc-shield-customer{
+	width:100px;
+	height:100px;
+	background:url(images/shield_customer.png) center 0px no-repeat;
+	background-size:100% 100%;
+	margin:20px;
+}
+.gc-shield-spline{
+	width:100px;
+	height:100px;
+	background:url(images/shield_spline.png) center 0px no-repeat;
+	background-size:100% 100%;
+	margin:20px;
+}
+
+.gc-mark-faultline{
+	width:148px;
+	height:148px;
+	background:url(images/faultlinemark.png) center 0px no-repeat;
+	background-size:100% 100%;
+	margin:20px 0px 20px 20px;
+}
+.gc-mark-complain{
+	width:148px;
+	height:148px;
+	background:url(images/complainmark.png) center 0px no-repeat;
+	background-size:100% 100%;
+	margin:20px 0px 20px 20px;
+}
+
+.topoclose{
+	width:24px;
+	height:24px;
+	background:url(images/close.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+
+
+
+.gc-icon-complain{
+	width:58px;
+	height:58px;
+	background:url(images/groupcustomer/complain.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.gc-icon-fault{
+	width:58px;
+	height:58px;
+	background:url(images/groupcustomer/fault.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+.gc-icon-performance_trend{
+	width:58px;
+	height:58px;
+	background:url(images/groupcustomer/performance_trend.png) center 0px no-repeat;
+	background-size:100% 100%;
+}
+
+.gc-icon-spline{
+	width:58px;
+	height:58px;
+	background:url(images/groupcustomer/spline.png) center 0px no-repeat;
+	background-size:100% 100%;
+}

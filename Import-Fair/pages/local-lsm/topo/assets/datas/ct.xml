@@ -1,0 +1,29 @@
+<Topo from="CACHE" id="assets/datas/ct.xml" name="长途软交换拓扑图">
+  <Groups>
+    <Group resourceType="IP专网" id="ar" name="IP专网" resourceId="" expand="true" image="assets/images/icons/group/c0.png" x="471.02588252314797" y="97"/>
+  </Groups>
+  <Nodes>
+    <Node resourceType="CE" resourceId="mmCE01" id="mmCE01" name="CE01" image="assets/images/icons/resource/0/online/ce.png" x="305" y="292"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94cb470c000e" id="8a5dffbc2f7608f8012f94cb470c000e" name="万荣AR9" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="523.025882523148" y="97"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94cbf085000f" id="8a5dffbc2f7608f8012f94cbf085000f" name="钦州AR10" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="737.525882523148" y="97"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c5e4890009" id="8a5dffbc2f7608f8012f94c5e4890009" name="金桥AR4" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="141.52588252314797" y="97"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c4af970008" id="8a5dffbc2f7608f8012f94c4af970008" name="浦东AR3" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="334.8" y="97"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c6e94a000a" id="8a5dffbc2f7608f8012f94c6e94a000a" name="万荣AR5" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="800.525882523148" y="97"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c85302000b" id="8a5dffbc2f7608f8012f94c85302000b" name="钦州AR6" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="578.525882523148" y="97"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94c929c4000c" id="8a5dffbc2f7608f8012f94c929c4000c" name="浦东AR7" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="207.02588252314803" y="97"/>
+    <Node resourceType="AR" resourceId="8a5dffbc2f7608f8012f94ca4d42000d" id="8a5dffbc2f7608f8012f94ca4d42000d" name="金桥AR8" group="ar" image="assets/images/icons/resource/0/online/ar.png" x="388.025882523148" y="97"/>
+    <Node resourceType="CE" resourceId="mmCE02" id="mmCE02" name="CE02" image="assets/images/icons/resource/0/online/ce.png" x="594" y="294"/>
+  	<Node resourceType="RETURN" resourceId="" id="mmreturnipnet" isSegment="true-assets/datas/ipnet.xml" name="返回IP承载网" image="assets/images/icons/resource/0/online/return.png" x="500" y="10"/>
+  </Nodes>
+  <Links>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94c4af970008" toId="mmCE01" color="39423" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94c4af970008" toId="mmCE01" color="65280" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94c85302000b" toId="mmCE02" color="39423" name=""/>
+    <Link resourceType="AR-CE" fromId="8a5dffbc2f7608f8012f94c85302000b" toId="mmCE02" color="65280" name=""/>
+  </Links>
+  <Labels>
+    <Label name="制表人：严敏" x="1201.35" y="44.95"/>
+    <Label name="长途软交换拓扑图" x="1201.35" y="4.8999999999999915"/>
+    <Label name="制表日期：2013-1-25" x="1201.35" y="85.00000000000001"/>
+  </Labels>
+</Topo>

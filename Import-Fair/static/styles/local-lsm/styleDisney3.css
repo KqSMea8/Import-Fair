@@ -1,0 +1,646 @@
+  /*public*/
+html,body {
+	width:100%;
+	height:100%;
+	margin:0px auto;
+	padding:0px auto;
+	background:#000;
+	}
+
+
+*{
+	color:#fff;
+	}
+	  
+ul, li, dl, dd, dt, p, h1, h2, h3 {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	border: 0px;
+}
+  .img {
+	  border: 0px;
+	  width: 100%;
+	  height: 100%;
+	  display:block;
+  }
+  
+  .hand {
+	  cursor: pointer;
+  }
+  .clear {
+	  clear: both;
+  }
+  
+  /*Disney*/
+  
+  
+  @font-face {
+	  font-family: 'fzzhengheis_el_gbregular';
+	  src: url('./font/fzzhengheis_el_gbregularr-webfont.eot');
+	  src: url('./font/fzzhengheis_el_gbregular-webfont.eot?#iefix') format('embedded-opentype'),
+		   url('./font/fzzhengheis_el_gbregular-webfont.woff2') format('woff2'),
+		   url('./font/fzzhengheis_el_gbregular-webfont.woff') format('woff'),
+		   url('./font/fzzhengheis_el_gbregular-webfont.ttf') format('truetype'),
+		   url('./font/fzzhengheis_el_gbregular-webfont.svg#fzzhengheis_el_gbregular') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+  
+  }
+  
+  @font-face {
+	  font-family: 'lets_go_digitalregular';
+	  src: url('./font/lets_go_digital_regular-webfont.eot');
+	  src: url('./font/lets_go_digital_regular-webfont.eot?#iefix') format('embedded-opentype'),
+		   url('./font/lets_go_digital_regular-webfont.woff2') format('woff2'),
+		   url('./font/lets_go_digital_regular-webfont.woff') format('woff'),
+		   url('./font/lets_go_digital_regular-webfont.ttf') format('truetype'),
+		   url('./font/lets_go_digital_regular-webfont.svg#lets_go_digitalregular') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+  
+  }
+  
+  .Guarantee{
+	  background:#000;
+	  width: 100%;
+	  height:100%;
+	  padding:0 0.5%;
+	  font-size: 1.1em;
+	  font-family:"微软雅黑";
+	  color:#fffff;
+	  position:relative;
+	  }
+  
+  /*1*/	
+  
+	  .PC_title{
+		  background:#252c34;
+		  width: 100%;
+		  float:left;
+	  }
+	  .PC_content{
+		  width:100%;
+		
+		  }
+	  .title_left{
+		  width:80%;
+		  float:left;
+		  }
+	  
+		  .icon{
+			  display: block;
+			  padding: 0 5px;
+			  width:48px;
+			  height:48px;
+		  }
+		  
+		  .icon-castle{
+			  float:left;
+			  margin: 0.5% 1%;
+			  background: url(./images/castle.png) center 0px no-repeat;
+		  }
+  
+  
+			  
+		  .title_disney{
+			  font-family: 'fzzhengheis-el-gbregular';
+			  float:left;
+			  color:#00b0f0;
+			  font-size:2.5em;
+			  padding-top:0.5%;
+			  }
+			  
+		  .title_time{
+			  float:left;
+			  padding-top:3%;
+			  padding-left:8%;
+			  }
+	  .title_right{
+		  width:20%;
+		  float:left;
+		  padding-left:1%;
+		  
+		  }
+			  
+  #table {
+	  float: left;
+	  width: 100%;
+	  margin:0;
+	  padding:0;
+  }
+  #table div {
+	  float: left;
+  }
+  #table li {
+	  float: left;
+	  width: 100%;
+	  list-style: none outside;
+	  float: left;
+	  text-align: left;
+  }
+			  
+		  
+		  .l1 {
+			  width:40%;
+			  text-align:left;
+		  }
+		  .r1 {
+			  width:60%;
+			  float:left;
+		  }
+		  
+		  .l2 {
+			  width:50%;
+			  text-align:left;
+		  }
+		  .r2 {
+			  width:50%;
+			  float:left;
+		  }
+		  
+		  
+		  .l3 {
+			  width:12%;
+		  }
+		  .l4 {
+			  width:11%;  
+		  }
+		  .r3 {
+			  width:11%;
+			  float:left;
+			  
+		  }
+		  
+
+		  .r1 div {
+			  float:left;
+		  }
+		  .icon2{
+			  display: block;
+			  padding: 0 5px;
+			  width:20px;
+			  height:20px;
+		  }
+		  .icon-Star1{
+			  float:left;
+			  margin:0 1%;
+			  background: url(./images/Star1.png) center 0px no-repeat;
+		  }
+		  .icon-Star2{
+			  float:left;
+			  margin:0 1%;
+			  background: url(./images/Star2.png) center 0px no-repeat;
+		  }	
+		  
+		  																	
+  
+  /*2*/	
+  	.icon3{
+		  display: block;
+		  padding: 0 5px;
+		  width:32px;
+		  height:32px;
+		  }
+	.icon-Overview{
+		float:left;
+		margin:0 1%;
+		background: url(./images/Overview.png) center 0px no-repeat;
+		}
+		
+	.icon-quality{
+		float:left;
+		margin:0 1%;
+		background: url(./images/quality.png) center 0px no-repeat;
+		}		
+	.icon-Warning{
+		float:left;
+		margin:0 1.5% 0 2%;
+		background: url(./images/Warning.png) center 0px no-repeat;
+		}
+	.icon-Detail{
+		float:left;
+		margin:0 1% 0 0.5%;
+		background: url(./images/Detail.png) center 0px no-repeat;
+		}				
+		  	
+	  .Overview{
+		  background:#1d2025;
+		  margin:0.5% 0;
+		  width: 100%;
+		
+	  }
+	  .Overview_content{
+		  width:100%;
+		  }
+		  
+		  .Overview_title{
+			  width:100%;
+			  padding:0.5% 0;
+			  border-bottom:0px #5ba5e4 solid;
+			  }
+			.Overview_title span{
+			  color:#00b0f0;
+			  font-size:1.5em;
+			  font-family: 'fzzhengheis-el-gbregular';
+			  }  
+		  .Overview_chart{
+			  width:100%;
+			  float:left;
+			  }
+		  .Ochart1{
+			  width:33%;
+			  float:left;
+			  background:#252c34;
+			  }
+
+		  .chartm{
+			  margin:0 0.5%;
+			  }
+		  .Ochart_content{
+			  width:100%;
+			  
+			  padding-top:0.6%;
+			  }
+		  .subtitle{
+			  width:100%;
+			  float:left;
+			  position:relative;
+			  }
+		  .subtitle h{
+			  margin:0.5% 0 0 4%;
+			  }
+		  .subtitle span{
+			  position:absolute;
+			  left:85%;
+			  }
+		  .DataChart{
+			  width:100%;
+			  }
+		  .DataChart_left{
+			  width:50%;
+			  text-align:center;
+			  float:left;
+			  }
+
+			  
+		  .DataChart_left h1{
+			  line-height:20%;
+			  font-size:2.5em;
+			  color:#ffc000;
+			  font-family:'lets_go_digitalregular';
+			   }
+		  .DataChart_left h1 span{
+			  font-size:0.5em;
+			   }		 	
+		  .DataChart_right{
+			  float:left;
+			  width:50%;
+			  }
+		  .Data{
+			  width:100%;
+			 
+			  float:left;
+			  padding-left:5%;
+			  margin-top:2%;
+			  }
+			  
+			.Data ul li{
+				list-style: none outside;
+				float:left;
+				} 
+			.Data li{
+				float:left;
+				}  				 	
+		  .Dataleft{
+			  width:32%;
+			  float:left;
+			  }
+		.Datacenter{
+			  width:32%;
+			 
+			  float:left;
+			  margin:0 2%;
+			  }
+		 .Dataright{
+			  width:32%;
+			  float:left;
+			  }	   	  	  	  
+				  
+		  .Ochart2{
+			  width:33%;
+			  float:left;
+			  background:#252c34;
+			  
+			  }
+		  .Ochart3{
+			  width:33%;
+			  float:left;
+			  background:#252c34;
+			  }										
+			  
+				  
+  
+  /*3*/		
+	  .network{
+		  background:#252c34;
+		  width: 100%;
+		  margin:0.5% 0;
+		  
+	  }
+	  .network_conter{
+		  width:100%;
+		  
+		  float:left;
+		  }
+		
+			.Nconter_left{
+				width:50%;		
+		  		float:left;
+				}
+			.Nconter_right{
+				width:50%;
+				
+		  		float:left;
+				}
+			.network_table{
+				width:100%;
+				
+				
+				}
+			.ntleft{
+				width:50%;
+				
+				padding:0 5%;
+				float:left;
+				background:#1d2025;
+				}
+			.ntleft li{
+				line-height:155%;
+				}
+
+			.table_color1{
+				color:#90c31f;
+				}
+		
+			.table_color2{
+				color:#ff0000;
+				}		
+				
+			.table_color3{
+				color:#ffc000;
+				}
+			.table_txt{
+				font-weight:bold;
+				text-align:right;
+				}
+												
+			.ntright{
+				width:50%;
+				
+				padding:0 5%;
+				float:left;
+				background:#1d2025;
+				}
+			.ntright li{
+				line-height:155%;
+				}				
+
+			.Nright_chart{
+				margin:1%;
+				border:1px #1d2025 solid;
+				
+				}
+			.more{
+				width:100%;
+				
+				float:left;
+				}
+			.more_left{
+				width:50%;
+				
+				float:left;
+				}
+			.more_right{
+				width:50%;
+				
+				float:left;
+				}
+			.mselect{
+				width:50%;
+				
+				padding:2% 1% 2% 20%;
+				float:left;
+				text-align:center;
+				}
+			.mselect_color{
+				color:#333;}	
+			.day{
+				width:50%;
+				background:#ffc000;
+				border:1px #ffc000 solid;
+				float:left;
+				
+				line-height:150%;
+				}
+			.hour{
+				width:50%;
+				border:1px #ffc000 solid;
+				float:left;
+				
+				line-height:150%;
+				text-align:center;
+				}
+			.mbtn{
+				width:50%;
+				
+				padding:2% 0 2% 15%;
+				float:left;
+				text-align:center;
+				}
+			.mbtn_txt{
+				width:100%;
+				background:#ffc000;
+				float:left;
+				
+				line-height:150%;
+				color:#333;
+				}																		  	
+  																	  	
+  
+  /*4*/		
+	  .information{
+		  background:#252c34;
+		  width: 100%;
+		  margin-top:0.5%;
+		  
+	  }
+	 .information_content{
+		width: 100%;
+		
+		float:left; 
+		}
+	.information_left{
+		width:30%;
+		float:left;
+		}
+	.ileft_table{
+		width:100%;
+		margin-top:2%;
+		}
+	.information_select{
+		width:100%;
+		
+		float:left;
+		}	
+	.select_top{
+		width:100%;
+		float:left;
+		text-align:center;
+		font-size:1.2em;
+		border-bottom:1px #00b0f0 solid;
+		}
+	.select1{
+		float:left;
+		width:33%;
+		
+		line-height:200%;
+		background:#00b0f0;
+		}
+	.select2{
+		float:left;
+		width:33%;
+		margin:0 0.5%;
+		
+		line-height:200%;
+		}
+	.select3{
+		float:left;
+		width:33%;
+		
+		line-height:200%;
+		}					
+		
+	.select_center{
+		width:100%;
+		
+		background:#1d2025;
+		padding:2% 5%;
+		}
+	.sc_txt{
+		width:100%;
+		margin:2% 0;
+		}	
+	.select_bottom{
+		width:100%;
+		
+		bottom:0;
+		margin:1% 2%;
+		}				
+				
+	.information_right{
+		width:68%;
+		margin-left:2%;
+		
+		float:left;
+		}	
+	.iright_table{
+		width:100%;
+		margin-top:0.5%;
+		background:#1d2025;
+		}
+	.table_height{
+		font-size:1.2em;
+		
+		line-height:200%;
+		border-bottom:1px #00b0f0 solid;
+		text-align:center;
+		margin-bottom:1%;
+		background:#00b0f0;
+		}	
+	.table_content{
+		
+		text-align:center;
+		}
+	.table_name{
+		text-align:left;
+		padding-left:2%;
+		}	
+	.icon-normal{
+		float:left;
+		margin:0.5% 4%;
+		background: url(./images/normal.png) center 0px no-repeat;
+		}
+	.icon-abnormal{
+		float:left;
+		margin:0.5% 4%;
+		background: url(./images/abnormal.png) center 0px no-repeat;
+		}	
+		
+		
+/************************************************************************/
+.Overview{
+		  height:70%;
+		  float:left;
+	  }
+#table {
+	  float: right;
+	  width: 30%;
+	  margin:0;
+	  padding:0;
+  }
+  #table div {
+	  float: left;
+  }
+  #table li {
+	  float: left;
+	  width: 100%;
+	  list-style: none outside;
+	  float: left;
+	  text-align: left;
+  }
+  
+  .l50 {
+			  width:50%;  
+		  }
+.cubeTable{
+}
+.cubeChart{
+	border:solid 1px #233333;
+	width:70%;
+	height:100%;
+	display:inline-block;
+}
+.chartSlider{
+	width:100%;
+	height:22%;
+	border:solid 1px #ff0000;
+	bottom:0px;
+}
+.container_image{
+	width:100%;
+	height:200px;
+	position:absolute;
+	bottom:200px; 
+}
+
+.slide_img {
+    position: relative;
+    z-index: 1;
+    left:200px;
+    height:200px;
+}
+.slide_img li a img {
+    position: absolute;
+    height: auto;
+}
+
+.title_right{
+		  width:30%;
+		  float:left;
+		  padding-left:1%;
+}
+.title_left{
+		  width:70%;
+		  float:left;
+		  }

@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Unity Web Player | CIIE</title>
+		<script type='text/javascript' src='jquery.min.js'></script>
+		<script type="text/javascript">
+		<!--
+		var unityObjectUrl = "UnityObject2.js";
+		if (document.location.protocol == 'https:')
+			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+		-->
+		</script>
+		<script type="text/javascript">
+		<!--
+			var config = {
+				width: 2400, 
+				height: 1200,
+				params: { enableDebugging:"0" }
+				
+			};
+			config.params["disableContextMenu"] = true;
+			var u = new UnityObject2(config);
+			
+			jQuery(function() {
+
+				var $missingScreen = jQuery("#unityPlayer").find(".missing");
+				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+				$missingScreen.hide();
+				$brokenScreen.hide();
+
+				u.observeProgress(function (progress) {
+					switch(progress.pluginStatus) {
+						case "broken":
+							$brokenScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$brokenScreen.show();
+						break;
+						case "missing":
+							$missingScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$missingScreen.show();
+						break;
+						case "installed":
+							$missingScreen.remove();
+						break;
+						case "first":
+						break;
+					}
+				});
+				u.initPlugin(jQuery("#unityPlayer")[0], "unityplayer.unity3d"+"?smooth="+getSmooth());
+			});
+		-->
+		</script>
+		<style type="text/css">
+		<!--
+		body {
+			font-family: Helvetica, Verdana, Arial, sans-serif;
+			background-color: white;
+			color: black;
+			text-align: center;
+			padding:0;
+			margin:0;
+			overflow:hidden;
+		}
+		a:link, a:visited {
+			color: #000;
+		}
+		a:active, a:hover {
+			color: #666;
+		}
+		p.header {
+			font-size: small;
+		}
+		p.header span {
+			font-weight: bold;
+		}
+		p.footer {
+			font-size: x-small;
+		}
+		div.content {
+			margin: auto;
+			width: 2400px;
+			overflow:hidden;
+		}
+		div.broken,
+		div.missing {
+			margin: auto;
+			position: relative;
+			top: 50%;
+			width: 193px;
+		}
+		div.broken a,
+		div.missing a {
+			height: 63px;
+			position: relative;
+			top: -31px;
+		}
+		div.broken img,
+		div.missing img {
+			border-width: 0px;
+		}
+		div.broken {
+			display: none;
+		}
+		div#unityPlayer {
+			cursor: default;
+			height: 1200px;
+			width: 2400px;
+			padding:0;
+			margin:0;
+		}
+		.map-icon-close{
+			background-image: url(closePopup.png);
+		    background-size: 100% 100%;
+		    width: 48px;
+		    height: 48px;
+		    cursor: pointer;
+		}
+		-->
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div id="unityPlayer">
+				<div class="missing">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<img id="fakeBg" style="width:2400px;height:1200px;margin:auto;display:none;opacity:0.8;"></img>
+		<iframe id="cellDetail" allowtransparency="true" width="1008px"  frameborder="no" height="833px" src="" style="overflow:hidden;display:none;position:absolute;left:50%;top:50%;margin-left:-500px;margin-top:-370px;"></iframe>
+		<iframe id="roomDetail" allowtransparency="true" width="2000px"  frameborder="no" height="1000px" src="" style="display:none;position:absolute;left:50%;bottom:50px;margin-left:-1000px;margin-top:-500px;"></iframe>
+		<iframe id="acAp" allowtransparency="true" width="2000px"  frameborder="no" height="1000px" src="" style="display:none;position:absolute;left:50%;bottom:50px;margin-left:-1000px;margin-top:-500px;"></iframe>
+		<div id="acApWin" style="position:absolute;top:50%;left:50%;margin-top:-400px;margin-left:-575px;width:1150px;height:960px;overflow:hidden;display:none;">
+	    	<iframe id="acApFrame" src="" frameborder="0" allowtransparency="true" style="border-radius:10px;width:1150px;height:960px;"></iframe>
+	    	<div id="acapClose" class="map-icon-close" style="position:absolute;right:5px;top:5px;" onclick="closeAcAp();"></div>'
+         </div>
+         <div id="apListWin" style="position:absolute;top:50%;left:50%;margin-top:-400px;margin-left:-500px;width:1000px;height:900px;overflow:hidden;display:none;">
+	    	<iframe id="apListFrame" src="" frameborder="0" allowtransparency="true" style="border-radius:10px;width:1000px;height:900px;"></iframe>
+	    	<div id="apListClose" class="map-icon-close" style="position:absolute;right:5px;top:5px;" onclick="closeApList();"></div>'
+         </div>
+	</body>
+	<script>
+		var smooth=getUrlParam(window.location.href,'').smooth;
+		function getSmooth(){
+			return smooth;
+		}
+		function returnGis(){
+			parent.returnGis();
+		}
+		function showAcAp(){
+			hideUnity();
+			var urlNew='../../../maptip/acap.jsp';
+      		$('#acApFrame').attr('src',urlNew);
+			$('#acApWin').show();
+		}
+		function closeAcAp(){
+			$('#acApWin').hide();
+			$('#apListWin').hide();
+			showUnity();
+			//$('#unityPlayer').css('visibility','visible');
+		}
+		function showAPList(hh,state){
+			var urlNew='../../../maptip/aplist.jsp?hall='+encodeURIComponent(hh)+'&state='+encodeURIComponent(state);
+			$('#apListFrame').attr('src',urlNew);
+			$('#apListWin').show();
+		}
+		function closeApList(){
+			$('#apListWin').hide();
+		}
+		function showCellDetail(name,type,lacci){
+			hideUnity();
+			var urlNew='../../../maptip/deviceDetailFor3D.jsp'+'?cellname='+encodeURIComponent(name)+'&nettype='+encodeURIComponent(type)+'&lacci='+encodeURIComponent(lacci)+'&smooth='+getSmooth();
+      		$('#cellDetail').attr('src',urlNew);
+			$('#cellDetail').show();
+			//$('#unityPlayer').css('visibility','hidden');
+			//parent.show3DCellDetail(name,type,lacci);
+		}
+		function closeCellDetail(){
+			$('#cellDetail').hide();
+			showUnity();
+			//$('#unityPlayer').css('visibility','visible');
+		}
+		function showRoomDetail(room){
+			hideUnity();
+			var urlNew='../../../maptip/roomVideoFor3DSingle.jsp?room='+room+'&width=800&height=800';
+      		$('#roomDetail').attr('src',urlNew);
+			$('#roomDetail').show();
+		}
+		function showMultiRoom(){
+			hideUnity();
+			var urlNew='../../../maptip/roomVideoFor3D.jsp?isMulti=true&height=450';
+      		$('#roomDetail').attr('src',urlNew);
+			$('#roomDetail').show();
+		}
+		function closeRoomDetail(){
+			$('#roomDetail').hide();
+			showUnity();
+		}
+		
+		function hideUnity(){
+			$('#fakeBg').show();
+			$('div.content').css('width','1px');
+			$('div.content').css('height','1px');
+		}
+		function showUnity(){
+			$('#fakeBg').hide();
+			$('div.content').css('width','2400px');
+			$('div.content').css('height','auto');
+		}
+		//解析URL参数
+		function getUrlParam(sUrl, sKey) {
+			var tmp=sUrl.split('?');
+			if(tmp.length>1){
+				 sUrl = tmp[1];//截取地址之后的所有参数
+				    //sUrl = sUrl.replace(/[&#]/g,'');//删除所有特殊字符
+				    //console.log(sUrl)
+				    if(sKey !== ''){
+				        //console.log('不为空')
+				        //构造正则，并截取最新的sUrl
+				        var para = '(' + sKey + '=' + ')';
+				        var myReg1 = new RegExp(para,'g');
+				        //var myReg2 = /[A-Za-z0-9]+/g;//可以修改传中文或者数字参数
+				        var myReg2 = /^([\u4E00-\u9FA5]+，?)+$/g;
+				        var myReg = new RegExp(myReg1.source + myReg2.source,'g');
+				        //console.log(myReg)
+				        var temArray = sUrl.match(myReg);//得到的是含有参数分隔符的数组,如果只需要返回参数，则还需进行下面的转换
+				        //console.log(temArray)
+				        if(temArray){
+				            temArray = temArray.toString().replace(myReg1,'');//删除参数分隔符sKey=,得到的是字符串
+				            var result = temArray.split(',');//字符串转换为数组
+				            return result;
+				        }
+				        else{
+				            //console.log(sKey)
+				            return '';//传入的参数名称sKey有错或者参数名值为空
+				        }
+				    }
+				    if(sKey === ''){
+				        //console.log('为空')
+				        sUrl = sUrl.split(/[&#]/g);//以特殊字符为分隔符生成数组
+				        var resultObj = {};//最后需要返回的对象
+				        for(var i= 0, len = sUrl.length; i<len; ++i){
+				            var temValue = sUrl[i];
+				            var temArrayV = temValue.split('=');
+				            resultObj[temArrayV[0]] = temArrayV[1];
+				        }
+				        return resultObj;
+				    }
+			}
+			return {};
+		   
+		}
+		function showScreenShot(img64){
+			$('#fakeBg').attr('src','data:image/jpg;base64,'+img64);
+			
+		}
+	</script>
+</html>

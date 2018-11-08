@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config describe="主配置文件,应用启动时要要加载的配置文件" >
+	<item url="assets/config/urls.xml" describe="接口配置"/>
+	<item url="assets/config/videos.xml" describe="视频列表"/>
+	<item url="assets/config/menus.xml" describe="菜单配置"/>
+	<item url="assets/config/kpis.xml" describe="设备和指标配置"/>
+	<item url="assets/config/apns.xml" describe="重要用户"/>
+	<item url="assets/config/arrays.xml" describe="数据源"/>
+	<item url="assets/config/netapp.xml" describe="互联网应用分析"/>
+	<item url="assets/config/prefs.xml" describe="应用设置"/>
+	<item url="assets/config/caches.xml" describe=""/>
+	<item url="assets/config/otherCitys.xml" describe="外省流量配置，主要用在拓扑表格中"/>
+	<item url="assets/config/topoRole.xml" describe="拓扑tab配置"/>
+	<item url="assets/config/isOpenRole.xml" describe="是否开启拓扑短信验证功能"/>
+</config>

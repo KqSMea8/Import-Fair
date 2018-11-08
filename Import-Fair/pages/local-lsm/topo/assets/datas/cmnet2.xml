@@ -1,0 +1,69 @@
+<Topo from="CACHE" id="assets/datas/gprs.xml" name="CMNET骨干网">
+  <Groups/>
+  <Nodes>
+    <Node resourceType="ROUTE" resourceId="8a5dffbc2a172910012a172910bf0003" id="8a5dffbc2a172910012a172910bf0003" name="浦东国际出口路由器M320" image="assets/images/icons/resource/0/online/route.png" x="876.8000000000001" y="288.50000000000006"/>
+    <Node resourceType="DG" resourceId="" id="cmnetPrinceWs" name="" image="cmnetPrinceWs" x="1260.3416666666672" y="409.5000000000001"/>
+    <Node resourceType="ROUTE" resourceId="8a5d9281387e2b8b013892c6e2910004" id="8a5d9281387e2b8b013892c6e2910004" name="浦东国际出口路由器NE5000" image="assets/images/icons/resource/0/online/route.png" x="731.8000000000001" y="289.50000000000006"/>
+    <Node resourceType="ROUTE" resourceId="8a5d9281387e2b8b013892c5ff860003" id="8a5d9281387e2b8b013892c5ff860003" name="浦东国内出口路由器T1600" image="assets/images/icons/resource/0/online/route.png" x="852.1000000000001" y="385.5000000000001"/>
+    <Node resourceType="ROUTE" resourceId="8a5dffbc2a172910012a172910bd0002" id="8a5dffbc2a172910012a172910bd0002" name="骨干武胜RRm320" image="assets/images/icons/resource/0/online/route.png" x="1169.3000000000002" y="500.5000000000001"/>
+    <Node resourceType="ROUTE" resourceId="" id="mmwsgjcklyqne5000" name="武胜国际出口路由器NE5000" image="assets/images/icons/resource/0/online/route.png" x="1004.95" y="244.50000000000009"/>
+    <Node resourceType="ROUTE" resourceId="8a5d9281387e2b8b01389311904c0006" id="8a5d9281387e2b8b01389311904c0006" name="武胜域名管控路由器T1600" image="assets/images/icons/resource/0/online/route.png" x="1004.95" y="385.5000000000001"/>
+    <Node resourceType="ROUTE" resourceId="8a5d9281387e2b8b01389310c0870005" id="8a5d9281387e2b8b01389310c0870005" name="浦东域名管控路由器T1600" image="assets/images/icons/resource/0/online/route.png" x="699.2500000000001" y="385.5000000000001"/>
+    <Node resourceType="ROUTE" resourceId="8a5dffbc2a172910012a172910c30005" id="8a5dffbc2a172910012a172910c30005" name="骨干NAP点路由器" image="assets/images/icons/resource/0/online/route.png" x="619.1500000000002" y="473.2500000000001"/>
+    <Node resourceType="ROUTE" resourceId="8a5dffbc2a172910012a172910c10004" id="8a5dffbc2a172910012a172910c10004" name="骨干浦东RRM320" image="assets/images/icons/resource/0/online/route.png" x="709.8000000000001" y="496.5000000000001"/>
+    <Node resourceType="DG" resourceId="" id="cmnetDx" name="" image="cmnetDxPd" x="1254.391666666667" y="155.50000000000006"/>
+    <Node resourceType="ROUTE" resourceId="8a5dffbc2a172910012a172910c50006" id="8a5dffbc2a172910012a172910c50006" name="武胜国内出口路由器T1600" image="assets/images/icons/resource/0/online/route.png" x="1157.8000000000002" y="385.5000000000001"/>
+    <Node resourceType="DG" resourceId="" id="cmnetPrincePd" name="" image="cmnetPrincePd" x="196.4416666666669" y="294.8999999999999"/>
+    <Node resourceType="LINE" resourceId="" id="line1" name="" image="assets/images/icons/resource/0/online/line.png" x="529.0000000000002" y="675.0000000000001"/>
+    <Node resourceType="ROUTE" resourceId="8a5dffbc29d9cbc70129d9cbc8680071" id="8a5dffbc29d9cbc70129d9cbc8680071" name="浦东TXP" image="assets/images/icons/resource/0/online/route.png" x="796.6500000000001" y="736.0000000000001"/>
+    <Node resourceType="ROUTE" resourceId="8a5dffbc29d9cbc70129d9cbc86a0073" id="8a5dffbc29d9cbc70129d9cbc86a0073" name="武胜TXP" image="assets/images/icons/resource/0/online/route.png" x="1054" y="736.0000000000001"/>
+    <Node resourceType="ROUTE" resourceId="8a5d92813488f4f3013491e8e09c0077" id="8a5d92813488f4f3013491e8e09c0077" name="骨干浦东4507R-1" image="assets/images/icons/resource/0/online/route.png" x="866.0000000000001" y="509.0000000000001"/>
+    <Node resourceType="ROUTE" resourceId="8a5d92813488f4f3013491e8e09d0078" id="8a5d92813488f4f3013491e8e09d0078" name="骨干浦东4507R-2" image="assets/images/icons/resource/0/online/route.png" x="972" y="509.0000000000001"/>
+    <Node resourceType="ROUTE" resourceId="SW9312-PD-1" id="SW9312-PD-1" name="骨干浦东9312-1" image="assets/images/icons/resource/0/online/route.png" x="866.0000000000001" y="567.0000000000001"/>
+    <Node resourceType="ROUTE" resourceId="8a5dffbc2a172910012a172910bb0001" id="8a5dffbc2a172910012a172910bb0001" name="骨干浦东TXP" image="assets/images/icons/resource/0/online/route.png" x="797.6500000000001" y="465.0000000000001"/>
+    <Node resourceType="ROUTE" resourceId="SW9312-WS-1" id="SW9312-WS-1" name="骨干武胜9312-1" image="assets/images/icons/resource/0/online/route.png" x="866.0000000000001" y="618.5000000000001"/>
+    <Node resourceType="ROUTE" resourceId="SW9312-PD-2" id="SW9312-PD-2" name="骨干浦东9312-2" image="assets/images/icons/resource/0/online/route.png" x="972" y="567.0000000000001"/>
+    <Node resourceType="ROUTE" resourceId="8a5d9281387e2b8b013892c45a050002" id="8a5d9281387e2b8b013892c45a050002" name="骨干武胜TXP" image="assets/images/icons/resource/0/online/route.png" x="1054" y="465.0000000000001"/>
+    <Node resourceType="ROUTE" resourceId="SW9312-WS-2" id="SW9312-WS-2" name="骨干武胜9312-2" image="assets/images/icons/resource/0/online/route.png" x="972" y="618.5000000000001"/>
+    <Node resourceType="DG" resourceId="" id="cmnetInternational" name="" image="cmnetInternational" x="510.04166666666697" y="95.00000000000003"/>
+  </Nodes>
+  <Links>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5d9281387e2b8b013892c6e2910004" toId="8a5dffbc2a172910012a172910bf0003" color="39423" name="GE" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5d92813488f4f3013491e8e09c0077" toId="8a5d92813488f4f3013491e8e09d0078" color="39423" name="2GE*" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5d9281387e2b8b013892c45a050002" toId="8a5d92813488f4f3013491e8e09d0078" color="39423" name="2GE" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5d9281387e2b8b013892c45a050002" toId="8a5dffbc2a172910012a172910bb0001" color="65280" name="10G*8" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5dffbc2a172910012a172910bb0001" toId="8a5dffbc2a172910012a172910c50006" color="65280" name="10G*9" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5d9281387e2b8b013892c45a050002" toId="8a5dffbc2a172910012a172910c50006" color="65280" name="10G*9" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5d9281387e2b8b013892c45a050002" toId="8a5d9281387e2b8b013892c5ff860003" color="65280" name="10G*9" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5dffbc2a172910012a172910bb0001" toId="8a5d9281387e2b8b013892c5ff860003" color="65280" name="10G*9" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5d9281387e2b8b013892c45a050002" toId="8a5d9281387e2b8b01389311904c0006" color="65280" name="10G*5" linkType="arc"/>
+    <Link resourceType="ROUTE-DG" fromId="8a5d9281387e2b8b013892c45a050002" toId="cmnetPrinceWs" color="65280" name="" linkType="arc"/>
+    <Link resourceType="ROUTE-DG" fromId="8a5d9281387e2b8b013892c6e2910004" toId="cmnetInternational" color="65280" name="" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5d9281387e2b8b013892c6e2910004" toId="8a5d9281387e2b8b01389310c0870005" color="65280" name="10G*4" linkType="arc"/>
+    <Link resourceType="ROUTE-DG" fromId="8a5d9281387e2b8b013892c5ff860003" toId="cmnetDx" color="65280" name="" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5dffbc2a172910012a172910bb0001" toId="8a5d9281387e2b8b01389310c0870005" color="65280" name="10G*5" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5dffbc2a172910012a172910bb0001" toId="8a5d9281387e2b8b01389311904c0006" color="65280" name="10G*5" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5d9281387e2b8b013892c45a050002" toId="8a5dffbc2a172910012a172910bd0002" color="39423" name="GE" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="mmwsgjcklyqne5000" toId="8a5d9281387e2b8b01389311904c0006" color="65280" name="10G*4*" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5d9281387e2b8b013892c45a050002" toId="8a5d9281387e2b8b01389310c0870005" color="65280" name="10G*5" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5dffbc2a172910012a172910bb0001" toId="8a5dffbc2a172910012a172910c30005" color="39423" name="GE*2" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5dffbc2a172910012a172910bb0001" toId="8a5dffbc2a172910012a172910c10004" color="39423" name="GE" linkType="arc"/>
+    <Link resourceType="ROUTE-DG" fromId="8a5dffbc2a172910012a172910bb0001" toId="cmnetPrincePd" color="65280" name="" linkType="arc"/>
+    <Link resourceType="DG-ROUTE" fromId="cmnetDx" toId="8a5dffbc2a172910012a172910c50006" color="65280" name="" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="8a5dffbc29d9cbc70129d9cbc86a0073" color="65280" name="10*10G" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5dffbc2a172910012a172910bb0001" toId="8a5d92813488f4f3013491e8e09c0077" color="39423" name="2GE" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="8a5dffbc2a172910012a172910bb0001" color="65280" name="20*10G" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="8a5d9281387e2b8b013892c45a050002" color="65280" name="20*10G" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="SW9312-PD-1" toId="SW9312-PD-2" color="65280" name="null" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="SW9312-WS-1" toId="SW9312-WS-2" color="65280" name="null" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5dffbc2a172910012a172910bb0001" toId="SW9312-PD-1" color="65280" name="null" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5dffbc2a172910012a172910bb0001" toId="SW9312-WS-1" color="65280" name="null" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5d9281387e2b8b013892c45a050002" toId="SW9312-PD-2" color="65280" name="null" linkType="arc"/>
+    <Link resourceType="ROUTE-ROUTE" fromId="8a5d9281387e2b8b013892c45a050002" toId="SW9312-WS-2" color="65280" name="null" linkType="arc"/>
+  </Links>
+  <Labels>
+    <Label name="CMNET骨干网" x="671.5000000000001" y="554.0000000000001"/>
+    <Label name="上海城域网" x="654.3500000000001" y="638.0000000000001"/>
+    <Label name="CMNET骨干网拓扑图" x="224.5" y="47"/>
+  </Labels>
+</Topo>                                                                                                                                                                                                                                                                                                                

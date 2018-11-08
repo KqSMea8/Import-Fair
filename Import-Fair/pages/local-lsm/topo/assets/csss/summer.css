@@ -1,0 +1,401 @@
+/* CSS file */
+
+global{
+	color:#346806;
+	font-size:12;
+	logoIcon: Embed(source="assets/images/summer/logo.png"); 
+}
+@font-face{
+	src: url('assets/fonts/DS-DIGIB.TTF');
+	fontFamily: "钟表";
+	font-weight:bold;
+}
+.digitalLabel{
+	fontFamily: "钟表";
+	font-weight:bold;
+}
+.timerBg
+{
+	background-color:#79c500;
+}
+Content
+{
+	padding-top:5;
+	padding-bottom:5;
+	background-alpha:0.4;
+	background-color:#ffffff;
+	border-thickness:5;
+	border-color:#733c28;
+	border-alpha:1;
+}
+
+.homeView
+{
+	background-image: Embed(source="assets/images/summer/bg.jpg"); 
+	background-size:"100%";
+}
+.innerView
+{
+	background-image: Embed(source="assets/images/summer/bg.jpg"); 
+	background-size:"100%";
+}
+
+.rect1
+{
+	background-color:#79c501;
+	padding-top:10;
+	padding-bottom:10;
+	background-alpha:0.65;
+}
+.rect2
+{
+	background-color:#20bbe7;
+	padding-top:10;
+	padding-bottom:10;
+	background-alpha:0.65;
+}
+.rect3
+{
+	background-color:#f08523;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rect4
+{
+	background-color:#e8c301;
+	padding-top:10;
+	padding-bottom:10;
+	background-alpha:0.65;
+}
+.rect5
+{
+	background-color:#d9455f;
+	padding-top:10;
+	padding-bottom:10;
+	background-alpha:0.65;
+}
+.rect6
+{
+	background-color:#b8c247;
+	padding-top:10;
+	padding-bottom:10;
+	background-alpha:0.65;
+}
+.rect7
+{
+	background-color:#00457c;
+	padding-top:10;
+	padding-bottom:10;
+	background-alpha:0.65;
+}
+.rect8
+{
+	background-color:#1b9a55;
+	padding-top:10;
+	padding-bottom:10;
+	background-alpha:0.65;
+}
+.rect9
+{
+	background-color:#c4e403;
+	padding-top:10;
+	padding-bottom:10;
+	background-alpha:0.65;
+}
+.rectTitle
+{
+	font-size:14;
+	font-weight:bold;
+	color:#ffffff;
+}
+CList
+{
+	color:#ffffff;
+	font-weight:bold;
+	border-alpha:0;
+	border-thickness:0;
+	selectionColor:#ffffff;
+	rollOverColor:#ffffff;
+	rollOverAlpha:0.23;
+	selectionAlpha:0.13;
+	padding-left:14;
+}
+
+.userlist
+{
+	color:#733c28;
+	border-alpha:0;
+	border-thickness:0;
+	selectionColor:#ede6dd;
+	rollOverColor:#ede6dd;
+	rollOverAlpha:1;
+	selectionAlpha:1;
+}
+
+DataGrid {
+	alternatingItemColors: #ffffff, #c5e98c;
+	headerColors: #79c500, #79c500;
+	verticalGridLineColor: #346500;
+	rollOverColor: #8dd73e;
+	textRollOverColor: #346500;
+	borderColor: #346500;
+	iconColor: #ffffff;
+	selectionColor: #5fa714;
+	color: #346500;
+	headerStyleName: "mydataGridHeaderStyle";
+}
+
+.mydataGridHeaderStyle {
+	color: #ffffff;
+}
+
+Panel,TitleWindow {
+	borderStyle: solid;
+	borderColor: #a9a9a9;
+	borderAlpha: 1;
+	borderThickness: 1;
+	borderThicknessLeft: 0;
+	borderThicknessTop: 0;
+	borderThicknessBottom: 0;
+	borderThicknessRight: 0;
+	padding-bottom:0;
+	padding-right:0;
+	padding-left:0;
+	padding-top:0;
+	roundedBottomCorners: false;
+	cornerRadius: 0;
+	headerHeight: 28;
+	backgroundAlpha: 1;
+	highlightAlphas: 0.1, 0;
+	headerColors: #79c500, #79c500;
+	backgroundColor: #ffffff;
+	dropShadowEnabled: false;
+	shadowDistance: -6;
+	titleStyleName: "mypanelTitle";
+	closeButtonUpSkin: Embed(source="assets/images/summer/close.png");
+	closeButtonOverSkin: Embed(source="assets/images/summer/close.png");
+	closeButtonDownSkin: Embed(source="assets/images/summer/close.png");
+}
+
+.mypanelTitle {
+	color: #ffffff;
+}
+
+EWindow{
+	settingButtonSkin: Embed(source="assets/images/summer/system.png");
+	searchButtonSkin: Embed(source="assets/images/summer/find.png");
+	resetButtonSkin: Embed(source="assets/images/summer/chart.png");
+	excelButtonSkin: Embed(source="assets/images/summer/excel.png");
+	refreshButtonSkin: Embed(source="assets/images/summer/refresh.png");	
+	topButtonUpSkin: Embed(source="assets/images/winTopSelected.png");
+	topButtonOverSkin: Embed(source="assets/images/winTopSelected.png");
+	topButtonDownSkin: Embed(source="assets/images/winTopSelected.png");
+	topButtonDisabledSkin: Embed(source="assets/images/winTopUnSelected.png");
+	normalButtonSkin: Embed(source="assets/images/summer/big.png");
+	minButtonSkin: Embed(source="assets/images/icons/suoxiao.png");
+	maxButtonSkin: Embed(source="assets/images/summer/small.png");
+	resizeCursor: Embed(source='assets/images/icons/huanyuan.png');
+	resizeIcon: Embed(source='assets/images/icons/huanyuan.png');
+	updateButtonSkin: Embed(source='assets/images/refresh.png');
+	iconSize:16;
+	maxBackgroundAlpha:1;
+	dropShadowEnabled: false;
+}
+CheckBox,RadioButton,LinkButton,Label
+{
+	color:#346806;
+}
+TabNavigator {
+	cornerRadius: 0;
+	tabOffset: 0;
+	backgroundAlpha: 0.5;
+	backgroundColor: #ffffff;
+	borderStyle: solid;
+	borderColor: #346500;
+	borderThickness: 1;
+	color: #1e3a00;
+	tabStyleName: "myTabs";
+	firstTabStyleName: "myTabs";
+	lastTabStyleName: "myTabs";
+	selectedTabTextStyleName: "mySelectedTabs";
+}
+
+.myTabs {
+	cornerRadius: 0;
+	fillAlphas: 0.6, 0.4;
+	fillColors: #ffffff, #79c500;
+	backgroundAlpha: 1;
+	backgroundColor: #346500;
+	borderColor: #346500;
+	color:#356500;
+	textRollOverColor: #1e3a00;
+	themeColor: #346500;
+	
+}
+
+.mySelectedTabs {
+	color: #fcfefe;
+	textRollOverColor: #79c500;
+}
+
+
+TileList
+{
+	selectionColor:#ffffff;
+	rollOverColor:#ffffff;
+}
+Canvas
+{
+	padding-right:0;
+	padding-left:0;
+}
+ComboBox {
+	cornerRadius: 3;
+	color: #643d2c;
+	borderColor: #7e5625;
+	iconColor: #643d2c;
+	fillAlphas: 1, 1, 1, 1;
+	fillColors: #ffffff, #b78232, #ffffff, #d8a24f;
+	selectionColor: #d8a24f;
+	textSelectedColor: #643d2c;
+	rollOverColor: #f9c36f;
+	textRollOverColor: #643d2c;
+	themeColor: #643d2c;
+	dropdownStyleName: "myComboBoxDropDowns";
+}
+
+.myComboBoxDropDowns {
+	borderColor: #643d2c;
+	color: #643d2c;
+}
+
+.button{
+	padding-right:10;
+	padding-left:10;
+}
+
+.buttonGroup
+{
+	vertical-align:"middle";
+	horizontal-align:"right";
+	padding-right:"20" ;
+	bottom:6;
+}
+
+
+
+.myRedColumnSeries {
+	fills: #FF0033, #FF3333, #FF6633;
+}        
+.myGreenColumnSeries {
+	fills: #33FF00, #33FF33, #33FF66;
+} 
+.myGrayColumnSeries {
+	fills: #cccccc, #cccccc, #cccccc;
+} 
+
+AxisRenderer
+{
+	can-drop-labels:true;
+}
+RichTab
+{
+	closeButtonSkin:Embed(source="assets/images/icons/x.png");
+}
+.infoStyle
+{
+	color:#568f0e;
+}
+.linkStyle
+{
+	color:#346806;
+	fontSize:14;
+	font-weight:bold;
+}
+
+VScrollBar,HScrollBar {
+	cornerRadius: 0;
+	highlightAlphas: 0, 0;
+	fillAlphas: 0.6, 0.4, 0.75, 0.65;
+	fillColors: #8fcf57, #8fcf57, #8fcf57, #8fcf57;
+	trackColors: #f4ffeb, #e7e7e7;
+	themeColor: #a4e070;
+	borderColor: #8fcf57;
+	iconColor: #478d0a;
+	thumbOffset: 1;
+}
+Button {
+	cornerRadius: 5;
+	highlightAlphas: 0.5, 0;
+	fillAlphas: 0.6, 0.4, 0.75, 0.65;
+	fillColors: #ffffff, #79c500, #ffffff, #eeeeee;
+	color: #1e3a00;
+	textRollOverColor: #1e3a00;
+	textSelectedColor: #1e3a00;
+	borderColor: #346500;
+	themeColor: #346500;
+}
+ComboBox {
+	cornerRadius: 5;
+	color: #1e3a00;
+	borderColor: #1e3a00;
+	iconColor: #1e3a00;
+	highlightAlphas: 0.4, 0;
+	fillAlphas: 0.6, 0.4, 0.75, 0.65;
+	fillColors: #ffffff, #79c500, #ffffff, #eeeeee;
+	backgroundAlpha: 1;
+	selectionColor: #79c500;
+	textSelectedColor: #1e3a00;
+	rollOverColor: #cbf89c;
+	textRollOverColor: #1e3a00;
+	themeColor: #60aa11;
+}
+ButtonBar {
+	horizontalGap: -1;
+	buttonStyleName: "mybuttonBarButtonStyle";
+	firstButtonStyleName: "mybuttonBarFirstButtonStyle";
+	lastButtonStyleName: "mybuttonBarLastButtonStyle";
+}
+
+.mybuttonBarButtonStyle {
+	highlightAlphas: 0.3, 0;
+	fillAlphas: 0.6, 0.4, 0.75, 0.65;
+	fillColors: #ffffff, #79c500, #ffffff, #d9f9a5;
+	color: #1e3a00;
+	textRollOverColor: #1e3a00;
+	textSelectedColor: #1e3a00;
+	borderColor: #346500;
+	themeColor: #346500;
+}
+
+.mybuttonBarFirstButtonStyle {
+	cornerRadius: 5;
+}
+
+.mybuttonBarLastButtonStyle {
+	cornerRadius: 5;
+}
+Tree
+{
+	disclosure-closed-icon:Embed(source="assets/images/tool/gray1.gif");
+	disclosure-open-icon:Embed(source="assets/images/tool/gray2.gif");
+}
+
+.metroButton{
+	cornerRadius: 0;
+	highlightAlphas: 0, 0;
+	fillAlphas: 1, 1, 0, 0;
+	fillColors: #356500, #356500, #356500, #356500;
+	color: #FFFFFF;
+	textRollOverColor: #1e3a00;
+	textSelectedColor: #1e3a00;
+	borderColor: #346500;
+	themeColor: #356500;
+}
+.tip
+{
+	
+}
+.yans
+{
+}

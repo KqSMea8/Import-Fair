@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<domains>
+		<domain ip="10.40.4.108" port="8080" id="domain108">
+			<urls><!-- 此处的路径都不需要IP地址与端口信息,TYPE主要用与区分HTTP,WS,SOCKET,RTMP,RO等，默认HTTP -->
+				<url id="hlrs" method="get" url="/js-view/ws/hlrs"></url>
+				<url id="mscservers" method="get" url="/js-view/ws/mscservers"></url>
+				<url id="ggsns" method="post" url="/js-view/ws/ggsns"></url>
+			</urls>
+		</domain>
+	</domains>
+	<preloadings><!-- 预加载文件,暂未支持-->
+		<preloading>
+			<id></id><!-- 此处的ID与代码里面引用的要保持一致 -->
+			<url></url><!-- 预加载文件路径,必须是XML格式的 -->
+		</preloading>
+	</preloadings>
+	<maxRequest>2</maxRequest><!-- 浏览器的最大请求数，建议设置成2 -->
+	<logLevel>5</logLevel><!-- 用于输出DEBUG信息,1:fatal,2:error,3:warn,4:info,5:debug,6,none-->
+</config>
+
+<!-- 
+http://10.40.4.108:18080/js-view/2012-12-12 00:00:00/2012-12-12_00:00:00/path/{top},{right}-{bottom},{left}?a=1
+{time|YYYY-MM-DD HH:NN:SS|HOUR|0}=2012-12-12 00:00:00
+{a}=1
+http://10.40.4.108:18080/js-view/{time|YYYY-MM-DD HH:NN:SS|MIN|-5|0}/{time|YYYY-MM-DD_HH:NN:SS|HOUR|0}/{path}/{range|left,top-right,bottom}?a={a}
+ -->

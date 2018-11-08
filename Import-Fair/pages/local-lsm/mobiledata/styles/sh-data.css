@@ -1,0 +1,221 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background:#000 url(../images/bg.jpg) no-repeat;
+	color:#fff;
+	padding:5px;
+}
+.data-top{
+	height:35px;
+	text-align:center;
+}
+.data-top h2{
+	font-size:36px;
+	color:#21bdea;
+	font-weight:normal;
+}
+.data-box{
+}
+.data-box-title{
+	width:237px;
+	height:49px;
+	background:url(../images/data-box-title.png) no-repeat;
+	font-size:32px;
+	padding:17px 0 0 36px
+}
+.data-cont{
+	height:1093px;
+	border:1px solid #21bdea;
+	margin:10px 0;
+	padding:5px;
+}
+.data-cont-box1{
+	border:1px solid #13627b;
+}
+.data-cont-box2{
+	border:1px dashed #21bdea;
+}
+.data-cont-box1,.data-cont-box2{
+	padding:2px 10px 5px;
+}
+.data-cont-box1 h3,.data-cont-box2 h3{
+	border-bottom:1px solid #67cde5;
+	font-size:28px;
+	padding:0 0 5px 0;
+	margin-bottom:5px;
+	font-weight:normal;
+}
+.data-indicator{
+	border:1px solid #21bdea;
+	background-color:#011a2e;
+}
+.data-indicator td{
+	text-align:center;
+	line-height:32px;
+	font-size:20px;
+	padding:3px 5px;
+}
+.data-indicator label{
+	color:#0FF;
+	display:block;
+	font-weight:normal;
+}
+.data-indicator span,.data-list ul li b{
+	font-family:"Let's go Digital";
+	display:inline-block;
+	margin-right:5px;
+}
+.data-indicator span{
+	font-size:45px;
+}
+.data-tb-top{
+	border-bottom:1px solid #21bdea;
+}
+.data-tb-row{
+	border-bottom:1px solid #13627b;
+}
+.data-list{
+	margin:10px 0 15px;
+	font-size:20px;
+}
+.data-list ul{
+	margin:2px 0;
+}
+.data-list ul li{
+	padding:7px 0 0px;
+	text-align:center;
+}
+.data-list ul li label,.data-list ul li b{
+	font-weight:normal;
+}
+.data-list ul li label{
+	color:#0FF;
+}
+.data-list ul li b{
+	font-size:36px;
+}
+.list-style1{
+	border-bottom:1px solid #67cde5;
+}
+.list-style2{
+	margin:12px 0;
+}
+.data-chart-box{
+	border:1px solid #016a91;
+	border-radius:3px;
+	position:relative;
+	z-index:1;
+	padding:1px;
+}
+.data-chart-box h4{
+	font-size:20px;
+	background-color:#000;
+	position:absolute;
+	z-index:3;
+	left:15px;
+	top:-12px;
+	font-weight:normal;
+}
+.data-bubble{
+	position:relative;
+	z-index:1;
+	cursor:pointer;
+}
+.data-bubble span{
+	font-size:18px;
+	position:absolute;
+	z-index:3;
+	text-align:center;
+}
+.data-bubble img{
+	position:absolute;
+	z-index:2;
+}
+.data-button{
+	width:170px;
+	height:60px;
+	line-height:60px;
+	text-align:center;
+	font-size:24px;
+	background:url(../images/button-bg.png) no-repeat;
+	border:none;
+}
+.data-progress{
+	font-size:20px;
+	padding:15px 10px;
+}
+.data-progress span{
+	font-size:36px;
+}
+.progress-box{
+	width:100%;
+	height:20px;
+	background-color:#444;
+	position:relative;
+	z-index:1;
+	border-radius:4px;
+	margin:20px 0;
+}
+.progress-green,.progress-red{
+	height:20px;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:2;
+	border-radius:4px;
+}
+.progress-green{
+	background:url(../images/progress-g.jpg) repeat-x;
+}
+.progress-red{
+	background:url(../images/progress-r.jpg) repeat-x;
+}
+.data-button-group{
+	margin:10px 0;
+}
+.data-button-group button{
+	font-size:20px;
+	border:1px solid #21bdea;
+	padding:20px;
+	background-color:#011a2e;
+	border-radius:4px;
+	display:inline-block;
+}
+button{
+	color:#ffcc01;
+}
+.data-window{
+	width:2090px;
+	height:550px;
+	border:1px solid #21bdea;
+	position:absolute;
+	left:5px;
+	bottom:5px;
+	z-index:999;
+	background-color:#022340;
+	font-size:20px;
+}
+.data-window h3{
+	margin:10px;
+}
+.data-window h3,.data-window th{
+	font-weight:normal;
+}
+.data-window th{
+	background-color:#00477f;
+	border-right:2px solid #001b2e;
+	border-bottom:2px solid #001b2e;
+}
+.data-window th,.data-window td{
+	line-height:50px;
+	padding:0 10px;
+	text-align:center;
+}
+.data-window td{
+	border-bottom:2px solid #001b2e;
+}
+.window-td-row{
+	background-color:#1a2c3c;
+}
+
+

@@ -1,0 +1,352 @@
+/* CSS file */
+
+global{
+	color:#733c28;
+	font-size:12;
+	logoIcon: Embed(source="assets/images/spring/logo.png"); 
+}
+@font-face{
+	src: url('assets/fonts/DS-DIGIB.TTF');
+	fontFamily: "钟表";
+	font-weight:bold;
+}
+.digitalLabel{
+	fontFamily: "钟表";
+	font-weight:bold;
+}
+.timerBg
+{
+	background-color:#ac6245;
+}
+Content
+{
+	padding-top:5;
+	padding-bottom:5;
+	background-alpha:0.88;
+	background-color:#ede6dd;
+	border-thickness:5;
+	border-color:#733c28;
+	border-alpha:1;
+}
+
+.homeView
+{
+	background-image: Embed(source="assets/images/spring/bg.jpg"); 
+	background-size:"100%";
+}
+.innerView
+{
+	background-image: Embed(source="assets/images/spring/inner_bg.jpg"); 
+	background-size:"100%";
+}
+
+.rect1
+{
+	background-color:#7f8d42;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rect2
+{
+	background-color:#78556d;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rect3
+{
+	background-color:#b78232;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rect4
+{
+	background-color:#a86248;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rect5
+{
+	background-color:#345b9e;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rect6
+{
+	background-color:#b8c247;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rect7
+{
+	background-color:#b97a85;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rect8
+{
+	background-color:#549982;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rect9
+{
+	background-color:#7e5625;
+	padding-top:10;
+	padding-bottom:10;
+}
+.rectTitle
+{
+	font-size:14;
+	font-weight:bold;
+	color:#ffffff;
+}
+CList
+{
+	color:#ffffff;
+	font-weight:bold;
+	border-alpha:0;
+	border-thickness:0;
+	selectionColor:#ffffff;
+	rollOverColor:#ffffff;
+	rollOverAlpha:0.23;
+	selectionAlpha:0.13;
+	padding-left:14;
+}
+
+.userlist
+{
+	color:#733c28;
+	border-alpha:0;
+	border-thickness:0;
+	selectionColor:#ede6dd;
+	rollOverColor:#ede6dd;
+	rollOverAlpha:1;
+	selectionAlpha:1;
+}
+
+DataGrid {
+	backgroundAlpha: 1;
+	backgroundColor: #ffffff;
+	alternatingItemColors: #ffffff, #f1ece4;
+	headerColors: #ac6245, #ac6245;
+	letterSpacing: 0;
+	verticalGridLineColor: #ded6c8;
+	useRollOver: true;
+	rollOverColor: #ecdcc2;
+	textRollOverColor: #79533c;
+	borderThickness: 1;
+	borderColor: #a7a7a7;
+	iconColor: #ffffff;
+	selectionColor: #edd2a6;
+	color: #79533c;
+	textSelectedColor: #79533c;
+	textIndent: 0;
+	headerStyleName: "mydataGridHeaderStyle";
+}
+
+.mydataGridHeaderStyle {
+	color: #ffffff;
+}
+Button {
+	cornerRadius: 3;
+	textIndent: 0;
+	paddingLeft: 3;
+	paddingRight: 3;
+	highlightAlphas: 0.2, 0.2;
+	fillAlphas: 1, 1, 1, 1;
+	fillColors: #b47258, #ac6245, #ffffff, #eeeeee;
+	color: #ffffff;
+	textRollOverColor: #7b3923;
+	textSelectedColor: #7b3923;
+	borderColor: #704500;
+	themeColor: #704500;
+}
+
+Panel,TitleWindow {
+	borderThicknessLeft: 10;
+	borderThicknessTop: 0;
+	borderThicknessBottom: 10;
+	borderThicknessRight: 10;
+	cornerRadius:2;
+	roundedBottomCorners: true;
+	backgroundAlpha: 1;
+	highlightAlphas: 1, 1;
+	backgroundColor: #ffffff;
+	shadowDirection: right;
+	borderAlpha:0.9;
+	padding-bottom:0;
+	padding-left:0;
+	padding-right:0;
+	padding-top:0;
+	closeButtonUpSkin: Embed(source="assets/images/spring/close.png");
+	closeButtonOverSkin: Embed(source="assets/images/spring/close.png");
+	closeButtonDownSkin: Embed(source="assets/images/spring/close.png");
+}
+
+EWindow{
+	settingButtonSkin: Embed(source="assets/images/spring/system.png");
+	searchButtonSkin: Embed(source="assets/images/spring/find.png");
+	resetButtonSkin: Embed(source="assets/images/spring/chart.png");
+	excelButtonSkin: Embed(source="assets/images/spring/excel.png");
+	refreshButtonSkin: Embed(source="assets/images/spring/refresh.png");
+	
+	topButtonUpSkin: Embed(source="assets/images/winTopSelected.png");
+	topButtonOverSkin: Embed(source="assets/images/winTopSelected.png");
+	topButtonDownSkin: Embed(source="assets/images/winTopSelected.png");
+	topButtonDisabledSkin: Embed(source="assets/images/winTopUnSelected.png");
+	normalButtonSkin: Embed(source="assets/images/spring/big.png");
+	minButtonSkin: Embed(source="assets/images/icons/suoxiao.png");
+	maxButtonSkin: Embed(source="assets/images/spring/small.png");
+	resizeCursor: Embed(source='assets/images/icons/huanyuan.png');
+	resizeIcon: Embed(source='assets/images/icons/huanyuan.png');
+	updateButtonSkin: Embed(source='assets/images/refresh.png');
+/*	borderAlpha: 0.8;
+	borderThicknessLeft: 5;
+	borderThicknessTop: 5;
+	borderThicknessBottom: 5;
+	borderThicknessRight: 5;
+	backgroundAlpha:1;*/
+	iconSize:16;
+	maxBackgroundAlpha:1;
+	dropShadowEnabled: true;	
+}
+CheckBox,RadioButton,LinkButton,Label
+{
+	color:#733c28;
+}
+TabNavigator {
+	tabHeight: 25;
+	cornerRadius: 0;
+	horizontalGap: 1;
+	horizontalAlign: left;
+	tabOffset: 0;
+	backgroundAlpha: 0.2;
+	backgroundColor: #ffffff;
+	borderStyle: solid;
+	borderColor: #a7a7a5;
+	borderThickness: 1;
+	tabStyleName: "myTabs";
+	firstTabStyleName: "myTabs";
+	lastTabStyleName: "myTabs";
+	selectedTabTextStyleName: "mySelectedTabs";
+}
+
+.myTabs {
+	cornerRadius: 0;
+	highlightAlphas: 0, 0;
+	fillAlphas: 1, 1;
+	fillColors: #d7c7ad, #d7c7ad;
+	backgroundAlpha: 1;
+	backgroundColor: #a86248;
+	borderColor: #a7a7a5;
+	color: #774836;
+	textRollOverColor: #ffffff;
+	themeColor: #ffffff;
+}
+
+.mySelectedTabs {
+	color: #ffffff;
+	textRollOverColor: #f9d4c6;
+}
+
+TileList
+{
+	selectionColor:#ffffff;
+	rollOverColor:#ffffff;
+}
+Canvas
+{
+	padding-right:0;
+	padding-left:0;
+}
+ComboBox {
+	cornerRadius: 3;
+	color: #643d2c;
+	borderColor: #7e5625;
+	iconColor: #643d2c;
+	fillAlphas: 1, 1, 1, 1;
+	fillColors: #ffffff, #b78232, #ffffff, #d8a24f;
+	selectionColor: #d8a24f;
+	textSelectedColor: #643d2c;
+	rollOverColor: #f9c36f;
+	textRollOverColor: #643d2c;
+	themeColor: #643d2c;
+	dropdownStyleName: "myComboBoxDropDowns";
+}
+
+.myComboBoxDropDowns {
+	borderColor: #643d2c;
+	color: #643d2c;
+}
+
+.button{
+	padding-right:10;
+	padding-left:10;
+}
+
+.buttonGroup
+{
+	vertical-align:"middle";
+	horizontal-align:"right";
+	padding-right:"20" ;
+	bottom:6;
+}
+
+ButtonBar
+{
+	buttonStyleName:"buttonBarStyleName";
+}
+.buttonBarStyleName {
+	cornerRadius: 3;
+	textIndent: 0;
+	paddingLeft: 3;
+	paddingRight: 3;
+	highlightAlphas: 0.2, 0.2;
+	fillAlphas: 1, 1, 1, 1;
+	fillColors: #b47258, #ac6245, #ffffff, #eeeeee;
+	color: #ffffff;
+	textRollOverColor: #7b3923;
+	textSelectedColor: #7b3923;
+	borderColor: #704500;
+	themeColor: #704500;
+}
+
+.myRedColumnSeries {
+	fills: #FF0033, #FF3333, #FF6633;
+}        
+.myGreenColumnSeries {
+	fills: #33FF00, #33FF33, #33FF66;
+} 
+.myGrayColumnSeries {
+	fills: #cccccc, #cccccc, #cccccc;
+} 
+
+AxisRenderer
+{
+	can-drop-labels:true;
+}
+RichTab
+{
+	closeButtonSkin:Embed(source="assets/images/icons/x.png");
+}
+.infoStyle
+{
+
+}
+.linkStyle
+{
+	fontSize:16;
+	font-weight:bold;
+}
+Tree
+{
+	disclosure-closed-icon:Embed(source="assets/images/tool/gray1.gif");
+	disclosure-open-icon:Embed(source="assets/images/tool/gray2.gif");
+}
+.tip
+{
+	
+}
+.yans
+{
+}

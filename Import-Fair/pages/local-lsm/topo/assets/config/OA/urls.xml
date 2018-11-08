@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<item id="restIpHoliday" source="/subject_rest_service/holiday" describe="专题rest接口" /> 
+	<item id="restIp" source="/subject_rest_service/rest/" describe="专题rest接口" /> 
+	<item id="restIp_38_38080" source="/subject_rest_service/rest/" describe="专题rest接口" /> 
+	<item id="restIp_38_8080" source="http://10.221.18.38:8080/" describe="专题rest接口" /> 
+	<item id="baseIp" source="" describe="" /> 
+	<item id="baseIp37" source="http://10.221.18.37:8080" describe="" /> 
+	<item id="dataQuality" source="/subject_rest_service/ipnet_sh/ipnet_sh.html" describe="节假日数据质量" /> 
+	<item id="fm5Console" source="http://10.221.18.37:8080/subject/fm5Jnlp/fm5Console.jsp" describe="短信网告警" /> 
+	<item id="dailyReport" source="/subject_rest_service/report/download/word.htm" describe="运行日报" /> 
+	<item id="downloadReportFileByReportId" source="/subject_rest_service/report/downloadReportFileByReportId/export.htm" describe="运行日报" /> 
+	<item id="dutyReport" source="/subject_rest_service/eve/assets/images/duty/" describe="值班报告" /> 
+	<item id="smsBulletin" source="/subject_rest_service/sms/bulletin/export/excel.htm" describe="短信快报导出" /> 
+	<item id="dataAllBulletin" source="/subject_rest_service/data/all/export/excel.htm" describe="数据网快报导出" /> 
+</config>

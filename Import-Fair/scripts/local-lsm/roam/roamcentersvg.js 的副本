@@ -1,0 +1,488 @@
+var CIIENEW=CIIENEW||{};
+CIIENEW.Roam=function ()
+{
+	this.initialize.apply(this,arguments);
+};
+CIIENEW.Roam.prototype.constructor=CIIENEW.Roam;
+CIIENEW.Roam.prototype.hotspot='进口博览会';
+CIIENEW.Roam.prototype.dm=null;
+CIIENEW.Roam.prototype.cdm=null;
+CIIENEW.Roam.prototype.roamType='intl';
+CIIENEW.Roam.prototype.hotspotList=[];
+CIIENEW.Roam.prototype.startIndex=0;
+CIIENEW.Roam.prototype.selectedHot=null;
+CIIENEW.Roam.prototype.lineWidth=3;
+CIIENEW.Roam.prototype.chartLabelSize=24;
+CIIENEW.Roam.prototype.alarmColors=['#00ffaa','#fff066','#ff933c','#ff5252'];
+CIIENEW.Roam.prototype.mapBaseWidth=2400;
+CIIENEW.Roam.prototype.mapBaseHeight=1120;
+CIIENEW.Roam.prototype.play=true;
+CIIENEW.Roam.prototype.mapPosIndex=0;
+CIIENEW.Roam.prototype.mapPosList=[
+  {name:'北美洲',x:482.5,y:502.5,scale:2},
+  {name:'南美洲',x:745,y:995,scale:2.5},
+  {name:'非洲',x:1340,y:842.5,scale:2.5},
+  {name:'欧洲',x:1220,y:500,scale:4.5},
+  {name:'亚洲',x:1787.5,y:650,scale:2.5},
+  {name:'澳洲',x:2077.5,y:1012.5,scale:4}
+];
+CIIENEW.Roam.prototype.mapPosMap={
+   '加拿大':{x:0,y:0}
+};
+
+CIIENEW.Roam.prototype.polygonMap={
+	'美国':'polygon1236,polygon133',
+	'新加坡':'polygon526',
+	'台湾':'polygon290',
+	'日本':'polygon322',
+	'德国':'polygon698',
+	'澳洲':'polygon895',
+	'英国':'polygon728,711',
+	'中国':'polygon291',
+	'泰国':'polygon577',
+	'韩国':'polygon338',
+	'马来西亚':'polygon562',
+	'法国':'polygon741',
+	'瑞士':'polygon700',
+	'印度尼西亚':'polygon472',
+	'意大利':'polygon728,749',
+	'荷兰':'polygon703',
+	'巴勒斯坦':'polygon796',
+	'丹麦':'polygon609',
+	'印度':'polygon584',
+	'丹麦':'polygon609',
+	'乌克兰':'polygon675',
+	'乌拉圭':'polygon1277',
+	'伊朗':'polygon786',
+	'俄罗斯':'path21',
+	'保加利亚':'polygon680',
+	'克罗地亚':'polygon690',
+	'冰岛':'polygon944',
+	'加拿大':'polygon1080,polygon1190,polygon1045,polygon1161',
+	'匈牙利':'polygon678',
+	'卡达':'polygon802',
+	'卢森堡':'polygon705',
+	'印度':'polygon584',
+	'印度尼西亚':'polygon472',
+	'厄瓜多尔':'polygon1273',
+	'台湾':'polygon290',
+	'哈萨克斯坦':'polygon340',
+	'土耳其':'polygon790,polygon791',
+	'埃及':'polygon824',
+	'塞浦路斯':'polygon794',
+	'墨西哥':'polygon1256',
+	'奥地利':'polygon695',
+	'巴勒斯坦':'polygon796',
+	'巴林':'polygon802',
+	'巴西':'polygon141',
+	'希腊':'polygon764',
+	'德国':'polygon698',
+	'意大利':'polygon749',
+	'挪威':'polygon651',
+	'捷克':'polygon697',
+	'摩洛哥':'polygon838',
+	'文莱':'polygon566',
+	'斐济':'polygon344',
+	'斯洛文尼亚':'polygon694',
+	'斯里兰卡':'polygon581',
+	'新加坡':'polygon526',
+	'新西兰':'polygon933,polygon934',
+	'日本':'polygon322',
+	'智利':'polygon1333',
+	'柬埔寨':'polygon570',
+	'比利时':'polygon704',
+	'沙特阿拉伯':'polygon801',
+	'法国':'polygon741',
+	'波兰':'polygon696',
+	'泰国':'polygon577',
+	'澳洲':'polygon895',
+	'爱尔兰共和国':'polygon711',
+	'爱沙尼亚':'polygon668',
+	'瑞典':'polygon655',
+	'瑞士':'polygon700',
+	'科威特':'polygon793',
+	'秘鲁':'polygon1274',
+	'立陶宛':'polygon673',
+	'缅甸':'polygon578',
+	'罗马尼亚':'polygon677',
+	'美国':'polygon1236,polygon133',
+	'芬兰':'path77',
+	'英国':'polygon728',
+	'荷兰':'polygon703',
+	'菲律宾':'polygon416,polygon394,polygon408,polygon421',
+	'葡萄牙':'polygon753',
+	'西班牙':'path83',
+	'越南':'polygon569',
+	'阿塞拜疆':'polygon785',
+	'阿尔巴尼亚':'polygon682',
+	'阿拉伯联合酋长国':'polygon803',
+	'阿曼':'polygon819',
+	'阿根廷':'polygon1278',
+	'韩国':'polygon338',
+	'马来西亚':'polygon562',
+	'马耳他':'polygon743'
+};
+CIIENEW.Roam.prototype.provinceMap={
+	'北京':'path21',
+	'天津':'path20',
+	'上海':'path26',
+	'重庆':'path10',
+	'河北':'path28',
+	'山西':'path12',
+	'辽宁':'path22',
+	'吉林':'path23',
+	'黑龙江':'path24',
+	'江苏':'path27',
+	'浙江':'path18',
+	'安徽':'path19',
+	'福建':'path17',
+	'江西':'path16',
+	'山东':'path25',
+	'河南':'path29',
+	'湖北':'path14',
+	'湖南':'path13',
+	'广东':'path15',
+	'海南':'path31',
+	'四川':'path5',
+	'贵州':'path8',
+	'云南':'path7',
+	'陕西':'path11',
+	'甘肃':'path1',
+	'青海':'path4',
+	'台湾':'path30',
+	'内蒙古':'path0',
+	'广西':'path9',
+	'西藏':'path6',
+	'宁夏':'path2',
+	'新疆':'path3'
+};
+
+CIIENEW.Roam.prototype.initialize=function(_hotspot){
+	if(_hotspot!=null){
+		this.hotspot=_hotspot;
+	}
+	this.dm=LSMScreen.DataManager.getInstance();
+	this.cdm=LSMScreen.CacheDataManager.getInstance();
+	
+	this.markWorld();
+	this.markChina();
+	
+	$('#world').on('click',this.logSvgPos.bind(this));
+	$('#switchBtn').on('click',this.switchRoamType.bind(this));
+	$('#airportroamclose').on('click',this.closeAirport.bind(this));
+	
+	
+	this.update();
+	setInterval(this.update.bind(this),60*1000);
+	
+	if(this.play) setInterval(this.posChange.bind(this),5*1000);
+	
+};
+CIIENEW.Roam.prototype.posChange=function(){
+	this.mapPosIndex=this.mapPosIndex%this.mapPosList.length;
+	var record=this.mapPosList[this.mapPosIndex];
+	$('#worldDiv').css('transform','scale('+record.scale+','+record.scale+')');
+	$('#worldDiv').css('transition','all 1s ease-in-out');
+	var width=$('#worldDiv').parent().width();
+	var height=$('#worldDiv').parent().height();
+	
+	var x=-(record.x-(width/2))*record.scale;
+	var y=-(record.y-(height/2))*record.scale;
+	
+	$('#worldDiv').animate({left:x+"px",top:y+"px"},1000);
+	
+	console.log(record.name+':'+x+','+y);
+	//{name:'北美洲',x:522,y:337}
+	this.mapPosIndex++;
+};
+CIIENEW.Roam.prototype.logSvgPos=function(e){
+//	2400*1120
+	console.log(e.clientX+','+e.clientY);
+};
+CIIENEW.Roam.prototype.markWorld=function(){
+	var list0=$('#world').find('polygon');
+	var list1=$('#world').find('path');
+	
+	for(var i=0;i<list0.length;i++){
+		$(list0[i]).attr('id','polygon'+i);
+	}
+	for(var i=0;i<list1.length;i++){
+		$(list1[i]).attr('id','path'+i);
+	}
+	
+	$('#world').find('text').text('');
+	
+	$('#world').find('polygon').css('fill','rgba(61,117,227,0.55)');
+	$('#world').find('path').css('fill','rgba(61,117,227,0.55)');
+	
+	$('#world').find('polygon').css('stroke','#142f6f');
+	$('#world').find('polygon').css('stroke-width','1');
+	
+	$('#world').find('path').css('stroke','#142f6f');
+	$('#world').find('path').css('stroke-width','1');
+	
+	$('#world').find('#polygon291').css('fill','rgba(151,229,255,0.45)');
+	$('#world').find('#polygon291').css('border','solid 1px #142f6f');
+};
+CIIENEW.Roam.prototype.markChina=function(){
+	var list0=$('#china').find('polygon');
+	var list1=$('#china').find('path');
+	
+	for(var i=0;i<list0.length;i++){
+		$(list0[i]).attr('id','polygon'+i);
+	}
+	for(var i=0;i<list1.length;i++){
+		$(list1[i]).attr('id','path'+i);
+	}
+	
+	$('#china').find('text').text('');
+	
+	$('#china').find('polygon').css('fill','rgba(61,117,227,0.55)');
+	$('#china').find('path').css('fill','rgba(61,117,227,0.55)');
+	
+	$('#china').find('polygon').css('stroke','#142f6f');
+	$('#china').find('polygon').css('stroke-width','0.5');
+	
+	$('#china').find('path').css('stroke','#142f6f');
+	$('#china').find('path').css('stroke-width','0.5');
+	
+	$('#china').find('#path26').css('fill','rgba(151,229,255,0.45)');
+	$('#china').find('#path26').css('border','solid 1px #142f6f');
+};
+CIIENEW.Roam.prototype.closeAirport=function(e){
+	this.hideAirRoam(true);
+};
+CIIENEW.Roam.prototype.updateHotspot=function(hot){
+	this.hotspot=hot;
+	if(this.hotspot=='进口博览会'){
+	}else{
+		this.hideAirRoam(true);
+	}
+	this.update();
+	
+};
+
+CIIENEW.Roam.prototype.switchRoamType=function(e){
+	var cls=$(e.currentTarget).attr('class');
+	if(cls=="roamcenterswitch_intl"){
+		$(e.currentTarget).attr('class','roamcenterswitch_pro');
+		$('#worldDiv').css('display','none');
+		$('#chinaDiv').css('display','block');
+		this.roamType='pro';
+	}else{
+		$(e.currentTarget).attr('class','roamcenterswitch_intl');
+		$('#chinaDiv').css('display','none');
+		$('#worldDiv').css('display','block');
+		this.roamType='intl';
+	}
+	this.update();
+	parent.updateRoamType(this.roamType);
+};
+
+CIIENEW.Roam.prototype.update=function(){
+	if(this.roamType=='intl'){
+		this.cdm.getIntlRoamTopN({topN:200,hot_name:this.hotspot},this.drawWorldChart.bind(this));
+	}else if(this.roamType=='pro'){
+		this.cdm.getProRoamTopN({topN:200,hot_name:this.hotspot},this.drawProChart.bind(this));
+	}
+	
+	this.cdm.getIntlRoamIn({
+		intl_name:null,
+		hot_name:'J-浦东机场'
+	},function(result){
+		var record=result.data;
+		record=record['J-浦东机场'];
+		var value=record.user_cnt+'';
+		var currentNum=$('#airportpd>div').length-1;
+		$('#airportpd>div').text('0');
+		for(var i=value.length-1;i>=0;i--){
+			$('#airportpd>div:eq('+currentNum+')').text(value.charAt(i));
+			currentNum--;
+		}
+	});
+	
+	this.cdm.getIntlRoamIn({
+		intl_name:null,
+		hot_name:'J-虹桥机场'
+	},function(result){
+		var record=result.data;
+		record=record['J-虹桥机场'];
+		var value=record.user_cnt+'';
+		var currentNum=$('#airportpd>div').length-1;
+		$('#airporthq>div').text('0');
+		for(var i=value.length-1;i>=0;i--){
+			$('#airporthq>div:eq('+currentNum+')').text(value.charAt(i));
+			currentNum--;
+		}
+	});
+};
+
+
+CIIENEW.Roam.prototype.drawProChart=function(result){
+	$('#tipDivPro').html('');
+	var list=result.data;
+	var map=this.provinceMap;
+	var colorList=[];
+	var max=0;
+	var colors=this.alarmColors;
+	for(var i=0;i<list.length;i++){
+		var record=list[i];
+		var name=record.pro_name.split('(')[0];
+		var value=record.user_cnt;
+		if(!isNaN(value)){
+			max=Math.max(max,value);
+		}
+		
+	}
+	$('#lv1').text((max/4*3).toFixed(0)+'~'+max);
+	$('#lv2').text((max/4*2).toFixed(0)+'~'+(max/4*3).toFixed(0));
+	$('#lv3').text((max/4*1).toFixed(0)+'~'+(max/4*2).toFixed(0));
+	$('#lv4').text('0~'+(max/4*1).toFixed(0));
+	for(var i=0;i<list.length;i++){
+		var record=list[i];
+		var name=record.pro_name.split('(')[0];
+		var value=record.user_cnt;
+		if(map[name]!=null){
+			var polygonIds=map[name];
+			var tmp=polygonIds.split(',');
+			var color=colors[Math.floor((value/max)*(colors.length-1))];
+			for(var j=0;j<tmp.length;j++){
+				var jqItem=$('#china').find('#'+tmp[j]);
+				jqItem.css('fill',color);
+				var display='';
+				if(i>=8){
+					display='display:none;';
+					if(jqItem.attr("pro_name")==null){
+						jqItem.attr("pro_name",name);
+						jqItem.on('mouseover',this.blockOverPro.bind(this));
+						jqItem.on('mouseout',this.blockOutPro.bind(this));
+					}
+				}
+				if(j==0){
+					var top=jqItem.offset().top;
+					var left=jqItem.offset().left;
+					
+					var width=jqItem.width();
+					var height=jqItem.height();
+					var centerX=(left*1+width/2);
+					var centerY=(top*1+height/2);
+					
+					centerX-=20;//气泡箭头位移
+					centerY-=65;//气泡箭头位移
+//					width:253px;
+//					height:68px;
+					
+//					console.log('top:'+top+',left:'+left);
+					var tip='<div pro_name="'+name+'" class="roammaptip" style="'+display+'padding:5px 0px 0px 40px;font-size:28px;position:absolute;top:'+centerY+'px;left:'+centerX+'px;">'
+					+'<span>'+name+'</span><span>'+value+'</span><span>人</span>'
+					+'</div>';
+					$('#tipDivPro').append(tip);
+				}
+				
+			}
+		}
+	}
+};
+CIIENEW.Roam.prototype.drawWorldChart=function(result){
+	$('#tipDiv').html('');
+	var list=result.data;
+	var map=this.polygonMap;
+	var colorList=[];
+	var max=0;
+	var colors=this.alarmColors;
+	for(var i=0;i<list.length;i++){
+		var record=list[i];
+		var name=record.intl_name.split('(')[0];
+		var value=record.user_cnt;
+		if(!isNaN(value)){
+			max=Math.max(max,value);
+		}
+		
+	}
+	$('#lv1').text((max/4*3).toFixed(0)+'~'+max);
+	$('#lv2').text((max/4*2).toFixed(0)+'~'+(max/4*3).toFixed(0));
+	$('#lv3').text((max/4*1).toFixed(0)+'~'+(max/4*2).toFixed(0));
+	$('#lv4').text('0~'+(max/4*1).toFixed(0));
+	for(var i=0;i<list.length;i++){
+		var record=list[i];
+		var name=record.intl_name.split('(')[0];
+		var value=record.user_cnt;
+		if(map[name]!=null){
+			var polygonIds=map[name];
+			var tmp=polygonIds.split(',');
+			var color=colors[Math.floor((value/max)*(colors.length-1))];
+			for(var j=0;j<tmp.length;j++){
+				var jqItem=$('#world').find('#'+tmp[j]);
+				jqItem.css('fill',color);
+				var display='';
+				if(i>=8){
+					display='display:none;';
+					if(jqItem.attr("intl_name")==null){
+						jqItem.attr("intl_name",name);
+						jqItem.on('mouseover',this.blockOver.bind(this));
+						jqItem.on('mouseout',this.blockOut.bind(this));
+					}
+				}
+				if(j==0){
+					var top=jqItem.offset().top;
+					var left=jqItem.offset().left;
+					
+					var width=jqItem.width();
+					var height=jqItem.height();
+					
+					var centerX=(left*1+width/2);
+					var centerY=(top*1+height/2);
+					
+					centerX-=20;//气泡箭头位移
+					centerY-=65;//气泡箭头位移
+//					width:253px;
+//					height:68px;
+					
+//					console.log('top:'+top+',left:'+left);
+					var tip='<div intl_name="'+name+'" class="roammaptip" style="'+display+'padding:5px 0px 0px 40px;font-size:28px;position:absolute;top:'+centerY+'px;left:'+centerX+'px;">'
+					+'<span>'+name+'</span><span>'+value+'</span><span>人</span>'
+					+'</div>';
+					$('#tipDiv').append(tip);
+				}
+				
+			}
+		}
+	}
+};
+
+CIIENEW.Roam.prototype.blockOver=function(e){
+	var intl_name=$(e.currentTarget).attr('intl_name');
+	$('.roammaptip[intl_name='+intl_name+']').css('display','block');
+	$('.roammaptip[intl_name='+intl_name+']').css('top',e.clientY-68);
+	$('.roammaptip[intl_name='+intl_name+']').css('left',e.clientX);
+};
+CIIENEW.Roam.prototype.blockOut=function(e){
+	var intl_name=$(e.currentTarget).attr('intl_name');
+	$('.roammaptip[intl_name='+intl_name+']').css('display','none');
+};
+
+CIIENEW.Roam.prototype.blockOverPro=function(e){
+	var pro_name=$(e.currentTarget).attr('pro_name');
+	$('.roammaptip[pro_name='+pro_name+']').css('display','block');
+	$('.roammaptip[pro_name='+pro_name+']').css('top',e.clientY-68);
+	$('.roammaptip[pro_name='+pro_name+']').css('left',e.clientX);
+};
+CIIENEW.Roam.prototype.blockOutPro=function(e){
+	var pro_name=$(e.currentTarget).attr('pro_name');
+	$('.roammaptip[pro_name='+pro_name+']').css('display','none');
+};
+
+CIIENEW.Roam.prototype.showAirRoam=function(isPermenent){
+	$('#airportroam').css('display','block');
+	if(isPermenent){
+		$('#airportroam').attr('isPermenent','true');
+	}
+};
+CIIENEW.Roam.prototype.hideAirRoam=function(force){
+	if(force){
+		$('#airportroam').attr('isPermenent','false');
+	}
+	if($('#airportroam').attr('isPermenent')!='true'){
+		$('#airportroam').css('display','none');
+	}
+};

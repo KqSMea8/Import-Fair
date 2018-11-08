@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config describe="拓扑右键菜单" >
+	<item id="saveTopo" name="保存拓扑"/>
+	<item id="historyAlarmPanel" name="历史告警"/>
+	<item id="customerPanel" name="关联客户信息"/>
+	<item id="bocePanel" name="拨测告警"/>
+	<item id="bocePerPanel" name="拨测性能报表"/>
+	<item id="bocePerPanel_2" name="业务拨测性能报表"/>
+	<item id="tousuPanel" name="投诉分析"/>
+	<item id="brasPanel" name="BRAS设备性能报表"/>
+	<item id="lnsPanel" name="LNS设备性能报表"/>
+	<item id="radiusPanel" name="Radius性能报表"/>
+	<item id="brasAlarmPanel" name="BRAS设备地址池利用率梯度告警"/>
+	<item id="lnsAlarmPanel" name="LNS设备地址池利用率梯度告警"/>
+</config>

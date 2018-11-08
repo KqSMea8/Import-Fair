@@ -1,0 +1,33 @@
+.ciienavibubble{
+	width:104px;
+	height:104px;
+	background:url(images/navi/bubble.png) center 0px no-repeat;
+	background-size:100% 100%;
+	cursor:pointer;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	z-index:1;
+}
+.ciienavibg{
+	width:354px;
+	background:url(images/navi/bg.png) center 0px no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	bottom:32px;
+	left:32px;
+	padding:10px;
+	font-size:48px;
+	color:#97e5ff;
+}
+
+.ciienaviitem{
+	width:332px;
+	height:120px;
+	padding:22px 28px 28px 28px;
+	cursor:pointer;
+}
+.ciienaviitemselected{
+	background:url(images/navi/selectborder.png) center 0px no-repeat;
+	background-size:100% 100%;
+}

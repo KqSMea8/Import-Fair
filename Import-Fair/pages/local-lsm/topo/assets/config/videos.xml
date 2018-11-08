@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config describe="动画配置">
+	<sms description="短信故障切换">
+		<item source="assets/video/sms/sms1" title="短信中心倒换" chartType="smschange"/> 
+		<item source="assets/video/sms/sms2" title="前置机故障" chartType="smschange2"/> 
+		<item source="assets/video/sms/sms3" title="业务处理机故障" chartType="smsnochange"/> 
+		<item source="assets/video/sms/sms4" title="电信网关故障"   chartType="DxChangeView"/> 
+		<item source="assets/video/sms/sms5" title="业务处理机故障"  chartType="DxNoChangeView"/> 
+	</sms>
+	<ipnet description="IP承载网故障切换">
+		<item source="assets/video/ipnet/ipnet1" title="CE单机故障"  chartType=""/> 
+		<item source="assets/video/ipnet/ipnet2" title="CE接入链路故障"   chartType=""/> 
+		<item source="assets/video/ipnet/ipnet3" title="MGW信令口主链路故障"  chartType=""/> 
+		<item source="assets/video/ipnet/ipnet4" title="MSC-S信令口主链路故障"  chartType=""/> 
+		<item source="assets/video/ipnet/ipnet5" title="媒体口链路故障"  chartType=""/> 
+		<item source="assets/video/ipnet/ipnet6" title="信令口备链路故障" /> 
+	</ipnet>
+	<gprs description="GPRS故障切换">
+		<item id="v1" source="assets/video/gprs/gprs"/> 
+	</gprs>
+</config>

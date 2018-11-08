@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<meta charset="UTF-8" http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%@ include file="/common/lib.jsp"%>
+<%@ include file="/common/bootstrap.jsp"%>
+<link type="text/css" rel="stylesheet" href="${ctx}/scripts/local-lsm/common/slide/css/reset.css" />
+<link type="text/css" rel="stylesheet" href="${ctx}/scripts/local-lsm/common/slide/css/style.css" />
+<link rel="stylesheet" href="${ctx}/static/styles/local-lsm/componentsStyle.css" />
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/common/slide/jquery_slide.js"></script>
+<link rel="stylesheet" href="${ctx}/static/styles/local-lsm/assets/controller/controller.css" />
+<title>控制器</title>
+</head>
+<body style="width:100%;height:100%;background:#000000;"> 
+	<div class="main_menu main">
+		<div class="container_image MainMenu">
+			<a href="javascript:void(0)" tip="0" class="i_btn prev_L"></a>
+			<a href="javascript:void(0)" tip="1" class="i_btn next_R"></a>
+			<ul class="slide_img">
+				<li name="screen_1">
+					<a href="javascript:void(0);"><img  src="${ctx}/static/styles/local-lsm/assets/controller/L_03.png" /></a>
+					<div class="bg"></div>
+				</li>
+				<li class="on" name="screen_2">
+					<a href="javascript:void(0)"><img  src="${ctx}/static/styles/local-lsm/assets/controller/C_03.png" /></a>
+					<div class="bg"></div>
+				</li>
+				<li name="screen_3">
+					<a href="javascript:void(0)"><img  src="${ctx}/static/styles/local-lsm/assets/controller/R_03.png" /></a>
+					<div class="bg"></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="ctrl_screen1 main">
+		<div id="screen1_regionkpi" ></div>
+		<div id="screen1_tabsub" >
+			<div id="screen1_tab" >
+				<ul class="nav navbar-nav">
+			         <li class="dropdown">
+			            <a href="#" class="tabli s1navtop">网元告警</a>
+			         </li>
+			          <li class="dropdown">
+			            <a href="#" class="tabli s1navtop">性能告警</a>
+			         </li>
+			          <li class="dropdown">
+			            <a href="#" class="tabli s1navtop">用户投诉</a>
+			         </li>
+			      </ul>
+			</div>
+			<div id="screen1_sub" >
+				<ul class="nav navbar-nav">
+			         <li class="dropdown">
+			            <a href="#" class="dropdown-toggle subli" data-toggle="dropdown">
+			            </a>
+			            <ul class="dropdown-menu">
+			               <li><a href="#" class="suba">子热点</a></li>
+			               <li><a href="#" class="suba">小区</a></li>
+			            </ul>
+			         </li>
+			          <li class="dropdown">
+			            <a href="#" class="dropdown-toggle subli" data-toggle="dropdown">
+			            </a>
+			            <ul class="dropdown-menu">
+			               <li><a href="#" class="suba">子热点</a></li>
+			               <li><a href="#" class="suba">小区</a></li>
+			            </ul>
+			         </li>
+			          <li class="dropdown">
+			            <a href="#" class="dropdown-toggle subli" data-toggle="dropdown">
+			            </a>
+			            <ul class="dropdown-menu">
+			               <li><a href="#" class="suba">子热点</a></li>
+			               <li><a href="#" class="suba">小区</a></li>
+			            </ul>
+			         </li>
+			          <li class="dropdown">
+			            <a href="#" class="dropdown-toggle subli" data-toggle="dropdown">
+			            </a>
+			            <ul class="dropdown-menu">
+			               <li><a href="#" class="suba">子热点</a></li>
+			               <li><a href="#" class="suba">小区</a></li>
+			            </ul>
+			         </li>
+			          <li class="dropdown">
+			            <a href="#" class="dropdown-toggle subli" data-toggle="dropdown">
+			            </a>
+			            <ul class="dropdown-menu">
+			               <li><a href="#" class="suba">子热点</a></li>
+			               <li><a href="#" class="suba">小区</a></li>
+			            </ul>
+			         </li>
+			      </ul>
+			</div>
+		</div>
+	</div>
+	<div class="ctrl_screen2 main">
+		<iframe id="map" style="width:100%;height:100%;" frameborder="no" src="" ></iframe>
+		<div class="screen2Btn" style="position:absolute;top:5px;left:50px;right:50px;">
+			<button class="btn btn-primary">中国博览会</button>
+			<button class="btn btn-primary">虹桥枢纽</button>
+			<button class="btn btn-primary">虹口足球场</button>
+			<button class="btn btn-primary">上海南站</button>
+			<button class="btn btn-primary">大宁商圈</button>
+			
+			<button class="btn btn-primary">交通枢纽</button>
+			<button class="btn btn-primary">寺庙</button>
+			<button class="btn btn-primary">商业场所</button>
+			<button class="btn btn-primary">游玩场所</button>
+			<button class="btn btn-primary">收费站</button>
+		</div>
+		<div class="screen2Btn_2"  style="position:absolute;bottom:5px;right:150px;">
+			<button class="btn btn-primary">卫星</button>
+			<button class="btn btn-primary">地图</button>
+			<button class="btn btn-primary">迪斯尼</button>
+		</div>
+	</div>
+	<div class="ctrl_screen3 main">
+		<div class="screen3Btn">
+			<button class="btn btn-primary">用户</button>
+			<button class="btn btn-primary">业务</button>
+			<button class="btn btn-primary">客流</button>
+			<button class="btn btn-primary">园区</button>
+		</div>
+		<div id="screen3Menu" class="container_image">
+			<a href="javascript:void(0)" tip="0" class="i_btn prev_L"></a>
+			<a href="javascript:void(0)" tip="1" class="i_btn next_R"></a>
+			<ul class="slide_img">
+				<li class="on">
+					<a href="javascript:void(0);"><img  src="${ctx}/static/styles/local-lsm/assets/controller/chart1.png" /></a>
+					<div class="bg"></div>
+				</li>
+				<li>
+					<a href="javascript:void(0)"><img  src="${ctx}/static/styles/local-lsm/assets/controller/chart2.png" /></a>
+					<div class="bg"></div>
+				</li>
+				<li>
+					<a href="javascript:void(0)"><img  src="${ctx}/static/styles/local-lsm/assets/controller/chart3.png" /></a>
+					<div class="bg"></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<span class="returnBtn">返回首页</span>
+	
+<!-- 	<form action="http://localhost:8787/LsmController/ShowFileUtils?id=test" method="post" enctype="multipart/form-data"> -->
+<!--         <input type="file" name="file" id="file" /> -->
+<!--         <input type="submit" value="上传" /> -->
+<!--     </form> -->
+</body>
+<%@ include file="/pages/local-lsm/common/screenbaseinclude.jsp"%>
+<script type="text/javascript" src="${ctx}/scripts/local-lsm/ctrl.js"></script>
+<script>
+	/** 立即执行方法*/
+	(function () { 
+		$("#map").height($(document).height());
+		var ctrl=new ScreenController.WsConnection(ScreenController.ROLE_CONTROLLER);
+		ctrl.initController();
+	}());
+</script>
+</html>

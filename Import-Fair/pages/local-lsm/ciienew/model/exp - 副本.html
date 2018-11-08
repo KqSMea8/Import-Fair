@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - FBX loader</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #000;
+				color: #fff;
+				margin: 0px;
+				overflow: hidden;
+			}
+			#info {
+				color: #fff;
+				position: absolute;
+				top: 10px;
+				width: 100%;
+				text-align: center;
+				z-index: 100;
+				display:block;
+			}
+			#info a {
+				color: #046;
+				font-weight: bold;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div id="info">
+			<a href="http://threejs.org" target="_blank" rel="noopener">three.js</a> - FBXLoader<br />
+			Character and animation from <a href="https://www.mixamo.com/" target="_blank" rel="noopener">Mixamo</a>
+		</div>
+		<div id="ctrlPanel" style="z-index:101;position:absolute;right:0px;top:0px;">
+			<button type="button" onclick="rise();">升起</button>
+			<button type="button" onclick="down();">降下</button>
+			<button type="button" onclick="orbitCtrl();">orbit</button>
+			<button type="button" onclick="freeCamera();">free</button>
+		</div>
+		<div style="position: absolute; z-index: 3001; overflow: hidden; opacity: 1; cursor: default; pointer-events: none; background: none; border-style: solid; border-color: rgb(0, 0, 0); border-width: 0px; border-radius: 0px; width: 300px; height: 300px; transform: translateZ(1e+12px) translate(0px, 26px) translate(0px, 150px) rotate(0deg) translate(0px, -150px);"><divstyle="position: absolute; z-index: 3001; overflow: visible; opacity: 1; cursor: pointer; pointer-events: auto; background: none; width: 254px; height: 303px; transform: translateZ(1e+12px) translate(23px, -1px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"><div style="position: absolute; z-index: 3001; overflow: visible; opacity: 1; cursor: pointer; pointer-events: auto; background-image: url(&quot;images/ov.png&quot;); width: 194px; height: 243px; background-position: 0px 0px; background-size: 194px 243px; transform: translateZ(1e+12px) translate(30px, 30px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"><div style="display: none; position: absolute; z-index: 3003; overflow: visible; opacity: 1; cursor: pointer; pointer-events: auto; background-image: url(&quot;images/mappoint.png&quot;); width: 12px; height: 12px; background-position: 0px 0px; background-size: 12px 12px; transform: translateZ(1e+12px) translate(-6px, -6px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"></div><div class="guidePoint" title="南广场正中" style="position: absolute; z-index: 3003; overflow: visible; opacity: 1; cursor: pointer; pointer-events: auto; background-image: url(&quot;images/mappointactive.png&quot;); width: 14px; height: 14px; background-position: 0px 0px; background-size: 14px 14px; transform: translateZ(1e+12px) translate(92px, 239px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"></div><div class="guidePoint" title="中心圆广场" style="position: absolute; z-index: 3003; overflow: visible; opacity: 1; cursor: pointer; pointer-events: auto; background-image: url(&quot;images/mappoint.png&quot;); width: 12px; height: 12px; background-position: 0px 0px; background-size: 12px 12px; transform: translateZ(1e+12px) translate(92px, 141px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"></div><div class="guidePoint" title="1H外" style="position: absolute; z-index: 3003; overflow: visible; opacity: 1; cursor: pointer; pointer-events: auto; background-image: url(&quot;images/mappoint.png&quot;); width: 12px; height: 12px; background-position: 0px 0px; background-size: 12px 12px; transform: translateZ(1e+12px) translate(159px, 100px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"></div><div class="guidePoint" title="1H内" style="position: absolute; z-index: 3003; overflow: visible; opacity: 1; cursor: pointer; pointer-events: auto; background-image: url(&quot;images/mappoint.png&quot;); width: 12px; height: 12px; background-position: 0px 0px; background-size: 12px 12px; transform: translateZ(1e+12px) translate(142px, 115px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"></div><div class="guidePoint" title="2H内" style="position: absolute; z-index: 3003; overflow: visible; opacity: 1; cursor: pointer; pointer-events: auto; background-image: url(&quot;images/mappoint.png&quot;); width: 12px; height: 12px; background-position: 0px 0px; background-size: 12px 12px; transform: translateZ(1e+12px) translate(119px, 89px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"></div><div class="guidePoint" title="2H外" style="position: absolute; z-index: 3003; overflow: visible; opacity: 1; cursor: pointer; pointer-events: auto; background-image: url(&quot;images/mappoint.png&quot;); width: 12px; height: 12px; background-position: 0px 0px; background-size: 12px 12px; transform: translateZ(1e+12px) translate(132px, 74px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"></div><div class="guidePoint" title="8.1H内" style="position: absolute; z-index: 3003; overflow: visible; opacity: 1; cursor: pointer; pointer-events: auto; background-image: url(&quot;images/mappoint.png&quot;); width: 12px; height: 12px; background-position: 0px 0px; background-size: 12px 12px; transform: translateZ(1e+12px) translate(134px, 160px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"></div><div class="guidePoint" title="8.1H中" style="position: absolute; z-index: 3003; overflow: visible; opacity: 1; cursor: pointer; pointer-events: auto; background-image: url(&quot;images/mappoint.png&quot;); width: 12px; height: 12px; background-position: 0px 0px; background-size: 12px 12px; transform: translateZ(1e+12px) translate(151px, 175px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"></div><div class="guidePoint" title="8.1H外" style="position: absolute; z-index: 3003; overflow: visible; opacity: 1; cursor: pointer; pointer-events: auto; background-image: url(&quot;images/mappoint.png&quot;); width: 12px; height: 12px; background-position: 0px 0px; background-size: 12px 12px; transform: translateZ(1e+12px) translate(168px, 190px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"></div><div class="guidePoint" title="7.1H外" style="position: absolute; z-index: 3003; overflow: visible; opacity: 1; cursor: pointer; pointer-events: auto; background-image: url(&quot;images/mappoint.png&quot;); width: 12px; height: 12px; background-position: 0px 0px; background-size: 12px 12px; transform: translateZ(1e+12px) translate(144px, 214px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"></div><div class="guidePoint" title="7.1H中" style="position: absolute; z-index: 3003; overflow: visible; opacity: 1; cursor: pointer; pointer-events: auto; background-image: url(&quot;images/mappoint.png&quot;); width: 12px; height: 12px; background-position: 0px 0px; background-size: 12px 12px; transform: translateZ(1e+12px) translate(124px, 198px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"></div><div class="guidePoint" title="7.1H内" style="position: absolute; z-index: 3003; overflow: visible; opacity: 1; cursor: pointer; pointer-events: auto; background-image: url(&quot;images/mappoint.png&quot;); width: 12px; height: 12px; background-position: 0px 0px; background-size: 12px 12px; transform: translateZ(1e+12px) translate(111px, 182px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"></div><div class="guidePoint" title="test" style="position: absolute; z-index: 3001; overflow: visible; opacity: 1; cursor: pointer; pointer-events: none; background: none; width: 77px; height: 77px; transform: translateZ(1e+12px) translate(61px, 208px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"><svg width="81" height="81" style="position: absolute; left: -2px; top: -2px;"><path stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="0" fill="rgb(255,255,255)" fill-opacity="0.5" d="M 40,40 L 21.0509801321489,6.4860529622698095 A 38.5,38.5 0 0 1 78.48568377584817,38.9501693920366 Z" style="pointer-events: visiblePainted; cursor: pointer; transform: scale(1, 1);"></path></svg></div></div></div><div class="guidePoint" title="test" style="display: none; position: absolute; z-index: 3001; overflow: visible; opacity: 1; cursor: pointer; pointer-events: auto; background: none; width: 254px; height: 303px; transform: translateZ(1e+12px) translate(23px, -1px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"><div class="guidePoint" title="test" style="position: absolute; z-index: 3001; overflow: visible; opacity: 1; cursor: pointer; pointer-events: auto; background-image: url(&quot;images/15040765842C0F.png&quot;); width: 194px; height: 243px; background-position: 0px 0px; background-size: 194px 243px; transform: translateZ(1e+12px) translate(30px, 30px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"><div class="guidePoint" title="test" style="position: absolute; z-index: 3001; overflow: visible; opacity: 1; cursor: pointer; pointer-events: none; background: none; width: 77px; height: 77px; transform: translateZ(1e+12px) translate(-38px, -38px) translate(0px, 0px) rotate(0deg) translate(0px, 0px);"><svg width="81" height="81" style="position: absolute; left: -2px; top: -2px;"><path stroke="rgb(0,0,0)" stroke-width="1" stroke-opacity="0" fill="rgb(255,255,255)" fill-opacity="0.5" d="M 40,40 L 62.33013488048833,71.36263822160372 A 38.5,38.5 0 0 1 1.8319405482483688,45.04472374739717 Z" style="pointer-events: visiblePainted; cursor: pointer; transform: scale(1, 1);"></path></svg></div></div></div></div>
+		
+		
+		
+		<script src="build/three.js"></script>
+
+		<script src="js/libs/inflate.min.js"></script>
+		<script src="js/loaders/FBXLoader.js"></script>
+
+		<script src="js/controls/OrbitControls.js"></script>
+		<script src="js/objects/Sky.js"></script>
+		<script src="js/Detector.js"></script>
+		<script src="js/libs/stats.min.js"></script>
+		<script src="scripts/libs/jquery.min.js"></script>
+		<script type="x-shader/x-vertex" id="vertexshader">
+
+			attribute float size;
+
+			varying vec3 vColor;
+
+			void main() {
+
+				vColor = color;
+
+				vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+
+				gl_PointSize = size * ( 300.0 / -mvPosition.z );
+
+				gl_Position = projectionMatrix * mvPosition;
+
+			}
+
+		</script>
+
+		<script type="x-shader/x-fragment" id="fragmentshader">
+
+			uniform sampler2D texture;
+
+			varying vec3 vColor;
+
+			void main() {
+
+				gl_FragColor = vec4( vColor, 1.0 );
+
+				gl_FragColor = gl_FragColor * texture2D( texture, gl_PointCoord );
+
+			}
+
+		</script>
+		
+		<script>
+//_tagofficewall _tagwall _taglv1wall
+			var CAMERA_MAP={
+				'南广场正中':{x:685.1529765377911,y:460.0899227711982,z:911.3142551956929},
+			};
+			$(function(){
+				$('.guidePoint').on('click',guidePointClicked);
+			});
+			
+			var PAN_SPEED=10;
+			var moveForward = false;
+			var moveBackward = false;
+			var moveLeft = false;
+			var moveRight = false;
+			
+			var moveZup = false;
+			var moveZdown=false;
+			
+			var mouseLeftDown=false;
+			var mouseDownVector3=null;
+			var mouseMoveVector3=null;
+			var mouseDownCameraTarget=null;
+			
+			
+			var onMouseDown=function(event){
+				mouseLeftDown=true;
+				mouseDownVector3=getMouseVector3(event.clientX,event.clientY).negate();
+				mouseDownCameraTarget=camera.getWorldDirection ();
+			}
+			var onMouseUp=function(event){
+				mouseLeftDown=false;
+			}
+			var onMouseMove=function(event){
+				if(mouseLeftDown){
+					mouseMoveVector3=getMouseVector3(event.clientX,event.clientY);
+					mouseMoveVector3=mouseMoveVector3.add(mouseDownVector3);
+				}
+				
+			}
+			
+			var onKeyDown = function ( event ) {
+
+					switch ( event.keyCode ) {
+
+						case 38: // up
+						case 87: // w
+							moveForward = true;
+							break;
+
+						case 37: // left
+						case 65: // a
+							moveLeft = true; break;
+
+						case 40: // down
+						case 83: // s
+							moveBackward = true;
+							break;
+
+						case 39: // right
+						case 68: // d
+							moveRight = true;
+							break;
+
+						case 90: // z
+							moveZdown = true;
+							break;
+						case 88: // x
+							moveZup = true;
+							break;
+
+					}
+
+				};
+
+				var onKeyUp = function ( event ) {
+
+					switch( event.keyCode ) {
+
+						case 38: // up
+						case 87: // w
+							moveForward = false;
+							break;
+
+						case 37: // left
+						case 65: // a
+							moveLeft = false;
+							break;
+
+						case 40: // down
+						case 83: // s
+							moveBackward = false;
+							break;
+
+						case 39: // right
+						case 68: // d
+							moveRight = false;
+							break;
+						case 90: // z
+							moveZdown = false;
+							break;
+						case 88: // x
+							moveZup = false;
+							break;
+
+					}
+
+				};
+			
+			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+			
+			var modelObject=null;
+			
+			var lv2Moving=false;
+			var lv2Group=null;
+			var lv2OriginY=0;
+			var lv2RiseY=400;
+			var lv2TargetY=0;
+			
+			var lv2Tag='_tagwall';
+			var lv1Tag='_taglv1wall';
+			//685.1529765377911,460.0899227711982,911.3142551956929
+			var downPos={x:685.1529765377911,y:460.0899227711982,z:911.3142551956929};
+			var risePos={x:574.8567551374084,y:246.37720501432494,z:-648.5433196680667};
+			
+			var FRAME_DELTA=10;
+			
+			var container, stats, controls=null;
+			var camera, scene, renderer, light;
+			var sky,sunSphere;
+			
+			var particleSystem, uniforms, geometry;
+
+			var particles = 10000;
+			var particleSize = 20;
+			
+			var originMaterialMap={};
+			
+
+			var clock = new THREE.Clock();
+
+			var mixers = [];
+			
+			var lastAnimateTime=null;
+
+			init();
+			animate();
+
+			function init() {
+
+				container = document.createElement( 'div' );
+				document.body.appendChild( container );
+
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera.position.set( downPos.x,downPos.y,downPos.z );
+				camera.lookAt(0, 100, 0);
+				//controls = new THREE.OrbitControls( camera );
+				//controls.target.set( 0, 100, 0 );
+				//controls.update();
+
+				scene = new THREE.Scene();
+				scene.background = new THREE.Color( 0xa0a0a0 );
+				//scene.fog = new THREE.Fog( 0xa0a0a0, 200, 1000 );
+				
+				
+				//粒子效果
+				uniforms = {
+
+					texture:   { value: new THREE.TextureLoader().load( "textures/sprites/snowflake7_alpha.png" ) }
+
+				};
+
+				var shaderMaterial = new THREE.ShaderMaterial( {
+
+					uniforms:       uniforms,
+					vertexShader:   document.getElementById( 'vertexshader' ).textContent,
+					fragmentShader: document.getElementById( 'fragmentshader' ).textContent,
+					
+					blending:       THREE.AdditiveBlending,
+					depthTest:      false,
+					transparent:    true,
+					vertexColors:   true
+
+				});
+
+
+				var radius = 30;
+				
+				geometry = new THREE.BufferGeometry();
+				var baseX=-81.62353515625;//-81.62353515625,125.88363647460938,-20.49648666381836
+				var baseY=60;
+				var baseZ=165.88363647460938;
+				var positions = [];
+				var colors = [];
+				var sizes = [];
+
+				var color = new THREE.Color();
+
+				for ( var i = 0; i < particles; i ++ ) {
+
+					positions.push( baseX+( Math.random() * 2 - 1 ) * radius );
+					positions.push( baseY+( Math.random() * 2 - 1 ) * radius );
+					positions.push( baseZ+( Math.random() * 2 - 1 ) * radius );
+
+					color.setHSL( i / particles, 1.0, 1.0 );
+
+					//colors.push( color.r, color.g, color.b );
+					colors.push( color.r, 0, 0 );
+					sizes.push(particleSize);
+
+				}
+				geometry.addAttribute( 'position', new THREE.Float32BufferAttribute( positions, 3 ) );
+				geometry.addAttribute( 'color', new THREE.Float32BufferAttribute( colors, 3 ) );
+				geometry.addAttribute( 'size', new THREE.Float32BufferAttribute( sizes, 1 ).setDynamic( true ) );
+
+				particleSystem = new THREE.Points( geometry, shaderMaterial );
+
+				scene.add( particleSystem );
+				
+				/////////////////////////////////
+
+				light = new THREE.HemisphereLight( 0xffffff, 0x444444,0.7 );
+				light.position.set( 0, 200, 0 );
+				scene.add( light );
+
+				light = new THREE.DirectionalLight( 0xffffff );
+				light.position.set( 0, 200, 100 );
+				light.castShadow = true;
+				light.shadow.camera.top = 180;
+				light.shadow.camera.bottom = -100;
+				light.shadow.camera.left = -120;
+				light.shadow.camera.right = 120;
+				scene.add( light );
+
+				// scene.add( new THREE.CameraHelper( light.shadow.camera ) );
+
+				// ground
+				var mesh = new THREE.Mesh( new THREE.PlaneGeometry( 2000, 2000 ), new THREE.MeshPhongMaterial( { color: 0x999999, depthWrite: false } ) );
+				mesh.rotation.x = - Math.PI / 2;
+				mesh.receiveShadow = true;
+				//scene.add( mesh );
+
+				var grid = new THREE.GridHelper( 2000, 20, 0x000000, 0x000000 );
+				grid.material.opacity = 0.2;
+				grid.material.transparent = true;
+				//scene.add( grid );
+				
+				scene.background = new THREE.CubeTextureLoader()
+				 .setPath( 'textures/cube/skybox/' )
+				 .load( [ 'px.jpg', 'nx.jpg', 'py.jpg', 'ny.jpg', 'pz.jpg', 'nz.jpg' ] );
+
+				// model
+				var loader = new THREE.FBXLoader();
+				loader.load( 'models/fbx/exp2.FBX', function ( object ) {
+					
+					modelObject=object;
+					modelObject.traverse( function ( child ) {
+						if(child.name=='router'){
+							console.log(child.position.x+','+child.position.y+','+child.position.z);
+						}
+						if ( child.type=='Group'&&child.name=='ALL_LV2' ) {
+							lv2Group=child;
+							lv2OriginY=lv2TargetY=lv2Group.position.y;
+							return;
+							//child.castShadow = true;
+							//child.receiveShadow = true;
+							
+							
+						}else if ( child.isMesh ) {
+							
+							child.castShadow = true;
+							child.receiveShadow = true;
+							
+							
+							
+							
+						}
+
+					} );
+					
+					highLightTag(lv2Tag);
+					scene.add( object );
+
+				} );
+
+				renderer = new THREE.WebGLRenderer({precision:'lowp',antialias:true,powerPreference:'low-power"',depth:true});
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.shadowMap.enabled = true;
+				container.appendChild( renderer.domElement );
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+				// stats
+				stats = new Stats();
+				container.appendChild( stats.dom );
+				
+				
+				document.addEventListener( 'keydown', onKeyDown, false );
+				document.addEventListener( 'keyup', onKeyUp, false );
+				
+				document.addEventListener( 'mousedown', onMouseDown, false );
+				document.addEventListener( 'mouseup', onMouseUp, false );
+				document.addEventListener( 'mousemove', onMouseMove, false );
+				
+				
+
+			}
+
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			//
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				//console.log('x:'+camera.position.x+',y:'+camera.position.y+',z:'+camera.position.z);
+				
+				var delta=0;
+				if(lastAnimateTime==null){
+					lastAnimateTime=new Date();
+				}else{
+					var now=new Date();
+					delta=now.getTime()-lastAnimateTime.getTime();
+					delta=delta/(1000/60);
+					lastAnimateTime=now;
+					
+					var yMove=delta*FRAME_DELTA;
+					if(lv2Group!=null){
+						var y=lv2Group.position.y;
+						if(y-lv2TargetY>yMove){//going down
+							lv2Group.position.y-=yMove;
+							controlLv2Opacity();
+						}else if(y-lv2TargetY<-yMove){//going rise
+							lv2Group.position.y+=yMove;
+							controlLv2Opacity();
+						}else if(y!=lv2TargetY){
+							lv2Group.position.y=lv2TargetY;
+							if(lv2Moving){
+								controlLv2Opacity();
+								lv2MoveEnd();
+							}
+						}
+					}
+					
+					
+					
+					
+				}
+				
+				//摄像机处理
+				if(controls==null){
+					var move=delta*PAN_SPEED;
+					var cameraDir=camera.getWorldDirection ();
+					cameraDir.normalize();
+					
+					var forward=0;
+					var backward=0;
+					var left=0;
+					var right=0;
+					
+					var up=0;
+					var down=0;
+					
+					
+					if(moveForward){
+						forward=move;
+					}
+					if(moveBackward){
+						backward=move;
+					}
+					if(moveLeft){
+						left=move;
+					}
+					if(moveRight){
+						right=move;
+					}
+					if(moveZup){
+						up=move;
+					}
+					if(moveZdown){
+						down=move;
+					}
+					
+					
+					
+					var dir=new THREE.Vector3(right-left,up-down,backward-forward);
+					if(dir.length()>0){
+						dir.normalize();
+						camera.translateOnAxis(dir,move);
+					}
+					
+					if(mouseLeftDown){
+						//mouseDownVector3 mouseMoveVector3 mouseDownCameraTarget
+						
+						
+						var originTarget=camera.position.clone().add(mouseDownCameraTarget);
+						var newTarget=originTarget.clone().add(mouseMoveVector3)
+						var angle=newTarget.angleTo(originTarget);
+						var upDir=camera.up;
+						//camera.lookAt(newTarget);
+						camera.rotateOnWorldAxis(upDir,angle);
+						console.log('angle:'+angle);
+					}
+					
+					
+				}
+				
+				
+				
+				//粒子效果随机
+				var time = Date.now() * 0.005;
+
+				//particleSystem.rotation.z = 0.01 * time;
+
+				var sizes = geometry.attributes.size.array;
+
+				for ( var i = 0; i < particles; i++ ) {
+
+					sizes[ i ] = particleSize/2 * ( 1 + Math.sin( 0.1 * i + time ) );
+
+				}
+
+				geometry.attributes.size.needsUpdate = true;
+				/////////////////
+
+				renderer.render( scene, camera );
+
+				stats.update();
+
+			}
+			
+			function rise(){
+				if(lv2Moving==false){
+					lv2TargetY=lv2RiseY;
+					lv2Moving=true;
+				}
+			}
+			
+			function down(){
+				if(lv2Moving==false){
+					lv2TargetY=lv2OriginY;
+					lv2Moving=true;
+				}
+			}
+			
+			function lv2MoveEnd(){
+				lv2Moving=false;
+				if(lv2TargetY==lv2OriginY){//down
+					highLightTag(lv2Tag);
+					camera.position.set( downPos.x,downPos.y,downPos.z );
+					camera.lookAt(0,100,0);
+				}else if(lv2TargetY==lv2RiseY){//rise
+					highLightTag(lv1Tag);
+					camera.position.set( risePos.x,risePos.y,risePos.z );
+					camera.lookAt(0,100,0);
+				}
+			}
+			function controlLv2Opacity(){
+				var y=lv2Group.position.y;
+				var opacity=1-Math.abs(y-lv2OriginY)/(lv2RiseY-lv2OriginY);
+				lv2Group.traverse( function ( child ) {
+					if ( child.isMesh ) {
+						if(child.material.length>0){
+							var tmp2=[];
+							var i=0;
+							for(i=0;i<child.material.length;i++){
+								var material=child.material[i].clone();
+								material.setValues({opacity:opacity,transparent:true});
+								tmp2.push(material);
+							}
+							child.material=tmp2;
+						}else{
+							var material=child.material.clone();
+							material.setValues({opacity:opacity,transparent:true});
+							child.material=material;
+						}
+					}
+				});
+			}
+			function highLightTag(tag){
+				modelObject.traverse( function ( child ) {
+
+						if ( child.isMesh ) {
+							if(child.name.indexOf(tag)!=-1){
+								if(child.material.length>0){
+									var tmp=[];
+									var tmp2=[];
+									var i=0;
+									for(i=0;i<child.material.length;i++){
+										tmp.push(child.material[i].clone());
+									}
+									if(originMaterialMap[child.name]==null){
+										originMaterialMap[child.name]=tmp;
+									}
+									for(i=0;i<child.material.length;i++){
+										var material=child.material[i].clone();
+										material.setValues({color:0xffb200,opacity:0.7,transparent:true});
+										tmp2.push(material);
+									}
+									child.material=tmp2;
+								}else{
+									if(originMaterialMap[child.name]==null){
+										originMaterialMap[child.name]=child.material.clone();
+									}
+									var material=child.material.clone();
+									material.setValues({color:0xffb200,opacity:0.7,transparent:true});//emissive:0xffb200,emissiveIntensity:0.8 //0xffb200
+									child.material=material;
+								}
+								
+							}else{
+								if(child.name.indexOf('_tagwall')!=-1){//2楼隐藏不做还原
+								
+								}else{
+									if(originMaterialMap[child.name]!=null){
+										child.material=originMaterialMap[child.name];
+									}
+								}
+								
+							}
+						}
+
+					} );
+			}
+			
+			function guidePointClicked(e){
+				var tip=$(e.currentTarget).attr('title');
+				alert(tip);
+			}
+			
+			function orbitCtrl(){
+				if(controls==null){
+					controls = new THREE.OrbitControls( camera );
+					controls.target.set( 0, 100, 0 );
+					controls.update();
+				}
+			}
+			
+			function freeCamera(){
+				if(controls!=null){
+					controls.dispose();
+					controls=null;
+				}
+			}
+			
+			function getMouseVector3(clientX,clientY){
+				var mv = new THREE.Vector3(
+					(clientX / window.innerWidth) * 2 - 1,
+					-(clientY / window.innerHeight) * 2 + 1,
+					0.5 );
+				mv.unproject(this.camera);   //这句将一个向量转成threejs坐标
+				return mv;
+			}
+
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,323 @@
+
+.titleKpi{
+  font-family:"Let's go Digital Regular";
+  font-size:0.8em;
+  text-align: center;
+  line-height:10px;
+  text-decoration: none;
+}
+
+
+.ui-state-default .ui-icon {
+    background-image: url("images/ui-icons_ffffff_256x240.png");
+}
+
+
+/**jqgrid边框背景*/
+.ui-widget-content {
+    border: 1px none #393F4F;
+    background: #021e38;
+    color: #ffffff;
+}
+
+/**jqgrid 表头背景*/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid #000000;
+    background: #012d72;
+    font-weight: normal;
+    color: #ffffff;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    border: 1px solid #0503d6;
+    background: #0503d6;
+    color: #ffffff;
+}
+/**jqgrid 奇数行颜色*/
+.oddGrayTableRow {
+	background: #164454;
+}
+
+
+.plainText{
+	color:#ffffff;
+}
+.colorText{
+	color:#00fcff;
+}
+
+.ui-jqgrid .ui-jqgrid-pager {
+    border-left: 0 none !important;
+    border-right: 0 none !important;
+    border-bottom: 0 none !important;
+    border-top: 0 none;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+    height: 35px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 22px;
+    
+}
+
+/**================MultiTypeDeviceKpiTable专用样式======================*/
+.ui-jqgrid .ui-jqgrid-view {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    padding: 0;
+    font-size: 30px;
+    text-indent: :5px;
+}
+.ui-jqgrid .ui-jqgrid-htable th {
+	height: 50px;
+    line-height: 50px;
+}
+.ui-jqgrid tr.jqgrow td {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-family:"afta_sansregular";
+    font-weight:bold;
+}
+.ui-jqgrid tr.jqgrow:hover{
+    background:#012d72;
+}
+
+
+.deviceNav{
+	background:#1D2025;
+}
+.deviceNav li{
+	text-align:center;
+	cursor:pointer;
+}
+.deviceNav li a{
+	font-size:20px;
+}
+
+.deviceNav li .deviceNavBottom{
+	position:absolute;
+	bottom:0px;
+	height:5px;
+	width:100%;
+}
+.deviceNav li .deviceNavBottomSelected{
+	background:#3B8BC8;
+}
+
+
+
+/**jqgrid边框背景*/
+.MultiTypeDeviceKpiTable .ui-widget-content {
+    border: 2px solid #3B8BC8;
+    background: #393F4F;
+    color: #ffffff;
+}
+
+.MultiTypeDeviceKpiTable .ui-jqgrid tr.jqgrow td {
+    font-weight: normal;
+    overflow: hidden;
+    white-space: pre;
+    height: 40px;
+    padding: 0 0px 0 0px;
+    border-bottom-width: 1px;
+    border-bottom-color: inherit;
+    border-bottom-style: solid;
+    font-size:20px;
+}
+
+/**DL4_right_content 迪士尼区域详情表格*/
+.DL4_right_content .ui-jqgrid .ui-jqgrid-htable th div {
+    overflow: hidden;
+    position: relative;
+    height: 30px;
+    margin: .4em .15em;
+}
+.DL4_right_content .ui-jqgrid .ui-jqgrid-htable th {
+    height: 30px;
+    line-height: 30px;
+}
+
+
+.fillCellBg{
+	background: #0D6793;
+	display:inline-block;
+	float:left;
+	left:0px;
+	top:0px;
+	text-align: left;
+	font-size:20px;
+	line-height: 40px;
+	text-indent: :5px;
+	font-family: "Let's go Digital Regular";
+	color:#FDF25E;
+	font-size:28px;
+}
+.vendorCell{
+	background: #0F2D55;
+}
+
+/**================MultiTypeDeviceKpiTable专用样式 end======================*/
+.batteryFull{
+	background:#6CA587;
+	border:1px solid #6CA587;
+	-moz-border-radius: 5px;      /* Gecko browsers */
+    -webkit-border-radius: 5px;   /* Webkit browsers */
+    border-radius:5px;            /* W3C syntax */
+}
+.batteryEmpty{
+	background:#7C7C7C;
+	border:1px solid #7C7C7C;
+	-moz-border-radius: 5px;      /* Gecko browsers */
+    -webkit-border-radius: 5px;   /* Webkit browsers */
+    border-radius:5px;            /* W3C syntax */
+}
+
+
+.batteryValue div{
+	font-size:16px;
+}
+.batteryValue{
+	text-indent: 5px;
+	font-size:24px;
+	font-family: "Let's go Digital Regular";
+	color:#FDF25E;
+	line-height: 24px;
+}
+.customScatter{
+	border-left:1px solid #ffffff;
+	border-bottom:1px solid #ffffff;
+	position:absolute;
+	bottom:30px;
+	left:30px;
+}
+
+.backBtn{
+	cursor:pointer;
+	float:right;
+	font-size:14px;
+	line-height:14px;
+	margin-top:18px;
+	display:none;
+}
+
+.tp2_box_SAEGW .alarmTopoNode i{
+	background: url(images/SAEGW_red.png) center 0px no-repeat
+}
+.tp2_box_MME .alarmTopoNode i{
+	background: url(images/MME_red.png) center 0px no-repeat
+}
+.alarmTopoNode span{
+	color:red;
+}
+
+.KPI_green div{
+	color:black;
+}
+.KPI_red div{
+	color:white;
+}
+
+.KPI_red .KPI1_span2{
+	font-size:2.4em;
+}
+
+.alarmBox{
+	border-color: #ff0000;
+}
+.alarmBox span{
+	color:#ff0000;
+}
+.icon-Chart{
+	float:right;
+	margin-right:5px;
+	cursor:pointer;
+}
+.arrow{
+	pointer-events: none;
+}
+.arrow div{
+	pointer-events: none;
+}
+
+.tempWin{
+	background:#011025;
+	border:1px solid #02d9eb;
+	filter:alpha(opacity=95); 
+	-moz-opacity:0.95; 
+	opacity:0.95;
+}
+
+.tempWinTitle{
+	font-size:24px;
+	font-weight:bold;
+	color:#ffffff;
+	text-indent: 10px;
+}
+.tempWinTitle div{
+	color:#ffffff;
+}
+.tempWinContent{
+	
+}
+.tempWinClose{
+	cursor:pointer;
+	position:absolute;
+	right:10px;
+	top:5px;
+	width:48px;
+	height:48px;
+	background: url(images/Panel_closeButtonUpSkin.png) center 0px no-repeat;
+	float:right;
+}
+
+.tempWinReturn{
+	cursor:pointer;
+	position:absolute;
+	right:50px;
+	top:5px;
+	width:48px;
+	height:48px;
+	background: url(images/back.png) center 0px no-repeat;
+	float:right;
+}
+input{
+	color:#000000;
+}
+
+.alarmLv0{
+	background-color: #167c1a;
+	color:white;
+}
+.alarmLv1{
+	background-color: #ff0000;
+	color:white;
+}
+.alarmLv2{
+	background-color: #ff6c00;
+	color:white;
+}
+.alarmLv3{
+	background-color: #FFFF00;
+	color:black;
+}
+.alarmLv4{
+	background-color: #00E8FD;
+	color:black;
+}
+.alarmLv0Txt{
+	color:white;
+}
+.alarmLv1Txt{
+	color:#ff0000;
+}
+.alarmLv2Txt{
+	color:#ff6c00;
+}
+.alarmLv3Txt{
+	color:#FFFF00;
+}
+.alarmLv4Txt{
+	color:#00E8FD;
+}

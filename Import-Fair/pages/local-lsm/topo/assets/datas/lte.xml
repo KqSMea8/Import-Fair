@@ -1,0 +1,62 @@
+<Topo from="CACHE" id="assets/datas/gprs.xml" name="LTE核心拓扑">
+  <Groups>
+    <Group resourceType="" id="group1" name="" resourceId="group1" expand="true" image="assets/images/icons/group/c0.png" x="153.96428571428578" y="467.5499999999999"/>
+    <Group resourceType="" id="group2" name="" resourceId="group2" expand="true" image="assets/images/icons/group/c0.png" x="229.71250000000006" y="353.8999999999999"/>
+    <Group resourceType="" id="group3" name="" resourceId="group3" expand="true" image="assets/images/icons/group/c0.png" x="653.7017857142858" y="356.8999999999999"/>
+    <Group resourceType="" id="group4" name="" resourceId="group4" expand="true" image="assets/images/icons/group/c0.png" x="441.70000000000005" y="168.70000000000002"/>
+    <Group resourceType="" id="group5" name="" resourceId="group5" expand="true" image="assets/images/icons/group/c0.png" x="653.7017857142858" y="457.94999999999993"/>
+  </Groups>
+  <Nodes>
+    <Node resourceType="LINE" resourceId="" id="line1" name="" image="assets/images/icons/resource/0/online/line1.jpg" x="462.00714285714287" y="1"/>
+    <Node resourceType="ENODEB" resourceId="" id="ENODEB2" name="" image="assets/images/icons/group/c1.png" x="172" y="70"/>
+    <Node resourceType="ENODEB" resourceId="" id="ENODEB3" name="" image="assets/images/icons/group/c2.png" x="598" y="70"/>
+    <Node resourceType="FW" resourceId="LTECE3" id="LTECE3" name="SW3" group="group3" image="assets/images/icons/resource/0/online/ce_grey.png" x="577.9535714285715" y="356.8999999999999"/>
+    <Node resourceType="FW" resourceId="LTEFW1" id="LTEFW1" name="防火墙1" image="assets/images/icons/resource/0/online/fw.png" x="160.76428571428582" y="265.19999999999993"/>
+    <Node resourceType="FW" resourceId="LTEFW2" id="LTEFW2" name="防火墙2" image="assets/images/icons/resource/0/online/fw.png" x="312.26071428571436" y="265.19999999999993"/>
+    <Node resourceType="FW" resourceId="LTEFW3" id="LTEFW3" name="防火墙3" image="assets/images/icons/resource/0/online/fwg.png" x="584.2535714285715" y="265.19999999999993"/>
+    <Node resourceType="FW" resourceId="LTEFW4" id="LTEFW4" name="防火墙4" image="assets/images/icons/resource/0/online/fwg.png" x="735.7500000000001" y="265.19999999999993"/>
+    <Node resourceType="MME" resourceId="MME2" id="MME2" name="SHMME02BHW" group="group1" image="assets/images/icons/resource/0/online/mme_grey.png" x="305.46071428571435" y="456.0499999999999"/>
+    <Node resourceType="ENODEB" resourceId="" id="ENODEB1" name="ENODEB" image="assets/images/icons/resource/0/online/group_ptn_enodeb.png" x="318" y="600.15"/>
+    <Node resourceType="MME" resourceId="MME1" id="MME1" name="SHMME01BHW" group="group1" image="assets/images/icons/resource/0/online/mme.png" x="153.96428571428578" y="456.0499999999999"/>
+    <Node resourceType="PGW" resourceId="PGW2" id="PGW2" name="SHSAEGW02BHW" group="group5" image="assets/images/icons/resource/0/online/pgw_grey.png" x="728.85" y="457.94999999999993"/>
+    <Node resourceType="FW" resourceId="LTECE4" id="LTECE4" name="SW4" group="group3" image="assets/images/icons/resource/0/online/ce_grey.png" x="729.4500000000002" y="356.8999999999999"/>
+    <Node resourceType="PGW" resourceId="PGW1" id="PGW1" name="SHSAEGW01BHW" group="group5" image="assets/images/icons/resource/0/online/pgw.png" x="577.9535714285715" y="457.94999999999993"/>
+    <Node resourceType="MX960" resourceId="MX9601" id="MX9601" name="钦州MX960-1" group="group4" image="assets/images/icons/resource/0/online/mx960.png" x="158.20000000000005" y="168.70000000000002"/>
+    <Node resourceType="MX960" resourceId="MX9602" id="MX9602" name="钦州MX960-2" group="group4" image="assets/images/icons/resource/0/online/mx960.png" x="312.20000000000005" y="168.70000000000002"/>
+    <Node resourceType="MX960" resourceId="MX9603" id="MX9603" name="浦东MX960-1" group="group4" image="assets/images/icons/resource/0/online/mx960.png" x="581.7" y="168.70000000000002"/>
+    <Node resourceType="MX960" resourceId="MX9604" id="MX9604" name="浦东MX960-2" group="group4" image="assets/images/icons/resource/0/online/mx960.png" x="733.2" y="168.70000000000002"/>
+    <Node resourceType="FW" resourceId="LTECE1" id="LTECE1" name="SW1" group="group2" image="assets/images/icons/resource/0/online/ce.png" x="153.96428571428578" y="353.8999999999999"/>
+    <Node resourceType="FW" resourceId="LTECE2" id="LTECE2" name="SW2" group="group2" image="assets/images/icons/resource/0/online/ce.png" x="305.46071428571435" y="353.8999999999999"/>
+  </Nodes>
+  <Links>
+    <Link resourceType="FW-FW" fromId="LTECE2" toId="LTEFW2" color="65280" name="2*10GE" linkType="arc"/>
+    <Link resourceType="FW-FW" fromId="LTECE1" toId="LTEFW1" color="65280" name="2*10GE" linkType="arc"/>
+    <Link resourceType="FW-FW" fromId="LTEFW3" toId="LTEFW4" color="39423" name="2*GE" linkType="arc"/>
+    <Link resourceType="FW-FW" fromId="LTECE3" toId="LTEFW3" color="65280" name="3*10GE" linkType="arc"/>
+    <Link resourceType="FW-FW" fromId="LTECE4" toId="LTEFW4" color="65280" name="3*10GE" linkType="arc"/>
+    <Link resourceType="FW-FW" fromId="LTECE3" toId="LTECE4" color="65280" name="3*10GE" linkType="arc"/>
+    <Link resourceType="MME-FW" fromId="MME2" toId="LTECE3" color="39423" name="2*GE" linkType="arc"/>
+    <Link resourceType="FW-FW" fromId="LTEFW1" toId="LTEFW2" color="39423" name="2*GE" linkType="arc"/>
+    <Link resourceType="PGW-ENODEB" fromId="PGW2" toId="ENODEB1" color="65280" name="3*10GE/台*2台" linkType="arc"/>
+    <Link resourceType="MX960-FW" fromId="MX9601" toId="LTEFW1" color="65280" name="3*10GE" linkType="arc"/>
+    <Link resourceType="MX960-FW" fromId="MX9602" toId="LTEFW2" color="65280" name="3*10GE" linkType="arc"/>
+    <Link resourceType="MX960-FW" fromId="MX9603" toId="LTEFW3" color="65280" name="3*10GE" linkType="arc"/>
+    <Link resourceType="MX960-FW" fromId="MX9604" toId="LTEFW4" color="65280" name="3*10GE" linkType="arc"/>
+    <Link resourceType="MME-ENODEB" fromId="MME2" toId="ENODEB1" color="39423" name="1GE/台*2台" linkType="arc"/>
+    <Link resourceType="MME-ENODEB" fromId="MME1" toId="ENODEB1" color="39423" name="1GE/台*6台" linkType="arc"/>
+    <Link resourceType="PGW-ENODEB" fromId="PGW1" toId="ENODEB1" color="39423" name="1GE/台*6台" linkType="arc"/>
+    <Link resourceType="PGW-ENODEB" fromId="PGW1" toId="ENODEB1" color="65280" name="3*10G/台*6台" linkType="arc"/>
+    <Link resourceType="MME-ENODEB" fromId="MME1" toId="ENODEB1" color="65280" name="3*10G/台*6台" linkType="arc"/>
+    <Link resourceType="MME-FW" fromId="MME1" toId="LTECE2" color="39423" name="2*GE" linkType="arc"/>
+    <Link resourceType="FW-PGW" fromId="LTECE4" toId="PGW2" color="39423" name="2*GE" linkType="arc"/>
+    <Link resourceType="PGW-FW" fromId="PGW2" toId="LTECE4" color="65280" name="3*10GE" linkType="arc"/>
+    <Link resourceType="PGW-FW" fromId="PGW1" toId="LTECE1" color="65280" name="3*10G" linkType="arc"/>
+    <Link resourceType="FW-PGW" fromId="LTECE1" toId="PGW1" color="39423" name="2*GE" linkType="arc"/>
+    <Link resourceType="MX960-MX960" fromId="MX9601" toId="MX9602" color="65280" name="" linkType="arc"/>
+    <Link resourceType="MX960-MX960" fromId="MX9603" toId="MX9604" color="65280" name="" linkType="arc"/>
+    <Link resourceType="FW-FW" fromId="LTECE1" toId="LTECE2" color="65280" name="3*10GE" linkType="arc"/>
+  </Links>
+  <Labels>
+    <Label name="LTE核心拓扑图" x="553" y="0"/>
+  </Labels>
+</Topo>

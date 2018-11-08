@@ -1,0 +1,249 @@
+<Topo from="CACHE" id="assets/datas/cmnet1.xml" name="CMNET城域网">
+  <Groups>
+    <Group resourceType="GROUP" id="lhd" name="龙华东" resourceId="lhd" expand="true" image="assets/images/icons/group/c0.png" x="349.3500000000001" y="134.375"/>
+    <Group resourceType="GROUP" id="sbc" name="世博村" resourceId="sbc" expand="true" image="assets/images/icons/group/c0.png" x="190.44999999999993" y="138.52499999999998"/>
+    <Group resourceType="GROUP" id="shtt" name="上海铁通" resourceId="shtt" expand="true" image="assets/images/icons/group/c0.png" x="1208" y="365.0000000000001"/>
+    <Group resourceType="GROUP" id="shnap" name="上海NAP" resourceId="shnap" expand="true" image="assets/images/icons/group/c0.png" x="1205" y="213.00000000000009"/>
+    <Group resourceType="GROUP" id="hjcsr7609" name="汇聚层SR" resourceId="hjcsr7609" expand="true" image="assets/images/icons/group/c0.png" x="782" y="726.1500000000001"/>
+    <Group resourceType="GROUP" id="hjcsrmx960" name="汇聚层SR" resourceId="hjcsrmx960" expand="true" image="assets/images/icons/group/c0.png" x="732.4766666666669" y="524.0583333333332"/>
+    <Group resourceType="GROUP" id="idc" name="IDC" resourceId="idc" expand="true" image="assets/images/icons/group/c0.png" x="258.975" y="402.8833333333333"/>
+    <Group resourceType="GROUP" id="hjcbras" name="汇聚层BRAS" resourceId="hjcbras" expand="true" image="assets/images/icons/group/c0.png" x="1138.1" y="519"/>
+    <Group resourceType="GROUP" id="spzx" name="视频中心" resourceId="spzx" expand="true" image="assets/images/icons/group/c0.png" x="186.79999999999995" y="783.375"/>
+    <Group resourceType="GROUP" id="jr-yqw" name="园区网" resourceId="jr-yqw" expand="true" image="assets/images/icons/group/c0.png" x="577" y="902"/>
+    <Group resourceType="GROUP" id="jr-jxjr" name="郊县接入" resourceId="jr-jxjr" expand="true" image="assets/images/icons/group/c0.png" x="716.3333333333334" y="902"/>
+    <Group resourceType="GROUP" id="jr-sqjr" name="市区接入" resourceId="jr-sqjr" expand="true" image="assets/images/icons/group/c0.png" x="855.6666666666666" y="902"/>
+    <Group resourceType="GROUP" id="jr-9306" name="9306多业务交换机" resourceId="jr-9306" expand="true" image="assets/images/icons/group/c0.png" x="995" y="902"/>
+    <Group resourceType="GROUP" id="dfyx" name="东方有线" resourceId="dfyx" expand="true" image="assets/images/icons/group/c0.png" x="1203.5" y="160.00000000000009"/>
+    <Group resourceType="GROUP" id="zcwl" name="中传网络" resourceId="zcwl" expand="true" image="assets/images/icons/group/c0.png" x="1204" y="261.0000000000001"/>
+    <Group resourceType="GROUP" id="akry" name="艾克瑞亚" resourceId="akry" expand="true" image="assets/images/icons/group/c0.png" x="1206" y="311.0000000000001"/>
+    <Group resourceType="GROUP" id="ne40e" name="NE40E" resourceId="ne40e" expand="true" image="assets/images/icons/group/c0.png" x="187.79999999999995" y="637.2499999999998"/>
+    <Group resourceType="GROUP" id="srjs" name="金山" resourceId="srjs" group="hjcsr7609" expand="true" image="assets/images/icons/group/c0.png" x="1047.5454545454545" y="726.1500000000001"/>
+    <Group resourceType="GROUP" id="srfx" name="奉贤" resourceId="srfx" group="hjcsr7609" expand="true" image="assets/images/icons/group/c0.png" x="1122.2727272727273" y="726.1500000000001"/>
+    <Group resourceType="GROUP" id="srnh" name="南汇" resourceId="srnh" group="hjcsr7609" expand="true" image="assets/images/icons/group/c0.png" x="972.8181818181818" y="726.1500000000001"/>
+    <Group resourceType="GROUP" id="srqp" name="青浦" resourceId="srqp" group="hjcsr7609" expand="true" image="assets/images/icons/group/c0.png" x="898.090909090909" y="726.1500000000001"/>
+    <Group resourceType="GROUP" id="srcm" name="崇明" resourceId="srcm" group="hjcsr7609" expand="true" image="assets/images/icons/group/c0.png" x="1197" y="726.1500000000001"/>
+    <Group resourceType="GROUP" id="srsj" name="松江" resourceId="srsj" group="hjcsr7609" expand="true" image="assets/images/icons/group/c0.png" x="823.3636363636363" y="726.1500000000001"/>
+    <Group resourceType="GROUP" id="srnj" name="怒江" resourceId="srnj" group="hjcsr7609" expand="true" image="assets/images/icons/group/c0.png" x="441.72727272727263" y="726.1500000000001"/>
+    <Group resourceType="GROUP" id="srcs" name="长寿" resourceId="srcs" group="hjcsr7609" expand="true" image="assets/images/icons/group/c0.png" x="366.9999999999999" y="726.1500000000001"/>
+    <Group resourceType="GROUP" id="srjd" name="嘉定" resourceId="srjd" group="hjcsr7609" expand="true" image="assets/images/icons/group/c0.png" x="516.4545454545454" y="726.1500000000001"/>
+    <Group resourceType="GROUP" id="srpd" name="浦东" resourceId="srpd" group="hjcsr7609" expand="true" image="assets/images/icons/group/c0.png" x="591.1818181818181" y="726.1500000000001"/>
+    <Group resourceType="GROUP" id="srbs" name="宝山" resourceId="srbs" group="hjcsr7609" expand="true" image="assets/images/icons/group/c0.png" x="665.9090909090909" y="726.1500000000001"/>
+    <Group resourceType="GROUP" id="srmh" name="闵行" resourceId="srmh" group="hjcsr7609" expand="true" image="assets/images/icons/group/c0.png" x="744.6363636363636" y="726.1500000000001"/>
+    <Group resourceType="GROUP" id="hepidc" name="惠而浦IDC" resourceId="hepidc" group="idc" expand="true" image="assets/images/icons/group/c0.png" x="331.15000000000003" y="506.9499999999998"/>
+    <Group resourceType="GROUP" id="pdidc" name="浦东IDC" resourceId="pdidc" group="idc" expand="true" image="assets/images/icons/group/c0.png" x="331.15000000000003" y="396.2999999999999"/>
+    <Group resourceType="GROUP" id="sjidc" name="松江IDC" resourceId="sjidc" group="idc" expand="true" image="assets/images/icons/group/c0.png" x="186.79999999999995" y="300.3999999999999"/>
+    <Group resourceType="GROUP" id="njidc2" name="怒江IDC-2" resourceId="njidc2" group="idc" expand="true" image="assets/images/icons/group/c0.png" x="331.15000000000003" y="297.3999999999999"/>
+    <Group resourceType="GROUP" id="njidc1" name="怒江IDC-1" resourceId="njidc1" group="idc" expand="true" image="assets/images/icons/group/c0.png" x="186.79999999999995" y="399.2999999999999"/>
+    <Group resourceType="GROUP" id="fxidc" name="奉贤IDC" resourceId="fxidc" group="idc" expand="true" image="assets/images/icons/group/c0.png" x="186.79999999999995" y="508.3666666666667"/>
+    <Group resourceType="GROUP" id="pdtxp" name="" resourceId="pdtxp" expand="true" image="assets/images/icons/group/c0.png"/>
+  </Groups>
+  <Nodes>
+    <Node resourceType="LINE" resourceId="" id="line1" name="" image="assets/images/icons/resource/0/online/line.png" x="472.0000000000001" y="427"/>
+    <Node resourceType="LINE" resourceId="" id="line2" name="" image="assets/images/icons/resource/0/online/line.png" x="464" y="888"/>
+    <Node resourceType="BRAS" resourceId="8a5dffbc29d9cbc70129d9cbc8710078" id="8a5dffbc29d9cbc70129d9cbc8710078" name="怒江-1BRAS" group="hjcbras" image="assets/images/icons/resource/0/online/bras.png" x="1138.1" y="518.65"/>
+    <Node resourceType="BRAS" resourceId="8a5dffbc29d9cbc70129d9cbc874007a" id="8a5dffbc29d9cbc70129d9cbc874007a" name="万荣-1BRAS" group="hjcbras" image="assets/images/icons/resource/0/online/bras.png" x="1199.85" y="579"/>
+    <Node resourceType="BRAS" resourceId="8a5dffbc29d9cbc70129d9cbc8720079" id="8a5dffbc29d9cbc70129d9cbc8720079" name="金桥-1BRAS" group="hjcbras" image="assets/images/icons/resource/0/online/bras.png" x="1138.1" y="456.6"/>
+    <Node resourceType="BRAS" resourceId="8a5dffbc29d9cbc70129d9cbc86e0076" id="8a5dffbc29d9cbc70129d9cbc86e0076" name="武胜-1BRAS" group="hjcbras" image="assets/images/icons/resource/0/online/bras.png" x="1199.85" y="516.25"/>
+    <Node resourceType="BRAS" resourceId="8a5dffbc31f5bda90131f5cd34e10009" id="8a5dffbc31f5bda90131f5cd34e10009" name="松江-1BRAS" group="hjcbras" image="assets/images/icons/resource/0/online/bras.png" x="1076.35" y="456.6"/>
+    <Node resourceType="BRAS" resourceId="8a5dffbc29d9cbc70129d9cbc86d0075" id="8a5dffbc29d9cbc70129d9cbc86d0075" name="长寿-1BRAS" group="hjcbras" image="assets/images/icons/resource/0/online/bras.png" x="1138.1" y="581.4"/>
+    <Node resourceType="BRAS" resourceId="8a5dffbc29d9cbc70129d9cbc8700077" id="8a5dffbc29d9cbc70129d9cbc8700077" name="钦州-1BRAS" group="hjcbras" image="assets/images/icons/resource/0/online/bras.png" x="1199.85" y="456.6"/>
+    <Node resourceType="BRAS" resourceId="8a5dffbc29d9cbc70129d9cbc8660070" id="8a5dffbc29d9cbc70129d9cbc8660070" name="浦东-2BRAS" group="hjcbras" image="assets/images/icons/resource/0/online/bras.png" x="1076.35" y="580.25"/>
+    <Node resourceType="BRAS" resourceId="8a5dffbc29d9cbc70129d9cbc865006f" id="8a5dffbc29d9cbc70129d9cbc865006f" name="浦东-1BRAS" group="hjcbras" image="assets/images/icons/resource/0/online/bras.png" x="1076.35" y="517.5"/>
+    <Node resourceType="LINE" resourceId="" id="line3" name="" image="assets/images/icons/resource/0/online/line.png" x="465" y="123"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc314c30c701314c55f16d0005" id="8a5dffbc314c30c701314c55f16d0005" name="6509-2SB" group="sbc" image="assets/images/icons/resource/0/online/switch.png" x="156.69999999999993" y="171.39999999999998"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc314c30c701314c51545d0004" id="8a5dffbc314c30c701314c51545d0004" name="6509-1SB" group="sbc" image="assets/images/icons/resource/0/online/switch.png" x="156.69999999999993" y="105.64999999999998"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc329421920132942e5f630002" id="8a5dffbc329421920132942e5f630002" name="6509-2LHD" group="lhd" image="assets/images/icons/resource/0/online/switch.png" x="313.00000000000006" y="167.25"/>
+    <Node resourceType="SWITCH" resourceId="8a5d92813488f4f3013491e8e5c8022a" id="8a5d92813488f4f3013491e8e5c8022a" name="6513-2PD" group="pdidc" image="assets/images/icons/resource/0/online/switch.png" x="367.5" y="396.2999999999999"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc2a54d901012a54d9024c0006" id="8a5dffbc2a54d901012a54d9024c0006" name="6513-1PD" group="pdidc" image="assets/images/icons/resource/0/online/switch.png" x="294.80000000000007" y="396.2999999999999"/>
+    <Node resourceType="SWITCH" resourceId="8a5d92813488f4f3013491e8e47401ac" id="8a5d92813488f4f3013491e8e47401ac" name="N7K-2SJ" group="sjidc" image="assets/images/icons/resource/0/online/switch.png" x="220.54999999999995" y="300.3999999999999"/>
+    <Node resourceType="SWITCH" resourceId="8a5d92813488f4f3013491e8e46901ab" id="8a5d92813488f4f3013491e8e46901ab" name="N7K-1SJ" group="sjidc" image="assets/images/icons/resource/0/online/switch.png" x="153.04999999999995" y="300.3999999999999"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc2d7d3aa3012d7de83b930003" id="8a5dffbc2d7d3aa3012d7de83b930003" name="N7K-4NJ" group="njidc2" image="assets/images/icons/resource/0/online/switch.png" x="367.5" y="297.3999999999999"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc2d7d3aa3012d7de640af0002" id="8a5dffbc2d7d3aa3012d7de640af0002" name="N7K-3NJ" group="njidc2" image="assets/images/icons/resource/0/online/switch.png" x="294.80000000000007" y="297.3999999999999"/>
+    <Node resourceType="MX960" resourceId="8a5d928136c89c3a0136c89c3aee000b" id="8a5d928136c89c3a0136c89c3aee000b" name="武胜MX960-2" group="hjcsrmx960" image="assets/images/icons/resource/0/online/mx960.png" x="768.1871428571432" y="563.1166666666666"/>
+    <Node resourceType="MX960" resourceId="8a5d928136c89c3a0136c89c3af1000c" id="8a5d928136c89c3a0136c89c3af1000c" name="武胜MX960-1" group="hjcsrmx960" image="assets/images/icons/resource/0/online/mx960.png" x="768.1871428571432" y="484.9999999999999"/>
+    <Node resourceType="SWITCH" resourceId="8a5d928136c89c3a0136c89c3ae90009" id="8a5d928136c89c3a0136c89c3ae90009" name="7609-2-CS" group="srcs" image="assets/images/icons/resource/0/online/switch.png" x="366.9999999999999" y="760.9"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc29d9cbc70129d9cbc7b80005" id="8a5dffbc29d9cbc70129d9cbc7b80005" name="7609-1-CS" group="srcs" image="assets/images/icons/resource/0/online/switch.png" x="366.9999999999999" y="691.4000000000001"/>
+    <Node resourceType="SWITCH" resourceId="8a5d9281385260f701385260f81c0004" id="8a5d9281385260f701385260f81c0004" name="7609-2-NJ" group="srnj" image="assets/images/icons/resource/0/online/switch.png" x="441.72727272727263" y="760.9"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc29d9cbc70129d9cbc7d20016" id="8a5dffbc29d9cbc70129d9cbc7d20016" name="7609-1-NJ" group="srnj" image="assets/images/icons/resource/0/online/switch.png" x="441.72727272727263" y="691.4000000000001"/>
+    <Node resourceType="SWITCH" resourceId="8a5d92813390b55f0133a06c22c70001" id="8a5d92813390b55f0133a06c22c70001" name="7609-2-JD" group="srjd" image="assets/images/icons/resource/0/online/switch.png" x="516.4545454545454" y="760.9"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc2d30a019012d30a019430000" id="8a5dffbc2d30a019012d30a019430000" name="7609-1-JD" group="srjd" image="assets/images/icons/resource/0/online/switch.png" x="516.4545454545454" y="691.4000000000001"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc31f5bda90131f5c8bf610007" id="8a5dffbc31f5bda90131f5c8bf610007" name="7609-3-PD" group="srpd" image="assets/images/icons/resource/0/online/switch.png" x="591.1818181818181" y="760.9"/>
+    <Node resourceType="SWITCH" resourceId="8a5d928136c89c3a0136c89c3aeb000a" id="8a5d928136c89c3a0136c89c3aeb000a" name="7609-4-PD" group="srpd" image="assets/images/icons/resource/0/online/switch.png" x="591.1818181818181" y="691.4000000000001"/>
+    <Node resourceType="MX960" resourceId="8a5d928136c89c3a01370bf2d34800c7" id="8a5d928136c89c3a01370bf2d34800c7" name="MX960-1-BS" group="srbs" image="assets/images/icons/resource/0/online/mx960.png" x="665.9090909090909" y="691.4000000000001"/>
+    <Node resourceType="MX960" resourceId="8a5d92813892df11013892dfd1790005" id="8a5d92813892df11013892dfd1790005" name="MX960-2-BS" group="srbs" image="assets/images/icons/resource/0/online/mx960.png" x="665.9090909090909" y="760.9"/>
+    <Node resourceType="MX960" resourceId="8a5d92813892df11013892dfd16c0003" id="8a5d92813892df11013892dfd16c0003" name="MX960-2-MH" group="srmh" image="assets/images/icons/resource/0/online/mx960.png" x="744.6363636363636" y="760.9"/>
+    <Node resourceType="MX960" resourceId="8a5d92813892df11013892dfd1640002" id="8a5d92813892df11013892dfd1640002" name="MX960-1-MH" group="srmh" image="assets/images/icons/resource/0/online/mx960.png" x="744.6363636363636" y="691.4000000000001"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc2a54d901012a54d902680016" id="8a5dffbc2a54d901012a54d902680016" name="N7K-1NJ" group="njidc1" image="assets/images/icons/resource/0/online/switch.png" x="153.04999999999995" y="399.2999999999999"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc2a54d901012a54d9026a0017" id="8a5dffbc2a54d901012a54d9026a0017" name="N7K-2NJ" group="njidc1" image="assets/images/icons/resource/0/online/switch.png" x="220.54999999999995" y="399.2999999999999"/>
+    <Node resourceType="SERVER" resourceId="8a5d9281362e043801362e0752e10002" id="8a5d9281362e043801362e0752e10002" name="Guard-7613" image="assets/images/icons/resource/0/online/server.png" x="690.75" y="134"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc31f5bda90131f5cbcf060008" id="8a5dffbc31f5bda90131f5cbcf060008" name="7609-1-SJ" group="srsj" image="assets/images/icons/resource/0/online/switch.png" x="823.3636363636363" y="691.4000000000001"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc29d9cbc70129d9cbc861006c" id="8a5dffbc29d9cbc70129d9cbc861006c" name="7609-2-SJ" group="srsj" image="assets/images/icons/resource/0/online/switch.png" x="823.3636363636363" y="760.9"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc329421920132942cfa9b0001" id="8a5dffbc329421920132942cfa9b0001" name="6509-1LHD" group="lhd" image="assets/images/icons/resource/0/online/switch.png" x="313.00000000000006" y="101.5"/>
+    <Node resourceType="MX960" resourceId="8a5d92813c411983013c411984570002" id="8a5d92813c411983013c411984570002" name="钦州MX960-1" group="hjcsrmx960" image="assets/images/icons/resource/0/online/mx480.png" x="839.6080952380955" y="484.9999999999999"/>
+    <Node resourceType="MX960" resourceId="8a5d92813c411983013c411984590003" id="8a5d92813c411983013c411984590003" name="钦州MX960-2" group="hjcsrmx960" image="assets/images/icons/resource/0/online/mx480.png" x="839.6080952380955" y="563.1166666666666"/>
+    <Node resourceType="MX960" resourceId="8a5d92813c411983013c411984180000" id="8a5d92813c411983013c411984180000" name="万荣MX960-1" group="hjcsrmx960" image="assets/images/icons/resource/0/online/mx480.png" x="482.5033333333336" y="484.9999999999999"/>
+    <Node resourceType="MX960" resourceId="8a5d92813c411983013c411984520001" id="8a5d92813c411983013c411984520001" name="万荣MX960-2" group="hjcsrmx960" image="assets/images/icons/resource/0/online/mx480.png" x="482.5033333333336" y="563.1166666666666"/>
+    <Node resourceType="SERVER" resourceId="8a5dffbc29d9cbc70129d9cbc88c008c" id="8a5dffbc29d9cbc70129d9cbc88c008c" name="GSR-1JQ" group="hjcsrmx960" image="assets/images/icons/resource/0/online/server.png" x="982.4500000000004" y="484.9999999999999"/>
+    <Node resourceType="SERVER" resourceId="8a5dffbc29d9cbc70129d9cbc88d008d" id="8a5dffbc29d9cbc70129d9cbc88d008d" name="GSR-2JQ" group="hjcsrmx960" image="assets/images/icons/resource/0/online/server.png" x="982.4500000000004" y="563.1166666666666"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc32942192013294339c4f0003" id="8a5dffbc32942192013294339c4f0003" name="7606LHD" group="lhd" image="assets/images/icons/resource/0/online/switch.png" x="385.7000000000001" y="167.25"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc29d9cbc70129d9cbc7cd0013" id="8a5dffbc29d9cbc70129d9cbc7cd0013" name="7609-1-QP" group="srqp" image="assets/images/icons/resource/0/online/switch.png" x="898.090909090909" y="691.4000000000001"/>
+    <Node resourceType="SWITCH" resourceId="8a5d9281385260f701385260f8260007" id="8a5d9281385260f701385260f8260007" name="7609-2-QP" group="srqp" image="assets/images/icons/resource/0/online/switch.png" x="898.090909090909" y="760.9"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc31f5bda90131f5bda98b0000" id="8a5dffbc31f5bda90131f5bda98b0000" name="7609-1-NH" group="srnh" image="assets/images/icons/resource/0/online/switch.png" x="972.8181818181818" y="691.4000000000001"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc31f5bda90131f5bf332d0001" id="8a5dffbc31f5bda90131f5bf332d0001" name="7609-2-NH" group="srnh" image="assets/images/icons/resource/0/online/switch.png" x="972.8181818181818" y="760.9"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc29d9cbc70129d9cbc85d0069" id="8a5dffbc29d9cbc70129d9cbc85d0069" name="7609-1-JS" group="srjs" image="assets/images/icons/resource/0/online/switch.png" x="1047.5454545454545" y="691.4000000000001"/>
+    <Node resourceType="SWITCH" resourceId="8a5d92813892df11013892dfd18e0008" id="8a5d92813892df11013892dfd18e0008" name="7609-2-JS" group="srjs" image="assets/images/icons/resource/0/online/switch.png" x="1047.5454545454545" y="760.9"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc29d9cbc70129d9cbc8590066" id="8a5dffbc29d9cbc70129d9cbc8590066" name="7609-1-FX" group="srfx" image="assets/images/icons/resource/0/online/switch.png" x="1122.2727272727273" y="691.4000000000001"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc31f5bda90131f5c43ac80002" id="8a5dffbc31f5bda90131f5c43ac80002" name="7609-2-FX" group="srfx" image="assets/images/icons/resource/0/online/switch.png" x="1122.2727272727273" y="760.9"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc29d9cbc70129d9cbc7b50003" id="8a5dffbc29d9cbc70129d9cbc7b50003" name="7609-1-CM" group="srcm" image="assets/images/icons/resource/0/online/switch.png" x="1197" y="691.4000000000001"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffa63fcca75d013fcca75d89000e" id="8a5dffa63fcca75d013fcca75d89000e" name="7609-2-CM" group="srcm" image="assets/images/icons/resource/0/online/switch.png" x="1197" y="760.9"/>
+    <Node resourceType="SERVER" resourceId="8a5dffbc29d9cbc70129d9cbc8830085" id="8a5dffbc29d9cbc70129d9cbc8830085" name="VPN RR NE40" image="assets/images/icons/resource/0/online/server.png" x="778.0499999999998" y="151"/>
+    <Node resourceType="SERVER" resourceId="8a5d9281362e043801362e05d0ef0001" id="8a5d9281362e043801362e05d0ef0001" name="Global RR M120WS" image="assets/images/icons/resource/0/online/server.png" x="753.2999999999998" y="351.5"/>
+    <Node resourceType="SERVER" resourceId="8a5dffbc29d9cbc70129d9cbc8820084" id="8a5dffbc29d9cbc70129d9cbc8820084" name="VPN RR NE40PD" image="assets/images/icons/resource/0/online/server.png" x="591.75" y="154"/>
+    <Node resourceType="SERVER" resourceId="8a5d9281362e043801362e0438540000" id="8a5d9281362e043801362e0438540000" name="Global RR M120PD" image="assets/images/icons/resource/0/online/server.png" x="596.25" y="356.5"/>
+    <Node resourceType="SWITCH" resourceId="IDC-HEP-01" id="IDC-HEP-01" name="N7K-1HEP" group="hepidc" image="assets/images/icons/resource/0/online/switch.png" x="294.80000000000007" y="506.9499999999998"/>
+    <Node resourceType="SWITCH" resourceId="IDC-HEP-02" id="IDC-HEP-02" name="N7K-2HEP" group="hepidc" image="assets/images/icons/resource/0/online/switch.png" x="367.5" y="506.9499999999998"/>
+    <Node resourceType="MX960" resourceId="8a5dffa642eb3b3101430df37f8e00a9" id="8a5dffa642eb3b3101430df37f8e00a9" name="长寿MX960-3" group="hjcsrmx960" image="assets/images/icons/resource/0/online/mx960.png" x="553.9242857142859" y="484.9999999999999"/>
+    <Node resourceType="MX960" resourceId="8a5dffa642eb3b3101430df37fe800ba" id="8a5dffa642eb3b3101430df37fe800ba" name="长寿MX960-4" group="hjcsrmx960" image="assets/images/icons/resource/0/online/mx960.png" x="553.9242857142859" y="563.1166666666666"/>
+    <Node resourceType="TXP" resourceId="8a5dffbc2a172910012a172910bb0001" id="8a5dffbc2a172910012a172910bb0001" name="集团浦东TXP1+3" image="assets/images/icons/resource/0/online/TXP.png" x="531.75" y="31"/>
+    <Node resourceType="MX960" resourceId="" id="8a5dffa642eb3b31014355d71c340175" name="浦东MX960-5" group="hjcsrmx960" image="assets/images/icons/resource/0/online/mx960.png" x="696.7661904761908" y="484.9999999999999"/>
+    <Node resourceType="MX960" resourceId="" id="8a5dffa642eb3b31014355d71c3a0186" name="浦东MX960-6" group="hjcsrmx960" image="assets/images/icons/resource/0/online/mx960.png" x="696.7661904761908" y="563.1166666666666"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc29d9cbc70129d9cbc864006e" id="8a5dffbc29d9cbc70129d9cbc864006e" name="铁通7606-4" image="assets/images/icons/resource/0/online/switch.png" x="1008.4499999999998" y="361.7999999999999"/>
+    <Node resourceType="MX960" resourceId="8a5d928136c89c3a0136c89c3af6000e" id="8a5d928136c89c3a0136c89c3af6000e" name="浦东MX960-1" group="hjcsrmx960" image="assets/images/icons/resource/0/online/mx960.png" x="625.3452380952384" y="484.9999999999999"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc29d9cbc70129d9cbc862006d" id="8a5dffbc29d9cbc70129d9cbc862006d" name="铁通7606-3" image="assets/images/icons/resource/0/online/switch.png" x="1099.1" y="361.9"/>
+    <Node resourceType="MX960" resourceId="8a5d928136c89c3a0136c89c3af3000d" id="8a5d928136c89c3a0136c89c3af3000d" name="浦东MX960-2" group="hjcsrmx960" image="assets/images/icons/resource/0/online/mx960.png" x="625.3452380952384" y="563.1166666666666"/>
+    <Node resourceType="TXP" resourceId="8a5d9281387e2b8b013892c45a050002" id="8a5d9281387e2b8b013892c45a050002" name="集团武胜TXP1+3" image="assets/images/icons/resource/0/online/TXP.png" x="815.25" y="27"/>
+    <Node resourceType="MX960" resourceId="8a5dffa642eb3b31014355d71c400197" id="8a5dffa642eb3b31014355d71c400197" name="怒江MX960-1" group="hjcsrmx960" image="assets/images/icons/resource/0/online/mx480.png" x="911.029047619048" y="484.9999999999999"/>
+    <Node resourceType="MX960" resourceId="8a5dffa642eb3b31014355d71c4601a8" id="8a5dffa642eb3b31014355d71c4601a8" name="怒江MX960-2" group="hjcsrmx960" image="assets/images/icons/resource/0/online/mx480.png" x="911.029047619048" y="563.1166666666666"/>
+    <Node resourceType="SERVER" resourceId="MX480-NJ" id="MX480-NJ" name="NJ-MX480" image="assets/images/icons/resource/0/online/server.png" x="989.75" y="187"/>
+    <Node resourceType="SERVER" resourceId="MX480-CS" id="MX480-CS" name="CS-MX480" image="assets/images/icons/resource/0/online/server.png" x="1054.25" y="224"/>
+    <Node resourceType="SERVER" resourceId="8a5d92813488f4f3013491e8e76d02db" id="8a5d92813488f4f3013491e8e76d02db" name="PD-MX480" image="assets/images/icons/resource/0/online/server.png" x="861.25" y="134"/>
+    <Node resourceType="SERVER" resourceId="8a5d92813488f4f3013491e8e76e02dc" id="8a5d92813488f4f3013491e8e76e02dc" name="WS-MX480" image="assets/images/icons/resource/0/online/server.png" x="926.75" y="155"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc329421920132942192c80000" id="8a5dffbc329421920132942192c80000" name="7606SB" group="sbc" image="assets/images/icons/resource/0/online/switch.png" x="224.19999999999993" y="171.39999999999998"/>
+    <Node resourceType="SERVER" resourceId="8a5dffa642eb3b3101430df37fec00cb" id="8a5dffa642eb3b3101430df37fec00cb" name="QZ-MX480" image="assets/images/icons/resource/0/online/server.png" x="1058" y="298"/>
+    <Node resourceType="SERVER" resourceId="8a5dffbc29d9cbc70129d9cbc7e80024" id="8a5dffbc29d9cbc70129d9cbc7e80024" name="钦州-GSR" image="assets/images/icons/resource/0/online/server.png" x="481.5" y="348.5"/>
+    <Node resourceType="TXP" resourceId="8a5dffbc29d9cbc70129d9cbc8680071" id="8a5dffbc29d9cbc70129d9cbc8680071" group="pdtxp" name="浦东TXP" image="assets/images/icons/resource/0/online/TXP.png" x="531.75" y="243"/>
+    <Node resourceType="TXP" resourceId="8a5dffbc29d9cbc70129d9cbc86a0073" id="8a5dffbc29d9cbc70129d9cbc86a0073" group="pdtxp" name="武胜TXP" image="assets/images/icons/resource/0/online/TXP.png" x="816.25" y="243"/>
+    <Node resourceType="TXP" resourceId="aaaaaa" id="aaaaaa" group="pdtxp" name="浦东TXP02" image="assets/images/icons/resource/0/online/TXP.png" x="531.75" y="300"/>
+    <Node resourceType="TXP" resourceId="bbbbbb" id="bbbbbb" group="pdtxp" name="武胜TXP02" image="assets/images/icons/resource/0/online/TXP.png" x="816.25" y="300"/>
+    <Node resourceType="SWITCH" resourceId="8a5d92813c4c29bb013c4c29bb780000" id="8a5d92813c4c29bb013c4c29bb780000" name="NE40E-1-YQ" group="ne40e" image="assets/images/icons/resource/0/online/switch.png" x="154.04999999999995" y="637.2499999999998"/>
+    <Node resourceType="SWITCH" resourceId="8a5d92813c4c29bb013c4c2ab6c50001" id="8a5d92813c4c29bb013c4c2ab6c50001" name="NE40E-2-YQ" group="ne40e" image="assets/images/icons/resource/0/online/switch.png" x="221.54999999999995" y="637.2499999999998"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc29d9cbc70129d9cbc7ea0025" id="8a5dffbc29d9cbc70129d9cbc7ea0025" name="6509-3-QZ" group="spzx" image="assets/images/icons/resource/0/online/switch.png" x="153.04999999999995" y="741.0999999999999"/>
+    <Node resourceType="SWITCH" resourceId="8a5dffbc29d9cbc70129d9cbc7eb0026" id="8a5dffbc29d9cbc70129d9cbc7eb0026" name="6509-4-QZ" group="spzx" image="assets/images/icons/resource/0/online/switch.png" x="220.54999999999995" y="741.0999999999999"/>
+    <Node resourceType="SWITCH" resourceId="" id="IDC-FX-01" name="N7000-1" group="fxidc" image="assets/images/icons/resource/0/online/switch.png" x="153.04999999999995" y="508.3666666666667"/>
+    <Node resourceType="SWITCH" resourceId="" id="IDC-FX-02" name="N7000-2" group="fxidc" image="assets/images/icons/resource/0/online/switch.png" x="220.54999999999995" y="508.3666666666667"/>
+    <Node resourceType="SWITCH" resourceId="" id="6509-1-YQ" name="6509-1-YQ" group="spzx" image="assets/images/icons/resource/0/online/switch.png" x="153.04999999999995" y="825.65"/>
+    <Node resourceType="SWITCH" resourceId="" id="6509-2-YQ" name="6509-2-YQ" group="spzx" image="assets/images/icons/resource/0/online/switch.png" x="220.54999999999995" y="825.65"/>
+    <Node resourceType="SERVER" resourceId="8a5dffbc29d9cbc70129d9cbc8810083" id="8a5dffbc29d9cbc70129d9cbc8810083" name="浦东-GSR" image="assets/images/icons/resource/0/online/server.png" x="481.5" y="168"/>
+  </Nodes>
+  <Links>
+    <Link resourceType="SERVER-SERVER" fromId="8a5d92813488f4f3013491e8e76e02dc" toId="8a5d92813488f4f3013491e8e76d02db" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5dffbc329421920132942192c80000" toId="8a5dffbc314c30c701314c51545d0004" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5dffbc314c30c701314c55f16d0005" toId="8a5dffbc329421920132942192c80000" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5dffbc314c30c701314c55f16d0005" toId="8a5dffbc314c30c701314c51545d0004" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5dffbc329421920132942e5f630002" toId="8a5dffbc329421920132942cfa9b0001" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5dffbc32942192013294339c4f0003" toId="8a5dffbc329421920132942e5f630002" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5d92813488f4f3013491e8e5c8022a" toId="8a5dffbc2a54d901012a54d9024c0006" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5d92813488f4f3013491e8e47401ac" toId="8a5d92813488f4f3013491e8e46901ab" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5dffbc2d7d3aa3012d7de83b930003" toId="8a5dffbc2d7d3aa3012d7de640af0002" color="65280" name="" linkType="arc"/>
+    <Link resourceType="MX960-MX960" fromId="8a5d928136c89c3a0136c89c3af3000d" toId="8a5d928136c89c3a0136c89c3af6000e" color="65280" name="" linkType="arc"/>
+    <Link resourceType="MX960-MX960" fromId="8a5d928136c89c3a0136c89c3aee000b" toId="8a5d928136c89c3a0136c89c3af1000c" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5d928136c89c3a0136c89c3ae90009" toId="8a5dffbc29d9cbc70129d9cbc7b80005" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5d9281385260f701385260f81c0004" toId="8a5dffbc29d9cbc70129d9cbc7d20016" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5d92813390b55f0133a06c22c70001" toId="8a5dffbc2d30a019012d30a019430000" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5dffbc31f5bda90131f5c8bf610007" toId="8a5d928136c89c3a0136c89c3aeb000a" color="65280" name="" linkType="arc"/>
+    <Link resourceType="MX960-MX960" fromId="8a5d928136c89c3a01370bf2d34800c7" toId="8a5d92813892df11013892dfd1790005" color="65280" name="" linkType="arc"/>
+    <Link resourceType="MX960-MX960" fromId="8a5d92813892df11013892dfd16c0003" toId="8a5d92813892df11013892dfd1640002" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5dffbc29d9cbc70129d9cbc864006e" toId="8a5dffbc29d9cbc70129d9cbc862006d" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5dffbc2a54d901012a54d902680016" toId="8a5dffbc2a54d901012a54d9026a0017" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="8a5d9281362e043801362e0752e10002" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="8a5d9281362e043801362e0752e10002" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5dffbc31f5bda90131f5cbcf060008" toId="8a5dffbc29d9cbc70129d9cbc861006c" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="8a5d9281362e043801362e05d0ef0001" color="39423" name="" linkType="arc"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="8a5dffbc29d9cbc70129d9cbc8830085" color="39423" name="" linkType="arc"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="8a5d9281362e043801362e0438540000" color="39423" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5dffbc32942192013294339c4f0003" toId="8a5dffbc329421920132942cfa9b0001" color="65280" name="" linkType="arc"/>
+    <Link resourceType="MX960-MX960" fromId="8a5d92813c411983013c411984570002" toId="8a5d92813c411983013c411984590003" color="65280" name="" linkType="arc"/>
+    <Link resourceType="MX960-MX960" fromId="8a5d92813c411983013c411984180000" toId="8a5d92813c411983013c411984520001" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SERVER-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc88c008c" toId="8a5dffbc29d9cbc70129d9cbc88d008d" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GROUP-SWITCH" fromId="shtt" toId="8a5dffbc29d9cbc70129d9cbc862006d" color="39423" name="2*GE" linkType="arc"/>
+    <Link resourceType="GROUP-SWITCH" fromId="shtt" toId="8a5dffbc29d9cbc70129d9cbc864006e" color="39423" name="2*GE" linkType="arc"/>
+    <Link resourceType="GROUP-SWITCH" fromId="shtt" toId="8a5dffbc29d9cbc70129d9cbc864006e" color="65280" name="2*10G" linkType="arc"/>
+    <Link resourceType="GROUP-SWITCH" fromId="shtt" toId="8a5dffbc29d9cbc70129d9cbc862006d" color="65280" name="2*10G" linkType="arc"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="8a5dffbc29d9cbc70129d9cbc8820084" color="39423" name="" linkType="arc"/>
+    <Link resourceType="TXP-TXP" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="8a5dffbc29d9cbc70129d9cbc86a0073" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-SWITCH" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="8a5dffbc32942192013294339c4f0003" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="8a5dffbc29d9cbc70129d9cbc8810083" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5dffbc29d9cbc70129d9cbc7cd0013" toId="8a5d9281385260f701385260f8260007" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5dffbc31f5bda90131f5bda98b0000" toId="8a5dffbc31f5bda90131f5bf332d0001" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5dffbc29d9cbc70129d9cbc85d0069" toId="8a5d92813892df11013892dfd18e0008" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5dffbc29d9cbc70129d9cbc8590066" toId="8a5dffbc31f5bda90131f5c43ac80002" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5dffbc29d9cbc70129d9cbc7b50003" toId="8a5dffa63fcca75d013fcca75d89000e" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="8a5dffbc29d9cbc70129d9cbc8830085" color="39423" name="" linkType="arc"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="8a5d9281362e043801362e05d0ef0001" color="39423" name="" linkType="arc"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="8a5dffbc29d9cbc70129d9cbc8820084" color="39423" name="" linkType="arc"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="8a5d9281362e043801362e0438540000" color="39423" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="IDC-HEP-01" toId="IDC-HEP-02" color="65280" name="" linkType="arc"/>
+    <Link resourceType="MX960-MX960" fromId="8a5dffa642eb3b3101430df37f8e00a9" toId="8a5dffa642eb3b3101430df37fe800ba" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-GROUP" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="idc" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="TXP-GROUP" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="idc" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="TXP-GROUP" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="spzx" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="TXP-GROUP" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="spzx" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="8a5d92813488f4f3013491e8e76e02dc" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-TXP" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="8a5dffbc2a172910012a172910bb0001" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-GROUP" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="hjcsrmx960" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="TXP-GROUP" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="hjcsr7609" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="TXP-GROUP" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="hjcbras" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="TXP-GROUP" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="hjcsr7609" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="TXP-GROUP" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="hjcbras" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="8a5d92813488f4f3013491e8e76d02db" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-GROUP" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="shnap" color="39423" name="" linkType="flexional"/>
+    <Link resourceType="TXP-SWITCH" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="8a5dffbc29d9cbc70129d9cbc864006e" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-SWITCH" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="8a5dffbc29d9cbc70129d9cbc862006d" color="65280" name="" linkType="arc"/>
+    <Link resourceType="MX960-MX960" fromId="8a5dffa642eb3b31014355d71c340175" toId="8a5dffa642eb3b31014355d71c3a0186" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-MX960" fromId="8a5dffbc29d9cbc70129d9cbc864006e" toId="8a5d928136c89c3a0136c89c3af6000e" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-MX960" fromId="8a5dffbc29d9cbc70129d9cbc862006d" toId="8a5d928136c89c3a0136c89c3af3000d" color="65280" name="" linkType="arc"/>
+    <Link resourceType="GROUP-GROUP" fromId="hjcbras" toId="jr-9306" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="GROUP-GROUP" fromId="hjcsrmx960" toId="jr-yqw" color="39423" name="" linkType="flexional"/>
+    <Link resourceType="GROUP-GROUP" fromId="hjcsrmx960" toId="jr-jxjr" color="39423" name="" linkType="flexional"/>
+    <Link resourceType="GROUP-GROUP" fromId="hjcsrmx960" toId="jr-sqjr" color="39423" name="" linkType="flexional"/>
+    <Link resourceType="GROUP-GROUP" fromId="hjcsrmx960" toId="jr-9306" color="39423" name="" linkType="flexional"/>
+    <Link resourceType="GROUP-GROUP" fromId="hjcsr7609" toId="jr-9306" color="39423" name="" linkType="flexional"/>
+    <Link resourceType="TXP-GROUP" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="shnap" color="39423" name="" linkType="arc"/>
+    <Link resourceType="TXP-TXP" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="8a5d9281387e2b8b013892c45a050002" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="8a5dffbc29d9cbc70129d9cbc8810083" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SERVER-SERVER" fromId="MX480-NJ" toId="MX480-CS" color="65280" name="" linkType="arc"/>
+    <Link resourceType="MX960-MX960" fromId="8a5dffa642eb3b31014355d71c400197" toId="8a5dffa642eb3b31014355d71c4601a8" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="MX480-NJ" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SERVER-TXP" fromId="MX480-CS" toId="8a5dffbc29d9cbc70129d9cbc86a0073" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SERVER-GROUP" fromId="8a5d92813488f4f3013491e8e76d02db" toId="dfyx" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="SERVER-GROUP" fromId="8a5d92813488f4f3013491e8e76e02dc" toId="dfyx" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="TXP-SWITCH" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="8a5dffbc329421920132942192c80000" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-GROUP" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="hjcsrmx960" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="8a5dffa642eb3b3101430df37fec00cb" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="8a5dffa642eb3b3101430df37fec00cb" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SERVER-GROUP" fromId="8a5dffa642eb3b3101430df37fec00cb" toId="akry" color="39423" name="" linkType="flexional"/>
+    <Link resourceType="SERVER-GROUP" fromId="8a5dffa642eb3b3101430df37fec00cb" toId="zcwl" color="39423" name="" linkType="flexional"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="8a5dffbc29d9cbc70129d9cbc7e80024" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-SERVER" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="8a5dffbc29d9cbc70129d9cbc7e80024" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-GROUP" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="ne40e" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="TXP-GROUP" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="ne40e" color="65280" name="" linkType="flexional"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5d92813c4c29bb013c4c29bb780000" toId="8a5d92813c4c29bb013c4c2ab6c50001" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="8a5dffbc29d9cbc70129d9cbc7ea0025" toId="8a5dffbc29d9cbc70129d9cbc7eb0026" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="IDC-FX-01" toId="IDC-FX-02" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SWITCH-SWITCH" fromId="6509-1-YQ" toId="6509-2-YQ" color="65280" name="" linkType="arc"/>
+    <Link resourceType="SERVER-GROUP" fromId="8a5dffbc29d9cbc70129d9cbc8810083" toId="shtt" color="65280" name="null" linkType="flexional"/>
+    
+    <Link resourceType="TXP-TXP" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="aaaaaa" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-TXP" fromId="aaaaaa" toId="bbbbbb" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-TXP" fromId="bbbbbb" toId="8a5dffbc29d9cbc70129d9cbc86a0073" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-TXP" fromId="8a5dffbc29d9cbc70129d9cbc8680071" toId="bbbbbb" color="65280" name="" linkType="arc"/>
+    <Link resourceType="TXP-TXP" fromId="8a5dffbc29d9cbc70129d9cbc86a0073" toId="aaaaaa" color="65280" name="" linkType="arc"/>
+  </Links>
+  <Labels>
+    <Label name="汇聚层" x="494.35" y="389.9"/>
+    <Label name="CMNET省网拓扑图" x="1126.5" y="0"/>
+    <Label name="接入层" x="481.0499999999999" y="857"/>
+    <Label name="核心层" x="480.35" y="92.9"/>
+    <Label name="骨干网" x="480" y="38.05"/>
+  </Labels>
+</Topo>

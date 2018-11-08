@@ -1,0 +1,70 @@
+/* jqgrid 覆盖 */
+.ui-jqgrid .ui-jqgrid-view {position: relative;left:0; top: 0; padding: 0; font-size:1em;}
+.ui-jqgrid tr.jqgrow td {font-weight: normal; overflow: hidden; white-space: pre; height: 22px;padding: 0 2px 0 2px;border-bottom-width: 0; border-bottom-color: none; border-bottom-style: none;}
+.ui-jqgrid tr.ui-row-ltr td {text-align:left;border-right-width: 0; border-right-color: none; border-right-style: none;}
+.ui-jqgrid .ui-jqgrid-htable th {
+    height: 2.1em;
+    font-size:1.6em;
+    color:#ffffff;
+}
+.ui-jqgrid tr.jqgrow td {
+    font-weight: normal;
+    overflow: hidden;
+    white-space: pre;
+    word-wrap:break-word;
+	word-break:break-all;
+    height: 2.1em;
+    padding: 0 2px 0 2px;
+    border-bottom-width: 0;
+    border-bottom-color: none;
+    border-bottom-style: none;
+    text-align:center;
+    font-size:1.6em;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: none;
+    background: #1f3469;
+    font-weight: normal;
+    color: #66e6ff;
+}
+.ui-widget-content {
+    border: none;
+    background: none;
+    color: #66e6ff;
+}
+
+.ui-jqgrid-btable>tbody>tr:nth-child(odd){
+	background: #171f4c;
+}
+.ui-jqgrid-btable>tbody>tr:nth-child(even){
+	background: #223772;
+}
+#appHigher>tbody>tr:nth-child(odd){
+	background: none;
+}
+#appHigher>tbody>tr:nth-child(even){
+	background: none;
+}
+#appLower>tbody>tr:nth-child(odd){
+	background: none;
+}
+#appLower>tbody>tr:nth-child(even){
+	background: none;
+}
+.ui-jqgrid-btable>tbody>tr>td:nth-child(1){
+	color: #ffffff;
+}
+.ui-jqgrid-btable>tbody>tr>td:nth-child(n+2){
+	font-weight:bold;
+}
+.ui-jqgrid-btable>tbody>tr:hover{
+	background: #a5adff;
+	color:#315379;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    border: 1px solid #fad42e;
+    background: #4660cb !important;
+    color: #66e6ff;
+}
+
